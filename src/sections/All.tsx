@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
 import { WrapCenterer } from "../components/WrapCenterer";
 import { haikus } from "../const/haikus";
 
-export const All = () => {
+export const All = ({ id }: { id: string }) => {
+  useEffect(() => {
+    document.getElementById(id)?.scrollIntoView();
+  }, [id]);
   return (
     <main>
       <h2 style={{ viewTransitionName: "title-all" }}>Cronología</h2>

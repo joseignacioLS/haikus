@@ -1,6 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import All from "../../sections/All";
+
+const id = Astro.url.searchParams.get("id") || "0";
 ---
 
-<Layout><All client:only /></Layout>
+<Layout><All id={id} client:only /></Layout>
