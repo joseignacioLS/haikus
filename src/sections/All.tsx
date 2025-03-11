@@ -24,3 +24,5 @@ export const All = () => {
     </main>
   );
 };
+
+export default All;

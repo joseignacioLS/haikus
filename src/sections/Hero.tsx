@@ -88,3 +88,5 @@ export const Hero = () => {
     </main>
   );
 };
+
+export default Hero;
