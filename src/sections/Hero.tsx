@@ -55,7 +55,9 @@ export const Hero = () => {
                       <Haiku
                         haiku={haiku}
                         onClick={() => {
-                          navigate(`/all#${haiku.order}`);
+                          navigate(
+                            `${import.meta.env.BASE_URL}all#${haiku.order}`
+                          );
                         }}
                         showDate
                         size="s"
