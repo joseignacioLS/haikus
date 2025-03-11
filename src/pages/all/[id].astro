@@ -11,7 +11,11 @@ export function getStaticPaths() {
   });
 }
 
-const id = Astro.url.pathname.split("/").at(-1) ?? "0";
+const id =
+  Astro.url.pathname
+    .split("/")
+    .filter((v) => Boolean(v))
+    .at(-1) ?? "0";
 ---
 
 <Layout><All id={id} client:only /></Layout>
