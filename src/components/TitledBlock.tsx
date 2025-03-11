@@ -22,7 +22,9 @@ export const TitledBlock = ({
       className={`${styles.titledBlock} ${
         bottomRighted ? styles.bottomRighted : ""
       }`}
-      onClick={() => (route ? navigate(route) : onClick?.())}
+      onClick={() =>
+        route ? navigate(`${import.meta.env.BASE_URL}${route}`) : onClick?.()
+      }
     >
       {title}
       <div className={styles.content}>{children}</div>
