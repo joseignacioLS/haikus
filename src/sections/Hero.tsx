@@ -58,6 +58,7 @@ export const Hero = () => {
                           navigate(`/all#${haiku.order}`);
                         }}
                         showDate
+                        size="s"
                       />
                     </WrapCenterer>
                   );
@@ -68,7 +69,7 @@ export const Hero = () => {
         sideDown={
           <TitledBlock title={<h2>Destacado</h2>} bottomRighted>
             <WrapCenterer>
-              <Haiku haiku={specialHaiku} showDate />
+              <Haiku haiku={specialHaiku} showDate size="s" />
             </WrapCenterer>
           </TitledBlock>
         }
@@ -76,14 +77,9 @@ export const Hero = () => {
           <TitledBlock
             title={<h2 style={{ viewTransitionName: "title-about" }}>About</h2>}
           >
-            <p>¡Hola! Soy Jose</p>
             <p>
-              Escribir haikus es una forma de expresarme y de llevar alguna
-              forma de diario.
-            </p>
-            <p>
-              Para bien o para mal escribo cuando estoy más reflexivo o
-              melancólico.
+              ¡Hola! Soy Jose. Escribir haikus es una forma de expresarme y de
+              llevar alguna forma de diario.
             </p>
             <p>¡Espero que los disfrutes!</p>
           </TitledBlock>

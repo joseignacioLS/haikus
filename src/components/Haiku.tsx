@@ -4,6 +4,7 @@ import styles from "./Haiku.module.scss";
 const sizeToFontSize: Record<string, string> = {
   default: "1rem",
   xl: "2rem",
+  s: ".75rem",
 };
 
 const cleanHaiku = (haiku: string): string => {
