@@ -52,16 +52,9 @@ export const Hero = () => {
                 .map((haiku) => {
                   return (
                     <WrapCenterer key={haiku.order}>
-                      <Haiku
-                        haiku={haiku}
-                        onClick={() => {
-                          navigate(
-                            `${import.meta.env.BASE_URL}all#${haiku.order}`
-                          );
-                        }}
-                        showDate
-                        size="s"
-                      />
+                      <a href={`${import.meta.env.BASE_URL}all#${haiku.order}`}>
+                        <Haiku haiku={haiku} showDate size="s" />
+                      </a>
                     </WrapCenterer>
                   );
                 })}
