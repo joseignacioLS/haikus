@@ -7,5 +7,5 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [react()],
   site: "https://haikus.github.io",
-  base: "haikus"
+  base: "/haikus/"
 });
