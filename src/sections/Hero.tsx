@@ -52,11 +52,7 @@ export const Hero = () => {
                 .map((haiku) => {
                   return (
                     <WrapCenterer key={haiku.order}>
-                      <a
-                        href={`${import.meta.env.BASE_URL}all?id=${
-                          haiku.order
-                        }`}
-                      >
+                      <a href={`${import.meta.env.BASE_URL}all/${haiku.order}`}>
                         <Haiku haiku={haiku} showDate size="s" />
                       </a>
                     </WrapCenterer>

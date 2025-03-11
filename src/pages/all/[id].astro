@@ -1,0 +1,17 @@
+---
+import { haikus } from "../../const/haikus";
+import Layout from "../../layouts/Layout.astro";
+import All from "../../sections/All";
+
+export function getStaticPaths() {
+  return haikus.map((h) => {
+    return {
+      params: { id: h.order },
+    };
+  });
+}
+
+const id = Astro.url.pathname.split("/").at(-1) ?? "0";
+---
+
+<Layout><All id={id} client:only /></Layout>
