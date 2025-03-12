@@ -74,9 +74,8 @@ export const Hero = () => {
           >
             <p>
               ¡Hola! Soy Jose. Escribir haikus es una forma de expresarme y de
-              llevar alguna forma de diario.
+              llevar alguna forma de diario. ¡Espero que los disfrutes!
             </p>
-            <p>¡Espero que los disfrutes!</p>
           </TitledBlock>
         }
       />

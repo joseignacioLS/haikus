@@ -13,7 +13,7 @@
 
   @container (width < 800px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3fr 2fr auto;
+    grid-template-rows: minmax(20vh, 50vh) auto auto;
     grid-template-areas:
       "b0 b0"
       "b1 b2"

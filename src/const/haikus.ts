@@ -389,7 +389,7 @@ export const haikus: Haiku[] = [
     order: 48,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Sin lo_im-po-si-ble\nla res-pues-ta de-be_es-tar\nen lo_im-pro-ba-ble",
@@ -397,7 +397,7 @@ export const haikus: Haiku[] = [
     order: 49,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Pue-de de-cir-se\nal no_e-le-gir su cau-ce,\nin-fe-liz a-gua?",
@@ -413,7 +413,7 @@ export const haikus: Haiku[] = [
     order: 51,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Si_e-xis-te_al-gún dios\na-guar-da con pa-cien-cia\nnues-tra per-di-ción",
@@ -445,7 +445,7 @@ export const haikus: Haiku[] = [
     order: 55,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Mi-ro_a-trás\nin-a-ca-ba-do\nper-sis-to",
@@ -469,7 +469,7 @@ export const haikus: Haiku[] = [
     order: 58,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Pre-vio_a-mor\nya des-gas-ta-do,\na-mis-tad?",
@@ -485,7 +485,7 @@ export const haikus: Haiku[] = [
     order: 60,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Es-cue-tos\npo-e-mas di-cen\nla ver-dad?",
@@ -493,7 +493,7 @@ export const haikus: Haiku[] = [
     order: 61,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Dón-de_es-tá\nel pro-pó-si-to\nde vi-vir?",
@@ -501,7 +501,7 @@ export const haikus: Haiku[] = [
     order: 62,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "To-ca e-le-gir\nlas ver-da-des del nue-vo\ne_in-cier-to si-no",
@@ -509,7 +509,7 @@ export const haikus: Haiku[] = [
     order: 63,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Tor-men-ta,\na-gi-ta_y_em-pu-ja\nmis ve-las",
@@ -525,7 +525,7 @@ export const haikus: Haiku[] = [
     order: 65,
     selected: false,
     tags: [],
-    hide: false,
+    hide: true,
   },
   {
     text: "Ás-pe-ro\ndo-lor dor-mi-ta\npor den-tro",
