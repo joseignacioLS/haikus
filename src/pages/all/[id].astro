@@ -4,9 +4,9 @@ import Layout from "../../layouts/Layout.astro";
 import All from "../../sections/All";
 
 export function getStaticPaths() {
-  return haikus.map((h) => {
+  return haikus.map(({ id }) => {
     return {
-      params: { id: h.order },
+      params: { id },
     };
   });
 }

@@ -7,12 +7,10 @@ import { haikus } from "../const/haikus";
 import { WrapCenterer } from "../components/WrapCenterer";
 
 export const Hero = () => {
-  const todaysHaiku = haikus.reduce((last, h) =>
-    last.order > h.order ? last : h
-  );
+  const todaysHaiku = haikus.reduce((last, h) => (last.id > h.id ? last : h));
   const specialHaiku = haikus.find((h) => h.selected) ?? {
     text: "",
-    order: 0,
+    id: 0,
     date: "",
     selected: true,
     tags: [],
@@ -48,11 +46,14 @@ export const Hero = () => {
               vertical
               slides={haikus
                 .filter((h) => !h.hide)
-                .sort((a, b) => (a.order < b.order ? 1 : -1))
+                .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
                 .map((haiku) => {
                   return (
-                    <WrapCenterer key={haiku.order}>
-                      <a href={`${import.meta.env.BASE_URL}all/${haiku.order}`}>
+                    <WrapCenterer key={haiku.id}>
+                      <a
+                        href={`${import.meta.env.BASE_URL}all/${haiku.id}`}
+                        style={{ width: "100%" }}
+                      >
                         <Haiku haiku={haiku} showDate size="s" />
                       </a>
                     </WrapCenterer>

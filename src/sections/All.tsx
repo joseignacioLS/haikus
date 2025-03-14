@@ -14,11 +14,11 @@ export const All = ({ id }: { id: string }) => {
       <Carousel
         style={{ viewTransitionName: "carousel" }}
         slides={haikus
-          .filter((h) => !h.hide)
-          .sort((a, b) => (a.order < b.order ? 1 : -1))
+          .filter(({ hide }) => !hide)
+          .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
           .map((h) => {
             return (
-              <WrapCenterer key={h.order}>
+              <WrapCenterer key={h.id}>
                 <Haiku haiku={h} size="xl" showDate />
               </WrapCenterer>
             );

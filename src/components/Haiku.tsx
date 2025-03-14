@@ -3,7 +3,7 @@ import styles from "./Haiku.module.scss";
 
 const sizeToFontSize: Record<string, string> = {
   default: "1rem",
-  xl: "2rem",
+  xl: "1.5rem",
   s: ".75rem",
 };
 
@@ -26,7 +26,7 @@ export const Haiku = ({
 }) => {
   return (
     <div
-      id={String(haiku.order)}
+      id={String(haiku.id)}
       style={{
         ...style,
         fontSize: sizeToFontSize[size] ?? sizeToFontSize.default,
@@ -40,6 +40,10 @@ export const Haiku = ({
           .map((l) => {
             return <p key={l}>{l}</p>;
           })}
+
+        <span className={styles.number}>
+          <i>#{haiku.id}</i>
+        </span>
         {showDate && (
           <span className={styles.date}>
             <i>{haiku.date}</i>
