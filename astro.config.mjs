@@ -6,6 +6,6 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  site: "https://joseignaciols.github.io/haikus.github.io",
-  base: "/haikus.github.io/",
+  site: "https://joseignaciols.github.io/haikus",
+  base: "/haikus/",
 });
