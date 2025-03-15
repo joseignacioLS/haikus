@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
 import { WrapCenterer } from "../components/WrapCenterer";
-import { haikus } from "../const/haikus";
+import haikus from "../const/haikus.json";
 
 export const All = ({ id }: { id: string }) => {
   useEffect(() => {

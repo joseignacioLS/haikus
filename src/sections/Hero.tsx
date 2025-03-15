@@ -1,10 +1,9 @@
-import { navigate } from "astro:transitions/client";
 import { Bento } from "../components/Bento";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
 import { TitledBlock } from "../components/TitledBlock";
-import { haikus } from "../const/haikus";
 import { WrapCenterer } from "../components/WrapCenterer";
+import haikus from "../const/haikus.json";
 
 export const Hero = () => {
   const todaysHaiku = haikus.reduce((last, h) => (last.id > h.id ? last : h));
@@ -21,10 +20,10 @@ export const Hero = () => {
     <main>
       <Bento
         colors={{
-          main: "#A6719230",
-          sideUp: "#A6719230",
-          sideDown: "#A6719230",
-          bottom: "#A6719230",
+          main: "#FFFFFF10",
+          sideUp: "#FFFFFF10",
+          sideDown: "#FFFFFF10",
+          bottom: "#FFFFFF10",
         }}
         main={
           <TitledBlock title={<h2>Último Haiku</h2>}>

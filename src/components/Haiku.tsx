@@ -1,4 +1,4 @@
-import type { Haiku as THaiku } from "../const/haikus";
+import type { Haiku as THaiku } from "../types";
 import styles from "./Haiku.module.scss";
 
 const sizeToFontSize: Record<string, string> = {
@@ -41,14 +41,9 @@ export const Haiku = ({
             return <p key={l}>{l}</p>;
           })}
 
-        <span className={styles.number}>
-          <i>#{haiku.id}</i>
+        <span className={styles.date}>
+          {showDate && <i>{haiku.date}</i>} <i>(#{haiku.id})</i>
         </span>
-        {showDate && (
-          <span className={styles.date}>
-            <i>{haiku.date}</i>
-          </span>
-        )}
       </div>
     </div>
   );
