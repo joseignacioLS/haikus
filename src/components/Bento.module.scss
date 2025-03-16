@@ -1,19 +1,21 @@
+@use "../styles/blocks";
+
 .bento {
   max-width: 100%;
   height: 100%;
   display: grid;
   grid-template-areas:
-    "b0 b0 b0 b1"
-    "b0 b0 b0 b1"
-    "b0 b0 b0 b2"
-    "b3 b3 b3 b2";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+    "b0 b0 b0 b1 b1"
+    "b0 b0 b0 b1 b1"
+    "b0 b0 b0 b2 b2"
+    "b3 b3 b3 b2 b2";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 1rem;
 
   @container (width < 800px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(20vh, 50vh) auto auto;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 3fr 2fr auto;
     grid-template-areas:
       "b0 b0"
       "b1 b2"
@@ -22,12 +24,8 @@
 }
 
 .box {
-  padding: 1rem;
-  border-radius: 2rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(white, 0.05);
+  @extend .card;
+  overflow: hidden;
 
   display: flex;
   justify-content: center;

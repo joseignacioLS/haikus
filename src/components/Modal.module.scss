@@ -1,0 +1,27 @@
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    position: relative;
+    width: 90vw;
+    height: fit-content;
+    background-color: rgba(black, .95);
+    border-radius: 2rem;
+    padding: 2rem;
+
+    .closeBtn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}

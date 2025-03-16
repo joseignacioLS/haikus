@@ -16,7 +16,6 @@ export const Haiku = ({
   style,
   size = "default",
   onClick,
-  showDate,
 }: {
   haiku: THaiku;
   style?: Record<string, string>;
@@ -34,15 +33,17 @@ export const Haiku = ({
       className={styles.haiku}
       onClick={onClick}
     >
+      <div></div>
       <div className={styles.content}>
         {cleanHaiku(haiku.text)
           .split("\n")
-          .map((l) => {
+          .map((l, i) => {
             return <p key={l}>{l}</p>;
           })}
-
-        <span className={styles.date}>
-          {showDate && <i>{haiku.date}</i>} <i>(#{haiku.id})</i>
+      </div>
+      <div className={styles.data}>
+        <span className={styles.id}>
+          <i>#{haiku.id}</i>
         </span>
       </div>
     </div>

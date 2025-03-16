@@ -3,7 +3,7 @@
     "text": "O-to-ño,\nho-jas de co-lor\nna-ran-ja",
     "date": "2017-10-06",
     "id": 0,
-    "selected": false,
+    "selected": true,
     "tags": ["3-5-3"],
     "hide": false
   },
@@ -35,7 +35,7 @@
     "text": "La lu-na ro-ja\nin-di-ca la lle-ga-da,\nfe-liz co-se-cha",
     "date": "2017-10-06",
     "id": 4,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -267,7 +267,7 @@
     "text": "Hú-me-do rit-mo,\nho-jas flo-tan-do_en char-cos,\nfu-gaz o-to-ño",
     "date": "2021-10-26",
     "id": 33,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -643,7 +643,7 @@
     "text": "Mi_a-mi-go\nse fue por siem-pre,\ndos a-ños",
     "date": "2025-01-23",
     "id": 80,
-    "selected": false,
+    "selected": true,
     "tags": ["3-5-3"],
     "hide": false
   },
@@ -707,7 +707,7 @@
     "text": "El pol-vo cu-bre\nlas te-clas de plás-ti-co,\ndes-ti-no co-mún",
     "date": "2025-01-29",
     "id": 88,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -723,7 +723,7 @@
     "text": "A-mi-go cuen-co\nto-ma-mos el té jun-tos,\nma-ña-nas frí-as",
     "date": "2025-01-30",
     "id": 90,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -731,7 +731,7 @@
     "text": "Cual lu-ciér-na-gas\na-lum-bran mi pa-se-o\nmi-les de lu-ces",
     "date": "2025-01-30",
     "id": 91,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -739,7 +739,7 @@
     "text": "Un des-per-fec-to\nen mi co-che cre-í ver,\nu-na po-li-lla",
     "date": "2025-01-30",
     "id": 92,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -779,7 +779,7 @@
     "text": "U-na u-rra-ca\nre-bus-ca en-tre res-tos,\n¡va-ya ban-que-te!",
     "date": "2025-02-01",
     "id": 97,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -803,7 +803,7 @@
     "text": "Sien-to en-vi-dia,\nar-tis-tas an-ces-tra-les\nque be-llos ver-sos",
     "date": "2025-02-01",
     "id": 100,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -851,7 +851,7 @@
     "text": "Ba-jo es-tre-llas\nnues-tros re-cuer-dos jun-tos\nro-ban mi sue-ño",
     "date": "2025-02-12",
     "id": 106,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -883,7 +883,7 @@
     "text": "Al-ta mon-ta-ña\nnu-bes cu-bren tu ci-ma\na-ho-ra pla-na",
     "date": "2025-02-23",
     "id": 110,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -891,7 +891,7 @@
     "text": "Vis-ta in-ver-nal\npi-ro-tec-nia ro-sa-da\nllu-via de_al-mendras",
     "date": "2025-02-23",
     "id": 111,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -915,7 +915,7 @@
     "text": "Ex-tra-ño ár-bol,\nre-pa-so mi ca-mi-no\n¿Dón-de me per-dí?",
     "date": "2025-02-27",
     "id": 114,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -963,7 +963,7 @@
     "text": "Pe-que-ño go-rrión,\n¿trae-rás las mis-mas plu-mas\ntras el ve-ra-no?",
     "date": "2025-03-03",
     "id": 120,
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "hide": false
   },
@@ -1011,6 +1011,22 @@
     "id": 126,
     "text": "Tron-co sin ra-mas\na la fuer-za a-pren-des\nflo-re-ce al-to",
     "date": "2025-03-15",
+    "selected": true,
+    "tags": ["5-7-5"],
+    "hide": false
+  },
+  {
+    "id": 127,
+    "text": "Fu-gaz mo-men-to,\nu-na ye-ma flo-re-ce,\nso-le-dad ro-ta",
+    "date": "2025-03-15",
+    "selected": false,
+    "tags": ["5-7-5"],
+    "hide": false
+  },
+  {
+    "id": 128,
+    "text": "Yaz-co per-di-do,\nto-dos quie-ren más tiem-po,\na mi me so-bra",
+    "date": "2025-03-16",
     "selected": false,
     "tags": ["5-7-5"],
     "hide": false

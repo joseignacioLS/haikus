@@ -6,8 +6,7 @@ import { WrapCenterer } from "../components/WrapCenterer";
 import haikus from "../const/haikus.json";
 
 export const Hero = () => {
-  const todaysHaiku = haikus.reduce((last, h) => (last.id > h.id ? last : h));
-  const specialHaiku = haikus.find((h) => h.selected) ?? {
+  const specialHaiku = haikus.filter((h) => h.selected) ?? {
     text: "",
     id: 0,
     date: "",
@@ -26,53 +25,63 @@ export const Hero = () => {
           bottom: "#FFFFFF10",
         }}
         main={
-          <TitledBlock title={<h2>Último Haiku</h2>}>
-            <WrapCenterer>
-              <Haiku haiku={todaysHaiku} size="xl" />
-            </WrapCenterer>
-          </TitledBlock>
-        }
-        sideUp={
-          <TitledBlock
-            title={
-              <h2 style={{ viewTransitionName: "title-all" }}>Cronología</h2>
-            }
-            bottomRighted
-          >
+          <TitledBlock title={<h2>Destacados</h2>}>
             <Carousel
-              randomize
-              style={{ viewTransitionName: "carousel" }}
               vertical
               slides={haikus
-                .filter((h) => !h.hide)
+                .filter((h) => !h.hide && h.selected)
                 .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
                 .map((haiku) => {
                   return (
                     <WrapCenterer key={haiku.id}>
-                      <a
-                        href={`${import.meta.env.BASE_URL}all/${haiku.id}`}
-                        style={{ width: "100%" }}
-                      >
-                        <Haiku haiku={haiku} showDate size="s" />
-                      </a>
+                      <Haiku haiku={haiku} showDate size="xl" />
                     </WrapCenterer>
                   );
                 })}
             ></Carousel>
           </TitledBlock>
         }
+        sideUp={
+          <img
+            style={{
+              minWidth: "calc(100% + 2rem)",
+              minHeight: "calc(100% + 2rem)",
+              objectFit: "cover",
+              overflow: "hidden",
+              viewTransitionName: "jose-img",
+            }}
+            src="/haikus/me.webp"
+            alt="Fotografía de Jose, el autor de la página"
+          />
+        }
         sideDown={
-          <TitledBlock title={<h2>Destacado</h2>} bottomRighted>
-            <WrapCenterer>
-              <Haiku haiku={specialHaiku} showDate size="s" />
-            </WrapCenterer>
-          </TitledBlock>
+          <Carousel
+            vertical
+            slides={haikus
+              .filter((h) => !h.hide)
+              .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
+              .map((haiku) => {
+                return (
+                  <WrapCenterer key={haiku.id}>
+                    <Haiku haiku={haiku} showDate size="s" />
+                  </WrapCenterer>
+                );
+              })}
+          ></Carousel>
         }
         bottom={
           <TitledBlock
-            title={<h2 style={{ viewTransitionName: "title-about" }}>About</h2>}
+            title={
+              <a href={`${import.meta.env.BASE_URL}about`}>
+                <h2 style={{ viewTransitionName: "title-about" }}>Sobre mi</h2>
+              </a>
+            }
           >
-            <p>
+            <p
+              style={{
+                viewTransitionName: "about-text",
+              }}
+            >
               ¡Hola! Soy Jose. Escribir haikus es una forma de expresarme y de
               llevar alguna forma de diario. ¡Espero que los disfrutes!
             </p>

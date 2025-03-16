@@ -1,3 +1,23 @@
 <main>
-  <h2 transition:name="title-about">About</h2>
+  <h2 transition:name="title-about">Sobre mi</h2>
+  <div>
+    <img
+      style={{
+        float: "left",
+        width: "50%",
+        margin: "0 1rem 1rem 0",
+        viewTransitionName: "jose-img",
+      }}
+      src="/haikus/me.webp"
+      alt="Fotografía de Jose, el autor de la página"
+    />
+    <p
+      style={{
+        viewTransitionName: "about-text",
+      }}
+    >
+      ¡Hola! Soy Jose. Escribir haikus es una forma de expresarme y de llevar
+      alguna forma de diario. ¡Espero que los disfrutes!
+    </p>
+  </div>
 </main>

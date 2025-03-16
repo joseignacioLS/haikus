@@ -6,9 +6,8 @@
   flex-wrap: nowrap;
   overflow: auto;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  scrollbar-color: rgba(white, 1) transparent;
+  scrollbar-width: thin;
 
   scroll-snap-type: x mandatory;
 
