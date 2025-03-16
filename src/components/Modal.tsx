@@ -12,8 +12,14 @@ export const Modal = () => {
   };
   if (!store.isOpen) return <></>;
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.modal}>
+    <div className={styles.wrapper} onClick={handleClose}>
+      <div
+        className={styles.modal}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+      >
         <button className={styles.closeBtn} onClick={handleClose}>
           X
         </button>
