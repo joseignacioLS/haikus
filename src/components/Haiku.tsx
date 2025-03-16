@@ -1,3 +1,4 @@
+import { modalStore } from "../store/Modal";
 import type { Haiku as THaiku } from "../types";
 import styles from "./Haiku.module.scss";
 
@@ -15,13 +16,13 @@ export const Haiku = ({
   haiku,
   style,
   size = "default",
-  onClick,
+  detailed,
 }: {
   haiku: THaiku;
   style?: Record<string, string>;
   size?: string;
-  onClick?: () => void;
   showDate?: boolean;
+  detailed?: boolean;
 }) => {
   return (
     <div
@@ -31,7 +32,12 @@ export const Haiku = ({
         fontSize: sizeToFontSize[size] ?? sizeToFontSize.default,
       }}
       className={styles.haiku}
-      onClick={onClick}
+      onClick={() => {
+        modalStore.set({
+          isOpen: true,
+          content: <Haiku haiku={haiku} size="xl" detailed />,
+        });
+      }}
     >
       <div></div>
       <div className={styles.content}>
@@ -46,6 +52,20 @@ export const Haiku = ({
           <i>#{haiku.id}</i>
         </span>
       </div>
+      {detailed && (
+        <div style={{ gridColumn: "1 / 4" }}>
+          <p>
+            <b>Fecha del haiku:</b>
+            <p>{haiku.date}</p>
+          </p>
+          <div>
+            <p>
+              <b>Tags del haiku:</b>
+            </p>
+            <p>{haiku.tags.join(", ")}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

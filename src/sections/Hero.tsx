@@ -55,19 +55,21 @@ export const Hero = () => {
           />
         }
         sideDown={
-          <Carousel
-            vertical
-            slides={haikus
-              .filter((h) => !h.hide)
-              .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
-              .map((haiku) => {
-                return (
-                  <WrapCenterer key={haiku.id}>
-                    <Haiku haiku={haiku} showDate size="s" />
-                  </WrapCenterer>
-                );
-              })}
-          ></Carousel>
+          <TitledBlock title={<h2>Todos</h2>} bottomRighted>
+            <Carousel
+              vertical
+              slides={haikus
+                .filter((h) => !h.hide)
+                .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
+                .map((haiku) => {
+                  return (
+                    <WrapCenterer key={haiku.id}>
+                      <Haiku haiku={haiku} showDate size="s" />
+                    </WrapCenterer>
+                  );
+                })}
+            ></Carousel>
+          </TitledBlock>
         }
         bottom={
           <TitledBlock

@@ -6,8 +6,10 @@
   text-decoration: inherit;
   color: inherit;
   gap: 1ch;
+
   &.bottomRighted {
     flex-direction: column-reverse;
+    align-items: flex-end;
   }
 
   .content {
