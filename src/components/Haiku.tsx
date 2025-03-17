@@ -3,8 +3,8 @@ import type { Haiku as THaiku } from "../types";
 import styles from "./Haiku.module.scss";
 
 const sizeToFontSize: Record<string, string> = {
-  default: "1rem",
   xl: "1.5rem",
+  default: "1rem",
   s: ".75rem",
 };
 

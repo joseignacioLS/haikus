@@ -64,7 +64,7 @@ export const Hero = () => {
                 .map((haiku) => {
                   return (
                     <WrapCenterer key={haiku.id}>
-                      <Haiku haiku={haiku} showDate size="s" />
+                      <Haiku haiku={haiku} showDate />
                     </WrapCenterer>
                   );
                 })}
