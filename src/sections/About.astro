@@ -2,12 +2,6 @@
   <h2 transition:name="title-about">Sobre mi</h2>
   <div>
     <img
-      style={{
-        float: "left",
-        width: "50%",
-        margin: "0 1rem 0 0",
-        viewTransitionName: "jose-img",
-      }}
       src="/haikus/me.webp"
       alt="Fotografía de Jose, el autor de la página"
     />
@@ -45,9 +39,18 @@
   }
   main {
     overflow: auto;
+    max-width: 500px;
+    margin: auto;
   }
   a {
     text-decoration: underline;
     color: cyan;
+  }
+  img {
+    float: left;
+    margin-right: 1rem;
+    max-width: 50%;
+    view-transition-name: jose-img;
+
   }
 </style>

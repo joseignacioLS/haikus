@@ -1,0 +1,17 @@
+.title {
+  display: flex;
+  gap: 1ch;
+  color: rgba(white, 0.3);
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+    border: 0;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+  }
+  .selectedTitle {
+    color: rgba(white, 1);
+  }
+}

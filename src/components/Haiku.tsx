@@ -1,9 +1,9 @@
-import { modalStore } from "../store/Modal";
+import { navigate } from "astro:transitions/client";
 import type { Haiku as THaiku } from "../types";
 import styles from "./Haiku.module.scss";
 
 const sizeToFontSize: Record<string, string> = {
-  xl: "1.5rem",
+  xl: "2rem",
   default: "1rem",
   s: ".75rem",
 };
@@ -33,10 +33,7 @@ export const Haiku = ({
       }}
       className={styles.haiku}
       onClick={() => {
-        modalStore.set({
-          isOpen: true,
-          content: <Haiku haiku={haiku} size="xl" detailed />,
-        });
+        !detailed && navigate(`${import.meta.env.BASE_URL}${haiku.id}`);
       }}
     >
       <div></div>
@@ -54,10 +51,10 @@ export const Haiku = ({
       </div>
       {detailed && (
         <div style={{ gridColumn: "1 / 4" }}>
-          <p>
+          <div>
             <b>Fecha del haiku:</b>
             <p>{haiku.date}</p>
-          </p>
+          </div>
           <div>
             <p>
               <b>Tags del haiku:</b>

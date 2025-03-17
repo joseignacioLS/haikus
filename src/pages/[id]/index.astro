@@ -1,7 +1,7 @@
 ---
 import haikus from "../../const/haikus.json";
 import Layout from "../../layouts/Layout.astro";
-import All from "../../sections/All";
+import Detail from "../../sections/Detail";
 
 export function getStaticPaths() {
   return haikus.map(({ id }) => {
@@ -18,4 +18,4 @@ const id =
     .at(-1) ?? "0";
 ---
 
-<Layout><All id={id} client:only /></Layout>
+<Layout><Detail id={id} client:only /></Layout>

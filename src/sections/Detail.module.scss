@@ -1,0 +1,4 @@
+@use "../styles/blocks";
+.block {
+  @extend .card;
+}

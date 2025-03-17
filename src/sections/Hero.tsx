@@ -1,19 +1,47 @@
+import { useEffect, useState } from "react";
 import { Bento } from "../components/Bento";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
 import { TitledBlock } from "../components/TitledBlock";
 import { WrapCenterer } from "../components/WrapCenterer";
 import haikus from "../const/haikus.json";
+import type { Haiku as THaiku } from "../types";
+
+import styles from "./Hero.module.scss";
+
+enum Filters {
+  TODOS = "TODOS",
+  DESTACADOS = "DESTACADOS",
+}
+
+const filterFns: Record<Filters, (h: THaiku) => boolean> = {
+  [Filters.TODOS]: (h: THaiku) => !h.hide,
+  [Filters.DESTACADOS]: (h: THaiku) => !h.hide && h.selected,
+};
 
 export const Hero = () => {
-  const specialHaiku = haikus.filter((h) => h.selected) ?? {
-    text: "",
-    id: 0,
-    date: "",
-    selected: true,
-    tags: [],
-    hide: false,
+  const [filter, setFilter] = useState<Filters>(Filters.DESTACADOS);
+  const [scrollPosition, setScrollPosition] = useState<number | undefined>(
+    undefined
+  );
+
+  const storePosition = (scrollPosition: number) => {
+    window.localStorage.setItem(
+      "haikuScroll",
+      JSON.stringify({
+        filter,
+        scrollPosition,
+      })
+    );
   };
+
+  useEffect(() => {
+    const retrieved = window.localStorage.getItem("haikuScroll");
+    if (!retrieved) return;
+    const { filter, scrollPosition } = JSON.parse(retrieved);
+    setFilter(filter);
+    setScrollPosition(scrollPosition);
+  }, []);
 
   return (
     <main>
@@ -25,11 +53,38 @@ export const Hero = () => {
           bottom: "#FFFFFF10",
         }}
         main={
-          <TitledBlock title={<h2>Destacados</h2>}>
+          <TitledBlock
+            title={
+              <h2 className={styles.title}>
+                <button
+                  className={
+                    filter === Filters.TODOS ? styles.selectedTitle : ""
+                  }
+                  onClick={() => {
+                    setFilter(Filters.TODOS);
+                    setScrollPosition(undefined);
+                  }}
+                >
+                  Todos
+                </button>
+                <button
+                  className={
+                    filter === Filters.DESTACADOS ? styles.selectedTitle : ""
+                  }
+                  onClick={() => {
+                    setFilter(Filters.DESTACADOS);
+                    setScrollPosition(undefined);
+                  }}
+                >
+                  Destacados
+                </button>
+              </h2>
+            }
+          >
             <Carousel
               vertical
               slides={haikus
-                .filter((h) => !h.hide && h.selected)
+                .filter(filterFns[filter] ?? filterFns[Filters.TODOS])
                 .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
                 .map((haiku) => {
                   return (
@@ -38,6 +93,8 @@ export const Hero = () => {
                     </WrapCenterer>
                   );
                 })}
+              onScroll={storePosition}
+              scrollPosition={scrollPosition}
             ></Carousel>
           </TitledBlock>
         }
@@ -54,23 +111,6 @@ export const Hero = () => {
             alt="Fotografía de Jose, el autor de la página"
           />
         }
-        sideDown={
-          <TitledBlock title={<h2>Todos</h2>} bottomRighted>
-            <Carousel
-              vertical
-              slides={haikus
-                .filter((h) => !h.hide)
-                .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
-                .map((haiku) => {
-                  return (
-                    <WrapCenterer key={haiku.id}>
-                      <Haiku haiku={haiku} showDate />
-                    </WrapCenterer>
-                  );
-                })}
-            ></Carousel>
-          </TitledBlock>
-        }
         bottom={
           <TitledBlock
             title={
@@ -82,6 +122,8 @@ export const Hero = () => {
             <p
               style={{
                 viewTransitionName: "about-text",
+                textOverflow: "ellipsis",
+                overflow: "hidden",
               }}
             >
               ¡Hola! Soy Jose. Escribir haikus es una forma de expresarme y de
