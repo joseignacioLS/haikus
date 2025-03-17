@@ -39,8 +39,8 @@ export const Hero = () => {
     const retrieved = window.localStorage.getItem("haikuScroll");
     if (!retrieved) return;
     const { filter, scrollPosition } = JSON.parse(retrieved);
-    setFilter(filter);
-    setScrollPosition(scrollPosition);
+    if ([Filters.TODOS, Filters.DESTACADOS].includes(filter)) setFilter(filter);
+    if (typeof scrollPosition === "number") setScrollPosition(scrollPosition);
   }, []);
 
   return (
