@@ -39,7 +39,7 @@ export const Haiku = ({
       <div className={styles.content}>
         {cleanHaiku(haiku.text)
           .split("\n")
-          .map((l, i) => {
+          .map((l) => {
             return <p key={l}>{l}</p>;
           })}
         <span className={styles.id}>
@@ -60,6 +60,18 @@ export const Haiku = ({
           </div>
         </div>
       )}
+      <button
+        className={styles.shareBtn}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          navigator.clipboard
+            .writeText(`${window.location.host}/haikus/${haiku.id}`)
+            .then(() => alert(`Se ha copiado la url del haiku #${haiku.id}`));
+        }}
+      >
+        <img src="/haikus/share.svg" alt="icono de compartir" />
+      </button>
     </div>
   );
 };
