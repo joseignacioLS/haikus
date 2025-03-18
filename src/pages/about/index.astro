@@ -1,17 +1,20 @@
 ---
+import HomeButton from "../../components/HomeButton.astro";
 import Layout from "../../layouts/Layout.astro";
+import "../../styles/_blocks.scss";
 ---
 
 <Layout>
   <main>
-    <h1
-      style={{
-        viewTransitionName: "about-title",
-      }}
-    >
-      Sobre mi
-    </h1>
-    <div class="body">
+    <HomeButton />
+    <div class="body card">
+      <h1
+        style={{
+          viewTransitionName: "about-title",
+        }}
+      >
+        Sobre mi
+      </h1>
       <img
         src="/haikus/me.webp"
         alt="Fotografía de Jose, el autor de la página"
