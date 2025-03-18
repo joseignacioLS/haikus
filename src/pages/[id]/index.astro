@@ -44,7 +44,6 @@ if (haiku.id === -1) navigate(`${import.meta.env.BASE_URL}`);
   import { navigate } from "astro:transitions/client";
   document.addEventListener("astro:page-load", () => {
     document.querySelector("#btnBack")?.addEventListener("click", () => {
-      console.log("wii");
       navigate(`${import.meta.env.BASE_URL}`);
     });
   });
@@ -53,5 +52,7 @@ if (haiku.id === -1) navigate(`${import.meta.env.BASE_URL}`);
 <style>
   #btnBack {
     font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
   }
 </style>

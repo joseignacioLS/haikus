@@ -67,7 +67,11 @@ export const Haiku = ({
           e.stopPropagation();
           navigator.clipboard
             .writeText(`${window.location.host}/haikus/${haiku.id}`)
-            .then(() => alert(`Se ha copiado la url del haiku #${haiku.id}`));
+            .then(
+              () =>
+                !navigator?.userAgentData?.mobile &&
+                alert(`Se ha copiado la url del haiku #${haiku.id}`)
+            );
         }}
       >
         <img src="/haikus/share.svg" alt="icono de compartir" />
