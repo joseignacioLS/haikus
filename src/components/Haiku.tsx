@@ -69,7 +69,7 @@ export const Haiku = ({
             .writeText(`${window.location.host}/haikus/${haiku.id}`)
             .then(
               () =>
-                !navigator?.userAgentData?.mobile &&
+                !(navigator as any).userAgentData?.mobile &&
                 alert(`Se ha copiado la url del haiku #${haiku.id}`)
             );
         }}

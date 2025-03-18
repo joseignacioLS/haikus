@@ -11,15 +11,14 @@ enum EFilters {
   DESTACADOS = "Destacados",
 }
 
-const filterFns: Record<EFilters, (h: THaiku) => boolean> = {
+const filterFns: Record<EFilters | "None", (h: THaiku) => boolean> = {
   [EFilters.TODOS]: (h: THaiku) => !h.hide,
   [EFilters.DESTACADOS]: (h: THaiku) => !h.hide && h.selected,
+  None: () => false,
 };
 
 export const HaikuShowcase = () => {
-  const [filter, setFilter] = useState<EFilters | undefined>(
-    EFilters.DESTACADOS
-  );
+  const [filter, setFilter] = useState<EFilters | undefined>(undefined);
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
@@ -44,14 +43,25 @@ export const HaikuShowcase = () => {
     );
   };
 
-  useEffect(() => {
-    const retrieved = window.localStorage.getItem("haikuScroll");
-    if (!retrieved) return;
-    const { filter, scrollPosition } = JSON.parse(retrieved);
-    if ([EFilters.TODOS, EFilters.DESTACADOS].includes(filter))
-      setFilter(filter);
-    if (typeof scrollPosition === "number") setScrollPosition(scrollPosition);
-  }, []);
+  const initializeFilter = () => {
+    try {
+      const retrieved = window.localStorage.getItem("haikuScroll");
+
+      if (!retrieved) throw new Error("");
+
+      const { filter, scrollPosition } = JSON.parse(retrieved);
+      setFilter(
+        [EFilters.TODOS, EFilters.DESTACADOS].includes(filter)
+          ? filter
+          : EFilters.DESTACADOS
+      );
+      if (typeof scrollPosition === "number") setScrollPosition(scrollPosition);
+    } catch (err) {
+      setFilter(EFilters.DESTACADOS);
+    }
+  };
+
+  useEffect(initializeFilter, []);
 
   return (
     <TitledBlock
@@ -79,7 +89,9 @@ export const HaikuShowcase = () => {
         vertical
         slides={haikus
           .filter(
-            filterFns[filter || EFilters.TODOS] ?? filterFns[EFilters.TODOS]
+            filter
+              ? filterFns[filter] ?? filterFns[EFilters.TODOS]
+              : filterFns.None
           )
           .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
           .map((haiku) => {

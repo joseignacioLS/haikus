@@ -8,7 +8,7 @@ import { MiniAbout } from "../sections/MiniAbout";
 ---
 
 <Layout>
-  <main>
+  <main class="slim">
     <HaikuShowcase client:load />
     <MiniAbout client:load />
   </main>
@@ -16,10 +16,6 @@ import { MiniAbout } from "../sections/MiniAbout";
 
 <style>
   main {
-    max-height: 100%;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: auto auto;
     gap: 1rem;
   }
 </style>

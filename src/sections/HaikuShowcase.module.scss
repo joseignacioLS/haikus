@@ -1,7 +1,7 @@
 .title {
   display: flex;
   gap: 1ch;
-  color: rgba(white, 0.3);
+  color: var(--text-color-disabled);
   button {
     cursor: pointer;
     background-color: transparent;
@@ -10,9 +10,9 @@
     font-size: inherit;
     font-family: inherit;
     font-weight: inherit;
-    transition: color .2s;
+    transition: color 0.2s;
   }
   .selectedTitle {
-    color: rgba(white, 1);
+    color: var(--text-color);
   }
 }

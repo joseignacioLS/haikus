@@ -11,7 +11,7 @@
   overflow: auto;
   gap: 2rem;
 
-  scrollbar-color: rgba(white, 1) transparent;
+  scrollbar-color: var(--text-color) transparent;
   scrollbar-width: thin;
 
   scroll-snap-type: x mandatory;
