@@ -2,6 +2,8 @@
 import { ClientRouter } from "astro:transitions";
 import "../styles/global.scss";
 import { Modal } from "../components/Modal";
+import "@fontsource-variable/domine";
+import "@fontsource-variable/open-sans";
 ---
 
 <!doctype html>
@@ -19,3 +21,16 @@ import { Modal } from "../components/Modal";
     <Modal client:load />
   </body>
 </html>
+
+<style is:global>
+  html,
+  body {
+    font-family: "Open Sans Variable", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Domine Variable", serif;
+  }
+</style>

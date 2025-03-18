@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.1",
+    "@fontsource-variable/domine": "^5.2.5",
+    "@fontsource-variable/open-sans": "^5.2.5",
     "@nanostores/react": "^0.8.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",

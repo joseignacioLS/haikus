@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inclusive+Sans:ital@0;1&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +10,6 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100dvh;
-
-  font-family: "Open Sans", sans-serif;
 
   @media (prefers-color-scheme: dark) {
     background-color: rgb(5, 12, 1);
@@ -34,12 +29,6 @@ main {
   overflow: hidden;
 
   container-type: inline-size;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Domine", serif;
 }
 
 a {
