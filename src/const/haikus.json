@@ -56,7 +56,7 @@
     "hide": false
   },
   {
-    "text": "Oc-tu-bre,\npor qué no du-ras?\nqué-da-te",
+    "text": "Oc-tu-bre,\n¿por qué no du-ras?\nqué-da-te",
     "date": "2017-10-06",
     "id": 7,
     "selected": false,
@@ -96,7 +96,7 @@
     "hide": false
   },
   {
-    "text": "El ri-a-chue-lo\nhu-yen-do del des-hie-lo\no-tro a-ño más.",
+    "text": "El ri-a-chue-lo\nhu-yen-do del des-hie-lo\no-tro a-ño más",
     "date": "2017-10-06",
     "id": 12,
     "selected": false,
@@ -104,7 +104,7 @@
     "hide": false
   },
   {
-    "text": "Los ni-ños co-rren,\ndis-fra-za-dos de -mons-truos,\npron-to llo-ra-rán",
+    "text": "Los ni-ños co-rren,\ndis-fra-za-dos de mons-truos,\npron-to llo-ra-rán",
     "date": "2017-10-06",
     "id": 13,
     "selected": false,
@@ -136,7 +136,7 @@
     "hide": false
   },
   {
-    "text": "Des-nu-do\nel ár-bol duer-me,\nvol-ve-rá?",
+    "text": "Des-nu-do\nel ár-bol duer-me,\n¿vol-ve-rá?",
     "date": "2019-01-13",
     "id": 17,
     "selected": false,
@@ -229,7 +229,7 @@
     "id": 28,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "hide": true
   },
   {
     "text": "La puer-ta\na-sus-ta des-de\ndos ca-ras",
