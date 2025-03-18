@@ -1,4 +1,4 @@
-export type Haiku = {
+export type THaiku = {
   text: string;
   date: string;
   selected: boolean;

@@ -6,8 +6,9 @@
   text-decoration: inherit;
   color: inherit;
   gap: 1ch;
+  overflow: hidden;
 
-  &.bottomRighted {
+  &.bottomTitled {
     flex-direction: column-reverse;
     align-items: flex-end;
   }

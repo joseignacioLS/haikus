@@ -2,11 +2,10 @@
   position: relative;
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 28px 1fr 28px;
-  grid-template-rows: 1fr;
   row-gap: 2rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   .content {
     width: 100%;
@@ -15,24 +14,17 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: .5ch;
+    gap: 0.5ch;
     align-items: center;
     justify-content: center;
     overflow: hidden;
   }
 
-  .data {
-    display: inline-block;
-    font-size: 85%;
-    text-align: right;
-    bottom: 0;
-    right: 0;
+  .id {
+    font-size: 75%;
+  }
 
-    align-self: flex-end;
-
-    .id {
-      writing-mode: vertical-lr;
-      text-orientation: upright;
-    }
+  .detail {
+    font-size: 75%;
   }
 }

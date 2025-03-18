@@ -1,5 +1,5 @@
 import { navigate } from "astro:transitions/client";
-import type { Haiku as THaiku } from "../types";
+import type { THaiku } from "../types";
 import styles from "./Haiku.module.scss";
 
 const sizeToFontSize: Record<string, string> = {
@@ -36,21 +36,18 @@ export const Haiku = ({
         !detailed && navigate(`${import.meta.env.BASE_URL}${haiku.id}`);
       }}
     >
-      <div></div>
       <div className={styles.content}>
         {cleanHaiku(haiku.text)
           .split("\n")
           .map((l, i) => {
             return <p key={l}>{l}</p>;
           })}
-      </div>
-      <div className={styles.data}>
         <span className={styles.id}>
           <i>#{haiku.id}</i>
         </span>
       </div>
       {detailed && (
-        <div style={{ gridColumn: "1 / 4" }}>
+        <div className={styles.detail}>
           <div>
             <b>Fecha del haiku:</b>
             <p>{haiku.date}</p>

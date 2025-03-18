@@ -1,7 +1,10 @@
 ---
+import { navigate } from "astro:transitions/client";
+import { Haiku } from "../../components/Haiku";
 import haikus from "../../const/haikus.json";
 import Layout from "../../layouts/Layout.astro";
-import Detail from "../../sections/Detail";
+import "../../styles/_blocks.scss";
+import type { THaiku } from "../../types";
 
 export function getStaticPaths() {
   return haikus.map(({ id }) => {
@@ -16,6 +19,22 @@ const id =
     .split("/")
     .filter((v) => Boolean(v))
     .at(-1) ?? "0";
+
+const haiku: THaiku = haikus.find((h) => h.id === Number(id)) ?? {
+  id: -1,
+  text: "",
+  date: "",
+  selected: false,
+  hide: false,
+  tags: [],
+};
+if (haiku.id === -1) navigate(`${import.meta.env.BASE_URL}`);
 ---
 
-<Layout><Detail id={id} client:only /></Layout>
+<Layout>
+  <main>
+    <div class="card">
+      <Haiku client:load haiku={haiku} size="xl" detailed />
+    </div>
+  </main>
+</Layout>

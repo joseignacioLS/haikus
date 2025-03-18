@@ -1,0 +1,28 @@
+@use "../styles/blocks";
+
+.miniAbout {
+  display: flex;
+  gap: 1rem;
+
+  .profilePicWrapper {
+    @extend .card;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      object-fit: cover;
+      min-width: 100%;
+      min-height: 100%;
+      border-radius: 2rem;
+    }
+  }
+
+  .profileTextWrapper {
+    @extend .card;
+    flex: 2;
+  }
+}

@@ -5,14 +5,14 @@ import { navigate } from "astro:transitions/client";
 type Props = {
   title?: ReactNode;
   children?: ReactNode;
-  bottomRighted?: boolean;
+  bottomTitle?: boolean;
   onClick?: (...args: any) => void;
   route?: string;
 };
 
 export const TitledBlock = ({
   title,
-  bottomRighted,
+  bottomTitle,
   onClick,
   route,
   children,
@@ -20,7 +20,7 @@ export const TitledBlock = ({
   return (
     <div
       className={`${styles.titledBlock} ${
-        bottomRighted ? styles.bottomRighted : ""
+        bottomTitle ? styles.bottomTitled : ""
       }`}
       onClick={() =>
         route ? navigate(`${import.meta.env.BASE_URL}${route}`) : onClick?.()
