@@ -12,6 +12,10 @@ const cleanHaiku = (haiku: string): string => {
   return haiku.replace(/\-/g, "").replace(/_/g, " ");
 };
 
+const formatDate = (date: string) => {
+  return date.slice(2).split("-");
+};
+
 export const Haiku = ({
   haiku,
   style,
@@ -54,16 +58,11 @@ export const Haiku = ({
       </div>
       {detailed && (
         <div className={styles.detail}>
-          <div>
-            <b>Fecha del haiku:</b>
-            <p>{haiku.date}</p>
-          </div>
-          <div>
-            <p>
-              <b>Tags del haiku:</b>
-            </p>
-            <p>{haiku.tags.join(", ")}</p>
-          </div>
+          <p className={styles.date}>
+            {formatDate(haiku.date).map((item, index) => (
+              <span key={index}>{item}</span>
+            ))}
+          </p>
         </div>
       )}
       <button
