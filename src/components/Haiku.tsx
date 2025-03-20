@@ -24,6 +24,15 @@ export const Haiku = ({
   showDate?: boolean;
   detailed?: boolean;
 }) => {
+  const copyShareLinkToClipboard = () => {
+    navigator.clipboard
+      .writeText(`${window.location.host}/haikus/${haiku.id}`)
+      .then(
+        () =>
+          !(navigator as any).userAgentData?.mobile &&
+          alert(`Se ha copiado la url del haiku #${haiku.id}`)
+      );
+  };
   return (
     <div
       id={String(haiku.id)}
@@ -37,14 +46,19 @@ export const Haiku = ({
       }}
     >
       <div className={styles.content}>
+        {!detailed && (
+          <span
+            className={styles.id}
+            style={{ viewTransitionName: `haiku-title-${haiku.id}` }}
+          >
+            <i>#{haiku.id}</i>
+          </span>
+        )}
         {cleanHaiku(haiku.text)
           .split("\n")
           .map((l) => {
             return <p key={l}>{l}</p>;
           })}
-        <span className={styles.id}>
-          <i>#{haiku.id}</i>
-        </span>
       </div>
       {detailed && (
         <div className={styles.detail}>
@@ -65,13 +79,7 @@ export const Haiku = ({
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
-          navigator.clipboard
-            .writeText(`${window.location.host}/haikus/${haiku.id}`)
-            .then(
-              () =>
-                !(navigator as any).userAgentData?.mobile &&
-                alert(`Se ha copiado la url del haiku #${haiku.id}`)
-            );
+          copyShareLinkToClipboard();
         }}
       >
         <img src="/haikus/share.svg" alt="icono de compartir" />

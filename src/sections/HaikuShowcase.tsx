@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
-import { TitledBlock } from "../components/TitledBlock";
+import { Title } from "../components/Title.tsx";
 import haikus from "../const/haikus.json";
 import type { THaiku } from "../types";
 import styles from "./HaikuShowcase.module.scss";
@@ -64,9 +64,9 @@ export const HaikuShowcase = () => {
   useEffect(initializeFilter, []);
 
   return (
-    <TitledBlock
-      title={
-        <h2 className={styles.title}>
+    <>
+      <Title>
+        <span className={styles.title}>
           {Object.values(EFilters).map((k) => {
             return (
               <button
@@ -82,9 +82,8 @@ export const HaikuShowcase = () => {
               </button>
             );
           })}
-        </h2>
-      }
-    >
+        </span>
+      </Title>
       <Carousel
         vertical
         slides={haikus
@@ -100,6 +99,6 @@ export const HaikuShowcase = () => {
         onScroll={storePosition}
         scrollPosition={scrollPosition}
       ></Carousel>
-    </TitledBlock>
+    </>
   );
 };
