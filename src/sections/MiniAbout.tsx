@@ -27,7 +27,7 @@ export const MiniAbout = () => {
             }}
           >
             ¡Hola! Soy Jose. Escribir haikus es una forma de expresarme y de
-            llevar alguna forma de diario. ¡Espero que los disfrutes!
+            llevar un diario. ¡Espero que los disfrutes!
           </p>
         </TitledBlock>
       </div>

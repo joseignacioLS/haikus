@@ -17,6 +17,12 @@ const filterFns: Record<EFilters | "None", (h: THaiku) => boolean> = {
   None: () => false,
 };
 
+const descriptions: Record<EFilters, string> = {
+  [EFilters.TODOS]: "Este es un listado de (casi) todos mis haikus.",
+  [EFilters.DESTACADOS]:
+    "Esta es una selección de mis haikus, los que más me gustan.",
+};
+
 export const HaikuShowcase = () => {
   const [filter, setFilter] = useState<EFilters | undefined>(undefined);
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
@@ -84,21 +90,24 @@ export const HaikuShowcase = () => {
           })}
         </span>
       </Title>
-      <Carousel
-        vertical
-        slides={haikus
-          .filter(
-            filter
-              ? filterFns[filter] ?? filterFns[EFilters.TODOS]
-              : filterFns.None
-          )
-          .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
-          .map((haiku) => {
-            return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
-          })}
-        onScroll={storePosition}
-        scrollPosition={scrollPosition}
-      ></Carousel>
+      <div className={styles.carouselWrapper}>
+        <Carousel
+          vertical
+          slides={haikus
+            .filter(
+              filter
+                ? filterFns[filter] ?? filterFns[EFilters.TODOS]
+                : filterFns.None
+            )
+            .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
+            .map((haiku) => {
+              return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
+            })}
+          onScroll={storePosition}
+          scrollPosition={scrollPosition}
+        ></Carousel>
+        {filter && <p className={styles.description}>{descriptions[filter]}</p>}
+      </div>
     </>
   );
 };
