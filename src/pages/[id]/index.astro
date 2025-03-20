@@ -34,13 +34,9 @@ if (haiku.id === -1) navigate(`${import.meta.env.BASE_URL}`);
 
 <Layout>
   <main class="slim">
-    <Title client:load showBackButton
-      ><span
-        style={{
-          viewTransitionName: `haiku-title-${id}`,
-        }}>#{id}</span
-      ></Title
-    >
+    <Title client:load showBackButton>
+      #{id}
+    </Title>
     <div class="card">
       <Haiku client:load haiku={haiku} size="xl" detailed />
     </div>

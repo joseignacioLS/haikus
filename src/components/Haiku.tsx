@@ -46,14 +46,6 @@ export const Haiku = ({
       }}
     >
       <div className={styles.content}>
-        {!detailed && (
-          <span
-            className={styles.id}
-            style={{ viewTransitionName: `haiku-title-${haiku.id}` }}
-          >
-            <i>#{haiku.id}</i>
-          </span>
-        )}
         {cleanHaiku(haiku.text)
           .split("\n")
           .map((l) => {
