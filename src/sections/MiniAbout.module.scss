@@ -3,6 +3,7 @@
 .miniAbout {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 
   .profilePicWrapper {
     @extend .card;
@@ -13,6 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
       object-fit: cover;
       min-width: 100%;
