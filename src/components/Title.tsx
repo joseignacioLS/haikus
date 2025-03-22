@@ -21,7 +21,10 @@ export const Title = ({
             navigate(`${import.meta.env.BASE_URL}`);
           }}
         >
-          <img src={`${import.meta.env.BASE_URL}back.svg`} />
+          <img
+            src={`${import.meta.env.BASE_URL}back.svg`}
+            alt="Icono de flecha apuntado a la izquierda"
+          />
         </button>
       )}
       <h1>{children}</h1>

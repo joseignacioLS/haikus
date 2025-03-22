@@ -16,9 +16,9 @@ export const MiniAbout = () => {
       <div className={styles.profileTextWrapper}>
         <TitledBlock
           title={
-            <a href={`${import.meta.env.BASE_URL}about`}>
-              <h2 style={{ viewTransitionName: "about-title" }}>Sobre mi</h2>
-            </a>
+            <h2 style={{ viewTransitionName: "about-title" }}>
+              <a href={`${import.meta.env.BASE_URL}about`}>Sobre mi</a>
+            </h2>
           }
         >
           <p
