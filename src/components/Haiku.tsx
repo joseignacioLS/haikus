@@ -49,13 +49,23 @@ export const Haiku = ({
         !detailed && navigate(`${import.meta.env.BASE_URL}${haiku.id}`);
       }}
     >
-      <div className={styles.content}>
-        {cleanHaiku(haiku.text)
-          .split("\n")
-          .map((l) => {
-            return <p key={l}>{l}</p>;
-          })}
-      </div>
+      {detailed ? (
+        <div className={styles.content}>
+          {cleanHaiku(haiku.text)
+            .split("\n")
+            .map((l) => {
+              return <p key={l}>{l}</p>;
+            })}
+        </div>
+      ) : (
+        <button className={styles.content}>
+          {cleanHaiku(haiku.text)
+            .split("\n")
+            .map((l) => {
+              return <p key={l}>{l}</p>;
+            })}
+        </button>
+      )}
       {detailed && (
         <div className={styles.detail}>
           <p className={styles.date}>
