@@ -1052,7 +1052,31 @@
     "text": "La fau-na ron-ca,\nvie-jos a-mi-gos cuen-tan\nnue-vas ba-ta-llas",
     "date": "2025-03-22",
     "selected": false,
-    "tags": [],
+    "tags": ["5-7-5"],
+    "hide": false
+  },
+  {
+    "id": 132,
+    "text": "Bri-nas su-su-rran,\nba-jo un cie-lo sin lu-na\nsol-ta-mos car-ga",
+    "date": "2025-03-23",
+    "selected": false,
+    "tags": ["5-7-5"],
+    "hide": false
+  },
+  {
+    "id": 133,
+    "text": "Au-gu-rio ne-gro,\ncru-zan nues-tros ca-mi-nos,\nco-ne-xión mu-da",
+    "date": "2025-03-23",
+    "selected": false,
+    "tags": ["5-7-5"],
+    "hide": false
+  },
+  {
+    "id": 134,
+    "text": "Lle-ga el lu-nes,\nde nue-vo me pre-gun-to,\n¿por qué tra-ba-jar?",
+    "date": "2025-03-23",
+    "selected": true,
+    "tags": ["5-7-5"],
     "hide": false
   }
 ]
