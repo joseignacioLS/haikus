@@ -1,5 +1,5 @@
 @use "../styles/blocks";
-@use "../styles/colors" as colors;
+@use "../styles/colors";
 
 .body {
   @extend .card;

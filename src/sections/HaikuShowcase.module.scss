@@ -1,10 +1,11 @@
 @use "../styles/blocks";
-@use "../styles/animations" as animations;
+@use "../styles/colors";
+@use "../styles/animations";
 
 .title {
   display: flex;
   gap: 1ch;
-  color: var(--text-color-disabled);
+  color: colors.$disabled;
   transition: color 0.2s;
 
   button {
@@ -19,7 +20,7 @@
   }
 
   .selectedTitle {
-    color: var(--text-color);
+    color: colors.$text;
   }
 }
 

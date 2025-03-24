@@ -1,4 +1,5 @@
-@use "../styles/animations" as animations;
+@use "../styles/colors";
+@use "../styles/animations";
 
 .carousel {
   @include animations.fade-in;
@@ -11,7 +12,7 @@
   overflow: auto;
   gap: 2rem;
 
-  scrollbar-color: var(--text-color) transparent;
+  scrollbar-color: colors.$text transparent;
   scrollbar-width: thin;
 
   scroll-snap-type: y mandatory;
