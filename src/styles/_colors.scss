@@ -1,0 +1,15 @@
+:root {
+  --dark-green: rgb(5, 12, 1);
+  --green: rgb(41, 49, 38);
+  --white: rgba(255, 255, 255, 0.8);
+  --white-disabled: rgba(255, 255, 255, 0.5);
+  --blue: cyan;
+  --pink: rgb(224, 67, 255);
+}
+
+$background: var(--dark-green);
+$foreground: var(--green);
+$text: var(--white);
+$disabled: var(--white-disabled);
+$anchor: var(--blue);
+$anchor_visited: var(--pink);

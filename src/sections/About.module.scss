@@ -1,15 +1,11 @@
 @use "../styles/blocks";
+@use "../styles/colors" as colors;
 
 .body {
   @extend .card;
 
   p {
     margin-bottom: 2ch;
-  }
-
-  a {
-    text-decoration: underline;
-    color: cyan;
   }
 
   img {

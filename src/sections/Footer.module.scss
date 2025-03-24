@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  .socialNetworkList {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2ch;
+    .socialNetworkItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5ch;
+      .icon {
+        width: 2ch;
+        height: 2ch;
+      }
+      .name {
+        @media (width < 300px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
