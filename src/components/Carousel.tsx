@@ -1,23 +1,21 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import styles from "./Carousel.module.scss";
 
-export const Carousel = ({
-  slides,
-  vertical,
-  style,
-  randomize,
-  onScroll,
-  onReachEnd,
-  scrollPosition,
-}: {
+type Props = {
   slides: ReactNode[];
-  vertical?: boolean;
-  style?: Record<string, string>;
   randomize?: boolean;
   onScroll?: (scrollPosition: number) => void;
   onReachEnd?: () => void;
   scrollPosition?: number;
-}) => {
+};
+
+export const Carousel = ({
+  slides,
+  randomize,
+  onScroll,
+  onReachEnd,
+  scrollPosition,
+}: Props) => {
   const ref = useRef(null);
   const randomizeScrollPosition = () => {
     const scrollElement = ref?.current as any;
@@ -51,8 +49,7 @@ export const Carousel = ({
     <div
       key={slides.length}
       ref={ref}
-      style={style}
-      className={`${styles.carousel} ${vertical ? styles.vertical : ""}`}
+      className={styles.carousel}
       onScroll={handleScroll}
     >
       {slides}

@@ -5,6 +5,7 @@ import { Title } from "../components/Title.tsx";
 import haikus from "../const/haikus.json";
 import type { THaiku } from "../types";
 import styles from "./HaikuShowcase.module.scss";
+import { retrieveData, storeData } from "../utils/storage.ts";
 
 enum EFilters {
   TODOS = "Todos",
@@ -23,16 +24,6 @@ const descriptions: Record<EFilters, string> = {
     "Esta es una selección de mis haikus, los que más me gustan.",
 };
 
-const storeData = (scrollPosition: number, filter: EFilters | undefined) => {
-  window.localStorage.setItem(
-    "haikuScroll",
-    JSON.stringify({
-      filter,
-      scrollPosition,
-    })
-  );
-};
-
 export const HaikuShowcase = () => {
   const [filter, setFilter] = useState<EFilters | undefined>(undefined);
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
@@ -41,7 +32,7 @@ export const HaikuShowcase = () => {
 
   const initializeFilter = () => {
     try {
-      const retrieved = window.localStorage.getItem("haikuScroll");
+      const retrieved = retrieveData();
 
       if (!retrieved) throw new Error("");
 
@@ -70,7 +61,12 @@ export const HaikuShowcase = () => {
                 className={filter === k ? styles.selectedTitle : ""}
                 onClick={() => {
                   setFilter(k);
-                  storeData(scrollPosition ?? 0, k);
+                  storeData(
+                    JSON.stringify({
+                      scrollPosition: scrollPosition ?? 0,
+                      filter: k,
+                    })
+                  );
                   setScrollPosition(undefined);
                 }}
               >
@@ -82,7 +78,6 @@ export const HaikuShowcase = () => {
       </Title>
       <div className={styles.carouselWrapper}>
         <Carousel
-          vertical
           slides={haikus
             .filter(
               filter
@@ -93,7 +88,9 @@ export const HaikuShowcase = () => {
             .map((haiku) => {
               return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
             })}
-          onScroll={(scrollPosition) => storeData(scrollPosition, filter)}
+          onScroll={(scrollPosition) =>
+            storeData(JSON.stringify({ scrollPosition, filter }))
+          }
           scrollPosition={scrollPosition}
         ></Carousel>
         {filter && (

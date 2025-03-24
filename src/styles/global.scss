@@ -1,0 +1,65 @@
+:root {
+  --bg-color: rgb(5, 12, 1);
+  --bg-color-clear: rgb(41, 49, 38);
+  --text-color: rgba(255, 255, 255, 0.8);
+  --text-color-disabled: rgba(255, 255, 255, 0.5);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  font-family: "Open Sans Variable", sans-serif;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+}
+
+main {
+  width: 100%;
+  min-width: 300px;
+  max-height: 100%;
+  min-height: 600px;
+  height: 100%;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  container-type: inline-size;
+
+  &.slim {
+    max-width: 500px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Domine Variable", serif;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  width: fit-content;
+}

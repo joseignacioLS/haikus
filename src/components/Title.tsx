@@ -3,13 +3,12 @@ import { type ReactNode } from "react";
 
 import styles from "./Title.module.scss";
 
-export const Title = ({
-  children,
-  showBackButton = false,
-}: {
+type Props = {
   children?: ReactNode;
   showBackButton?: boolean;
-}) => {
+};
+
+export const Title = ({ children, showBackButton = false }: Props) => {
   return (
     <nav className={styles.navbar}>
       {showBackButton && (

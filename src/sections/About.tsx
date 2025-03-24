@@ -45,6 +45,7 @@ export const About = () => {
             <a
               href="https://es.wikipedia.org/wiki/Matsuo_Bash%C5%8D"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Bashō
             </a>{" "}
@@ -52,6 +53,7 @@ export const About = () => {
             <a
               href="https://es.wikipedia.org/wiki/Masaoka_Shiki"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Shiki
             </a>

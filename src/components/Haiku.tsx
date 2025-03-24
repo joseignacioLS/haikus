@@ -1,19 +1,12 @@
 import { navigate } from "astro:transitions/client";
 import type { THaiku } from "../types";
 import styles from "./Haiku.module.scss";
+import { cleanHaiku, formatDate } from "../utils/text";
 
 const sizeToFontSize: Record<string, string> = {
   xl: "2rem",
   default: "1rem",
   s: ".75rem",
-};
-
-const cleanHaiku = (haiku: string): string => {
-  return haiku.replace(/\-/g, "").replace(/_/g, " ");
-};
-
-const formatDate = (date: string) => {
-  return date.slice(2).split("-");
 };
 
 const ShareButton = ({ id }: { id: number }) => {
@@ -37,24 +30,21 @@ const ShareButton = ({ id }: { id: number }) => {
     >
       <img
         src={`${import.meta.env.BASE_URL}share.svg`}
-        alt="icono de compartir"
+        alt="Icono de compartir"
       />
     </button>
   );
 };
 
-export const Haiku = ({
-  haiku,
-  style,
-  size = "default",
-  detailed,
-}: {
+type Props = {
   haiku: THaiku;
   style?: Record<string, string>;
   size?: string;
   showDate?: boolean;
   detailed?: boolean;
-}) => {
+};
+
+export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
   return (
     <div
       style={{
