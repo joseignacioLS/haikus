@@ -9,7 +9,7 @@ export const MiniAbout = () => {
           style={{
             viewTransitionName: "jose-img",
           }}
-          src="/haikus/me.webp"
+          src={`${import.meta.env.BASE_URL}me.webp`}
           alt="Fotografía de Jose, el autor de la página"
         />
       </div>

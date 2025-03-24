@@ -1,10 +1,11 @@
 @use "../styles/blocks";
+@use "../styles/animations" as animations;
 
 .title {
   display: flex;
   gap: 1ch;
   color: var(--text-color-disabled);
-  transition: color .2s;
+  transition: color 0.2s;
 
   button {
     cursor: pointer;
@@ -33,6 +34,7 @@
   flex-direction: column;
 
   .description {
+    @include animations.fade-in;
     border-top: 1px solid white;
     padding-top: 1ch;
     text-align: center;

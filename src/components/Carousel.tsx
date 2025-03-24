@@ -49,6 +49,7 @@ export const Carousel = ({
 
   return (
     <div
+      key={slides.length}
       ref={ref}
       style={style}
       className={`${styles.carousel} ${vertical ? styles.vertical : ""}`}

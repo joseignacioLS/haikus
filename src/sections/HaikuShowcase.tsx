@@ -96,7 +96,11 @@ export const HaikuShowcase = () => {
           onScroll={(scrollPosition) => storeData(scrollPosition, filter)}
           scrollPosition={scrollPosition}
         ></Carousel>
-        {filter && <p className={styles.description}>{descriptions[filter]}</p>}
+        {filter && (
+          <p key={filter} className={styles.description}>
+            {descriptions[filter]}
+          </p>
+        )}
       </div>
     </>
   );

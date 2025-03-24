@@ -19,7 +19,7 @@ const formatDate = (date: string) => {
 const ShareButton = ({ id }: { id: number }) => {
   const copyShareLinkToClipboard = () => {
     navigator.clipboard
-      .writeText(`${window.location.host}/haikus/${id}`)
+      .writeText(`${window.location.host}${import.meta.env.BASE_URL}${id}`)
       .then(
         () =>
           !(navigator as any).userAgentData?.mobile &&
@@ -35,7 +35,10 @@ const ShareButton = ({ id }: { id: number }) => {
         copyShareLinkToClipboard();
       }}
     >
-      <img src="/haikus/share.svg" alt="icono de compartir" />
+      <img
+        src={`${import.meta.env.BASE_URL}share.svg`}
+        alt="icono de compartir"
+      />
     </button>
   );
 };

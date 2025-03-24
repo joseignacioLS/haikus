@@ -1,4 +1,7 @@
+@use "../styles/animations" as animations;
+
 .carousel {
+  @include animations.fade-in;
   position: relative;
   width: 100%;
   height: 100%;
@@ -13,7 +16,7 @@
 
   scroll-snap-type: x mandatory;
 
-  &>* {
+  & > * {
     padding: 0 1px;
     flex: 0 0 auto;
     width: 100%;
@@ -24,7 +27,7 @@
     flex-direction: column;
     scroll-snap-type: y mandatory;
 
-    &>* {
+    & > * {
       padding: 1px 0;
       flex: 0 0 auto;
       height: 100%;
