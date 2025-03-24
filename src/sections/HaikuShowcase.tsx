@@ -23,31 +23,21 @@ const descriptions: Record<EFilters, string> = {
     "Esta es una selección de mis haikus, los que más me gustan.",
 };
 
+const storeData = (scrollPosition: number, filter: EFilters | undefined) => {
+  window.localStorage.setItem(
+    "haikuScroll",
+    JSON.stringify({
+      filter,
+      scrollPosition,
+    })
+  );
+};
+
 export const HaikuShowcase = () => {
   const [filter, setFilter] = useState<EFilters | undefined>(undefined);
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
-
-  const storePosition = (scrollPosition: number) => {
-    window.localStorage.setItem(
-      "haikuScroll",
-      JSON.stringify({
-        filter,
-        scrollPosition,
-      })
-    );
-  };
-
-  const storeFilter = (filter: EFilters) => {
-    window.localStorage.setItem(
-      "haikuScroll",
-      JSON.stringify({
-        filter,
-        scrollPosition,
-      })
-    );
-  };
 
   const initializeFilter = () => {
     try {
@@ -80,7 +70,7 @@ export const HaikuShowcase = () => {
                 className={filter === k ? styles.selectedTitle : ""}
                 onClick={() => {
                   setFilter(k);
-                  storeFilter(k);
+                  storeData(scrollPosition ?? 0, k);
                   setScrollPosition(undefined);
                 }}
               >
@@ -103,7 +93,7 @@ export const HaikuShowcase = () => {
             .map((haiku) => {
               return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
             })}
-          onScroll={storePosition}
+          onScroll={(scrollPosition) => storeData(scrollPosition, filter)}
           scrollPosition={scrollPosition}
         ></Carousel>
         {filter && <p className={styles.description}>{descriptions[filter]}</p>}

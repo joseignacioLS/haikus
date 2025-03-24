@@ -16,6 +16,30 @@ const formatDate = (date: string) => {
   return date.slice(2).split("-");
 };
 
+const ShareButton = ({ id }: { id: number }) => {
+  const copyShareLinkToClipboard = () => {
+    navigator.clipboard
+      .writeText(`${window.location.host}/haikus/${id}`)
+      .then(
+        () =>
+          !(navigator as any).userAgentData?.mobile &&
+          alert(`Se ha copiado la url del haiku #${id}`)
+      );
+  };
+  return (
+    <button
+      className={styles.shareBtn}
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        copyShareLinkToClipboard();
+      }}
+    >
+      <img src="/haikus/share.svg" alt="icono de compartir" />
+    </button>
+  );
+};
+
 export const Haiku = ({
   haiku,
   style,
@@ -28,18 +52,8 @@ export const Haiku = ({
   showDate?: boolean;
   detailed?: boolean;
 }) => {
-  const copyShareLinkToClipboard = () => {
-    navigator.clipboard
-      .writeText(`${window.location.host}/haikus/${haiku.id}`)
-      .then(
-        () =>
-          !(navigator as any).userAgentData?.mobile &&
-          alert(`Se ha copiado la url del haiku #${haiku.id}`)
-      );
-  };
   return (
     <div
-      id={String(haiku.id)}
       style={{
         ...style,
         fontSize: sizeToFontSize[size] ?? sizeToFontSize.default,
@@ -50,13 +64,22 @@ export const Haiku = ({
       }}
     >
       {detailed ? (
-        <div className={styles.content}>
-          {cleanHaiku(haiku.text)
-            .split("\n")
-            .map((l) => {
-              return <p key={l}>{l}</p>;
-            })}
-        </div>
+        <>
+          <div className={styles.content}>
+            {cleanHaiku(haiku.text)
+              .split("\n")
+              .map((l) => {
+                return <p key={l}>{l}</p>;
+              })}
+          </div>
+          <div className={styles.detail}>
+            <p className={styles.date}>
+              {formatDate(haiku.date).map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
+            </p>
+          </div>
+        </>
       ) : (
         <button className={styles.content}>
           {cleanHaiku(haiku.text)
@@ -66,25 +89,7 @@ export const Haiku = ({
             })}
         </button>
       )}
-      {detailed && (
-        <div className={styles.detail}>
-          <p className={styles.date}>
-            {formatDate(haiku.date).map((item, index) => (
-              <span key={index}>{item}</span>
-            ))}
-          </p>
-        </div>
-      )}
-      <button
-        className={styles.shareBtn}
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          copyShareLinkToClipboard();
-        }}
-      >
-        <img src="/haikus/share.svg" alt="icono de compartir" />
-      </button>
+      <ShareButton id={haiku.id} />
     </div>
   );
 };

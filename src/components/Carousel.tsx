@@ -7,6 +7,7 @@ export const Carousel = ({
   style,
   randomize,
   onScroll,
+  onReachEnd,
   scrollPosition,
 }: {
   slides: ReactNode[];
@@ -14,6 +15,7 @@ export const Carousel = ({
   style?: Record<string, string>;
   randomize?: boolean;
   onScroll?: (scrollPosition: number) => void;
+  onReachEnd?: () => void;
   scrollPosition?: number;
 }) => {
   const ref = useRef(null);
@@ -27,6 +29,14 @@ export const Carousel = ({
     const scrollElement = ref?.current as any;
     if (!scrollElement) return;
     scrollElement.scrollTo({ top });
+  };
+
+  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
+    const { scrollTop, scrollHeight, offsetHeight } = e.currentTarget;
+    onScroll?.(scrollTop);
+    if (scrollTop + offsetHeight === scrollHeight) {
+      onReachEnd?.();
+    }
   };
   useEffect(() => {
     if (!randomize) return;
@@ -42,7 +52,7 @@ export const Carousel = ({
       ref={ref}
       style={style}
       className={`${styles.carousel} ${vertical ? styles.vertical : ""}`}
-      onScroll={(e) => onScroll?.(e.currentTarget.scrollTop)}
+      onScroll={handleScroll}
     >
       {slides}
     </div>
