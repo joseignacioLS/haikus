@@ -5,7 +5,7 @@
     "id": 0,
     "selected": true,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La ho-ja tiem-bla,\npor fin em-pie-za_a ca-er,\nlle-ga_el o-to-ño",
@@ -13,7 +13,7 @@
     "id": 1,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La ca-la-ba-za,\ncre-ce_en el huer-to,fe-liz,\npron-to son-rei-rá.",
@@ -21,7 +21,7 @@
     "id": 2,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "El ár-bol\nmu-da las ho-jas,\ncan-sa-do",
@@ -29,7 +29,7 @@
     "id": 3,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La lu-na ro-ja\nin-di-ca la lle-ga-da,\nfe-liz co-se-cha",
@@ -37,7 +37,7 @@
     "id": 4,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La som-bra lar-ga\nse-ña-la_al frí-o nor-te,\nlos o-sos duer-men",
@@ -45,7 +45,7 @@
     "id": 5,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "De no-che_el fue-go\ncre-pi-ta_en la ho-gue-ra,\nca-lien-ta_el a-mor",
@@ -53,7 +53,7 @@
     "id": 6,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Oc-tu-bre,\n¿por qué no du-ras?\nqué-da-te",
@@ -61,7 +61,7 @@
     "id": 7,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Es-pe-ra,\npron-to ca-e-rá\nla no-che",
@@ -69,7 +69,7 @@
     "id": 8,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "El ca-lor\nde tu com-pa-ñí-a\nme lle-na",
@@ -77,7 +77,7 @@
     "id": 9,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "La pre-sión\nso-bre mi pe-cho,\nme_a-ho-ga",
@@ -85,7 +85,7 @@
     "id": 10,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Te-mo de-ci-dir\nme que-do sin op-cio-nes,\nde-ten-te tiem-po",
@@ -93,7 +93,7 @@
     "id": 11,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "El ri-a-chue-lo\nhu-yen-do del des-hie-lo\no-tro a-ño más",
@@ -101,7 +101,7 @@
     "id": 12,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Los ni-ños co-rren,\ndis-fra-za-dos de mons-truos,\npron-to llo-ra-rán",
@@ -109,7 +109,7 @@
     "id": 13,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Hu-ye_el ve-ra-no,\nju-nio tra-e-lo a-quí,\nno hay fu-tu-ro.",
@@ -117,15 +117,15 @@
     "id": 14,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
-    "text": "Frí-o_a-zul\nNu-bes dis-tan-tes,\nIn-vier-no",
+    "text": "Frí-o_a-zul\nnu-bes dis-tan-tes,\nin-vier-no",
     "date": "2019-01-13",
     "id": 15,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Des-can-sa\nla vi-da_a-ho-ra,\ntran-qui-la",
@@ -133,7 +133,7 @@
     "id": 16,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Des-nu-do\nel ár-bol duer-me,\n¿vol-ve-rá?",
@@ -141,7 +141,7 @@
     "id": 17,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "El vue-lo ra-so\ndel pá-ja-ro_a-za-ba-che,\ngé-li-do cam-po",
@@ -149,7 +149,7 @@
     "id": 18,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Pe-num-bra\ni-nun-da_el mon-te,\nlo_a-bra-za",
@@ -157,7 +157,7 @@
     "id": 19,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La nie-ve\ncu-bre el bos-que\nca-no-so",
@@ -165,7 +165,7 @@
     "id": 20,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "El to-cón\nco-bi-ja vi-da\nque duer-me",
@@ -173,7 +173,7 @@
     "id": 21,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "El rí-o\nse de-ti-e-ne\na_es-pe-rar",
@@ -181,7 +181,7 @@
     "id": 22,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Re-pi-que-te-o,\nla ven-ta-na_a-fi-nan-do\nsu ins-tru-men-to",
@@ -189,7 +189,7 @@
     "id": 23,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La_a-ra-ña\nte-je su mun-do\nen se-da.",
@@ -197,7 +197,7 @@
     "id": 24,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Un bro-te\nse_a-gi-ta_al vien-to,\nal na-cer.",
@@ -205,7 +205,7 @@
     "id": 25,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "La bri-sa\nin-cli-na_al ta-llo,\npor siem-pre.",
@@ -213,7 +213,7 @@
     "id": 26,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Las lu-ciér-na-gas\ni-lu-mi-nan el bos-que,\nguí-an la no-che",
@@ -221,7 +221,7 @@
     "id": 27,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Un a-gu-je-ro\nal que so-lo se en-tra,\nva-cuo es-pa-cio",
@@ -229,7 +229,7 @@
     "id": 28,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": true
+    "show": false
   },
   {
     "text": "La puer-ta\na-sus-ta des-de\ndos ca-ras",
@@ -237,7 +237,7 @@
     "id": 29,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "El vien-to\ndes-nu-da_al ár-bol,\nca-du-co",
@@ -245,7 +245,7 @@
     "id": 30,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La llu-ví-a es,\nla mon-ta-ña fue y es,\nno de-jo hue-lla",
@@ -253,7 +253,7 @@
     "id": 31,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": false
   },
   {
     "text": "La llu-via mo-ja\nlos lon-ge-vos ár-bo-les\nsép-ti-mo_o-to-ño",
@@ -261,7 +261,7 @@
     "id": 32,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Hú-me-do rit-mo,\nho-jas flo-tan-do_en char-cos,\nfu-gaz o-to-ño",
@@ -269,7 +269,7 @@
     "id": 33,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Ro-ja luz\nal-ma des-nu-da,\nsols-ti-cio",
@@ -277,7 +277,7 @@
     "id": 34,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La llu-via\ntrae tu re-cuer-do,\ntris-te-za",
@@ -285,7 +285,7 @@
     "id": 35,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Los rí-os\nno se di-vi-den,\npor siem-pre",
@@ -293,7 +293,7 @@
     "id": 36,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "aun-que per-pe-tua\nla ro-ca va cam-bian-do,\nfal-so des-ti-no",
@@ -301,7 +301,7 @@
     "id": 37,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "se me-cen\nlos sua-ves tol-dos\nca-lien-tes",
@@ -309,7 +309,7 @@
     "id": 38,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "so-le-dad,\na-mor y o-dio\no-to-ñal",
@@ -317,7 +317,7 @@
     "id": 39,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "la ro-ca\nes-pe-ra quie-ta,\nen cal-ma",
@@ -325,7 +325,7 @@
     "id": 40,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "el cam-bio\ntra-e con-si-go\nel do-lor",
@@ -333,7 +333,7 @@
     "id": 41,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La_an-sie-dad\nso-bre mi pe-cho\nme_a-ho-ga",
@@ -341,7 +341,7 @@
     "id": 42,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "El ár-bol\nal per-der la_ho-ja\nse mue-re",
@@ -349,7 +349,7 @@
     "id": 43,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Re-bro-ta\ntras un de-sas-tre,\nla vi-da",
@@ -357,7 +357,7 @@
     "id": 44,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Los sen-ti-mien-tos\na-flo-ran den-tro de mí,\nbue-nos o ma-los",
@@ -365,7 +365,7 @@
     "id": 45,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Las nu-bes\nsiem-pre ter-mi-nan\npor ir-se",
@@ -373,7 +373,7 @@
     "id": 46,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Se rom-pen\nvie-jas pro-me-sas,\nex-tra-ño",
@@ -381,7 +381,7 @@
     "id": 47,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "A-ho-ra\ncó-mo con-fí-o\nen na-die?",
@@ -389,7 +389,7 @@
     "id": 48,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
     "text": "Sin lo_im-po-si-ble\nla res-pues-ta de-be_es-tar\nen lo_im-pro-ba-ble",
@@ -397,7 +397,7 @@
     "id": 49,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": true
+    "show": false
   },
   {
     "text": "Pue-de de-cir-se\nal no_e-le-gir su cau-ce,\nin-fe-liz a-gua?",
@@ -405,7 +405,7 @@
     "id": 50,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Más due-le\ntu da-ga_al sa-lir,\nte quie-ro",
@@ -413,7 +413,7 @@
     "id": 51,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
     "text": "Si_e-xis-te_al-gún dios\na-guar-da con pa-cien-cia\nnues-tra per-di-ción",
@@ -421,7 +421,7 @@
     "id": 52,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": false
   },
   {
     "text": "De-ses-pe-ran-za\nne-gro pe-sar in-ter-no\nllu-via to-rren-cial",
@@ -429,7 +429,7 @@
     "id": 53,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Có-mo com-pren-der\nque tras gar-gan-tuo cam-bio\nto-do si-gue_i-gual",
@@ -437,7 +437,7 @@
     "id": 54,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Un tra-to,\nlim-piad las mi-nas\nsed li-bres",
@@ -445,7 +445,7 @@
     "id": 55,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
     "text": "Mi-ro_a-trás\nin-a-ca-ba-do\nper-sis-to",
@@ -453,15 +453,15 @@
     "id": 56,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
-    "text": "Be-lle-za,\nes-tás tam-bién en\nel do-lor?",
+    "text": "Be-lle-za,\n¿es-tás tam-bién en\nel do-lor?",
     "date": "2025-01-01",
     "id": 57,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Es-ca-par\nde tu des-ti-no\nes men-tal",
@@ -469,15 +469,15 @@
     "id": 58,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
-    "text": "Pre-vio_a-mor\nya des-gas-ta-do,\na-mis-tad?",
+    "text": "Pre-vio_a-mor\nya des-gas-ta-do,\n¿a-mis-tad?",
     "date": "2025-01-01",
     "id": 59,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Me cuen-to\nmen-ti-ras pa-ra\ncre-er-las",
@@ -485,7 +485,7 @@
     "id": 60,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
     "text": "Es-cue-tos\npo-e-mas di-cen\nla ver-dad?",
@@ -493,7 +493,7 @@
     "id": 61,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
     "text": "Dón-de_es-tá\nel pro-pó-si-to\nde vi-vir?",
@@ -501,7 +501,7 @@
     "id": 62,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
     "text": "To-ca e-le-gir\nlas ver-da-des del nue-vo\ne_in-cier-to si-no",
@@ -509,7 +509,7 @@
     "id": 63,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": true
+    "show": false
   },
   {
     "text": "Tor-men-ta,\na-gi-ta_y_em-pu-ja\nmis ve-las",
@@ -517,7 +517,7 @@
     "id": 64,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "E-xis-te\nre-al-men-te el\nfra-ca-so?",
@@ -525,7 +525,7 @@
     "id": 65,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
     "text": "Ás-pe-ro\ndo-lor dor-mi-ta\npor den-tro",
@@ -533,7 +533,7 @@
     "id": 66,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "El ar-te\na-pa-ga_el do-lor\nde mi_al-ma",
@@ -541,7 +541,7 @@
     "id": 67,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Qui-én di-rí-a\nque_el al-ma_es-tá for-ma-da\npor tan-tas pie-zas?",
@@ -549,15 +549,15 @@
     "id": 68,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": false
   },
   {
-    "text": "Y si la vi-da\nno tie-ne más sen-ti-do\nque dis-fru-tar-la?",
+    "text": "¿Y si la vi-da\nno tie-ne más sen-ti-do\nque dis-fru-tar-la?",
     "date": "2025-01-07",
     "id": 69,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Me_han ro-to,\nde-pen-de de mí\nre-gre-sar",
@@ -565,7 +565,7 @@
     "id": 70,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Se_a-ca-bó,\nfrí-a tris-te-za,\ndes-a-mor",
@@ -573,7 +573,7 @@
     "id": 71,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La lu-na\nya no son-rí-e\npa-ra mí",
@@ -581,7 +581,7 @@
     "id": 72,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Al fi-nal\nto-do_es la-men-to\ny pe-na",
@@ -589,7 +589,7 @@
     "id": 73,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Ya no se\nque es co-rrec-to\ny que no",
@@ -597,15 +597,15 @@
     "id": 74,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": true
+    "show": false
   },
   {
-    "text": "Soy li-bre\npa-ra bien o mal\nyo man-do",
+    "text": "Soy li-bre,\npa-ra bien o mal\nyo man-do",
     "date": "2025-01-13",
     "id": 75,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Po-der e-le-gir\nmi com-ple-to des-ti-no\nal-ma des-nu-da",
@@ -613,7 +613,7 @@
     "id": 76,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": false
   },
   {
     "text": "To-dos sa-be-mos\nco-mo fun-cio-na to-do\nsi no_es-tá ro-to",
@@ -621,7 +621,7 @@
     "id": 77,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Bien y mal\nes sub-je-ti-vo\ny fu-gaz",
@@ -629,7 +629,7 @@
     "id": 78,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Cuan-do pre-gun-tes\nde-bes es-tar a-bier-to\na la res-pues-ta",
@@ -637,7 +637,7 @@
     "id": 79,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": false
   },
   {
     "text": "Mi_a-mi-go\nse fue por siem-pre,\ndos a-ños",
@@ -645,7 +645,7 @@
     "id": 80,
     "selected": true,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "El to-cón\npa-re-ce muer-to,\nes-pe-ra",
@@ -653,7 +653,7 @@
     "id": 81,
     "selected": false,
     "tags": ["3-5-3"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Dí-as fu-ga-ces\ncie-los lle-nos de_es-tre-llas,\nbos-ques ne-va-dos",
@@ -661,7 +661,7 @@
     "id": 82,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Mar-te_y Ju-pi-ter\nNep-tu-no_U-ra-no_y Ve-nus,\ncie-lo ú-ni-co",
@@ -669,7 +669,7 @@
     "id": 83,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Ra-mas des-nu-das\ncie-los de to-nos gri-ses,\nfi-nal del ci-clo",
@@ -677,7 +677,7 @@
     "id": 84,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Cie-lo co-bri-zo\nlas som-bras co-rren li-bres,\nlle-ga la no-che",
@@ -685,7 +685,7 @@
     "id": 85,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "E-ter-no tic-tac\nsu-ce-si-ón in-fi-ni-ta,\nsen-ti-do fa-laz",
@@ -693,7 +693,7 @@
     "id": 86,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Ri-sas ner-vio-sas,\ndos a-man-tes dis-fru-tan\nes-tan-do jun-tos",
@@ -701,7 +701,7 @@
     "id": 87,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "El pol-vo cu-bre\nlas te-clas de plás-ti-co,\ndes-ti-no co-mún",
@@ -709,7 +709,7 @@
     "id": 88,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "U-na_al-mo-ha-da\ndon-de an-tes e-ran dos,\nsue-ño le-ja-no",
@@ -717,7 +717,7 @@
     "id": 89,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "A-mi-go cuen-co\nto-ma-mos el té jun-tos,\nma-ña-nas frí-as",
@@ -725,7 +725,7 @@
     "id": 90,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Cual lu-ciér-na-gas\na-lum-bran mi pa-se-o\nmi-les de lu-ces",
@@ -733,7 +733,7 @@
     "id": 91,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Un des-per-fec-to\nen mi co-che cre-í ver,\nu-na po-li-lla",
@@ -741,7 +741,7 @@
     "id": 92,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "In-di-fe-ren-tes,\ncán-ti-cos de go-rrio-nes\nen el in-vier-no",
@@ -749,7 +749,7 @@
     "id": 93,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Na-tu-ra-le-za\ncu-bier-ta de as-fal-to,\nmu-sa nos-tal-gía",
@@ -757,7 +757,7 @@
     "id": 94,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Tris-tes re-cuer-dos,\nre-loj re-ci-ta man-tra\nme-ce la no-che",
@@ -765,7 +765,7 @@
     "id": 95,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Bri-sa he-la-da\ncá-li-do to-que de sol,\ndí-a in-ver-nal",
@@ -773,7 +773,7 @@
     "id": 96,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "U-na u-rra-ca\nre-bus-ca en-tre res-tos,\n¡va-ya ban-que-te!",
@@ -781,7 +781,7 @@
     "id": 97,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Gra-ta sor-pre-sa,\n¡u-na pa-ta-ta de-luxe\nen mi pe-di-do!",
@@ -789,7 +789,7 @@
     "id": 98,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Vi-si-ta bre-ve,\ngo-rrión can-ta frus-tra-do\nvue-lo ham-brien-to",
@@ -797,7 +797,7 @@
     "id": 99,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Sien-to en-vi-dia,\nar-tis-tas an-ces-tra-les\nque be-llos ver-sos",
@@ -805,7 +805,7 @@
     "id": 100,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Ba-jo tu som-bra\nes-pe-ro a las flo-res,\ngi-gan-te ver-de",
@@ -813,7 +813,7 @@
     "id": 101,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Co-rro y co-rro\nper-si-go u-na me-ta,\nel ho-ri-zon-te",
@@ -821,7 +821,7 @@
     "id": 102,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Mi-ro_al o-es-te\nsor-pren-den-te be-lle-za,\no-ca-so ro-sa",
@@ -829,7 +829,7 @@
     "id": 103,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Es-pe-sa nie-bla\npier-des al pe-re-gri-no,\n¿qué pro-pó-si-to?",
@@ -837,7 +837,7 @@
     "id": 104,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "E-cos pa-sa-dos,\nes-pi-rí-tus pre-sen-tes,\nre-cuer-dos ro-tos",
@@ -845,7 +845,7 @@
     "id": 105,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Ba-jo es-tre-llas\nnues-tros re-cuer-dos jun-tos\nro-ban mi sue-ño",
@@ -853,7 +853,7 @@
     "id": 106,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "To-dos los co-pos\na-ca-ban de-rre-ti-dos,\nman-to al-bi-no",
@@ -861,7 +861,7 @@
     "id": 107,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Mu-sa mo-nar-ca\n¿có-mo con-si-go ha-cer\nque no te va-yas?",
@@ -869,7 +869,7 @@
     "id": 108,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "For-mas le-ja-nas\nbru-ma de las mon-ta-ñas\na-bri-go frí-o",
@@ -877,7 +877,7 @@
     "id": 109,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Al-ta mon-ta-ña\nnu-bes cu-bren tu ci-ma\na-ho-ra pla-na",
@@ -885,7 +885,7 @@
     "id": 110,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Vis-ta in-ver-nal\npi-ro-tec-nia ro-sa-da\nllu-via de_al-mendras",
@@ -893,7 +893,7 @@
     "id": 111,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Mi pa-so de-ja\nhue-llas en el ca-mi-no,\nque_el tiem-po bo-rra",
@@ -901,7 +901,7 @@
     "id": 112,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Yer-mo pá-ra-mo,\nbro-te de-sa-fian-te\nvo-lun-tad sa-cra",
@@ -909,7 +909,7 @@
     "id": 113,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Ex-tra-ño ár-bol,\nre-pa-so mi ca-mi-no\n¿Dón-de me per-dí?",
@@ -917,7 +917,7 @@
     "id": 114,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Char-co de llu-via,\ne-fí-me-ro re-fle-jo\nllé-va-me a-llí",
@@ -925,7 +925,7 @@
     "id": 115,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "La llu-via ca-e\nel ar-tis-ta es-cri-be\nel al-ma vi-ve",
@@ -933,7 +933,7 @@
     "id": 116,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Sa-lí con mie-do\nmi-ran-do co-mo vol-ver,\ntiem-po de co-rrer",
@@ -941,7 +941,7 @@
     "id": 117,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Lar-go ca-mi-nar,\nhu-mo con-tra el cie-lo,\npla-to ca-lien-te",
@@ -949,7 +949,7 @@
     "id": 118,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "De vuel-ta en pie\nca-mi-no sin co-ge-ar,\nmás a-ún due-le",
@@ -957,7 +957,7 @@
     "id": 119,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Pe-que-ño go-rrión,\n¿trae-rás las mis-mas plu-mas\ntras el ve-ra-no?",
@@ -965,7 +965,7 @@
     "id": 120,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Du-ra ca-í-da,\na par-tir de a-ho-ra\nmi-ra tus bo-tas",
@@ -973,7 +973,7 @@
     "id": 121,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Mo-ja-do_el sue-lo\nmar-zo trae_el e-qui-no-cio\nrít-mi-co ger-mén",
@@ -981,7 +981,7 @@
     "id": 122,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Sol y es-tre-llas\nper-fec-to e-qui-li-brio,\npuer-ta a-bier-ta",
@@ -989,7 +989,7 @@
     "id": 123,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "¡Un ver-de-ci-llo!\nvi-si-ta pri-ma-ve-ral\nal-go tem-pra-na",
@@ -997,7 +997,7 @@
     "id": 124,
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "text": "Tras tan-to tiem-po,\nes tu ho-ra de bri-llar\n¡suer-te a-mi-go!",
@@ -1005,7 +1005,7 @@
     "id": 125,
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 126,
@@ -1013,7 +1013,7 @@
     "date": "2025-03-15",
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 127,
@@ -1021,7 +1021,7 @@
     "date": "2025-03-15",
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 128,
@@ -1029,7 +1029,7 @@
     "date": "2025-03-16",
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 129,
@@ -1037,7 +1037,7 @@
     "date": "2025-03-16",
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 130,
@@ -1045,7 +1045,7 @@
     "date": "2025-03-21",
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 131,
@@ -1053,7 +1053,7 @@
     "date": "2025-03-22",
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 132,
@@ -1061,7 +1061,7 @@
     "date": "2025-03-23",
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 133,
@@ -1069,7 +1069,7 @@
     "date": "2025-03-23",
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 134,
@@ -1077,7 +1077,7 @@
     "date": "2025-03-23",
     "selected": true,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   },
   {
     "id": 135,
@@ -1085,6 +1085,6 @@
     "date": "2025-03-26",
     "selected": false,
     "tags": ["5-7-5"],
-    "hide": false
+    "show": true
   }
 ]

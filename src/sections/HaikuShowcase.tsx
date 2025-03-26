@@ -13,8 +13,8 @@ enum EFilters {
 }
 
 const filterFns: Record<EFilters | "None", (h: THaiku) => boolean> = {
-  [EFilters.TODOS]: (h: THaiku) => !h.hide,
-  [EFilters.DESTACADOS]: (h: THaiku) => !h.hide && h.selected,
+  [EFilters.TODOS]: (h: THaiku) => h.show,
+  [EFilters.DESTACADOS]: (h: THaiku) => h.show && h.selected,
   None: () => false,
 };
 

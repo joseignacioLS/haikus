@@ -10,7 +10,7 @@ import type { THaiku } from "../../types";
 export function getStaticPaths() {
   return [
     ...haikus
-      .filter((h) => !h.hide)
+      .filter((h) => h.show)
       .map(({ id }) => {
         return {
           params: { id },
@@ -28,7 +28,7 @@ const id =
     .filter((v) => Boolean(v))
     .at(-1) ?? "0";
 
-const visibleHaikus = haikus.filter((h) => !h.hide);
+const visibleHaikus = haikus.filter((h) => h.show);
 const haiku: THaiku | undefined = visibleHaikus.find(
   (h) => h.id === Number(id)
 );
