@@ -37,7 +37,7 @@ const ShareButton = ({ id }: { id: number }) => {
 };
 
 type Props = {
-  haiku: THaiku;
+  haiku: THaiku | undefined;
   style?: Record<string, string>;
   size?: string;
   showDate?: boolean;
@@ -45,6 +45,10 @@ type Props = {
 };
 
 export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
+  if (!haiku) {
+    navigate(import.meta.env.BASE_URL);
+    return <></>;
+  }
   return (
     <div
       style={{

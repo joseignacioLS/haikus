@@ -21,8 +21,9 @@ const id =
     .filter((v) => Boolean(v))
     .at(-1) ?? "0";
 
-const haiku: THaiku | undefined = haikus.find((h) => h.id === Number(id));
-if (!haiku) navigate(`${import.meta.env.BASE_URL}`);
+const haiku: THaiku | undefined = haikus.find(
+  (h) => h.id === Number(id) && !h.hide
+);
 ---
 
 <Layout>
@@ -31,7 +32,7 @@ if (!haiku) navigate(`${import.meta.env.BASE_URL}`);
       #{id}
     </Title>
     <div class="card">
-      {haiku && <Haiku client:load haiku={haiku} size="xl" detailed />}
+      <Haiku client:load haiku={haiku} size="xl" detailed />
     </div>
   </main>
 </Layout>
