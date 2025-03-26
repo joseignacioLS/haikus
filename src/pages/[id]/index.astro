@@ -1,18 +1,25 @@
 ---
-import { navigate } from "astro:transitions/client";
 import { Haiku } from "../../components/Haiku";
 import { Title } from "../../components/Title";
 import haikus from "../../const/haikus.json";
+import HaikuGuard from "../../guards/HaikuGuard";
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/_blocks.scss";
 import type { THaiku } from "../../types";
 
 export function getStaticPaths() {
-  return haikus.map(({ id }) => {
-    return {
-      params: { id },
-    };
-  });
+  return [
+    ...haikus
+      .filter((h) => !h.hide)
+      .map(({ id }) => {
+        return {
+          params: { id },
+        };
+      }),
+    {
+      params: { id: "random" },
+    },
+  ];
 }
 
 const id =
@@ -21,18 +28,20 @@ const id =
     .filter((v) => Boolean(v))
     .at(-1) ?? "0";
 
-const haiku: THaiku | undefined = haikus.find(
-  (h) => h.id === Number(id) && !h.hide
+const visibleHaikus = haikus.filter((h) => !h.hide);
+const haiku: THaiku | undefined = visibleHaikus.find(
+  (h) => h.id === Number(id)
 );
 ---
 
 <Layout>
   <main class="slim">
+    <HaikuGuard id={id} client:load />
     <Title client:load showBackButton>
-      #{id}
+      #{haiku?.id}
     </Title>
     <div class="card">
-      <Haiku client:load haiku={haiku} size="xl" detailed />
+      {haiku && <Haiku client:load haiku={haiku} size="xl" detailed />}
     </div>
   </main>
 </Layout>

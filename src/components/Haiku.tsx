@@ -1,7 +1,7 @@
 import { navigate } from "astro:transitions/client";
 import type { THaiku } from "../types";
-import styles from "./Haiku.module.scss";
 import { cleanHaiku, formatDate } from "../utils/text";
+import styles from "./Haiku.module.scss";
 
 const sizeToFontSize: Record<string, string> = {
   xl: "2rem",
@@ -37,7 +37,7 @@ const ShareButton = ({ id }: { id: number }) => {
 };
 
 type Props = {
-  haiku: THaiku | undefined;
+  haiku: THaiku;
   style?: Record<string, string>;
   size?: string;
   showDate?: boolean;
@@ -45,10 +45,6 @@ type Props = {
 };
 
 export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
-  if (!haiku) {
-    navigate(import.meta.env.BASE_URL);
-    return <></>;
-  }
   return (
     <div
       style={{
