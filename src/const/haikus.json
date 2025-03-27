@@ -645,7 +645,8 @@
     "id": 80,
     "selected": true,
     "tags": ["3-5-3"],
-    "show": true
+    "show": true,
+    "description": ["Hace dos años que se fue Chuck. Le echo de menos."]
   },
   {
     "text": "El to-cón\npa-re-ce muer-to,\nes-pe-ra",
@@ -741,7 +742,10 @@
     "id": 92,
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Que gracia. Caminaba hacia mi coche y en el lateral parecía haber un golpe o algún desperfecto. Sin embargo, al acercarme, ví que realmente era una polilla posada en la puerta. De alguna manera camuflándose en un entorno moderno."
+    ]
   },
   {
     "text": "In-di-fe-ren-tes,\ncán-ti-cos de go-rrio-nes\nen el in-vier-no",
@@ -885,7 +889,10 @@
     "id": 110,
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "He visto unas nubes muy densas y bajas que hacían de techo, como cortando la montaña a mitad. Daba la impresión de que, en lugar de en pico, arriba hubiese una gran planicie."
+    ]
   },
   {
     "text": "Vis-ta in-ver-nal\npi-ro-tec-nia ro-sa-da\nllu-via de_al-mendras",
@@ -997,7 +1004,11 @@
     "id": 124,
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "He visto un verdecillo posado en un rama, pero aún quedan unas semanas para la primavera.",
+      "Que curioso."
+    ]
   },
   {
     "text": "Tras tan-to tiem-po,\nes tu ho-ra de bri-llar\n¡suer-te a-mi-go!",
@@ -1057,7 +1068,11 @@
     "date": "2025-03-22",
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Una sesión nocturna de charla con un viejo amigo. Hablamos de los tiempos juntos y de las incertidumbres de nuestro presente y futuro.",
+      "Me alegra tenerle en mi vida y poder hablar así con él."
+    ]
   },
   {
     "id": 132,
