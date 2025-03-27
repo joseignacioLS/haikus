@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
 import { Title } from "../components/Title.tsx";
@@ -74,6 +74,28 @@ export const HaikuShowcase = () => {
 
   useEffect(initializeFilter, []);
 
+  const carousel = useMemo(
+    () => (
+      <Carousel
+        slides={haikus
+          .filter(
+            filter
+              ? filterFns[filter] ?? filterFns[EFilters.TODOS]
+              : filterFns.None
+          )
+          .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
+          .map((haiku) => {
+            return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
+          })}
+        onScroll={(scrollPosition) =>
+          storeData(JSON.stringify({ scrollPosition, filter }))
+        }
+        scrollPosition={scrollPosition}
+      ></Carousel>
+    ),
+    [haikus, filter, scrollPosition]
+  );
+
   return (
     <>
       <Title>
@@ -106,22 +128,7 @@ export const HaikuShowcase = () => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <Carousel
-          slides={haikus
-            .filter(
-              filter
-                ? filterFns[filter] ?? filterFns[EFilters.TODOS]
-                : filterFns.None
-            )
-            .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
-            .map((haiku) => {
-              return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
-            })}
-          onScroll={(scrollPosition) =>
-            storeData(JSON.stringify({ scrollPosition, filter }))
-          }
-          scrollPosition={scrollPosition}
-        ></Carousel>
+        {carousel}
         {filter && (
           <p key={filter} className={styles.description}>
             {descriptions[filter]}
