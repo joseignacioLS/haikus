@@ -29,8 +29,12 @@ export const HaikuShowcase = () => {
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
-  const [touchStart, setTouchStart] = useState(undefined);
-  const [touchEnd, setTouchEnd] = useState(undefined);
+  const [touchStart, setTouchStart] = useState<
+    { x: number; y: number } | undefined
+  >(undefined);
+  const [touchEnd, setTouchEnd] = useState<
+    { x: number; y: number } | undefined
+  >(undefined);
 
   const initializeFilter = () => {
     try {
@@ -50,26 +54,34 @@ export const HaikuShowcase = () => {
     }
   };
 
-  const handleTouchEnd = (e: any) => {
+  const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    const delta = touchEnd - touchStart;
+    const deltaX = touchEnd.x - touchStart.x;
+    const deltaY = touchEnd.y - touchStart.y;
     setTouchStart(undefined);
     setTouchEnd(undefined);
-    if (Math.abs(delta) < 50) return;
-    if (delta > 0) {
+    if (Math.abs(deltaY) > 50) return;
+    if (Math.abs(deltaX) < 50) return;
+    if (deltaX > 0) {
       setFilter(EFilters.TODOS);
       return;
     }
-    if (delta < 0) {
+    if (deltaX < 0) {
       setFilter(EFilters.DESTACADOS);
       return;
     }
   };
-  const handleTouchStart = (e: any) => {
-    setTouchStart(e.targetTouches[0].clientX);
+  const handleTouchStart = (e: React.TouchEvent<HTMLElement>) => {
+    setTouchStart({
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY,
+    });
   };
-  const handleTouchMove = (e: any) => {
-    setTouchEnd(e.targetTouches[0].clientX);
+  const handleTouchMove = (e: React.TouchEvent<HTMLElement>) => {
+    setTouchEnd({
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY,
+    });
   };
 
   useEffect(initializeFilter, []);

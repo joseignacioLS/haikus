@@ -23,7 +23,8 @@ const generateNewEntry = (
     date: date ?? Temporal.Now.plainDateISO().toString(),
     selected,
     tags,
-    hide: false,
+    show: true,
+    description: [],
   };
 };
 
