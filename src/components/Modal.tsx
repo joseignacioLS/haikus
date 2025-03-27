@@ -5,12 +5,9 @@ import styles from "./Modal.module.scss";
 export const Modal = () => {
   const store = useStore(modalStore);
   const handleClose = () => {
-    modalStore.set({
-      ...store,
-      isOpen: false,
-    });
+    modalStore.set(null);
   };
-  if (!store.isOpen) return <></>;
+  if (!store) return <></>;
   return (
     <div className={styles.wrapper} onClick={handleClose}>
       <div
@@ -20,10 +17,13 @@ export const Modal = () => {
           e.stopPropagation();
         }}
       >
-        <button className={styles.closeBtn} onClick={handleClose}>
-          X
+        <button className={`naked ${styles.closeBtn}`} onClick={handleClose}>
+          <img
+            src={`${import.meta.env.BASE_URL}close.svg`}
+            alt="Círculo con un aspa dentro"
+          />
         </button>
-        {store.content}
+        {store}
       </div>
     </div>
   );

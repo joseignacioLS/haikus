@@ -1,39 +1,15 @@
 import { navigate } from "astro:transitions/client";
+import { modalStore } from "../store/Modal";
 import type { THaiku } from "../types";
 import { cleanHaiku, formatDate } from "../utils/text";
+import { ShareButton } from "./ShareButton";
+import { DetailModal } from "./DetailModal";
 import styles from "./Haiku.module.scss";
 
 const sizeToFontSize: Record<string, string> = {
   xl: "2rem",
   default: "1rem",
   s: ".75rem",
-};
-
-const ShareButton = ({ id }: { id: number }) => {
-  const copyShareLinkToClipboard = () => {
-    navigator.clipboard
-      .writeText(`${window.location.host}${import.meta.env.BASE_URL}${id}`)
-      .then(
-        () =>
-          !(navigator as any).userAgentData?.mobile &&
-          alert(`Se ha copiado la url del haiku #${id}`)
-      );
-  };
-  return (
-    <button
-      className={styles.shareBtn}
-      onClick={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        copyShareLinkToClipboard();
-      }}
-    >
-      <img
-        src={`${import.meta.env.BASE_URL}share.svg`}
-        alt="Icono de compartir"
-      />
-    </button>
-  );
 };
 
 type Props = {
@@ -45,6 +21,9 @@ type Props = {
 };
 
 export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
+  const openDescription = () => {
+    modalStore.set(<DetailModal haiku={haiku} />);
+  };
   return (
     <div
       style={{
@@ -66,23 +45,25 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
               })}
           </div>
           <div className={styles.detail}>
-            <div className={styles.description}>
-              {haiku.description?.map((p) => (
-                <p key={p}>{p}</p>
+            <p className={styles.date}>
+              {formatDate(haiku.date).map((item, index) => (
+                <span key={index}>{item}</span>
               ))}
-            </div>
-            <div className={styles.more}>
-              <p className={styles.date}>
-                {formatDate(haiku.date).map((item, index) => (
-                  <span key={index}>{item}</span>
-                ))}
-              </p>
-              <ShareButton id={haiku.id} />
-            </div>
+            </p>
+            {haiku.description && (
+              <button
+                className={`${styles.description}`}
+                onClick={openDescription}
+                disabled={!haiku.description}
+              >
+                Sobre este haiku
+              </button>
+            )}
+            <ShareButton id={haiku.id} />
           </div>
         </>
       ) : (
-        <button className={styles.content}>
+        <button className={`naked ${styles.content}`}>
           {cleanHaiku(haiku.text)
             .split("\n")
             .map((l) => {

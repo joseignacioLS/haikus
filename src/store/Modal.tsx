@@ -1,6 +1,4 @@
 import { atom } from "nanostores";
+import type { ReactElement } from "react";
 
-export const modalStore = atom({
-  isOpen: false,
-  content: <></>,
-});
+export const modalStore = atom<ReactElement | null>(null);

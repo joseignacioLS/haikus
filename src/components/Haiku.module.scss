@@ -1,3 +1,5 @@
+@use "../styles/colors";
+
 .haiku {
   position: relative;
   width: 100%;
@@ -8,7 +10,7 @@
   overflow: hidden;
 
   &.detailed {
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 4fr auto;
   }
 
   .content {
@@ -27,46 +29,23 @@
     height: 100%;
     text-align: center;
     font-size: 75%;
-    display: grid;
-    grid-template-columns: 1fr 2ch;
-    gap: 1rem;
-    overflow: hidden;
-    .more {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      .date {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 
-        gap: 0;
-        line-height: 1.7ch;
-        font-size: 75%;
-      }
+    .date {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 0;
+      line-height: 1.7ch;
+      font-size: 75%;
     }
 
     .description {
-      width: 100%;
-      overflow: auto;
       font-size: 75%;
-      text-align: left;
-      p {
-        margin-bottom: 1ch;
-      }
-    }
-  }
-
-  .shareBtn {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-      object-fit: contain;
     }
   }
 }

@@ -116,7 +116,7 @@ export const HaikuShowcase = () => {
             return (
               <button
                 key={k}
-                className={filter === k ? styles.selectedTitle : ""}
+                className={`naked ${filter === k ? styles.selectedTitle : ""}`}
                 onClick={() => {
                   setFilter(k);
                   storeData(

@@ -1,0 +1,12 @@
+.shareBtn {
+  width: 2ch;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}

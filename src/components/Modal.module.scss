@@ -10,23 +10,30 @@
   justify-content: center;
   align-items: center;
 
+  --padding: 2rem;
+
   .modal {
     position: relative;
     width: 90vw;
     height: fit-content;
     background-color: rgba(black, 0.95);
-    border-radius: 2rem;
-    padding: 2rem;
+    border-radius: var(--padding);
+    padding: var(--padding);
 
     .closeBtn {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
+      top: calc(var(--padding) / 2);
+      right: calc(var(--padding) / 2);
+      width: var(--padding);
+      aspect-ratio: 1 / 1;
       background-color: transparent;
       border: 0;
       outline: 0;
       color: colors.$text;
       cursor: pointer;
+      img {
+        width: 100%;
+      }
     }
   }
 }

@@ -66,11 +66,26 @@ h3 {
 }
 
 button {
-  background-color: transparent;
   border: 0;
   color: inherit;
   font-family: inherit;
   cursor: pointer;
   font-size: inherit;
   width: fit-content;
+  color: colors.$background;
+  font-weight: bold;
+  background-color: colors.$button;
+  padding: .5ch 1ch;
+  border-radius: 2ch;
+
+  &.naked {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &:disabled {
+    opacity: .3;
+  }
 }

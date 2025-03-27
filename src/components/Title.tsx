@@ -13,7 +13,7 @@ export const Title = ({ children, showBackButton = false }: Props) => {
     <nav className={styles.navbar}>
       {showBackButton && (
         <button
-          className={styles.backbtn}
+          className={`naked ${styles.backbtn}`}
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();

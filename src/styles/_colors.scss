@@ -5,6 +5,7 @@
   --white-disabled: rgba(255, 255, 255, 0.5);
   --blue: cyan;
   --pink: rgb(224, 67, 255);
+  --orange: chocolate;
 }
 
 $background: var(--dark-green);
@@ -13,3 +14,4 @@ $text: var(--white);
 $disabled: var(--white-disabled);
 $anchor: var(--blue);
 $anchor_visited: var(--pink);
+$button: var(--orange);
