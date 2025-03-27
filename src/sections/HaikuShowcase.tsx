@@ -29,6 +29,8 @@ export const HaikuShowcase = () => {
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
+  const [touchStart, setTouchStart] = useState(undefined);
+  const [touchEnd, setTouchEnd] = useState(undefined);
 
   const initializeFilter = () => {
     try {
@@ -46,6 +48,28 @@ export const HaikuShowcase = () => {
     } catch (err) {
       setFilter(EFilters.DESTACADOS);
     }
+  };
+
+  const handleTouchEnd = (e: any) => {
+    if (!touchStart || !touchEnd) return;
+    const delta = touchEnd - touchStart;
+    setTouchStart(undefined);
+    setTouchEnd(undefined);
+    if (Math.abs(delta) < window.innerWidth / 3) return;
+    if (delta > 0) {
+      setFilter(EFilters.TODOS);
+      return;
+    }
+    if (delta < 0) {
+      setFilter(EFilters.DESTACADOS);
+      return;
+    }
+  };
+  const handleTouchStart = (e: any) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+  const handleTouchMove = (e: any) => {
+    setTouchEnd(e.targetTouches[0].clientX);
   };
 
   useEffect(initializeFilter, []);
@@ -76,7 +100,12 @@ export const HaikuShowcase = () => {
           })}
         </span>
       </Title>
-      <div className={styles.carouselWrapper}>
+      <div
+        className={styles.carouselWrapper}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <Carousel
           slides={haikus
             .filter(
