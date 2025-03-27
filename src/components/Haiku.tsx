@@ -51,7 +51,7 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
         ...style,
         fontSize: sizeToFontSize[size] ?? sizeToFontSize.default,
       }}
-      className={styles.haiku}
+      className={`${styles.haiku} ${detailed ? styles.detailed : ""}`}
       onClick={() => {
         !detailed && navigate(`${import.meta.env.BASE_URL}${haiku.id}`);
       }}
@@ -66,11 +66,19 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
               })}
           </div>
           <div className={styles.detail}>
-            <p className={styles.date}>
-              {formatDate(haiku.date).map((item, index) => (
-                <span key={index}>{item}</span>
+            <div className={styles.description}>
+              {haiku.description?.map((p) => (
+                <p key={p}>{p}</p>
               ))}
-            </p>
+            </div>
+            <div className={styles.more}>
+              <p className={styles.date}>
+                {formatDate(haiku.date).map((item, index) => (
+                  <span key={index}>{item}</span>
+                ))}
+              </p>
+              <ShareButton id={haiku.id} />
+            </div>
           </div>
         </>
       ) : (
@@ -82,7 +90,6 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
             })}
         </button>
       )}
-      <ShareButton id={haiku.id} />
     </div>
   );
 };

@@ -1045,7 +1045,11 @@
     "date": "2025-03-21",
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Salgo de Alicante, camino de ver a mis amigos, y mientras conduzco el Maigmó se eleva ante mí.",
+      "Después de tanto tiempo, aún me sorprende."
+    ]
   },
   {
     "id": 131,
@@ -1069,7 +1073,10 @@
     "date": "2025-03-23",
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Normalmente no paseo por las noches, pero hoy me hacía falta y he decidido salir. En mi camino me cruzo con un gato negro de ojos dorados, y durante un momento nos miramos y noto una conexión."
+    ]
   },
   {
     "id": 134,
@@ -1077,7 +1084,10 @@
     "date": "2025-03-23",
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Tras cinco días de vacaciones toca volver al trabajo. Quizás no sea tanto tener una rutina de trabajo, sino las condiciones y la proyección de este sistema lo que me quita las ganas de volver"
+    ]
   },
   {
     "id": 135,
@@ -1093,6 +1103,11 @@
     "date": "2025-03-26",
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Tras una tarde con amigos me siento en mi cama a escribir en mi libreta.",
+      "Aún es esa temporada tan agradable en la que el peso y el calor del edredón se agradecen.",
+      "Es media noche, escucho el segundero de mi reloj de pared, que hace patente el paso del tiempo."
+    ]
   }
 ]

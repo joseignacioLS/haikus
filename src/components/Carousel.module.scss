@@ -12,9 +12,6 @@
   overflow: auto;
   gap: 2rem;
 
-  scrollbar-color: colors.$text transparent;
-  scrollbar-width: thin;
-
   scroll-snap-type: y mandatory;
 
   & > * {
