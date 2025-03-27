@@ -55,7 +55,7 @@ export const HaikuShowcase = () => {
     const delta = touchEnd - touchStart;
     setTouchStart(undefined);
     setTouchEnd(undefined);
-    if (Math.abs(delta) < window.innerWidth / 3) return;
+    if (Math.abs(delta) < 100) return;
     if (delta > 0) {
       setFilter(EFilters.TODOS);
       return;
