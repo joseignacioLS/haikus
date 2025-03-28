@@ -1,5 +1,5 @@
 import { navigate } from "astro:transitions/client";
-import { type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 
 import styles from "./Title.module.scss";
 
@@ -9,6 +9,9 @@ type Props = {
 };
 
 export const Title = ({ children, showBackButton = false }: Props) => {
+  useEffect(() => {
+    window.scrollTo(0, 1);
+  }, []);
   return (
     <nav className={styles.navbar}>
       {showBackButton && (
