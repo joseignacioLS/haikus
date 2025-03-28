@@ -670,7 +670,10 @@
     "id": 83,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Se alinean los planetas en el cielo nocturno, por lo visto no volverá a pasar hasta dentro de cientos de años."
+    ]
   },
   {
     "text": "Ra-mas des-nu-das\ncie-los de to-nos gri-ses,\nfi-nal del ci-clo",
@@ -726,7 +729,10 @@
     "id": 90,
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Otro día más trabajando, me preparo un té, y la taza y yo pasamos un rato juntos."
+    ]
   },
   {
     "text": "Cual lu-ciér-na-gas\na-lum-bran mi pa-se-o\nmi-les de lu-ces",
@@ -777,7 +783,10 @@
     "id": 96,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "He de admitir que soy una persona de otoño/invierno. El viento frío en contraposición con el calor del sol en la cara es una sensación increible."
+    ]
   },
   {
     "text": "U-na u-rra-ca\nre-bus-ca en-tre res-tos,\n¡va-ya ban-que-te!",
@@ -785,7 +794,10 @@
     "id": 97,
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Hace reflexionar como lo que sería un montón de basura para mí, para otro ser puede ser una fuente de alimento."
+    ]
   },
   {
     "text": "Gra-ta sor-pre-sa,\n¡u-na pa-ta-ta de-luxe\nen mi pe-di-do!",
@@ -793,7 +805,10 @@
     "id": 98,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Desde niño siempre me ha hecho gracia que dentro de las patatas fritas venga una 'deluxe'."
+    ]
   },
   {
     "text": "Vi-si-ta bre-ve,\ngo-rrión can-ta frus-tra-do\nvue-lo ham-brien-to",
@@ -801,7 +816,10 @@
     "id": 99,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Hoy me he dado el lujo de salir a comer solo. Mientras disfruto de la comida al sol, un gorrión se acerca en busca de comida."
+    ]
   },
   {
     "text": "Sien-to en-vi-dia,\nar-tis-tas an-ces-tra-les\nque be-llos ver-sos",
@@ -833,7 +851,10 @@
     "id": 103,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Voy de camino a mi partida de rol a última hora de la tarde invernal, y al mirar al oeste veo un cielo rosa precioso."
+    ]
   },
   {
     "text": "Es-pe-sa nie-bla\npier-des al pe-re-gri-no,\n¿qué pro-pó-si-to?",
@@ -865,7 +886,10 @@
     "id": 107,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Siempre decimos que no hay dos copos de nieve iguales, que son únicos. Y aun así todos tienen el mismo destino."
+    ]
   },
   {
     "text": "Mu-sa mo-nar-ca\n¿có-mo con-si-go ha-cer\nque no te va-yas?",
@@ -900,7 +924,10 @@
     "id": 111,
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Bien entrado el invierno los almendros empiezan a florecer, llenando los árboles de color rosa, como si de fuegos artificiales se trataran."
+    ]
   },
   {
     "text": "Mi pa-so de-ja\nhue-llas en el ca-mi-no,\nque_el tiem-po bo-rra",
@@ -924,7 +951,10 @@
     "id": 114,
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "A veces no nos damos cuenta de que nos hemos perdido hasta que no nos topamos con algo extraño, que nos hace ver que no sabemos donde estamos."
+    ]
   },
   {
     "text": "Char-co de llu-via,\ne-fí-me-ro re-fle-jo\nllé-va-me a-llí",
@@ -948,7 +978,7 @@
     "id": 117,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": false
   },
   {
     "text": "Lar-go ca-mi-nar,\nhu-mo con-tra el cie-lo,\npla-to ca-lien-te",
@@ -980,7 +1010,11 @@
     "id": 121,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "A veces nos centramos tanto en el ambiente o en los demás que no vemos que los que corremos peligro somos nosotros.",
+      "Es un momento para recordar que tenemos que cuidar de nosotros mismos también."
+    ]
   },
   {
     "text": "Mo-ja-do_el sue-lo\nmar-zo trae_el e-qui-no-cio\nrít-mi-co ger-mén",
@@ -988,7 +1022,10 @@
     "id": 122,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Se acerca el equinocio de primavera y me inspira a escribir, pero no consigo captarlo en forma de haiku."
+    ]
   },
   {
     "text": "Sol y es-tre-llas\nper-fec-to e-qui-li-brio,\npuer-ta a-bier-ta",
@@ -1016,7 +1053,10 @@
     "id": 125,
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Un buen amigo mío se enfrenta a un momento crucial en su vida. Le deseo lo mejor."
+    ]
   },
   {
     "id": 126,
@@ -1024,7 +1064,10 @@
     "date": "2025-03-15",
     "selected": true,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Es curioso ver como los árboles tiene ramas a partir de cierta altura. Han aprendido de sus errores y solo producen yemas donde saben que es fructífero."
+    ]
   },
   {
     "id": 127,
@@ -1040,7 +1083,10 @@
     "date": "2025-03-16",
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Últimamente me cuesta llenar el tiempo libre que tengo. Pienso en aquellas veces en las que quería más, y ahora que me sobre llega a agobiarme."
+    ]
   },
   {
     "id": 129,
@@ -1048,7 +1094,10 @@
     "date": "2025-03-16",
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Es raro ver salir la luna viviendo en la ciudad. Pero durante mi paseo nocturno, tras una colina y entre dos edificios, veo salir una lunea llena y brillante."
+    ]
   },
   {
     "id": 130,
@@ -1080,7 +1129,10 @@
     "date": "2025-03-23",
     "selected": false,
     "tags": ["5-7-5"],
-    "show": true
+    "show": true,
+    "description": [
+      "Aún inspirado por mi conversación con mi amigo sobre la vida, recuerdo el sitio y como compartir la carga nos alivia."
+    ]
   },
   {
     "id": 133,
