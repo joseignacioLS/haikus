@@ -63,11 +63,11 @@ export const HaikuShowcase = () => {
     if (Math.abs(deltaY) > 50) return;
     if (Math.abs(deltaX) < 50) return;
     if (deltaX > 0) {
-      setFilter(EFilters.TODOS);
+      handleFilterChange(EFilters.TODOS);
       return;
     }
     if (deltaX < 0) {
-      setFilter(EFilters.DESTACADOS);
+      handleFilterChange(EFilters.DESTACADOS);
       return;
     }
   };
@@ -82,6 +82,21 @@ export const HaikuShowcase = () => {
       x: e.targetTouches[0].clientX,
       y: e.targetTouches[0].clientY,
     });
+  };
+
+  const handleScroll = (scrollPosition: number) => {
+    storeData(JSON.stringify({ scrollPosition, filter }));
+  };
+
+  const handleFilterChange = (filter: EFilters) => {
+    setFilter(filter);
+    storeData(
+      JSON.stringify({
+        scrollPosition: scrollPosition ?? 0,
+        filter,
+      })
+    );
+    setScrollPosition(undefined);
   };
 
   useEffect(initializeFilter, []);
@@ -99,9 +114,7 @@ export const HaikuShowcase = () => {
           .map((haiku) => {
             return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
           })}
-        onScroll={(scrollPosition) =>
-          storeData(JSON.stringify({ scrollPosition, filter }))
-        }
+        onScroll={handleScroll}
         scrollPosition={scrollPosition}
       ></Carousel>
     ),
@@ -118,14 +131,7 @@ export const HaikuShowcase = () => {
                 key={k}
                 className={`naked ${filter === k ? styles.selectedTitle : ""}`}
                 onClick={() => {
-                  setFilter(k);
-                  storeData(
-                    JSON.stringify({
-                      scrollPosition: scrollPosition ?? 0,
-                      filter: k,
-                    })
-                  );
-                  setScrollPosition(undefined);
+                  handleFilterChange(k);
                 }}
               >
                 {k}
