@@ -1124,5 +1124,17 @@
       "Aún es esa temporada tan agradable en la que el peso y el calor del edredón se agradecen.",
       "Es media noche, escucho el segundero de mi reloj de pared, que hace patente el paso del tiempo."
     ]
+  },
+  {
+    "id": 137,
+    "text": "Da-dos de vein-te,\na-ven-tu-ras é-pi-cas,\nnue-vos a-mi-gos",
+    "date": "2025-03-27",
+    "selected": false,
+    "tags": ["5-7-5"],
+    "show": true,
+    "description": [
+      "No pensaba que fuese capaz de montar un nuevo grupo de rol. Me daba miedo abrirme a gente nueva.",
+      "Ya llevamos varias sesiones de la partida y estoy muy contento"
+    ]
   }
 ]

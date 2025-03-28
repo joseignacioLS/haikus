@@ -10,15 +10,28 @@ import "../styles/global.scss";
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <title>Haikus</title>
     <meta name="viewport" content="width=device-width" />
     <link
       rel="icon"
       type="image/svg+xml"
       href=`${import.meta.env.BASE_URL}favicon.webp`
     />
-    <meta name="generator" content={Astro.generator} />
     <meta name="description" content="Diario de Haikus de Jose" />
-    <title>Haikus</title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Haikus" />
+    <meta property="og:description" content="Diario de Haikus de Jose" />
+    <meta
+      property="og:image"
+      content="https://joseignacio.github.io/haikus/favicon.webp"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Haikus" />
+    <meta name="twitter:description" content="Diario de Haikus de Jose" />
+
     <ClientRouter />
   </head>
   <body>
