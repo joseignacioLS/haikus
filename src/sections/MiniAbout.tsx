@@ -17,7 +17,7 @@ export const MiniAbout = () => {
         <TitledBlock
           title={
             <h2 style={{ viewTransitionName: "about-title" }}>
-              <a href={`${import.meta.env.BASE_URL}about`}>Sobre mi</a>
+              <a href={`${import.meta.env.BASE_URL}about`}>Sobre mí</a>
             </h2>
           }
         >
