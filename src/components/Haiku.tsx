@@ -38,11 +38,9 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
       {detailed ? (
         <>
           <div className={styles.content}>
-            {cleanHaiku(haiku.text)
-              .split("\n")
-              .map((l) => {
-                return <p key={l}>{l}</p>;
-              })}
+            {haiku.text.map((l) => {
+              return <p key={l}>{cleanHaiku(l)}</p>;
+            })}
           </div>
           <div className={styles.detail}>
             <p className={styles.date}>
@@ -64,11 +62,9 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
         </>
       ) : (
         <button className={`naked ${styles.content}`}>
-          {cleanHaiku(haiku.text)
-            .split("\n")
-            .map((l) => {
-              return <p key={l}>{l}</p>;
-            })}
+          {haiku.text.map((l) => {
+            return <p key={l}>{cleanHaiku(l)}</p>;
+          })}
         </button>
       )}
     </div>

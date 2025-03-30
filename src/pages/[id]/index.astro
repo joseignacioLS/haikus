@@ -5,7 +5,7 @@ import haikus from "../../const/haikus.json";
 import HaikuGuard from "../../guards/HaikuGuard";
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/_blocks.scss";
-import type { THaiku } from "../../types";
+import { type THaiku } from "../../types";
 
 export function getStaticPaths() {
   return [
@@ -28,7 +28,7 @@ const id =
     .filter((v) => Boolean(v))
     .at(-1) ?? "0";
 
-const visibleHaikus = haikus.filter((h) => h.show);
+const visibleHaikus: THaiku[] = haikus.filter((h) => h.show);
 const haiku: THaiku | undefined = visibleHaikus.find(
   (h) => h.id === Number(id)
 );

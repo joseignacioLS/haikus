@@ -1,5 +1,5 @@
 export type THaiku = {
-  text: string;
+  text: string[];
   date: string;
   selected: boolean;
   id: number;

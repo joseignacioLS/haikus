@@ -1,6 +1,6 @@
 [
   {
-    "text": "O-to-ño,\nho-jas de co-lor\nna-ran-ja",
+    "text": ["O-to-ño,", "ho-jas de co-lor", "na-ran-ja"],
     "date": "2017-10-06",
     "id": 0,
     "selected": true,
@@ -8,7 +8,11 @@
     "show": true
   },
   {
-    "text": "La ho-ja tiem-bla,\npor fin em-pie-za_a ca-er,\nlle-ga_el o-to-ño",
+    "text": [
+      "La ho-ja tiem-bla,",
+      "por fin em-pie-za_a ca-er,",
+      "lle-ga_el o-to-ño"
+    ],
     "date": "2017-10-06",
     "id": 1,
     "selected": false,
@@ -16,7 +20,11 @@
     "show": true
   },
   {
-    "text": "La ca-la-ba-za,\ncre-ce_en el huer-to,fe-liz,\npron-to son-rei-rá.",
+    "text": [
+      "La ca-la-ba-za,",
+      "cre-ce_en el huer-to,fe-liz,",
+      "pron-to son-rei-rá."
+    ],
     "date": "2017-10-06",
     "id": 2,
     "selected": false,
@@ -24,7 +32,7 @@
     "show": true
   },
   {
-    "text": "El ár-bol\nmu-da las ho-jas,\ncan-sa-do",
+    "text": ["El ár-bol", "mu-da las ho-jas,", "can-sa-do"],
     "date": "2017-10-06",
     "id": 3,
     "selected": false,
@@ -32,7 +40,7 @@
     "show": true
   },
   {
-    "text": "La lu-na ro-ja\nin-di-ca la lle-ga-da,\nfe-liz co-se-cha",
+    "text": ["La lu-na ro-ja", "in-di-ca la lle-ga-da,", "fe-liz co-se-cha"],
     "date": "2017-10-06",
     "id": 4,
     "selected": true,
@@ -40,7 +48,11 @@
     "show": true
   },
   {
-    "text": "La som-bra lar-ga\nse-ña-la_al frí-o nor-te,\nlos o-sos duer-men",
+    "text": [
+      "La som-bra lar-ga",
+      "se-ña-la_al frí-o nor-te,",
+      "los o-sos duer-men"
+    ],
     "date": "2017-10-06",
     "id": 5,
     "selected": false,
@@ -48,7 +60,11 @@
     "show": true
   },
   {
-    "text": "De no-che_el fue-go\ncre-pi-ta_en la ho-gue-ra,\nca-lien-ta_el a-mor",
+    "text": [
+      "De no-che_el fue-go",
+      "cre-pi-ta_en la ho-gue-ra,",
+      "ca-lien-ta_el a-mor"
+    ],
     "date": "2017-10-06",
     "id": 6,
     "selected": false,
@@ -56,7 +72,7 @@
     "show": true
   },
   {
-    "text": "Oc-tu-bre,\n¿por qué no du-ras?\nqué-da-te",
+    "text": ["Oc-tu-bre,", "¿por qué no du-ras?", "qué-da-te"],
     "date": "2017-10-06",
     "id": 7,
     "selected": false,
@@ -64,7 +80,7 @@
     "show": true
   },
   {
-    "text": "Es-pe-ra,\npron-to ca-e-rá\nla no-che",
+    "text": ["Es-pe-ra,", "pron-to ca-e-rá", "la no-che"],
     "date": "2017-10-06",
     "id": 8,
     "selected": false,
@@ -72,7 +88,7 @@
     "show": false
   },
   {
-    "text": "El ca-lor\nde tu com-pa-ñí-a\nme lle-na",
+    "text": ["El ca-lor", "de tu com-pa-ñí-a", "me lle-na"],
     "date": "2017-10-06",
     "id": 9,
     "selected": false,
@@ -80,7 +96,7 @@
     "show": false
   },
   {
-    "text": "La pre-sión\nso-bre mi pe-cho,\nme_a-ho-ga",
+    "text": ["La pre-sión", "so-bre mi pe-cho,", "me_a-ho-ga"],
     "date": "2017-10-06",
     "id": 10,
     "selected": false,
@@ -88,7 +104,11 @@
     "show": false
   },
   {
-    "text": "Te-mo de-ci-dir\nme que-do sin op-cio-nes,\nde-ten-te tiem-po",
+    "text": [
+      "Te-mo de-ci-dir",
+      "me que-do sin op-cio-nes,",
+      "de-ten-te tiem-po"
+    ],
     "date": "2017-10-06",
     "id": 11,
     "selected": false,
@@ -96,7 +116,7 @@
     "show": true
   },
   {
-    "text": "El ri-a-chue-lo\nhu-yen-do del des-hie-lo\no-tro a-ño más",
+    "text": ["El ri-a-chue-lo", "hu-yen-do del des-hie-lo", "o-tro a-ño más"],
     "date": "2017-10-06",
     "id": 12,
     "selected": false,
@@ -104,7 +124,11 @@
     "show": true
   },
   {
-    "text": "Los ni-ños co-rren,\ndis-fra-za-dos de mons-truos,\npron-to llo-ra-rán",
+    "text": [
+      "Los ni-ños co-rren,",
+      "dis-fra-za-dos de mons-truos,",
+      "pron-to llo-ra-rán"
+    ],
     "date": "2017-10-06",
     "id": 13,
     "selected": false,
@@ -112,7 +136,11 @@
     "show": true
   },
   {
-    "text": "Hu-ye_el ve-ra-no,\nju-nio tra-e-lo a-quí,\nno hay fu-tu-ro.",
+    "text": [
+      "Hu-ye_el ve-ra-no,",
+      "ju-nio tra-e-lo a-quí,",
+      "no hay fu-tu-ro."
+    ],
     "date": "2017-10-06",
     "id": 14,
     "selected": false,
@@ -120,7 +148,7 @@
     "show": true
   },
   {
-    "text": "Frí-o_a-zul\nnu-bes dis-tan-tes,\nin-vier-no",
+    "text": ["Frí-o_a-zul", "nu-bes dis-tan-tes,", "In-vier-no"],
     "date": "2019-01-13",
     "id": 15,
     "selected": false,
@@ -128,7 +156,7 @@
     "show": true
   },
   {
-    "text": "Des-can-sa\nla vi-da_a-ho-ra,\ntran-qui-la",
+    "text": ["Des-can-sa", "la vi-da_a-ho-ra,", "tran-qui-la"],
     "date": "2019-01-13",
     "id": 16,
     "selected": false,
@@ -136,7 +164,7 @@
     "show": false
   },
   {
-    "text": "Des-nu-do\nel ár-bol duer-me,\n¿vol-ve-rá?",
+    "text": ["Des-nu-do", "el ár-bol duer-me,", "¿vol-ve-rá?"],
     "date": "2019-01-13",
     "id": 17,
     "selected": false,
@@ -144,7 +172,7 @@
     "show": true
   },
   {
-    "text": "El vue-lo ra-so\ndel pá-ja-ro_a-za-ba-che,\ngé-li-do cam-po",
+    "text": ["El vue-lo ra-so", "del pá-ja-ro_a-za-ba-che,", "gé-li-do cam-po"],
     "date": "2019-01-13",
     "id": 18,
     "selected": false,
@@ -152,7 +180,7 @@
     "show": true
   },
   {
-    "text": "Pe-num-bra\ni-nun-da_el mon-te,\nlo_a-bra-za",
+    "text": ["Pe-num-bra", "i-nun-da_el mon-te,", "lo_a-bra-za"],
     "date": "2019-01-13",
     "id": 19,
     "selected": false,
@@ -160,7 +188,7 @@
     "show": true
   },
   {
-    "text": "La nie-ve\ncu-bre el bos-que\nca-no-so",
+    "text": ["La nie-ve", "cu-bre el bos-que", "ca-no-so"],
     "date": "2019-01-13",
     "id": 20,
     "selected": false,
@@ -168,7 +196,7 @@
     "show": false
   },
   {
-    "text": "El to-cón\nco-bi-ja vi-da\nque duer-me",
+    "text": ["El to-cón", "co-bi-ja vi-da", "que duer-me"],
     "date": "2019-01-13",
     "id": 21,
     "selected": false,
@@ -176,7 +204,7 @@
     "show": false
   },
   {
-    "text": "El rí-o\nse de-ti-e-ne\na_es-pe-rar",
+    "text": ["El rí-o", "se de-ti-e-ne", "a_es-pe-rar"],
     "date": "2019-01-13",
     "id": 22,
     "selected": false,
@@ -184,7 +212,11 @@
     "show": false
   },
   {
-    "text": "Re-pi-que-te-o,\nla ven-ta-na_a-fi-nan-do\nsu ins-tru-men-to",
+    "text": [
+      "Re-pi-que-te-o,",
+      "la ven-ta-na_a-fi-nan-do",
+      "su ins-tru-men-to"
+    ],
     "date": "2019-01-13",
     "id": 23,
     "selected": false,
@@ -192,7 +224,7 @@
     "show": true
   },
   {
-    "text": "La_a-ra-ña\nte-je su mun-do\nen se-da.",
+    "text": ["La_a-ra-ña", "te-je su mun-do", "en se-da."],
     "date": "2019-01-13",
     "id": 24,
     "selected": false,
@@ -200,7 +232,7 @@
     "show": false
   },
   {
-    "text": "Un bro-te\nse_a-gi-ta_al vien-to,\nal na-cer.",
+    "text": ["Un bro-te", "se_a-gi-ta_al vien-to,", "al na-cer."],
     "date": "2019-01-13",
     "id": 25,
     "selected": false,
@@ -208,7 +240,7 @@
     "show": false
   },
   {
-    "text": "La bri-sa\nin-cli-na_al ta-llo,\npor siem-pre.",
+    "text": ["La bri-sa", "in-cli-na_al ta-llo,", "por siem-pre."],
     "date": "2019-01-13",
     "id": 26,
     "selected": false,
@@ -216,7 +248,11 @@
     "show": false
   },
   {
-    "text": "Las lu-ciér-na-gas\ni-lu-mi-nan el bos-que,\nguí-an la no-che",
+    "text": [
+      "Las lu-ciér-na-gas",
+      "i-lu-mi-nan el bos-que,",
+      "guí-an la no-che"
+    ],
     "date": "2019-01-13",
     "id": 27,
     "selected": false,
@@ -224,7 +260,7 @@
     "show": true
   },
   {
-    "text": "Un a-gu-je-ro\nal que so-lo se en-tra,\nva-cuo es-pa-cio",
+    "text": ["Un a-gu-je-ro", "al que so-lo se en-tra,", "va-cuo es-pa-cio"],
     "date": "2019-01-13",
     "id": 28,
     "selected": false,
@@ -232,7 +268,7 @@
     "show": false
   },
   {
-    "text": "La puer-ta\na-sus-ta des-de\ndos ca-ras",
+    "text": ["La puer-ta", "a-sus-ta des-de", "dos ca-ras"],
     "date": "2019-01-13",
     "id": 29,
     "selected": false,
@@ -240,7 +276,7 @@
     "show": false
   },
   {
-    "text": "El vien-to\ndes-nu-da_al ár-bol,\nca-du-co",
+    "text": ["El vien-to", "des-nu-da_al ár-bol,", "ca-du-co"],
     "date": "2019-01-13",
     "id": 30,
     "selected": false,
@@ -248,7 +284,7 @@
     "show": true
   },
   {
-    "text": "La llu-ví-a es,\nla mon-ta-ña fue y es,\nno de-jo hue-lla",
+    "text": ["La llu-ví-a es,", "la mon-ta-ña fue y es,", "no de-jo hue-lla"],
     "date": "2019-01-13",
     "id": 31,
     "selected": false,
@@ -256,7 +292,11 @@
     "show": false
   },
   {
-    "text": "La llu-via mo-ja\nlos lon-ge-vos ár-bo-les\nsép-ti-mo_o-to-ño",
+    "text": [
+      "La llu-via mo-ja",
+      "los lon-ge-vos ár-bo-les",
+      "sép-ti-mo_o-to-ño"
+    ],
     "date": "2021-10-26",
     "id": 32,
     "selected": false,
@@ -264,7 +304,11 @@
     "show": true
   },
   {
-    "text": "Hú-me-do rit-mo,\nho-jas flo-tan-do_en char-cos,\nfu-gaz o-to-ño",
+    "text": [
+      "Hú-me-do rit-mo,",
+      "ho-jas flo-tan-do_en char-cos,",
+      "fu-gaz o-to-ño"
+    ],
     "date": "2021-10-26",
     "id": 33,
     "selected": true,
@@ -272,7 +316,7 @@
     "show": true
   },
   {
-    "text": "Ro-ja luz\nal-ma des-nu-da,\nsols-ti-cio",
+    "text": ["Ro-ja luz", "al-ma des-nu-da,", "sols-ti-cio"],
     "date": "2022-06-21",
     "id": 34,
     "selected": false,
@@ -280,7 +324,7 @@
     "show": true
   },
   {
-    "text": "La llu-via\ntrae tu re-cuer-do,\ntris-te-za",
+    "text": ["La llu-via", "trae tu re-cuer-do,", "tris-te-za"],
     "date": "2023-05-19",
     "id": 35,
     "selected": false,
@@ -288,7 +332,7 @@
     "show": true
   },
   {
-    "text": "Los rí-os\nno se di-vi-den,\npor siem-pre",
+    "text": ["Los rí-os", "no se di-vi-den,", "por siem-pre"],
     "date": "2024-10-17",
     "id": 36,
     "selected": false,
@@ -296,7 +340,11 @@
     "show": true
   },
   {
-    "text": "aun-que per-pe-tua\nla ro-ca va cam-bian-do,\nfal-so des-ti-no",
+    "text": [
+      "aun-que per-pe-tua",
+      "la ro-ca va cam-bian-do,",
+      "fal-so des-ti-no"
+    ],
     "date": "2024-10-17",
     "id": 37,
     "selected": false,
@@ -304,7 +352,7 @@
     "show": true
   },
   {
-    "text": "se me-cen\nlos sua-ves tol-dos\nca-lien-tes",
+    "text": ["se me-cen", "los sua-ves tol-dos", "ca-lien-tes"],
     "date": "2024-10-17",
     "id": 38,
     "selected": false,
@@ -312,7 +360,7 @@
     "show": true
   },
   {
-    "text": "so-le-dad,\na-mor y o-dio\no-to-ñal",
+    "text": ["so-le-dad,", "a-mor y o-dio", "o-to-ñal"],
     "date": "2024-10-17",
     "id": 39,
     "selected": false,
@@ -320,7 +368,7 @@
     "show": true
   },
   {
-    "text": "la ro-ca\nes-pe-ra quie-ta,\nen cal-ma",
+    "text": ["la ro-ca", "es-pe-ra quie-ta,", "en cal-ma"],
     "date": "2024-10-17",
     "id": 40,
     "selected": false,
@@ -328,7 +376,7 @@
     "show": true
   },
   {
-    "text": "el cam-bio\ntra-e con-si-go\nel do-lor",
+    "text": ["el cam-bio", "tra-e con-si-go", "el do-lor"],
     "date": "2024-10-17",
     "id": 41,
     "selected": false,
@@ -336,7 +384,7 @@
     "show": true
   },
   {
-    "text": "La_an-sie-dad\nso-bre mi pe-cho\nme_a-ho-ga",
+    "text": ["La_an-sie-dad", "so-bre mi pe-cho", "me_a-ho-ga"],
     "date": "2024-10-17",
     "id": 42,
     "selected": false,
@@ -344,7 +392,7 @@
     "show": true
   },
   {
-    "text": "El ár-bol\nal per-der la_ho-ja\nse mue-re",
+    "text": ["El ár-bol", "al per-der la_ho-ja", "se mue-re"],
     "date": "2024-10-17",
     "id": 43,
     "selected": false,
@@ -352,7 +400,7 @@
     "show": true
   },
   {
-    "text": "Re-bro-ta\ntras un de-sas-tre,\nla vi-da",
+    "text": ["Re-bro-ta", "tras un de-sas-tre,", "la vi-da"],
     "date": "2024-11-21",
     "id": 44,
     "selected": false,
@@ -360,7 +408,11 @@
     "show": true
   },
   {
-    "text": "Los sen-ti-mien-tos\na-flo-ran den-tro de mí,\nbue-nos o ma-los",
+    "text": [
+      "Los sen-ti-mien-tos",
+      "a-flo-ran den-tro de mí,",
+      "bue-nos o ma-los"
+    ],
     "date": "2024-12-11",
     "id": 45,
     "selected": false,
@@ -368,7 +420,7 @@
     "show": true
   },
   {
-    "text": "Las nu-bes\nsiem-pre ter-mi-nan\npor ir-se",
+    "text": ["Las nu-bes", "siem-pre ter-mi-nan", "por ir-se"],
     "date": "2024-12-30",
     "id": 46,
     "selected": false,
@@ -376,7 +428,7 @@
     "show": true
   },
   {
-    "text": "Se rom-pen\nvie-jas pro-me-sas,\nex-tra-ño",
+    "text": ["Se rom-pen", "vie-jas pro-me-sas,", "ex-tra-ño"],
     "date": "2024-12-30",
     "id": 47,
     "selected": false,
@@ -384,7 +436,7 @@
     "show": true
   },
   {
-    "text": "A-ho-ra\ncó-mo con-fí-o\nen na-die?",
+    "text": ["A-ho-ra", "có-mo con-fí-o", "en na-die?"],
     "date": "2024-12-30",
     "id": 48,
     "selected": false,
@@ -392,7 +444,11 @@
     "show": false
   },
   {
-    "text": "Sin lo_im-po-si-ble\nla res-pues-ta de-be_es-tar\nen lo_im-pro-ba-ble",
+    "text": [
+      "Sin lo_im-po-si-ble",
+      "la res-pues-ta de-be_es-tar",
+      "en lo_im-pro-ba-ble"
+    ],
     "date": "2024-12-30",
     "id": 49,
     "selected": false,
@@ -400,7 +456,11 @@
     "show": false
   },
   {
-    "text": "Pue-de de-cir-se\nal no_e-le-gir su cau-ce,\nin-fe-liz a-gua?",
+    "text": [
+      "Pue-de de-cir-se",
+      "al no_e-le-gir su cau-ce,",
+      "in-fe-liz a-gua?"
+    ],
     "date": "2024-12-31",
     "id": 50,
     "selected": false,
@@ -408,7 +468,7 @@
     "show": true
   },
   {
-    "text": "Más due-le\ntu da-ga_al sa-lir,\nte quie-ro",
+    "text": ["Más due-le", "tu da-ga_al sa-lir,", "te quie-ro"],
     "date": "2024-12-31",
     "id": 51,
     "selected": false,
@@ -416,7 +476,11 @@
     "show": false
   },
   {
-    "text": "Si_e-xis-te_al-gún dios\na-guar-da con pa-cien-cia\nnues-tra per-di-ción",
+    "text": [
+      "Si_e-xis-te_al-gún dios",
+      "a-guar-da con pa-cien-cia",
+      "nues-tra per-di-ción"
+    ],
     "date": "2024-12-31",
     "id": 52,
     "selected": false,
@@ -424,7 +488,11 @@
     "show": false
   },
   {
-    "text": "De-ses-pe-ran-za\nne-gro pe-sar in-ter-no\nllu-via to-rren-cial",
+    "text": [
+      "De-ses-pe-ran-za",
+      "ne-gro pe-sar in-ter-no",
+      "llu-via to-rren-cial"
+    ],
     "date": "2024-12-31",
     "id": 53,
     "selected": false,
@@ -432,7 +500,11 @@
     "show": true
   },
   {
-    "text": "Có-mo com-pren-der\nque tras gar-gan-tuo cam-bio\nto-do si-gue_i-gual",
+    "text": [
+      "Có-mo com-pren-der",
+      "que tras gar-gan-tuo cam-bio",
+      "to-do si-gue_i-gual"
+    ],
     "date": "2024-12-31",
     "id": 54,
     "selected": false,
@@ -440,7 +512,7 @@
     "show": false
   },
   {
-    "text": "Un tra-to,\nlim-piad las mi-nas\nsed li-bres",
+    "text": ["Un tra-to,", "lim-piad las mi-nas", "sed li-bres"],
     "date": "2024-12-31",
     "id": 55,
     "selected": false,
@@ -448,7 +520,7 @@
     "show": false
   },
   {
-    "text": "Mi-ro_a-trás\nin-a-ca-ba-do\nper-sis-to",
+    "text": ["Mi-ro_a-trás", "in-a-ca-ba-do", "per-sis-to"],
     "date": "2025-01-01",
     "id": 56,
     "selected": false,
@@ -456,7 +528,7 @@
     "show": true
   },
   {
-    "text": "Be-lle-za,\n¿es-tás tam-bién en\nel do-lor?",
+    "text": ["Be-lle-za,", "¿es-tás tam-bién en", "el do-lor?"],
     "date": "2025-01-01",
     "id": 57,
     "selected": false,
@@ -464,7 +536,7 @@
     "show": true
   },
   {
-    "text": "Es-ca-par\nde tu des-ti-no\nes men-tal",
+    "text": ["Es-ca-par", "de tu des-ti-no", "es men-tal"],
     "date": "2025-01-01",
     "id": 58,
     "selected": false,
@@ -472,7 +544,7 @@
     "show": false
   },
   {
-    "text": "Pre-vio_a-mor\nya des-gas-ta-do,\n¿a-mis-tad?",
+    "text": ["Pre-vio_a-mor", "ya des-gas-ta-do,", "¿a-mis-tad?"],
     "date": "2025-01-01",
     "id": 59,
     "selected": false,
@@ -480,7 +552,7 @@
     "show": true
   },
   {
-    "text": "Me cuen-to\nmen-ti-ras pa-ra\ncre-er-las",
+    "text": ["Me cuen-to", "men-ti-ras pa-ra", "cre-er-las"],
     "date": "2025-01-01",
     "id": 60,
     "selected": false,
@@ -488,7 +560,7 @@
     "show": false
   },
   {
-    "text": "Es-cue-tos\npo-e-mas di-cen\nla ver-dad?",
+    "text": ["Es-cue-tos", "po-e-mas di-cen", "la ver-dad?"],
     "date": "2025-01-01",
     "id": 61,
     "selected": false,
@@ -496,7 +568,7 @@
     "show": false
   },
   {
-    "text": "Dón-de_es-tá\nel pro-pó-si-to\nde vi-vir?",
+    "text": ["Dón-de_es-tá", "el pro-pó-si-to", "de vi-vir?"],
     "date": "2025-01-01",
     "id": 62,
     "selected": false,
@@ -504,7 +576,11 @@
     "show": false
   },
   {
-    "text": "To-ca e-le-gir\nlas ver-da-des del nue-vo\ne_in-cier-to si-no",
+    "text": [
+      "To-ca e-le-gir",
+      "las ver-da-des del nue-vo",
+      "e_in-cier-to si-no"
+    ],
     "date": "2025-01-06",
     "id": 63,
     "selected": false,
@@ -512,7 +588,7 @@
     "show": false
   },
   {
-    "text": "Tor-men-ta,\na-gi-ta_y_em-pu-ja\nmis ve-las",
+    "text": ["Tor-men-ta,", "a-gi-ta_y_em-pu-ja", "mis ve-las"],
     "date": "2025-01-07",
     "id": 64,
     "selected": false,
@@ -520,7 +596,7 @@
     "show": true
   },
   {
-    "text": "E-xis-te\nre-al-men-te el\nfra-ca-so?",
+    "text": ["E-xis-te", "re-al-men-te el", "fra-ca-so?"],
     "date": "2025-01-07",
     "id": 65,
     "selected": false,
@@ -528,7 +604,7 @@
     "show": false
   },
   {
-    "text": "Ás-pe-ro\ndo-lor dor-mi-ta\npor den-tro",
+    "text": ["Ás-pe-ro", "do-lor dor-mi-ta", "por den-tro"],
     "date": "2025-01-07",
     "id": 66,
     "selected": false,
@@ -536,7 +612,7 @@
     "show": false
   },
   {
-    "text": "El ar-te\na-pa-ga_el do-lor\nde mi_al-ma",
+    "text": ["El ar-te", "a-pa-ga_el do-lor", "de mi_al-ma"],
     "date": "2025-01-07",
     "id": 67,
     "selected": false,
@@ -544,7 +620,11 @@
     "show": false
   },
   {
-    "text": "Qui-én di-rí-a\nque_el al-ma_es-tá for-ma-da\npor tan-tas pie-zas?",
+    "text": [
+      "Qui-én di-rí-a",
+      "que_el al-ma_es-tá for-ma-da",
+      "por tan-tas pie-zas?"
+    ],
     "date": "2025-01-07",
     "id": 68,
     "selected": false,
@@ -552,7 +632,11 @@
     "show": false
   },
   {
-    "text": "¿Y si la vi-da\nno tie-ne más sen-ti-do\nque dis-fru-tar-la?",
+    "text": [
+      "¿Y si la vi-da",
+      "no tie-ne más sen-ti-do",
+      "que dis-fru-tar-la?"
+    ],
     "date": "2025-01-07",
     "id": 69,
     "selected": false,
@@ -560,7 +644,7 @@
     "show": false
   },
   {
-    "text": "Me_han ro-to,\nde-pen-de de mí\nre-gre-sar",
+    "text": ["Me_han ro-to,", "de-pen-de de mí", "re-gre-sar"],
     "date": "2025-01-07",
     "id": 70,
     "selected": false,
@@ -568,7 +652,7 @@
     "show": true
   },
   {
-    "text": "Se_a-ca-bó,\nfrí-a tris-te-za,\ndes-a-mor",
+    "text": ["Se_a-ca-bó,", "frí-a tris-te-za,", "des-a-mor"],
     "date": "2025-01-07",
     "id": 71,
     "selected": false,
@@ -576,7 +660,7 @@
     "show": true
   },
   {
-    "text": "La lu-na\nya no son-rí-e\npa-ra mí",
+    "text": ["La lu-na", "ya no son-rí-e", "pa-ra mí"],
     "date": "2025-01-07",
     "id": 72,
     "selected": false,
@@ -584,7 +668,7 @@
     "show": false
   },
   {
-    "text": "Al fi-nal\nto-do_es la-men-to\ny pe-na",
+    "text": ["Al fi-nal", "to-do_es la-men-to", "y pe-na"],
     "date": "2025-01-07",
     "id": 73,
     "selected": false,
@@ -592,7 +676,7 @@
     "show": false
   },
   {
-    "text": "Ya no se\nque es co-rrec-to\ny que no",
+    "text": ["Ya no se", "que es co-rrec-to", "y que no"],
     "date": "2025-01-10",
     "id": 74,
     "selected": false,
@@ -600,7 +684,7 @@
     "show": false
   },
   {
-    "text": "Soy li-bre,\npa-ra bien o mal\nyo man-do",
+    "text": ["Soy li-bre,", "pa-ra bien o mal", "yo man-do"],
     "date": "2025-01-13",
     "id": 75,
     "selected": false,
@@ -608,7 +692,7 @@
     "show": true
   },
   {
-    "text": "Po-der e-le-gir\nmi com-ple-to des-ti-no\nal-ma des-nu-da",
+    "text": ["Po-der e-le-gir", "mi com-ple-to des-ti-no", "al-ma des-nu-da"],
     "date": "2025-01-13",
     "id": 76,
     "selected": false,
@@ -616,7 +700,7 @@
     "show": false
   },
   {
-    "text": "To-dos sa-be-mos\nco-mo fun-cio-na to-do\nsi no_es-tá ro-to",
+    "text": ["To-dos sa-be-mos", "co-mo fun-cio-na to-do", "si no_es-tá ro-to"],
     "date": "2025-01-17",
     "id": 77,
     "selected": false,
@@ -624,7 +708,7 @@
     "show": false
   },
   {
-    "text": "Bien y mal\nes sub-je-ti-vo\ny fu-gaz",
+    "text": ["Bien y mal", "es sub-je-ti-vo", "y fu-gaz"],
     "date": "2025-01-17",
     "id": 78,
     "selected": false,
@@ -632,7 +716,11 @@
     "show": true
   },
   {
-    "text": "Cuan-do pre-gun-tes\nde-bes es-tar a-bier-to\na la res-pues-ta",
+    "text": [
+      "Cuan-do pre-gun-tes",
+      "de-bes es-tar a-bier-to",
+      "a la res-pues-ta"
+    ],
     "date": "2025-01-19",
     "id": 79,
     "selected": false,
@@ -640,7 +728,7 @@
     "show": false
   },
   {
-    "text": "Mi_a-mi-go\nse fue por siem-pre,\ndos a-ños",
+    "text": ["Mi_a-mi-go", "se fue por siem-pre,", "dos a-ños"],
     "date": "2025-01-23",
     "id": 80,
     "selected": true,
@@ -649,7 +737,7 @@
     "description": ["Hace dos años que se fue Chuck. Le echo de menos."]
   },
   {
-    "text": "El to-cón\npa-re-ce muer-to,\nes-pe-ra",
+    "text": ["El to-cón", "pa-re-ce muer-to,", "es-pe-ra"],
     "date": "2025-01-28",
     "id": 81,
     "selected": false,
@@ -657,7 +745,11 @@
     "show": true
   },
   {
-    "text": "Dí-as fu-ga-ces\ncie-los lle-nos de_es-tre-llas,\nbos-ques ne-va-dos",
+    "text": [
+      "Dí-as fu-ga-ces",
+      "cie-los lle-nos de_es-tre-llas,",
+      "bos-ques ne-va-dos"
+    ],
     "date": "2025-01-28",
     "id": 82,
     "selected": false,
@@ -665,7 +757,11 @@
     "show": true
   },
   {
-    "text": "Mar-te_y Ju-pi-ter\nNep-tu-no_U-ra-no_y Ve-nus,\ncie-lo ú-ni-co",
+    "text": [
+      "Mar-te_y Ju-pi-ter",
+      "Nep-tu-no_U-ra-no_y Ve-nus,",
+      "cie-lo ú-ni-co"
+    ],
     "date": "2025-01-28",
     "id": 83,
     "selected": false,
@@ -676,7 +772,11 @@
     ]
   },
   {
-    "text": "Ra-mas des-nu-das\ncie-los de to-nos gri-ses,\nfi-nal del ci-clo",
+    "text": [
+      "Ra-mas des-nu-das",
+      "cie-los de to-nos gri-ses,",
+      "fi-nal del ci-clo"
+    ],
     "date": "2025-01-28",
     "id": 84,
     "selected": false,
@@ -684,7 +784,11 @@
     "show": true
   },
   {
-    "text": "Cie-lo co-bri-zo\nlas som-bras co-rren li-bres,\nlle-ga la no-che",
+    "text": [
+      "Cie-lo co-bri-zo",
+      "las som-bras co-rren li-bres,",
+      "lle-ga la no-che"
+    ],
     "date": "2025-01-28",
     "id": 85,
     "selected": false,
@@ -692,7 +796,11 @@
     "show": true
   },
   {
-    "text": "E-ter-no tic-tac\nsu-ce-si-ón in-fi-ni-ta,\nsen-ti-do fa-laz",
+    "text": [
+      "E-ter-no tic-tac",
+      "su-ce-si-ón in-fi-ni-ta,",
+      "sen-ti-do fa-laz"
+    ],
     "date": "2025-01-28",
     "id": 86,
     "selected": false,
@@ -700,7 +808,11 @@
     "show": true
   },
   {
-    "text": "Ri-sas ner-vio-sas,\ndos a-man-tes dis-fru-tan\nes-tan-do jun-tos",
+    "text": [
+      "Ri-sas ner-vio-sas,",
+      "dos a-man-tes dis-fru-tan",
+      "es-tan-do jun-tos"
+    ],
     "date": "2025-01-28",
     "id": 87,
     "selected": false,
@@ -708,7 +820,11 @@
     "show": true
   },
   {
-    "text": "El pol-vo cu-bre\nlas te-clas de plás-ti-co,\ndes-ti-no co-mún",
+    "text": [
+      "El pol-vo cu-bre",
+      "las te-clas de plás-ti-co,",
+      "des-ti-no co-mún"
+    ],
     "date": "2025-01-29",
     "id": 88,
     "selected": true,
@@ -716,7 +832,7 @@
     "show": true
   },
   {
-    "text": "U-na_al-mo-ha-da\ndon-de an-tes e-ran dos,\nsue-ño le-ja-no",
+    "text": ["U-na_al-mo-ha-da", "don-de an-tes e-ran dos,", "sue-ño le-ja-no"],
     "date": "2025-01-29",
     "id": 89,
     "selected": false,
@@ -724,7 +840,7 @@
     "show": true
   },
   {
-    "text": "A-mi-go cuen-co\nto-ma-mos el té jun-tos,\nma-ña-nas frí-as",
+    "text": ["A-mi-go cuen-co", "to-ma-mos el té jun-tos,", "ma-ña-nas frí-as"],
     "date": "2025-01-30",
     "id": 90,
     "selected": true,
@@ -735,7 +851,11 @@
     ]
   },
   {
-    "text": "Cual lu-ciér-na-gas\na-lum-bran mi pa-se-o\nmi-les de lu-ces",
+    "text": [
+      "Cual lu-ciér-na-gas",
+      "a-lum-bran mi pa-se-o",
+      "mi-les de lu-ces"
+    ],
     "date": "2025-01-30",
     "id": 91,
     "selected": true,
@@ -743,7 +863,7 @@
     "show": true
   },
   {
-    "text": "Un des-per-fec-to\nen mi co-che cre-í ver,\nu-na po-li-lla",
+    "text": ["Un des-per-fec-to", "en mi co-che cre-í ver,", "u-na po-li-lla"],
     "date": "2025-01-30",
     "id": 92,
     "selected": true,
@@ -754,7 +874,11 @@
     ]
   },
   {
-    "text": "In-di-fe-ren-tes,\ncán-ti-cos de go-rrio-nes\nen el in-vier-no",
+    "text": [
+      "In-di-fe-ren-tes,",
+      "cán-ti-cos de go-rrio-nes",
+      "en el in-vier-no"
+    ],
     "date": "2025-01-31",
     "id": 93,
     "selected": false,
@@ -762,7 +886,7 @@
     "show": true
   },
   {
-    "text": "Na-tu-ra-le-za\ncu-bier-ta de as-fal-to,\nmu-sa nos-tal-gía",
+    "text": ["Na-tu-ra-le-za", "cu-bier-ta de as-fal-to,", "mu-sa nos-tal-gía"],
     "date": "2025-01-31",
     "id": 94,
     "selected": false,
@@ -770,7 +894,11 @@
     "show": true
   },
   {
-    "text": "Tris-tes re-cuer-dos,\nre-loj re-ci-ta man-tra\nme-ce la no-che",
+    "text": [
+      "Tris-tes re-cuer-dos,",
+      "re-loj re-ci-ta man-tra",
+      "me-ce la no-che"
+    ],
     "date": "2025-02-01",
     "id": 95,
     "selected": false,
@@ -778,7 +906,7 @@
     "show": true
   },
   {
-    "text": "Bri-sa he-la-da\ncá-li-do to-que de sol,\ndí-a in-ver-nal",
+    "text": ["Bri-sa he-la-da", "cá-li-do to-que de sol,", "dí-a in-ver-nal"],
     "date": "2025-02-01",
     "id": 96,
     "selected": false,
@@ -789,7 +917,11 @@
     ]
   },
   {
-    "text": "U-na u-rra-ca\nre-bus-ca en-tre res-tos,\n¡va-ya ban-que-te!",
+    "text": [
+      "U-na u-rra-ca",
+      "re-bus-ca en-tre res-tos,",
+      "¡va-ya ban-que-te!"
+    ],
     "date": "2025-02-01",
     "id": 97,
     "selected": true,
@@ -800,7 +932,7 @@
     ]
   },
   {
-    "text": "Gra-ta sor-pre-sa,\n¡u-na pa-ta-ta de-luxe\nen mi pe-di-do!",
+    "text": ["Gra-ta sor-pre-sa,", "¡u-na pa-ta-ta de-luxe", "en mi pe-di-do!"],
     "date": "2025-02-01",
     "id": 98,
     "selected": false,
@@ -811,7 +943,11 @@
     ]
   },
   {
-    "text": "Vi-si-ta bre-ve,\ngo-rrión can-ta frus-tra-do\nvue-lo ham-brien-to",
+    "text": [
+      "Vi-si-ta bre-ve,",
+      "go-rrión can-ta frus-tra-do",
+      "vue-lo ham-brien-to"
+    ],
     "date": "2025-02-01",
     "id": 99,
     "selected": false,
@@ -822,7 +958,11 @@
     ]
   },
   {
-    "text": "Sien-to en-vi-dia,\nar-tis-tas an-ces-tra-les\nque be-llos ver-sos",
+    "text": [
+      "Sien-to en-vi-dia,",
+      "ar-tis-tas an-ces-tra-les",
+      "que be-llos ver-sos"
+    ],
     "date": "2025-02-01",
     "id": 100,
     "selected": true,
@@ -830,7 +970,7 @@
     "show": true
   },
   {
-    "text": "Ba-jo tu som-bra\nes-pe-ro a las flo-res,\ngi-gan-te ver-de",
+    "text": ["Ba-jo tu som-bra", "es-pe-ro a las flo-res,", "gi-gan-te ver-de"],
     "date": "2025-02-05",
     "id": 101,
     "selected": false,
@@ -838,7 +978,7 @@
     "show": true
   },
   {
-    "text": "Co-rro y co-rro\nper-si-go u-na me-ta,\nel ho-ri-zon-te",
+    "text": ["Co-rro y co-rro", "per-si-go u-na me-ta,", "el ho-ri-zon-te"],
     "date": "2025-02-06",
     "id": 102,
     "selected": false,
@@ -846,7 +986,7 @@
     "show": true
   },
   {
-    "text": "Mi-ro_al o-es-te\nsor-pren-den-te be-lle-za,\no-ca-so ro-sa",
+    "text": ["Mi-ro_al o-es-te", "sor-pren-den-te be-lle-za,", "o-ca-so ro-sa"],
     "date": "2025-02-06",
     "id": 103,
     "selected": false,
@@ -857,7 +997,11 @@
     ]
   },
   {
-    "text": "Es-pe-sa nie-bla\npier-des al pe-re-gri-no,\n¿qué pro-pó-si-to?",
+    "text": [
+      "Es-pe-sa nie-bla",
+      "pier-des al pe-re-gri-no,",
+      "¿qué pro-pó-si-to?"
+    ],
     "date": "2025-02-07",
     "id": 104,
     "selected": false,
@@ -865,7 +1009,11 @@
     "show": true
   },
   {
-    "text": "E-cos pa-sa-dos,\nes-pi-rí-tus pre-sen-tes,\nre-cuer-dos ro-tos",
+    "text": [
+      "E-cos pa-sa-dos,",
+      "es-pi-rí-tus pre-sen-tes,",
+      "re-cuer-dos ro-tos"
+    ],
     "date": "2025-02-11",
     "id": 105,
     "selected": false,
@@ -873,7 +1021,11 @@
     "show": true
   },
   {
-    "text": "Ba-jo es-tre-llas\nnues-tros re-cuer-dos jun-tos\nro-ban mi sue-ño",
+    "text": [
+      "Ba-jo es-tre-llas",
+      "nues-tros re-cuer-dos jun-tos",
+      "ro-ban mi sue-ño"
+    ],
     "date": "2025-02-12",
     "id": 106,
     "selected": true,
@@ -881,7 +1033,7 @@
     "show": true
   },
   {
-    "text": "To-dos los co-pos\na-ca-ban de-rre-ti-dos,\nman-to al-bi-no",
+    "text": ["To-dos los co-pos", "a-ca-ban de-rre-ti-dos,", "man-to al-bi-no"],
     "date": "2025-02-18",
     "id": 107,
     "selected": false,
@@ -892,7 +1044,7 @@
     ]
   },
   {
-    "text": "Mu-sa mo-nar-ca\n¿có-mo con-si-go ha-cer\nque no te va-yas?",
+    "text": ["Mu-sa mo-nar-ca", "¿có-mo con-si-go ha-cer", "que no te va-yas?"],
     "date": "2025-02-18",
     "id": 108,
     "selected": false,
@@ -900,7 +1052,7 @@
     "show": true
   },
   {
-    "text": "For-mas le-ja-nas\nbru-ma de las mon-ta-ñas\na-bri-go frí-o",
+    "text": ["For-mas le-ja-nas", "bru-ma de las mon-ta-ñas", "a-bri-go frí-o"],
     "date": "2025-02-20",
     "id": 109,
     "selected": false,
@@ -908,7 +1060,7 @@
     "show": true
   },
   {
-    "text": "Al-ta mon-ta-ña\nnu-bes cu-bren tu ci-ma\na-ho-ra pla-na",
+    "text": ["Al-ta mon-ta-ña", "nu-bes cu-bren tu ci-ma", "a-ho-ra pla-na"],
     "date": "2025-02-23",
     "id": 110,
     "selected": true,
@@ -919,7 +1071,11 @@
     ]
   },
   {
-    "text": "Vis-ta in-ver-nal\npi-ro-tec-nia ro-sa-da\nllu-via de_al-mendras",
+    "text": [
+      "Vis-ta in-ver-nal",
+      "pi-ro-tec-nia ro-sa-da",
+      "llu-via de_al-mendras"
+    ],
     "date": "2025-02-23",
     "id": 111,
     "selected": true,
@@ -930,7 +1086,11 @@
     ]
   },
   {
-    "text": "Mi pa-so de-ja\nhue-llas en el ca-mi-no,\nque_el tiem-po bo-rra",
+    "text": [
+      "Mi pa-so de-ja",
+      "hue-llas en el ca-mi-no,",
+      "que_el tiem-po bo-rra"
+    ],
     "date": "2025-02-25",
     "id": 112,
     "selected": false,
@@ -938,7 +1098,7 @@
     "show": true
   },
   {
-    "text": "Yer-mo pá-ra-mo,\nbro-te de-sa-fian-te\nvo-lun-tad sa-cra",
+    "text": ["Yer-mo pá-ra-mo,", "bro-te de-sa-fian-te", "vo-lun-tad sa-cra"],
     "date": "2025-02-26",
     "id": 113,
     "selected": false,
@@ -946,7 +1106,7 @@
     "show": true
   },
   {
-    "text": "Ex-tra-ño ár-bol,\nre-pa-so mi ca-mi-no\n¿Dón-de me per-dí?",
+    "text": ["Ex-tra-ño ár-bol,", "re-pa-so mi ca-mi-no", "¿Dón-de me per-dí?"],
     "date": "2025-02-27",
     "id": 114,
     "selected": true,
@@ -957,7 +1117,7 @@
     ]
   },
   {
-    "text": "Char-co de llu-via,\ne-fí-me-ro re-fle-jo\nllé-va-me a-llí",
+    "text": ["Char-co de llu-via,", "e-fí-me-ro re-fle-jo", "llé-va-me a-llí"],
     "date": "2025-03-01",
     "id": 115,
     "selected": false,
@@ -965,7 +1125,7 @@
     "show": true
   },
   {
-    "text": "La llu-via ca-e\nel ar-tis-ta es-cri-be\nel al-ma vi-ve",
+    "text": ["La llu-via ca-e", "el ar-tis-ta es-cri-be", "el al-ma vi-ve"],
     "date": "2025-03-01",
     "id": 116,
     "selected": false,
@@ -973,7 +1133,11 @@
     "show": true
   },
   {
-    "text": "Sa-lí con mie-do\nmi-ran-do co-mo vol-ver,\ntiem-po de co-rrer",
+    "text": [
+      "Sa-lí con mie-do",
+      "mi-ran-do co-mo vol-ver,",
+      "tiem-po de co-rrer"
+    ],
     "date": "2025-03-02",
     "id": 117,
     "selected": false,
@@ -981,7 +1145,11 @@
     "show": false
   },
   {
-    "text": "Lar-go ca-mi-nar,\nhu-mo con-tra el cie-lo,\npla-to ca-lien-te",
+    "text": [
+      "Lar-go ca-mi-nar,",
+      "hu-mo con-tra el cie-lo,",
+      "pla-to ca-lien-te"
+    ],
     "date": "2025-03-02",
     "id": 118,
     "selected": false,
@@ -989,7 +1157,7 @@
     "show": true
   },
   {
-    "text": "De vuel-ta en pie\nca-mi-no sin co-ge-ar,\nmás a-ún due-le",
+    "text": ["De vuel-ta en pie", "ca-mi-no sin co-ge-ar,", "más a-ún due-le"],
     "date": "2025-03-02",
     "id": 119,
     "selected": false,
@@ -997,7 +1165,11 @@
     "show": true
   },
   {
-    "text": "Pe-que-ño go-rrión,\n¿trae-rás las mis-mas plu-mas\ntras el ve-ra-no?",
+    "text": [
+      "Pe-que-ño go-rrión,",
+      "¿trae-rás las mis-mas plu-mas",
+      "tras el ve-ra-no?"
+    ],
     "date": "2025-03-03",
     "id": 120,
     "selected": true,
@@ -1005,7 +1177,7 @@
     "show": true
   },
   {
-    "text": "Du-ra ca-í-da,\na par-tir de a-ho-ra\nmi-ra tus bo-tas",
+    "text": ["Du-ra ca-í-da,", "a par-tir de a-ho-ra", "mi-ra tus bo-tas"],
     "date": "2025-03-03",
     "id": 121,
     "selected": false,
@@ -1017,7 +1189,11 @@
     ]
   },
   {
-    "text": "Mo-ja-do_el sue-lo\nmar-zo trae_el e-qui-no-cio\nrít-mi-co ger-mén",
+    "text": [
+      "Mo-ja-do_el sue-lo",
+      "mar-zo trae_el e-qui-no-cio",
+      "rít-mi-co ger-mén"
+    ],
     "date": "2025-03-05",
     "id": 122,
     "selected": false,
@@ -1028,7 +1204,11 @@
     ]
   },
   {
-    "text": "Sol y es-tre-llas\nper-fec-to e-qui-li-brio,\npuer-ta a-bier-ta",
+    "text": [
+      "Sol y es-tre-llas",
+      "per-fec-to e-qui-li-brio,",
+      "puer-ta a-bier-ta"
+    ],
     "date": "2025-03-05",
     "id": 123,
     "selected": false,
@@ -1036,7 +1216,11 @@
     "show": true
   },
   {
-    "text": "¡Un ver-de-ci-llo!\nvi-si-ta pri-ma-ve-ral\nal-go tem-pra-na",
+    "text": [
+      "¡Un ver-de-ci-llo!",
+      "vi-si-ta pri-ma-ve-ral",
+      "al-go tem-pra-na"
+    ],
     "date": "2025-03-10",
     "id": 124,
     "selected": true,
@@ -1048,7 +1232,11 @@
     ]
   },
   {
-    "text": "Tras tan-to tiem-po,\nes tu ho-ra de bri-llar\n¡suer-te a-mi-go!",
+    "text": [
+      "Tras tan-to tiem-po,",
+      "es tu ho-ra de bri-llar",
+      "¡suer-te a-mi-go!"
+    ],
     "date": "2025-03-10",
     "id": 125,
     "selected": false,
@@ -1060,7 +1248,11 @@
   },
   {
     "id": 126,
-    "text": "Tron-co sin ra-mas\na la fuer-za a-pren-des\nflo-re-ce al-to",
+    "text": [
+      "Tron-co sin ra-mas",
+      "a la fuer-za a-pren-des",
+      "flo-re-ce al-to"
+    ],
     "date": "2025-03-15",
     "selected": true,
     "tags": ["5-7-5"],
@@ -1071,7 +1263,7 @@
   },
   {
     "id": 127,
-    "text": "Fu-gaz mo-men-to,\nu-na ye-ma flo-re-ce,\nso-le-dad ro-ta",
+    "text": ["Fu-gaz mo-men-to,", "u-na ye-ma flo-re-ce,", "so-le-dad ro-ta"],
     "date": "2025-03-15",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1079,7 +1271,11 @@
   },
   {
     "id": 128,
-    "text": "Yaz-co per-di-do,\nto-dos quie-ren más tiem-po,\na mi me so-bra",
+    "text": [
+      "Yaz-co per-di-do,",
+      "to-dos quie-ren más tiem-po,",
+      "a mi me so-bra"
+    ],
     "date": "2025-03-16",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1090,7 +1286,7 @@
   },
   {
     "id": 129,
-    "text": "Tras la co-li-na\nun ba-ño pla-te-a-do,\nla lu-na lle-na",
+    "text": ["Tras la co-li-na", "un ba-ño pla-te-a-do,", "la lu-na lle-na"],
     "date": "2025-03-16",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1101,7 +1297,11 @@
   },
   {
     "id": 130,
-    "text": "Via-jo al nor-te,\nA-li-can-te tras de mí,\nson-rí-e_el Maig-mó",
+    "text": [
+      "Via-jo al nor-te,",
+      "A-li-can-te tras de mí,",
+      "son-rí-e_el Maig-mó"
+    ],
     "date": "2025-03-21",
     "selected": true,
     "tags": ["5-7-5"],
@@ -1113,7 +1313,11 @@
   },
   {
     "id": 131,
-    "text": "La fau-na ron-ca,\nvie-jos a-mi-gos cuen-tan\nnue-vas ba-ta-llas",
+    "text": [
+      "La fau-na ron-ca,",
+      "vie-jos a-mi-gos cuen-tan",
+      "nue-vas ba-ta-llas"
+    ],
     "date": "2025-03-22",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1125,7 +1329,11 @@
   },
   {
     "id": 132,
-    "text": "Bri-nas su-su-rran,\nba-jo un cie-lo sin lu-na\nsol-ta-mos car-ga",
+    "text": [
+      "Bri-nas su-su-rran,",
+      "ba-jo un cie-lo sin lu-na",
+      "sol-ta-mos car-ga"
+    ],
     "date": "2025-03-23",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1136,7 +1344,11 @@
   },
   {
     "id": 133,
-    "text": "Au-gu-rio ne-gro,\ncru-zan nues-tros ca-mi-nos,\nco-ne-xión mu-da",
+    "text": [
+      "Au-gu-rio ne-gro,",
+      "cru-zan nues-tros ca-mi-nos,",
+      "co-ne-xión mu-da"
+    ],
     "date": "2025-03-23",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1147,7 +1359,11 @@
   },
   {
     "id": 134,
-    "text": "Lle-ga el lu-nes,\nde nue-vo me pre-gun-to,\n¿por qué tra-ba-jar?",
+    "text": [
+      "Lle-ga el lu-nes,",
+      "de nue-vo me pre-gun-to,",
+      "¿por qué tra-ba-jar?"
+    ],
     "date": "2025-03-23",
     "selected": true,
     "tags": ["5-7-5"],
@@ -1158,7 +1374,11 @@
   },
   {
     "id": 135,
-    "text": "In-vier-no a-trás,\nso-bre ra-mas ca-du-cas\nre-na-cen ho-jas",
+    "text": [
+      "In-vier-no a-trás,",
+      "so-bre ra-mas ca-du-cas",
+      "re-na-cen ho-jas"
+    ],
     "date": "2025-03-26",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1166,7 +1386,7 @@
   },
   {
     "id": 136,
-    "text": "No-che tem-pra-na,\nsua-ve ca-lor de le-cho,\nca-e a-re-na",
+    "text": ["No-che tem-pra-na,", "sua-ve ca-lor de le-cho,", "ca-e a-re-na"],
     "date": "2025-03-26",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1179,7 +1399,11 @@
   },
   {
     "id": 137,
-    "text": "Da-dos de vein-te,\na-ven-tu-ras é-pi-cas,\nnue-vos a-mi-gos",
+    "text": [
+      "Da-dos de vein-te,",
+      "a-ven-tu-ras é-pi-cas,",
+      "nue-vos a-mi-gos"
+    ],
     "date": "2025-03-27",
     "selected": true,
     "tags": ["5-7-5"],
@@ -1191,7 +1415,11 @@
   },
   {
     "id": 138,
-    "text": "Re-í-mos jun-tos,\nsin sa-ber quie-nes so-mos\nnos a-cep-ta-mos",
+    "text": [
+      "Re-í-mos jun-tos,",
+      "sin sa-ber quie-nes so-mos",
+      "nos a-cep-ta-mos"
+    ],
     "date": "2025-03-29",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1202,7 +1430,11 @@
   },
   {
     "id": 139,
-    "text": "O-tro sue-ño más\nmi sub-cons-cien-te lu-cha\na-bro los o-jos",
+    "text": [
+      "O-tro sue-ño más",
+      "mi sub-cons-cien-te lu-cha",
+      "a-bro los o-jos"
+    ],
     "date": "2025-03-30",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1213,7 +1445,11 @@
   },
   {
     "id": 140,
-    "text": "Ba-ño de bos-que\nque ex-tra-ño con-cep-to\n¿ver-dad ár-bo-les?",
+    "text": [
+      "Ba-ño de bos-que",
+      "que ex-tra-ño con-cep-to",
+      "¿ver-dad ár-bo-les?"
+    ],
     "date": "2025-03-30",
     "selected": false,
     "tags": ["5-7-5"],
@@ -1224,7 +1460,7 @@
   },
   {
     "id": 141,
-    "text": "A-pren-diz Hai-jin\no-tra ho-ja del ár-bol\na-sí es Jo-se",
+    "text": ["A-pren-diz Hai-jin", "o-tra ho-ja del ár-bol", "a-sí es Jo-se"],
     "date": "2025-03-30",
     "selected": false,
     "tags": ["5-7-5"],
