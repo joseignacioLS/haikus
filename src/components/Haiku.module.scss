@@ -9,6 +9,13 @@
   grid-template-rows: 1fr;
   overflow: hidden;
 
+  .id {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+  }
+
   &.detailed {
     grid-template-rows: 4fr auto;
   }

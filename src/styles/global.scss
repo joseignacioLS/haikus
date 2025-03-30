@@ -52,6 +52,7 @@ main {
 
 a {
   color: colors.$anchor;
+
   &:visited {
     color: colors.$anchor_visited;
   }
@@ -61,6 +62,7 @@ h1,
 h2,
 h3 {
   font-family: "Domine Variable", serif;
+
   a,
   a:visited {
     color: inherit;
@@ -75,7 +77,7 @@ button {
   cursor: pointer;
   font-size: inherit;
   width: fit-content;
-  color: colors.$background;
+  color: colors.$text;
   font-weight: bold;
   background-color: colors.$button;
   padding: 0.5ch 1ch;

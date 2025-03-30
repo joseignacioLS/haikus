@@ -14,11 +14,28 @@
 
   scroll-snap-type: y mandatory;
 
-  & > * {
+  &>* {
     width: 100%;
     padding: 1px 0;
     flex: 0 0 auto;
     height: 100%;
     scroll-snap-align: center;
+
+    view-timeline-name: --revealing-item;
+    view-timeline-axis: block;
+
+    animation: linear appear both;
+    animation-timeline: --revealing-item;
+    animation-range: entry 0% cover 50%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1;
   }
 }

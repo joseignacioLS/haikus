@@ -38,7 +38,9 @@ const haiku: THaiku | undefined = visibleHaikus.find(
   <main class="slim">
     <HaikuGuard id={id} client:load />
     <Title client:load showBackButton>
-      #{haiku?.id}
+      <span transition:name={`haiku-id-${haiku?.id}`}>
+        #{haiku?.id}
+      </span>
     </Title>
     <div class="card">
       {haiku && <Haiku client:load haiku={haiku} size="xl" detailed />}

@@ -37,9 +37,23 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
     >
       {detailed ? (
         <>
-          <div className={styles.content}>
-            {haiku.text.map((l) => {
-              return <p key={l}>{cleanHaiku(l)}</p>;
+          <div
+            className={styles.content}
+            style={{
+              viewTransitionName: `haiku-content-${haiku.id}`,
+            }}
+          >
+            {haiku.text.map((l, i) => {
+              return (
+                <p
+                  key={l}
+                  style={{
+                    viewTransitionName: `haiku-content-${haiku.id}-${i}`,
+                  }}
+                >
+                  {cleanHaiku(l)}
+                </p>
+              );
             })}
           </div>
           <div className={styles.detail}>
@@ -61,11 +75,30 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
           </div>
         </>
       ) : (
-        <button className={`naked ${styles.content}`}>
-          {haiku.text.map((l) => {
-            return <p key={l}>{cleanHaiku(l)}</p>;
-          })}
-        </button>
+        <>
+          <span
+            className={styles.id}
+            style={{
+              viewTransitionName: `haiku-id-${haiku.id}`,
+            }}
+          >{`#${haiku.id}`}</span>
+          <button className={`naked ${styles.content}`}>
+            <div>
+              {haiku.text.map((l, i) => {
+                return (
+                  <p
+                    key={l}
+                    style={{
+                      viewTransitionName: `haiku-content-${haiku.id}-${i}`,
+                    }}
+                  >
+                    {cleanHaiku(l)}
+                  </p>
+                );
+              })}
+            </div>
+          </button>
+        </>
       )}
     </div>
   );
