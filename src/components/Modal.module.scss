@@ -1,4 +1,5 @@
 @use "../styles/colors";
+
 .wrapper {
   position: fixed;
   top: 0;
@@ -21,6 +22,8 @@
     border-radius: var(--padding);
     padding: var(--padding);
 
+    animation: appear .5s forwards;
+
     .closeBtn {
       position: absolute;
       top: calc(var(--padding) / 2);
@@ -32,9 +35,20 @@
       outline: 0;
       color: colors.$text;
       cursor: pointer;
+
       img {
         width: 100%;
       }
     }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
