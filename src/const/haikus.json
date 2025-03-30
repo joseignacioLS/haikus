@@ -1451,7 +1451,7 @@
       "¿ver-dad ár-bo-les?"
     ],
     "date": "2025-03-30",
-    "selected": false,
+    "selected": true,
     "tags": ["5-7-5"],
     "show": true,
     "description": [
@@ -1467,6 +1467,26 @@
     "show": true,
     "description": [
       "En el bosque me he sentido inspirado por un haiku de Shiki."
+    ]
+  },
+  {
+    "id": 142,
+    "text": [
+      "Cris-tal he-la-do",
+      "sus-pi-ros in-co-ne-xos",
+      "muer-tes ne-va-das"
+    ],
+    "date": "2025-03-30",
+    "selected": false,
+    "tags": ["5-7-5"],
+    "show": true,
+    "description": [
+      "Hoy paseaba por Alcoi y en la pared de un tunel ví un poema:",
+      "Cristal helado",
+      "de cada suspiro inconexo",
+      "muerte nevada,",
+      "sueño roto",
+      "Era casí un haiku, así que en su honor he decidido terminar de adaptarlo, espero que con el perdón de su autor o autora original."
     ]
   }
 ]
