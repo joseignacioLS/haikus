@@ -1210,5 +1210,27 @@
     "description": [
       "¿Qué significan los sueños? A veces pasamos por momentos duros y la noche nos enfrenta a cosas que preferimos evitar."
     ]
+  },
+  {
+    "id": 140,
+    "text": "Ba-ño de bos-que\nque ex-tra-ño con-cep-to\n¿ver-dad ár-bo-les?",
+    "date": "2025-03-30",
+    "selected": false,
+    "tags": ["5-7-5"],
+    "show": true,
+    "description": [
+      "Dar un paseo por la naturaleza hace que cambie la percepción que tengo del mundo. Me siento uno con el bosque."
+    ]
+  },
+  {
+    "id": 141,
+    "text": "A-pren-diz Hai-jin\no-tra ho-ja del ár-bol\na-sí es Jo-se",
+    "date": "2025-03-30",
+    "selected": false,
+    "tags": ["5-7-5"],
+    "show": true,
+    "description": [
+      "En el bosque me he sentido inspirado por un haiku de Shiki."
+    ]
   }
 ]
