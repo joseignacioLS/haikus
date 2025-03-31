@@ -168,7 +168,7 @@ export const HaikuShowcase = () => {
         </div>
       )}
       {$status === ERequestStatus.ERROR && (
-        <div className={`${styles.carouselWrapper}`}>{$error}</div>
+        <div className={`${styles.carouselWrapper}`}>{$error.message}</div>
       )}
     </>
   );

@@ -39,10 +39,6 @@ const initHaikuData = async () => {
     });
 };
 
-export const getHaiku = (id: THaiku["id"]): THaiku => {
-  return haikus.get().find((h) => h.id === id) || fallbackHaiku;
-};
-
 export const haikus = atom<THaiku[]>([]);
 export const status = atom<ERequestStatus>(ERequestStatus.LOADING);
 export const error = atom<any>(null);

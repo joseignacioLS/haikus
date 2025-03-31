@@ -8,7 +8,6 @@ import { cleanHaiku, formatDate } from "../utils/text";
 import { DetailModal } from "./DetailModal";
 import styles from "./Haiku.module.scss";
 import { ShareButton } from "./ShareButton";
-import { Spinner } from "./Spinner";
 
 const sizeToFontSize: Record<string, string> = {
   xl: "2rem",
@@ -45,8 +44,6 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
     if (!haiku) return;
     modalStore.set(<DetailModal haiku={haiku} />);
   };
-
-  if ($status === ERequestStatus.LOADING) return <Spinner />;
 
   return (
     <div

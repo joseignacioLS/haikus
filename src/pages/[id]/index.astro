@@ -1,8 +1,14 @@
 ---
 import { Haiku } from "../../components/Haiku";
+import { Spinner } from "../../components/Spinner";
 import { Title } from "../../components/Title";
 import Layout from "../../layouts/Layout.astro";
-import { getHaiku } from "../../store/Haikus";
+import {
+  ERequestStatus,
+  fallbackHaiku,
+  haikus,
+  status,
+} from "../../store/Haikus";
 
 import "../../styles/_blocks.scss";
 
@@ -15,8 +21,9 @@ const id =
       .filter((v) => Boolean(v))
       .at(-1)
   ) ?? -1;
-
-const haiku = getHaiku(id);
+const $status = status.get();
+const $haikus = haikus.get();
+const haiku = $haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku;
 ---
 
 <Layout>
@@ -27,7 +34,17 @@ const haiku = getHaiku(id);
       </span>
     </Title>
     <div class="card">
-      <Haiku client:only haiku={haiku} size="xl" detailed />
+      {
+        $status === ERequestStatus.SUCCESS && (
+          <Haiku
+            client:only
+            haiku={$haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku}
+            size="xl"
+            detailed
+          />
+        )
+      }
+      {$status === ERequestStatus.LOADING && <Spinner />}
     </div>
   </main>
 </Layout>
