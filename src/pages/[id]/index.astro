@@ -17,8 +17,6 @@ const id =
     .filter((v) => Boolean(v))
     .at(-1) ?? "0";
 
-console.log({ id, haikus });
-
 const visibleHaikus: THaiku[] = haikus.filter((h) => h.show);
 const haiku: THaiku | undefined = visibleHaikus.find(
   (h) => h.id === Number(id)
