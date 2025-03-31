@@ -1,10 +1,14 @@
+import { useStore } from "@nanostores/react";
 import { navigate } from "astro:transitions/client";
+import { useEffect, useState } from "react";
+import { data } from "../store/Data";
 import { modalStore } from "../store/Modal";
 import type { THaiku } from "../types";
 import { cleanHaiku, formatDate } from "../utils/text";
-import { ShareButton } from "./ShareButton";
 import { DetailModal } from "./DetailModal";
 import styles from "./Haiku.module.scss";
+import { ShareButton } from "./ShareButton";
+import { Spinner } from "./Spinner";
 
 const sizeToFontSize: Record<string, string> = {
   xl: "2rem",
@@ -13,17 +17,47 @@ const sizeToFontSize: Record<string, string> = {
 };
 
 type Props = {
-  haiku: THaiku;
+  id: THaiku["id"] | undefined;
   style?: Record<string, string>;
   size?: string;
   showDate?: boolean;
   detailed?: boolean;
 };
 
-export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
+export const Haiku = ({ id, style, size = "default", detailed }: Props) => {
+  const haikus = useStore(data);
+  const [haiku, setHaiku] = useState<THaiku | null>(null);
+
+  useEffect(() => {
+    if (haikus.length === 0) return;
+    const selectedHaiku = haikus.find((h) => h.id === id && h.show) ?? null;
+    if (!selectedHaiku) {
+      detailed && navigate("/");
+      return;
+    }
+    setHaiku(selectedHaiku);
+  }, [id, haikus]);
+
   const openDescription = () => {
+    if (!haiku) return;
     modalStore.set(<DetailModal haiku={haiku} />);
   };
+
+  if (!haiku)
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Spinner />
+      </div>
+    );
+
   return (
     <div
       style={{
@@ -44,16 +78,7 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
             }}
           >
             {haiku.text.map((l, i) => {
-              return (
-                <p
-                  key={l}
-                  style={{
-                    viewTransitionName: `haiku-content-${haiku.id}-${i}`,
-                  }}
-                >
-                  {cleanHaiku(l)}
-                </p>
-              );
+              return <p key={l}>{cleanHaiku(l)}</p>;
             })}
           </div>
           <div className={styles.detail}>
@@ -85,16 +110,7 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
           <button className={`naked ${styles.content}`}>
             <div>
               {haiku.text.map((l, i) => {
-                return (
-                  <p
-                    key={l}
-                    style={{
-                      viewTransitionName: `haiku-content-${haiku.id}-${i}`,
-                    }}
-                  >
-                    {cleanHaiku(l)}
-                  </p>
-                );
+                return <p key={l}>{cleanHaiku(l)}</p>;
               })}
             </div>
           </button>

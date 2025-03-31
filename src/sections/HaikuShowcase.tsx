@@ -2,12 +2,12 @@ import { useStore } from "@nanostores/react";
 import { useEffect, useMemo, useState } from "react";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
+import { Spinner } from "../components/Spinner.tsx";
 import { Title } from "../components/Title.tsx";
 import { ERequestStatus, data, error, status } from "../store/Data.tsx";
 import type { THaiku } from "../types";
 import { retrieveData, storeData } from "../utils/storage.ts";
 import styles from "./HaikuShowcase.module.scss";
-import { Spinner } from "../components/Spinner.tsx";
 
 enum EFilters {
   TODOS = "Todos",
@@ -119,7 +119,7 @@ export const HaikuShowcase = () => {
           )
           .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
           .map((haiku) => {
-            return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
+            return <Haiku key={haiku.id} id={haiku.id} showDate size="xl" />;
           })}
         onScroll={handleScroll}
         scrollPosition={scrollPosition}
