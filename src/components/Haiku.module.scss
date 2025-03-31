@@ -40,9 +40,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
 
     .date {
+      flex: 0 0 4ch;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -50,15 +50,6 @@
       gap: 0;
       line-height: 1.7ch;
       font-size: 75%;
-    }
-
-    .description {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img {
-        width: 3ch;
-      }
     }
   }
 }

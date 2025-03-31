@@ -78,7 +78,7 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
               ))}
             </p>
             <button
-              className={`round ${styles.description}`}
+              className={`round`}
               onClick={openDescription}
               disabled={!haiku.description}
             >

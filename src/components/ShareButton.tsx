@@ -13,7 +13,7 @@ export const ShareButton = ({ id }: { id: THaiku["id"] }) => {
   };
   return (
     <button
-      className={`naked ${styles.shareBtn}`}
+      className={`round`}
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();

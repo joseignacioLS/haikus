@@ -83,9 +83,13 @@ button {
   padding: 0.5ch 1ch;
   border-radius: 2ch;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &.round {
     border-radius: 10000px;
-    padding: .5ch;
+    padding: 0.5ch;
   }
 
   &.naked {
@@ -97,5 +101,9 @@ button {
 
   &:disabled {
     opacity: 0.3;
+  }
+
+  img {
+    height: 3ch;
   }
 }
