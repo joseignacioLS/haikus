@@ -83,6 +83,11 @@ button {
   padding: 0.5ch 1ch;
   border-radius: 2ch;
 
+  &.round {
+    border-radius: 10000px;
+    padding: .5ch;
+  }
+
   &.naked {
     background-color: transparent;
     color: inherit;

@@ -77,15 +77,13 @@ export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
                 <span key={index}>{item}</span>
               ))}
             </p>
-            {haiku.description && (
-              <button
-                className={`${styles.description}`}
-                onClick={openDescription}
-                disabled={!haiku.description}
-              >
-                Sobre este haiku
-              </button>
-            )}
+            <button
+              className={`round ${styles.description}`}
+              onClick={openDescription}
+              disabled={!haiku.description}
+            >
+              <img src="./info.svg" />
+            </button>
             <ShareButton id={haiku.id} />
           </div>
         </>
