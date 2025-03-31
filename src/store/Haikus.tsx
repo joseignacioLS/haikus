@@ -27,8 +27,8 @@ const initHaikuData = async () => {
       }
       return r.json();
     })
-    .then((retrievedData) => {
-      haikus.set(retrievedData);
+    .then((retrievedData: THaiku[]) => {
+      haikus.set(retrievedData.filter((h) => h.show));
       status.set(ERequestStatus.SUCCESS);
       error.set(null);
     })

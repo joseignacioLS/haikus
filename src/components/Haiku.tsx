@@ -1,12 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { navigate } from "astro:transitions/client";
-import { useEffect, useState } from "react";
-import {
-  ERequestStatus,
-  fallbackHaiku,
-  getHaiku,
-  status,
-} from "../store/Haikus";
+import { useEffect } from "react";
+import { ERequestStatus, status } from "../store/Haikus";
 import { modalStore } from "../store/Modal";
 import type { THaiku } from "../types";
 import { cleanHaiku, formatDate } from "../utils/text";
@@ -22,16 +17,15 @@ const sizeToFontSize: Record<string, string> = {
 };
 
 type Props = {
-  id: THaiku["id"] | undefined;
+  haiku: THaiku;
   style?: Record<string, string>;
   size?: string;
   showDate?: boolean;
   detailed?: boolean;
 };
 
-export const Haiku = ({ id, style, size = "default", detailed }: Props) => {
+export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
   const $status = useStore(status);
-  const [haiku, setHaiku] = useState<THaiku>(fallbackHaiku);
 
   const navigateToHome = () => {
     detailed && navigate("/");
@@ -42,12 +36,10 @@ export const Haiku = ({ id, style, size = "default", detailed }: Props) => {
     if ($status === ERequestStatus.ERROR) {
       return navigateToHome();
     }
-    const selectedHaiku = getHaiku(id ?? -1);
-    if (selectedHaiku.id === -1) {
+    if ($status === ERequestStatus.SUCCESS && haiku.id === -1) {
       return navigateToHome();
     }
-    setHaiku(selectedHaiku);
-  }, [id, getHaiku, $status]);
+  }, [haiku, $status]);
 
   const openDescription = () => {
     if (!haiku) return;

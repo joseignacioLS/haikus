@@ -119,7 +119,7 @@ export const HaikuShowcase = () => {
           )
           .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
           .map((haiku) => {
-            return <Haiku key={haiku.id} id={haiku.id} showDate size="xl" />;
+            return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
           })}
         onScroll={handleScroll}
         scrollPosition={scrollPosition}

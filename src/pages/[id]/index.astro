@@ -2,6 +2,7 @@
 import { Haiku } from "../../components/Haiku";
 import { Title } from "../../components/Title";
 import Layout from "../../layouts/Layout.astro";
+import { getHaiku } from "../../store/Haikus";
 
 import "../../styles/_blocks.scss";
 
@@ -13,7 +14,9 @@ const id =
       .split("/")
       .filter((v) => Boolean(v))
       .at(-1)
-  ) ?? 0;
+  ) ?? -1;
+
+const haiku = getHaiku(id);
 ---
 
 <Layout>
@@ -24,7 +27,7 @@ const id =
       </span>
     </Title>
     <div class="card">
-      <Haiku client:only id={id} size="xl" detailed />
+      <Haiku client:only haiku={haiku} size="xl" detailed />
     </div>
   </main>
 </Layout>
