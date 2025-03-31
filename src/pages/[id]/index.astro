@@ -18,7 +18,7 @@ const id =
 
 <Layout>
   <main class="slim">
-    <Title client:only showBackButton>
+    <Title client:load showBackButton>
       <span transition:name={`haiku-id-${id}`}>
         #{id}
       </span>

@@ -4,7 +4,7 @@ import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
 import { Spinner } from "../components/Spinner.tsx";
 import { Title } from "../components/Title.tsx";
-import { ERequestStatus, data, error, status } from "../store/Data.tsx";
+import { ERequestStatus, error, haikus, status } from "../store/Haikus.tsx";
 import type { THaiku } from "../types";
 import { retrieveData, storeData } from "../utils/storage.ts";
 import styles from "./HaikuShowcase.module.scss";
@@ -32,7 +32,7 @@ export const HaikuShowcase = () => {
     undefined
   );
 
-  const $haikus = useStore(data);
+  const $haikus = useStore(haikus);
   const $status = useStore(status);
   const $error = useStore(error);
 

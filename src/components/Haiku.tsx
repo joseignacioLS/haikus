@@ -1,7 +1,12 @@
 import { useStore } from "@nanostores/react";
 import { navigate } from "astro:transitions/client";
 import { useEffect, useState } from "react";
-import { data, ERequestStatus, status } from "../store/Data";
+import {
+  ERequestStatus,
+  fallbackHaiku,
+  getHaiku,
+  status,
+} from "../store/Haikus";
 import { modalStore } from "../store/Modal";
 import type { THaiku } from "../types";
 import { cleanHaiku, formatDate } from "../utils/text";
@@ -24,18 +29,7 @@ type Props = {
   detailed?: boolean;
 };
 
-const fallbackHaiku: THaiku = {
-  id: -1,
-  date: "",
-  selected: false,
-  show: true,
-  tags: [],
-  text: [],
-  description: [],
-};
-
 export const Haiku = ({ id, style, size = "default", detailed }: Props) => {
-  const $haikus = useStore(data);
   const $status = useStore(status);
   const [haiku, setHaiku] = useState<THaiku>(fallbackHaiku);
 
@@ -48,13 +42,12 @@ export const Haiku = ({ id, style, size = "default", detailed }: Props) => {
     if ($status === ERequestStatus.ERROR) {
       return navigateToHome();
     }
-    const selectedHaiku =
-      $haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku;
+    const selectedHaiku = getHaiku(id ?? -1);
     if (selectedHaiku.id === -1) {
       return navigateToHome();
     }
     setHaiku(selectedHaiku);
-  }, [id, $haikus, $status]);
+  }, [id, getHaiku, $status]);
 
   const openDescription = () => {
     if (!haiku) return;

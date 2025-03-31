@@ -1,14 +1,16 @@
-import { Temporal } from "temporal-polyfill";
-import haikus from "../const/haikus.json";
-import styles from "./Timeline.module.scss";
 import { useEffect, useRef, useState } from "react";
+import { Temporal } from "temporal-polyfill";
+import styles from "./Timeline.module.scss";
+import { useStore } from "@nanostores/react";
+import { haikus } from "../store/Haikus";
 
 export const Timeline = () => {
+  const $haikus = useStore(haikus);
   const highlightedDate = "";
   const [weeks, setWeeks] = useState<{ date: string; count: number }[][]>([]);
   const ref = useRef(null);
   useEffect(() => {
-    const origin = Temporal.PlainDate.from(haikus[0].date);
+    const origin = Temporal.PlainDate.from($haikus[0].date);
     const today = Temporal.Now.plainDateISO();
     const monday = today.subtract({ days: today.dayOfWeek - 1 });
     const originMonday = origin.subtract({ days: origin.dayOfWeek - 1 });
@@ -20,13 +22,13 @@ export const Timeline = () => {
         const date = originMonday.add({ weeks: i, days: j });
         week.push({
           date: date.toString(),
-          count: haikus.filter((h) => h.date === date.toString()).length,
+          count: $haikus.filter((h) => h.date === date.toString()).length,
         });
       }
       newWeeks.push(week);
     }
     setWeeks(newWeeks);
-  }, []);
+  }, [$haikus]);
 
   return (
     <div className={styles.timeline}>
