@@ -1,7 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { navigate } from "astro:transitions/client";
 import { useEffect, useState } from "react";
-import { data } from "../store/Data";
+import { data, ERequestStatus, status } from "../store/Data";
 import { modalStore } from "../store/Modal";
 import type { THaiku } from "../types";
 import { cleanHaiku, formatDate } from "../utils/text";
@@ -24,39 +24,44 @@ type Props = {
   detailed?: boolean;
 };
 
+const fallbackHaiku: THaiku = {
+  id: -1,
+  date: "",
+  selected: false,
+  show: true,
+  tags: [],
+  text: [],
+  description: [],
+};
+
 export const Haiku = ({ id, style, size = "default", detailed }: Props) => {
-  const haikus = useStore(data);
-  const [haiku, setHaiku] = useState<THaiku | null>(null);
+  const $haikus = useStore(data);
+  const $status = useStore(status);
+  const [haiku, setHaiku] = useState<THaiku>(fallbackHaiku);
+
+  const navigateToHome = () => {
+    detailed && navigate("/");
+  };
 
   useEffect(() => {
-    if (haikus.length === 0) return;
-    const selectedHaiku = haikus.find((h) => h.id === id && h.show) ?? null;
-    if (!selectedHaiku) {
-      detailed && navigate("/");
-      return;
+    if ($status === ERequestStatus.LOADING) return;
+    if ($status === ERequestStatus.ERROR) {
+      return navigateToHome();
+    }
+    const selectedHaiku =
+      $haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku;
+    if (selectedHaiku.id === -1) {
+      return navigateToHome();
     }
     setHaiku(selectedHaiku);
-  }, [id, haikus]);
+  }, [id, $haikus, $status]);
 
   const openDescription = () => {
     if (!haiku) return;
     modalStore.set(<DetailModal haiku={haiku} />);
   };
 
-  if (!haiku)
-    return (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Spinner />
-      </div>
-    );
+  if ($status === ERequestStatus.LOADING) return <Spinner />;
 
   return (
     <div

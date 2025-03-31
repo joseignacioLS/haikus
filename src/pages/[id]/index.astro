@@ -18,13 +18,13 @@ const id =
 
 <Layout>
   <main class="slim">
-    <Title client:load showBackButton>
+    <Title client:only showBackButton>
       <span transition:name={`haiku-id-${id}`}>
         #{id}
       </span>
     </Title>
     <div class="card">
-      <Haiku client:load id={id} size="xl" detailed />
+      <Haiku client:only id={id} size="xl" detailed />
     </div>
   </main>
 </Layout>

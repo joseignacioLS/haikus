@@ -131,7 +131,7 @@ export const HaikuShowcase = () => {
   return (
     <>
       <Title>
-        <span className={styles.title}>
+        <div className={styles.title}>
           {Object.values(EFilters).map((k) => {
             return (
               <button
@@ -145,7 +145,7 @@ export const HaikuShowcase = () => {
               </button>
             );
           })}
-        </span>
+        </div>
       </Title>
       {$status === ERequestStatus.SUCCESS && (
         <div
@@ -163,14 +163,12 @@ export const HaikuShowcase = () => {
         </div>
       )}
       {$status === ERequestStatus.LOADING && (
-        <div className={`${styles.carouselWrapper} ${styles.warning}`}>
+        <div className={`${styles.carouselWrapper}`}>
           <Spinner />
         </div>
       )}
       {$status === ERequestStatus.ERROR && (
-        <div className={`${styles.carouselWrapper} ${styles.warning}`}>
-          {$error}
-        </div>
+        <div className={`${styles.carouselWrapper}`}>{$error}</div>
       )}
     </>
   );
