@@ -1,32 +1,23 @@
 ---
 import { Haiku } from "../../components/Haiku";
 import { Title } from "../../components/Title";
-import haikus from "../../const/haikus.json";
 import HaikuGuard from "../../guards/HaikuGuard";
 import Layout from "../../layouts/Layout.astro";
+import { data } from "../../store/Data";
+
 import "../../styles/_blocks.scss";
 import { type THaiku } from "../../types";
 
-export function getStaticPaths() {
-  return [
-    ...haikus
-      .filter((h) => h.show)
-      .map(({ id }) => {
-        return {
-          params: { id },
-        };
-      }),
-    {
-      params: { id: "random" },
-    },
-  ];
-}
+export const prerender = false;
 
+const haikus = data.get();
 const id =
   Astro.url.pathname
     .split("/")
     .filter((v) => Boolean(v))
     .at(-1) ?? "0";
+
+console.log({ id, haikus });
 
 const visibleHaikus: THaiku[] = haikus.filter((h) => h.show);
 const haiku: THaiku | undefined = visibleHaikus.find(
@@ -36,7 +27,7 @@ const haiku: THaiku | undefined = visibleHaikus.find(
 
 <Layout>
   <main class="slim">
-    <HaikuGuard id={id} client:load />
+    <HaikuGuard id={id} client:only />
     <Title client:load showBackButton>
       <span transition:name={`haiku-id-${haiku?.id}`}>
         #{haiku?.id}

@@ -1,0 +1,21 @@
+@use "../styles/colors";
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  background-color: colors.$text;
+  border-radius: 50%;
+  animation: jump 2s infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}

@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^6.2.4",
     "@astrojs/react": "^4.2.1",
     "@fontsource-variable/domine": "^5.2.5",
     "@fontsource-variable/open-sans": "^5.2.5",

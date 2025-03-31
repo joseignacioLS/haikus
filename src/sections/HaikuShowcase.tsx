@@ -1,11 +1,13 @@
+import { useStore } from "@nanostores/react";
 import { useEffect, useMemo, useState } from "react";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
 import { Title } from "../components/Title.tsx";
-import haikus from "../const/haikus.json";
+import { ERequestStatus, data, error, status } from "../store/Data.tsx";
 import type { THaiku } from "../types";
-import styles from "./HaikuShowcase.module.scss";
 import { retrieveData, storeData } from "../utils/storage.ts";
+import styles from "./HaikuShowcase.module.scss";
+import { Spinner } from "../components/Spinner.tsx";
 
 enum EFilters {
   TODOS = "Todos",
@@ -29,6 +31,11 @@ export const HaikuShowcase = () => {
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
+
+  const $haikus = useStore(data);
+  const $status = useStore(status);
+  const $error = useStore(error);
+
   const [touchStart, setTouchStart] = useState<
     { x: number; y: number } | undefined
   >(undefined);
@@ -104,7 +111,7 @@ export const HaikuShowcase = () => {
   const carousel = useMemo(
     () => (
       <Carousel
-        slides={haikus
+        slides={$haikus
           .filter(
             filter
               ? filterFns[filter] ?? filterFns[EFilters.TODOS]
@@ -118,7 +125,7 @@ export const HaikuShowcase = () => {
         scrollPosition={scrollPosition}
       ></Carousel>
     ),
-    [haikus, filter, scrollPosition]
+    [$haikus, filter, scrollPosition]
   );
 
   return (
@@ -140,19 +147,31 @@ export const HaikuShowcase = () => {
           })}
         </span>
       </Title>
-      <div
-        className={styles.carouselWrapper}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        {carousel}
-        {filter && (
-          <p key={filter} className={styles.description}>
-            {descriptions[filter]}
-          </p>
-        )}
-      </div>
+      {$status === ERequestStatus.SUCCESS && (
+        <div
+          className={styles.carouselWrapper}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {carousel}
+          {filter && (
+            <p key={filter} className={styles.description}>
+              {descriptions[filter]}
+            </p>
+          )}
+        </div>
+      )}
+      {$status === ERequestStatus.LOADING && (
+        <div className={`${styles.carouselWrapper} ${styles.warning}`}>
+          <Spinner />
+        </div>
+      )}
+      {$status === ERequestStatus.ERROR && (
+        <div className={`${styles.carouselWrapper} ${styles.warning}`}>
+          {$error}
+        </div>
+      )}
     </>
   );
 };
