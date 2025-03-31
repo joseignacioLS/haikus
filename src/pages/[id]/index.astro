@@ -23,7 +23,6 @@ const id =
   ) ?? -1;
 const $status = status.get();
 const $haikus = haikus.get();
-const haiku = $haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku;
 ---
 
 <Layout>
@@ -37,7 +36,7 @@ const haiku = $haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku;
       {
         $status === ERequestStatus.SUCCESS && (
           <Haiku
-            client:only
+            client:load
             haiku={$haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku}
             size="xl"
             detailed
