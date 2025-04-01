@@ -1,7 +1,4 @@
-import { useStore } from "@nanostores/react";
 import { navigate } from "astro:transitions/client";
-import { useEffect } from "react";
-import { ERequestStatus, status } from "../store/Haikus";
 import { modalStore } from "../store/Modal";
 import type { THaiku } from "../types";
 import { cleanHaiku, formatDate } from "../utils/text";
@@ -24,24 +21,7 @@ type Props = {
 };
 
 export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
-  const $status = useStore(status);
-
-  const navigateToHome = () => {
-    detailed && navigate("/");
-  };
-
-  useEffect(() => {
-    if ($status === ERequestStatus.LOADING) return;
-    if ($status === ERequestStatus.ERROR) {
-      return navigateToHome();
-    }
-    if ($status === ERequestStatus.SUCCESS && haiku.id === -1) {
-      return navigateToHome();
-    }
-  }, [haiku, $status]);
-
   const openDescription = () => {
-    if (!haiku) return;
     modalStore.set(<DetailModal haiku={haiku} />);
   };
 
