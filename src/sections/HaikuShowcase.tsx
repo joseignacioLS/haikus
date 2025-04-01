@@ -1,10 +1,10 @@
-import { useStore } from "@nanostores/react";
 import { useEffect, useMemo, useState } from "react";
 import { Carousel } from "../components/Carousel";
 import { Haiku } from "../components/Haiku";
 import { Spinner } from "../components/Spinner.tsx";
 import { Title } from "../components/Title.tsx";
-import { ERequestStatus, error, haikus, status } from "../store/Haikus.tsx";
+import { useHaikuStore } from "../hooks/useHaikuStore.tsx";
+import { ERequestStatus } from "../store/Haikus.tsx";
 import type { THaiku } from "../types";
 import { retrieveData, storeData } from "../utils/storage.ts";
 import styles from "./HaikuShowcase.module.scss";
@@ -31,18 +31,8 @@ export const HaikuShowcase = () => {
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
-  const [statusState, setStatusState] = useState(ERequestStatus.LOADING);
 
-  useEffect(() => {
-    const unsubscribe = status.subscribe((status) => {
-      setStatusState(status);
-    });
-    return () => {
-      unsubscribe();
-    };
-  }, []);
-
-  const $haikus = useStore(haikus);
+  const { haikus, status } = useHaikuStore();
 
   const [touchStart, setTouchStart] = useState<
     { x: number; y: number } | undefined
@@ -116,25 +106,23 @@ export const HaikuShowcase = () => {
 
   useEffect(initializeFilter, []);
 
-  const carousel = useMemo(
-    () => (
+  const carousel = useMemo(() => {
+    const slides = haikus
+      .filter(
+        filter ? filterFns[filter] ?? filterFns[EFilters.TODOS] : filterFns.None
+      )
+      .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
+      .map((haiku) => {
+        return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
+      });
+    return (
       <Carousel
-        slides={$haikus
-          .filter(
-            filter
-              ? filterFns[filter] ?? filterFns[EFilters.TODOS]
-              : filterFns.None
-          )
-          .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
-          .map((haiku) => {
-            return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
-          })}
-        onScroll={handleScroll}
+        slides={slides}
         scrollPosition={scrollPosition}
+        onScroll={handleScroll}
       ></Carousel>
-    ),
-    [$haikus, filter, scrollPosition]
-  );
+    );
+  }, [haikus, filter, scrollPosition]);
 
   return (
     <>
@@ -155,7 +143,7 @@ export const HaikuShowcase = () => {
           })}
         </div>
       </Title>
-      {statusState === ERequestStatus.SUCCESS && (
+      {status === ERequestStatus.SUCCESS && (
         <div
           className={styles.carouselWrapper}
           onTouchStart={handleTouchStart}
@@ -170,12 +158,12 @@ export const HaikuShowcase = () => {
           )}
         </div>
       )}
-      {statusState === ERequestStatus.LOADING && (
+      {status === ERequestStatus.LOADING && (
         <div className={`${styles.carouselWrapper}`}>
           <Spinner />
         </div>
       )}
-      {statusState === ERequestStatus.ERROR && (
+      {status === ERequestStatus.ERROR && (
         <div className={`${styles.carouselWrapper}`}>Ha habido un error</div>
       )}
     </>

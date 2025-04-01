@@ -1,39 +1,21 @@
-import { useEffect, useState } from "react";
 import { Haiku } from "../components/Haiku";
 import { Spinner } from "../components/Spinner";
-import { ERequestStatus, fallbackHaiku, haikus, status } from "../store/Haikus";
-import type { THaiku } from "../types";
+import { useHaikuStore } from "../hooks/useHaikuStore";
+import { ERequestStatus, fallbackHaiku } from "../store/Haikus";
 
 export default function DetailedHaiku({ id }: { id: Number }) {
-  const [haikusState, setHaikusState] = useState<THaiku[]>([]);
-  const [statusState, setStatusState] = useState(ERequestStatus.LOADING);
-
-  useEffect(() => {
-    const subscriptions = [
-      status.subscribe((receivedStatus) => {
-        setStatusState(receivedStatus);
-      }),
-      haikus.subscribe((receivedHaikus) => {
-        setHaikusState([...receivedHaikus]);
-      }),
-    ];
-    return () => {
-      subscriptions.forEach((u) => u());
-    };
-  }, []);
+  const { haikus, status } = useHaikuStore();
 
   return (
     <div className="card">
-      {statusState === ERequestStatus.SUCCESS && (
+      {status === ERequestStatus.SUCCESS && (
         <Haiku
-          haiku={
-            haikusState.find((h) => h.id === id && h.show) ?? fallbackHaiku
-          }
+          haiku={haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku}
           size="xl"
           detailed
         />
       )}
-      {statusState === ERequestStatus.LOADING && <Spinner />}
+      {status === ERequestStatus.LOADING && <Spinner />}
     </div>
   );
 }
