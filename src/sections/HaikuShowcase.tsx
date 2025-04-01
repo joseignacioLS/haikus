@@ -4,8 +4,7 @@ import { Haiku } from "../components/Haiku";
 import { Spinner } from "../components/Spinner.tsx";
 import { Title } from "../components/Title.tsx";
 import { useHaikuStore } from "../hooks/useHaikuStore.tsx";
-import { ERequestStatus } from "../store/Haikus.tsx";
-import type { THaiku } from "../types";
+import { ERequestStatus, type THaiku } from "../types";
 import { retrieveData, storeData } from "../utils/storage.ts";
 import styles from "./HaikuShowcase.module.scss";
 
@@ -113,7 +112,7 @@ export const HaikuShowcase = () => {
       )
       .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
       .map((haiku) => {
-        return <Haiku key={haiku.id} haiku={haiku} showDate size="xl" />;
+        return <Haiku key={haiku.id} haiku={haiku} />;
       });
     return (
       <Carousel

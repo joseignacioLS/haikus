@@ -1,8 +1,10 @@
+@use "../styles/spaces";
+
 .navbar {
   display: flex;
   gap: 1ch;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: spaces.$gap_default;
 
   .backbtn {
     height: 100%;

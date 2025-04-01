@@ -1,5 +1,6 @@
 @use "../styles/blocks";
 @use "../styles/colors";
+@use "../styles/spaces";
 
 .body {
   @extend .card;
@@ -10,8 +11,8 @@
 
   img {
     float: left;
-    margin-right: 1rem;
+    margin-right: spaces.$gap_default;
     max-width: 50%;
-    border-radius: 2rem;
+    border-radius: spaces.$border_radius_default;
   }
 }

@@ -7,3 +7,9 @@ export type THaiku = {
   show: boolean;
   description?: string[];
 };
+
+export enum ERequestStatus {
+  LOADING = "LOADING",
+  SUCCESS = "SUCCESS",
+  ERROR = "ERROR",
+}

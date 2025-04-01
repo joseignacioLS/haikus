@@ -1,11 +1,17 @@
 @use "./colors";
+@use "./spaces";
 
 .card {
-  padding: 1rem;
-  border-radius: 2rem;
+  padding: spaces.$gap_default;
+  border-radius: spaces.$border_radius_default;
   width: 100%;
   height: 100%;
   background-color: colors.$foreground;
   flex: 1;
   overflow: auto;
+}
+
+.cardNoPadding {
+  @extend .card;
+  padding: 0;
 }

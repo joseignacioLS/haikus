@@ -1,4 +1,6 @@
 @use "./colors";
+@use "./spaces";
+@use "./fonts";
 
 * {
   margin: 0;
@@ -38,7 +40,7 @@ main {
   min-height: 600px;
   height: 100%;
   margin: auto;
-  padding: 1rem;
+  padding: spaces.$gap_default;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -68,6 +70,13 @@ h3 {
     color: inherit;
     text-decoration: none;
   }
+}
+
+h1 {
+  @extend .title_font;
+}
+h2 {
+  @extend .subtitle_font;
 }
 
 button {

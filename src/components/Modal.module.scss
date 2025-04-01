@@ -1,4 +1,6 @@
 @use "../styles/colors";
+@use "../styles/spaces";
+@use "../styles/animations";
 
 .wrapper {
   position: fixed;
@@ -11,24 +13,21 @@
   justify-content: center;
   align-items: center;
 
-  --padding: 2rem;
-
   .modal {
+    @include animations.fade-in(.5s);
     position: relative;
     width: 90vw;
     max-width: calc(500px * 0.9);
     height: fit-content;
     background-color: rgba(black, 0.95);
-    border-radius: var(--padding);
-    padding: var(--padding);
-
-    animation: appear .5s forwards;
+    border-radius: spaces.$gap_big;
+    padding: spaces.$gap_big;
 
     .closeBtn {
       position: absolute;
-      top: calc(var(--padding) / 2);
-      right: calc(var(--padding) / 2);
-      width: var(--padding);
+      top: spaces.$gap_default;
+      right: spaces.$gap_default;
+      width: 2rem;
       aspect-ratio: 1 / 1;
       background-color: transparent;
       border: 0;
@@ -40,15 +39,5 @@
         width: 100%;
       }
     }
-  }
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }

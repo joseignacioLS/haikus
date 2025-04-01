@@ -7,13 +7,12 @@ import "../../styles/_blocks.scss";
 
 export const prerender = false;
 
-const id =
-  Number(
-    Astro.url.pathname
-      .split("/")
-      .filter((v) => Boolean(v))
-      .at(-1)
-  ) ?? -1;
+const id = parseInt(
+  Astro.url.pathname
+    .split("/")
+    .filter((v) => Boolean(v))
+    .at(-1) ?? "-1"
+);
 ---
 
 <Layout>

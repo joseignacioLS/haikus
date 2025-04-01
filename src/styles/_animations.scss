@@ -1,12 +1,28 @@
-@mixin fade-in {
-  animation: fade-in .5s forwards;
+@mixin fade-in($time) {
+  animation: fade-in-animation $time forwards;
 }
 
-@keyframes fade-in {
+@mixin jump($time) {
+  animation: jump-animation $time infinite;
+}
+
+@keyframes fade-in-animation {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes jump-animation {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-50px);
   }
 }

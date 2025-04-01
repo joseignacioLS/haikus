@@ -1,5 +1,5 @@
 import { atom } from "nanostores";
-import type { THaiku } from "../types";
+import { ERequestStatus, type THaiku } from "../types";
 
 export const fallbackHaiku: THaiku = {
   id: -1,
@@ -10,12 +10,6 @@ export const fallbackHaiku: THaiku = {
   text: [],
   description: [],
 };
-
-export enum ERequestStatus {
-  LOADING = "LOADING",
-  SUCCESS = "SUCCESS",
-  ERROR = "ERROR",
-}
 
 const initHaikuData = async () => {
   status.set(ERequestStatus.LOADING);

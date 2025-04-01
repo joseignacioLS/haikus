@@ -1,15 +1,13 @@
 @use "../styles/blocks";
+@use "../styles/spaces";
 
 .miniAbout {
   display: flex;
-  gap: 1rem;
+  gap: spaces.$gap_default;
 
   .profilePicWrapper {
-    @extend .card;
-    flex: 1;
-    aspect-ratio: 1 / 1;
+    @extend .cardNoPadding;
     overflow: hidden;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +16,7 @@
       object-fit: cover;
       min-width: 100%;
       min-height: 100%;
-      border-radius: 2rem;
+      border-radius: inherit;
     }
   }
 

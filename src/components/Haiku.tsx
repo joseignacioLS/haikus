@@ -6,31 +6,18 @@ import { DetailModal } from "./DetailModal";
 import styles from "./Haiku.module.scss";
 import { ShareButton } from "./ShareButton";
 
-const sizeToFontSize: Record<string, string> = {
-  xl: "2rem",
-  default: "1rem",
-  s: ".75rem",
-};
-
 type Props = {
   haiku: THaiku;
-  style?: Record<string, string>;
-  size?: string;
-  showDate?: boolean;
   detailed?: boolean;
 };
 
-export const Haiku = ({ haiku, style, size = "default", detailed }: Props) => {
+export const Haiku = ({ haiku, detailed }: Props) => {
   const openDescription = () => {
     modalStore.set(<DetailModal haiku={haiku} />);
   };
 
   return (
     <div
-      style={{
-        ...style,
-        fontSize: sizeToFontSize[size] ?? sizeToFontSize.default,
-      }}
       className={`${styles.haiku} ${detailed ? styles.detailed : ""}`}
       onClick={() => {
         !detailed && navigate(`${import.meta.env.BASE_URL}${haiku.id}`);

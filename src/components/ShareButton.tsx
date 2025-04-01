@@ -1,5 +1,4 @@
-import { type THaiku } from "../types.d";
-import styles from "./ShareButton.module.scss";
+import { type THaiku } from "../types";
 
 export const ShareButton = ({ id }: { id: THaiku["id"] }) => {
   const copyShareLinkToClipboard = () => {

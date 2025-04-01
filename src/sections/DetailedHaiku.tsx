@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { Haiku } from "../components/Haiku";
 import { Spinner } from "../components/Spinner";
 import { useHaikuStore } from "../hooks/useHaikuStore";
-import { ERequestStatus, fallbackHaiku } from "../store/Haikus";
-import type { THaiku } from "../types";
+import { fallbackHaiku } from "../store/Haikus";
+import { ERequestStatus, type THaiku } from "../types";
 
-export default function DetailedHaiku({ id }: { id: Number }) {
+export default function DetailedHaiku({ id }: { id: THaiku["id"] }) {
   const { haikus, status } = useHaikuStore();
   const [haiku, setHaiku] = useState(fallbackHaiku);
 
@@ -31,9 +31,7 @@ export default function DetailedHaiku({ id }: { id: Number }) {
 
   return (
     <div className="card">
-      {status === ERequestStatus.SUCCESS && (
-        <Haiku haiku={haiku} size="xl" detailed />
-      )}
+      {status === ERequestStatus.SUCCESS && <Haiku haiku={haiku} detailed />}
       {status === ERequestStatus.LOADING && <Spinner />}
     </div>
   );

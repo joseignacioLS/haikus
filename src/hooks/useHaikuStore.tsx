@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ERequestStatus, error, haikus, status } from "../store/Haikus";
-import type { THaiku } from "../types";
+import { error, haikus, status } from "../store/Haikus";
+import { ERequestStatus, type THaiku } from "../types";
 
 export const useHaikuStore = () => {
   const [data, setData] = useState<{
@@ -12,6 +12,7 @@ export const useHaikuStore = () => {
     status: ERequestStatus.LOADING,
     error: null,
   });
+
   useEffect(() => {
     const subscriptions = [
       haikus.subscribe((haikus) => {
