@@ -1,9 +1,17 @@
+@use "./media";
+
 .title_font {
   font-size: 2rem;
+  @include media.extremely_small {
+    font-size: 1.5rem;
+  }
 }
 
 .subtitle_font {
   font-size: 1.5rem;
+  @include media.extremely_small {
+    font-size: 1.25rem;
+  }
 }
 
 .text_font {

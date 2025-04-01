@@ -1,0 +1,5 @@
+@mixin extremely_small {
+  @media (width < 350px) {
+    @content;
+  }
+}
