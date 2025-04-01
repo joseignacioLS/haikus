@@ -31,10 +31,18 @@ export const HaikuShowcase = () => {
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
+  const [statusState, setStatusState] = useState(ERequestStatus.LOADING);
+
+  useEffect(() => {
+    const unsubscribe = status.subscribe((status) => {
+      setStatusState(status);
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   const $haikus = useStore(haikus);
-  const $status = useStore(status);
-  const $error = useStore(error);
 
   const [touchStart, setTouchStart] = useState<
     { x: number; y: number } | undefined
@@ -147,7 +155,7 @@ export const HaikuShowcase = () => {
           })}
         </div>
       </Title>
-      {$status === ERequestStatus.SUCCESS && (
+      {statusState === ERequestStatus.SUCCESS && (
         <div
           className={styles.carouselWrapper}
           onTouchStart={handleTouchStart}
@@ -162,13 +170,13 @@ export const HaikuShowcase = () => {
           )}
         </div>
       )}
-      {$status === ERequestStatus.LOADING && (
+      {statusState === ERequestStatus.LOADING && (
         <div className={`${styles.carouselWrapper}`}>
           <Spinner />
         </div>
       )}
-      {$status === ERequestStatus.ERROR && (
-        <div className={`${styles.carouselWrapper}`}>{$error.message}</div>
+      {statusState === ERequestStatus.ERROR && (
+        <div className={`${styles.carouselWrapper}`}>Ha habido un error</div>
       )}
     </>
   );

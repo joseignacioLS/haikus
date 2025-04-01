@@ -52,7 +52,13 @@ export const Carousel = ({
       className={styles.carousel}
       onScroll={handleScroll}
     >
-      {slides}
+      {slides.map((s: any) => {
+        return (
+          <div key={s.key} className={styles.wrapper}>
+            {s}
+          </div>
+        );
+      })}
     </div>
   );
 };
