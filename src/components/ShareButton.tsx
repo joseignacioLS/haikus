@@ -3,7 +3,7 @@ import { type THaiku } from "../types";
 export const ShareButton = ({ id }: { id: THaiku["id"] }) => {
   const copyShareLinkToClipboard = () => {
     navigator.clipboard
-      .writeText(`${window.location.host}${import.meta.env.BASE_URL}${id}`)
+      .writeText(`${window.location.host}/${id}`)
       .then(
         () =>
           !(navigator as any).userAgentData?.mobile &&
@@ -20,7 +20,7 @@ export const ShareButton = ({ id }: { id: THaiku["id"] }) => {
       }}
     >
       <img
-        src={`${import.meta.env.BASE_URL}share.svg`}
+        src={`/share.svg`}
         alt="Icono de compartir"
       />
     </button>

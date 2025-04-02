@@ -15,7 +15,7 @@ export const About = () => {
       </Title>
       <div className={styles.body}>
         <img
-          src={`${import.meta.env.BASE_URL}me.webp`}
+          src={`/me.webp`}
           alt="Fotografía de Jose, el autor de la página"
           style={{
             viewTransitionName: "jose-img",
@@ -61,7 +61,7 @@ export const About = () => {
           </p>
           <p>
             Ahora mismo el haiku del que estoy más orgulloso es{" "}
-            <a href={`${import.meta.env.BASE_URL}130`}>Sonríe el Maigmo</a>
+            <a href={`/130`}>Sonríe el Maigmo</a>
           </p>
           <p>¡Espero que los disfrutes!</p>
         </div>

@@ -1,22 +1,21 @@
 ---
 import { Title } from "../../components/Title";
 import Layout from "../../layouts/Layout.astro";
-import DetailedHaiku from "../../sections/DetailedHaiku";
+import { HaikuCollection } from "../../sections/HaikuCollection";
 
 import "../../styles/_blocks.scss";
 
 export const prerender = false;
-
-const id = parseInt(Astro.params.id ?? "-1");
+const tag = Astro.params.tag ?? "";
 ---
 
 <Layout>
   <main class="slim">
     <Title client:load showBackButton>
-      <span transition:name={`haiku-id-${id}`}>
-        #{id}
+      <span>
+        {tag}
       </span>
     </Title>
-    <DetailedHaiku client:load id={id} />
+    <HaikuCollection client:load tag={tag} />
   </main>
 </Layout>

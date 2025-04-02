@@ -6,9 +6,14 @@ import styles from "./Title.module.scss";
 type Props = {
   children?: ReactNode;
   showBackButton?: boolean;
+  backRoute?: string;
 };
 
-export const Title = ({ children, showBackButton = false }: Props) => {
+export const Title = ({
+  children,
+  showBackButton = false,
+  backRoute = "/",
+}: Props) => {
   useEffect(() => {
     window.scrollTo(0, 1);
   }, []);
@@ -20,11 +25,11 @@ export const Title = ({ children, showBackButton = false }: Props) => {
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            navigate(`${import.meta.env.BASE_URL}`);
+            navigate(backRoute);
           }}
         >
           <img
-            src={`${import.meta.env.BASE_URL}back.svg`}
+            src={`/back.svg`}
             alt="Icono de flecha apuntado a la izquierda"
           />
         </button>

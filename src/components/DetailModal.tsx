@@ -1,3 +1,4 @@
+import { navigate } from "astro:transitions/client";
 import type { THaiku } from "../types";
 import styles from "./DetailModal.module.scss";
 
@@ -9,6 +10,21 @@ export const DetailModal = ({ haiku }: { haiku: THaiku }) => {
       {haiku.description?.map((p) => (
         <p key={p}>{p}</p>
       ))}
+      <div className={styles.tags}>
+        {haiku.tags.sort().map((tag) => {
+          return (
+            <button
+              key={tag}
+              className="rounded"
+              onClick={() => {
+                navigate(`/collection/${tag}`);
+              }}
+            >
+              {tag}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };

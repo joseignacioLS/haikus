@@ -10,4 +10,10 @@
   p {
     margin-bottom: 1ch;
   }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1ch;
+  }
 }

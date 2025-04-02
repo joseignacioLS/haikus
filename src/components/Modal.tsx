@@ -24,10 +24,7 @@ export const Modal = () => {
         }}
       >
         <button className={`naked ${styles.closeBtn}`} onClick={handleClose}>
-          <img
-            src={`${import.meta.env.BASE_URL}close.svg`}
-            alt="Círculo con un aspa dentro"
-          />
+          <img src={`/close.svg`} alt="Círculo con un aspa dentro" />
         </button>
         {store}
       </div>

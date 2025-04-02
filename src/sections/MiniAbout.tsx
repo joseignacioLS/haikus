@@ -9,7 +9,7 @@ export const MiniAbout = () => {
           style={{
             viewTransitionName: "jose-img",
           }}
-          src={`${import.meta.env.BASE_URL}me.webp`}
+          src={`/me.webp`}
           alt="Fotografía de Jose, el autor de la página"
         />
       </div>
@@ -17,7 +17,7 @@ export const MiniAbout = () => {
         <TitledBlock
           title={
             <h2 style={{ viewTransitionName: "about-title" }}>
-              <a href={`${import.meta.env.BASE_URL}about`}>Sobre mí</a>
+              <a href={`/about`}>Sobre mí</a>
             </h2>
           }
         >

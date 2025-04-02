@@ -20,7 +20,7 @@ export const Haiku = ({ haiku, detailed }: Props) => {
     <div
       className={`${styles.haiku} ${detailed ? styles.detailed : ""}`}
       onClick={() => {
-        !detailed && navigate(`${import.meta.env.BASE_URL}${haiku.id}`);
+        !detailed && navigate(`/${haiku.id}`);
       }}
     >
       {detailed ? (
@@ -46,7 +46,7 @@ export const Haiku = ({ haiku, detailed }: Props) => {
               onClick={openDescription}
               disabled={!haiku.description}
             >
-              <img src="./info.svg" />
+              <img src="/info.svg" />
             </button>
             <ShareButton id={haiku.id} />
           </div>
