@@ -1,25 +1,14 @@
 @use "../styles/blocks";
 
 .titledBlock {
-  &.carded {
-    @extend .card;
-  }
-  width: 100%;
-  height: 100%;
+  @extend .card;
+
   display: flex;
   flex-direction: column;
   text-decoration: inherit;
-  color: inherit;
   gap: 1ch;
+
   overflow: hidden;
-
-  text-decoration: none;
-  color: inherit;
-
-  &.bottomTitled {
-    flex-direction: column-reverse;
-    align-items: flex-end;
-  }
 
   .content {
     width: 100%;

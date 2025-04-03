@@ -8,19 +8,20 @@ import { ERequestStatus, type THaiku } from "../types";
 import { retrieveData, storeData } from "../utils/storage.ts";
 import styles from "./HaikuShowcase.module.scss";
 
-enum EFilters {
-  TODOS = "Todos",
-  DESTACADOS = "Destacados",
-}
-
-const filterFns: Record<EFilters | "None", (h: THaiku) => boolean> = {
-  [EFilters.TODOS]: (h: THaiku) => h.show,
-  [EFilters.DESTACADOS]: (h: THaiku) => h.show && h.selected,
-  None: () => false,
+type Props<T extends string> = {
+  filters: T[];
+  filterFns: Record<T, Record<string, any[]>>;
+  defaultFilter?: T;
+  storeState?: boolean;
 };
 
-export const HaikuShowcase = () => {
-  const [filter, setFilter] = useState<EFilters | undefined>(undefined);
+export const HaikuShowcase = <T extends string>({
+  filters,
+  defaultFilter,
+  filterFns,
+  storeState,
+}: Props<T>) => {
+  const [filter, setFilter] = useState<T | undefined>(undefined);
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
@@ -35,20 +36,24 @@ export const HaikuShowcase = () => {
   >(undefined);
 
   const initializeFilter = () => {
+    if (!storeState) {
+      setFilter(defaultFilter);
+      return;
+    }
     try {
       const retrieved = retrieveData();
 
       if (!retrieved) throw new Error("");
 
       const { filter, scrollPosition } = JSON.parse(retrieved);
-      setFilter(
-        [EFilters.TODOS, EFilters.DESTACADOS].includes(filter)
-          ? filter
-          : EFilters.DESTACADOS
-      );
-      if (typeof scrollPosition === "number") setScrollPosition(scrollPosition);
+
+      setFilter([filters].includes(filter) ? filter : defaultFilter);
+
+      if (typeof scrollPosition === "number") {
+        setScrollPosition(scrollPosition);
+      }
     } catch (err) {
-      setFilter(EFilters.DESTACADOS);
+      setFilter(defaultFilter ?? filters[0]);
     }
   };
 
@@ -61,11 +66,23 @@ export const HaikuShowcase = () => {
     if (Math.abs(deltaY) > 50) return;
     if (Math.abs(deltaX) < 50) return;
     if (deltaX > 0) {
-      handleFilterChange(EFilters.TODOS);
+      setFilter((oldFilter) => {
+        const filterIndex = filters.findIndex((f) => f === oldFilter);
+        if (filterIndex === -1) return oldFilter;
+        const leftIndex = Math.max(0, filterIndex - 1);
+        return filters[leftIndex];
+      });
+      setScrollPosition(undefined);
       return;
     }
     if (deltaX < 0) {
-      handleFilterChange(EFilters.DESTACADOS);
+      setFilter((oldFilter) => {
+        const filterIndex = filters.findIndex((f) => f === oldFilter);
+        if (filterIndex === -1) return oldFilter;
+        const rightIndex = Math.min(filters.length - 1, filterIndex + 1);
+        return filters[rightIndex];
+      });
+      setScrollPosition(undefined);
       return;
     }
   };
@@ -86,24 +103,30 @@ export const HaikuShowcase = () => {
     storeData(JSON.stringify({ scrollPosition, filter }));
   };
 
-  const handleFilterChange = (filter: EFilters) => {
-    setFilter(filter);
+  useEffect(initializeFilter, []);
+
+  useEffect(() => {
+    if (!storeState) return;
     storeData(
       JSON.stringify({
         scrollPosition: scrollPosition ?? 0,
         filter,
       })
     );
-    setScrollPosition(undefined);
-  };
-
-  useEffect(initializeFilter, []);
+  }, [filter, scrollPosition, storeState]);
 
   const carousel = useMemo(() => {
     const slides = haikus
-      .filter(
-        filter ? filterFns[filter] ?? filterFns[EFilters.TODOS] : filterFns.None
-      )
+      .filter((h) => {
+        if (!filter || !filterFns[filter]) return false;
+        return Object.entries(filterFns[filter]).every(([key, options]) => {
+          const value = h[key as keyof THaiku];
+          if (Array.isArray(value)) {
+            return options.filter((o) => value.includes(o)).length > 0;
+          }
+          return options.includes(h[key as keyof THaiku]);
+        });
+      })
       .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
       .map((haiku) => {
         return <Haiku key={haiku.id} haiku={haiku} />;
@@ -119,23 +142,28 @@ export const HaikuShowcase = () => {
 
   return (
     <section className={styles.wrapper}>
-      <Title>
-        <div className={styles.title}>
-          {Object.values(EFilters).map((k) => {
-            return (
-              <button
-                key={k}
-                className={`naked ${filter === k ? styles.selectedTitle : ""}`}
-                onClick={() => {
-                  handleFilterChange(k);
-                }}
-              >
-                {k}
-              </button>
-            );
-          })}
-        </div>
-      </Title>
+      {filters.length > 1 && (
+        <Title>
+          <div className={styles.title}>
+            {filters.map((k) => {
+              return (
+                <button
+                  key={k}
+                  className={`naked ${
+                    filter === k ? styles.selectedTitle : ""
+                  }`}
+                  onClick={() => {
+                    setFilter(k);
+                    setScrollPosition(undefined);
+                  }}
+                >
+                  {k}
+                </button>
+              );
+            })}
+          </div>
+        </Title>
+      )}
       {status === ERequestStatus.SUCCESS && (
         <div
           className={styles.carouselWrapper}

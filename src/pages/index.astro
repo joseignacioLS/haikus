@@ -2,11 +2,24 @@
 import Layout from "../layouts/Layout.astro";
 import { HaikuShowcase } from "../sections/HaikuShowcase";
 import { MiniAbout } from "../sections/MiniAbout";
+
+const filters = ["Todos", "Destacados"];
+const defaultFilter = filters[1];
+const filterFns = {
+  Todos: {},
+  Destacados: { selected: [true] },
+};
 ---
 
 <Layout>
-  <main class="slim">
-    <HaikuShowcase client:load />
+  <main>
+    <HaikuShowcase
+      client:load
+      filters={filters}
+      defaultFilter={defaultFilter}
+      filterFns={filterFns}
+      storeState
+    />
     <MiniAbout client:load />
   </main>
 </Layout>
@@ -27,9 +40,9 @@ import { MiniAbout } from "../sections/MiniAbout";
     @include media.large {
       max-width: 100%;
       display: grid;
-      grid-template-columns: 1fr 220px minmax(auto, calc(
-          600px - calc(spaces.$gap_default * 2)
-        )) 220px 1fr;
+      grid-template-columns:
+        1fr 220px minmax(auto, calc(600px - calc(spaces.$gap_default * 2)))
+        220px 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: ". . haikus about .";
     }

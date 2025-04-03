@@ -2,14 +2,7 @@
 
 .navbar {
   display: flex;
-  gap: 1ch;
+  gap: spaces.$gap_small;
   align-items: center;
   margin-bottom: spaces.$gap_default;
-
-  .backbtn {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }

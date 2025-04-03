@@ -4,24 +4,13 @@ import styles from "./TitledBlock.module.scss";
 type Props = {
   title?: ReactNode;
   children?: ReactNode;
-  bottomTitle?: boolean;
-  isCard?: boolean;
 };
 
-export const TitledBlock = ({
-  title,
-  bottomTitle,
-  children,
-  isCard,
-}: Props) => {
+export const TitledBlock = ({ title, children }: Props) => {
   return (
-    <div
-      className={`${styles.titledBlock} ${
-        bottomTitle ? styles.bottomTitled : ""
-      } ${isCard ? styles.carded : ""}`}
-    >
+    <section className={styles.titledBlock}>
       {title}
       <div className={styles.content}>{children}</div>
-    </div>
+    </section>
   );
 };

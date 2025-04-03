@@ -1,9 +1,9 @@
 import { navigate } from "astro:transitions/client";
 import type { THaiku } from "../types";
-import styles from "./DetailModal.module.scss";
+import styles from "./HaikuInfoModal.module.scss";
 import { ShareButton } from "./ShareButton";
 
-export const DetailModal = ({ haiku }: { haiku: THaiku }) => {
+export const HaikuInfoModal = ({ haiku }: { haiku: THaiku }) => {
   return (
     <div className={styles.wrapper}>
       <div>

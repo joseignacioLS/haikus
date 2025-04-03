@@ -21,7 +21,7 @@ export const CollectionsCard = () => {
       .sort();
   }, [haikus]);
   return (
-    <TitledBlock title={<h2>Colecciones</h2>} isCard>
+    <TitledBlock title={<h2>Colecciones</h2>}>
       <div className={styles.tagList}>
         {tags.map((tag) => {
           return (

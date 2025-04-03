@@ -4,19 +4,16 @@
 .tagList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   gap: spaces.$gap_mini;
   padding-bottom: spaces.$gap_small;
   & > * {
     flex-shrink: 0;
   }
-}
-@include media.mobile {
-  .tagList {
+  @include media.mobile {
     justify-content: flex-start;
     max-height: 100px;
+    flex-wrap: nowrap;
     overflow: auto;
-    flex-wrap: no-wrap;
   }
 }

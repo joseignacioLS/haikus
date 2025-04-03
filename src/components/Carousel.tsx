@@ -3,25 +3,12 @@ import styles from "./Carousel.module.scss";
 
 type Props = {
   slides: ReactNode[];
-  randomize?: boolean;
   onScroll?: (scrollPosition: number) => void;
-  onReachEnd?: () => void;
   scrollPosition?: number;
 };
 
-export const Carousel = ({
-  slides,
-  randomize,
-  onScroll,
-  onReachEnd,
-  scrollPosition,
-}: Props) => {
+export const Carousel = ({ slides, onScroll, scrollPosition }: Props) => {
   const ref = useRef(null);
-  const randomizeScrollPosition = () => {
-    const scrollElement = ref?.current as any;
-    if (!scrollElement) return;
-    scrollTo(scrollElement.scrollHeight * Math.random());
-  };
 
   const scrollTo = (top: number = 0) => {
     const scrollElement = ref?.current as any;
@@ -30,16 +17,9 @@ export const Carousel = ({
   };
 
   const handleScroll = (e: React.UIEvent<HTMLElement>) => {
-    const { scrollTop, scrollHeight, offsetHeight } = e.currentTarget;
+    const { scrollTop } = e.currentTarget;
     onScroll?.(scrollTop);
-    if (scrollTop + offsetHeight === scrollHeight) {
-      onReachEnd?.();
-    }
   };
-  useEffect(() => {
-    if (!randomize) return;
-    randomizeScrollPosition();
-  }, [randomize]);
 
   useEffect(() => {
     scrollTo(scrollPosition ?? 0);

@@ -4,22 +4,23 @@
 
 .carousel {
   @include animations.fade-in(0.5s);
-  position: relative;
+
   width: 100%;
   height: 100%;
+
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  overflow: auto;
   gap: spaces.$gap_default;
+  flex-wrap: nowrap;
+
+  overflow: auto;
 
   scroll-snap-type: y mandatory;
 
-  & > * {
-    width: 100%;
+  .wrapper {
     padding: 1px 0;
-    flex: 0 0 auto;
-    height: 100%;
+    flex: 0 0 100%;
+
     scroll-snap-align: center;
 
     view-timeline-name: --revealing-item;

@@ -56,18 +56,22 @@ main {
   }
 }
 
-a {
-  color: colors.$anchor;
-
-  &:visited {
-    color: colors.$anchor_visited;
-  }
-}
-
 h1,
 h2,
 h3 {
   font-family: "Domine Variable", serif;
+  transition: font-size 0.2s;
+}
+
+p {
+  margin-bottom: spaces.$gap_default;
+}
+
+a,
+p,
+span,
+button {
+  transition: font-size 0.2s;
 }
 
 h1 {
@@ -75,6 +79,14 @@ h1 {
 }
 h2 {
   @extend .subtitle_font;
+}
+
+a {
+  color: colors.$anchor;
+
+  &:visited {
+    color: colors.$anchor_visited;
+  }
 }
 
 button {

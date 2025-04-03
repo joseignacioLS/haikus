@@ -21,7 +21,7 @@ export const Title = ({
     <nav className={styles.navbar}>
       {showBackButton && (
         <button
-          className={`naked ${styles.backbtn}`}
+          className={`naked`}
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();

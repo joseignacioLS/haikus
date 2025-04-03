@@ -1,13 +1,19 @@
 ---
 import { Title } from "../../components/Title";
 import Layout from "../../layouts/Layout.astro";
-import { HaikuCollection } from "../../sections/HaikuCollection";
 import { CollectionsCard } from "../../components/CollectionsCard";
 
 import "../../styles/_blocks.scss";
+import { HaikuShowcase } from "../../sections/HaikuShowcase";
 
 export const prerender = false;
+
 const tag = Astro.params.tag ?? "";
+
+const defaultFilter = "Tag";
+const filterFns = {
+  Tag: { tags: [tag] },
+};
 ---
 
 <Layout>
@@ -18,7 +24,12 @@ const tag = Astro.params.tag ?? "";
           {tag}
         </span>
       </Title>
-      <HaikuCollection client:load tag={tag} />
+      <HaikuShowcase
+        client:load
+        filters={[defaultFilter]}
+        defaultFilter={defaultFilter}
+        filterFns={filterFns}
+      />
     </section>
     <CollectionsCard client:load />
   </main>

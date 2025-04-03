@@ -16,7 +16,6 @@ export const MiniAbout = () => {
       </div>
       <div className={styles.profileTextWrapper}>
         <TitledBlock
-          isCard
           title={
             <h2 style={{ viewTransitionName: "about-title" }}>
               <a href={`/about`}>Sobre mí</a>

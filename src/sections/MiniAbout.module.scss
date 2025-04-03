@@ -3,11 +3,14 @@
 @use "../styles/media";
 
 .miniAbout {
-  height: fit-content;
   width: 100%;
+  height: fit-content;
+
   grid-area: about;
+
   display: grid;
   gap: spaces.$gap_default;
+
   overflow: hidden;
 
   @include media.mobile {
@@ -41,7 +44,6 @@
   }
 
   .profileTextWrapper {
-    height: 100%;
     p {
       height: 100%;
       overflow: auto;

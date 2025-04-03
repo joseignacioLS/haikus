@@ -9,6 +9,8 @@
 
 .haiku_font {
   font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
   @include media.large {
     font-size: 2rem;
   }

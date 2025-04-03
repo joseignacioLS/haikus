@@ -3,15 +3,18 @@
 @use "../styles/animations";
 
 .wrapper {
+  @include animations.fade-in(0.25s);
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  backdrop-filter: blur(5px);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  backdrop-filter: blur(5px);
 
   .modal {
     @include animations.fade-in(0.5s);
@@ -19,25 +22,16 @@
     width: 90vw;
     max-width: calc(500px * 0.9);
     height: fit-content;
+
+    padding: spaces.$gap_default;
+
     background-color: rgba(black, 0.95);
     border-radius: spaces.$gap_default;
-    padding: spaces.$gap_default;
 
     .closeBtn {
       position: absolute;
       top: spaces.$gap_default;
       right: spaces.$gap_default;
-      width: 2rem;
-      aspect-ratio: 1 / 1;
-      background-color: transparent;
-      border: 0;
-      outline: 0;
-      color: colors.$text;
-      cursor: pointer;
-
-      img {
-        width: 100%;
-      }
     }
   }
 }
