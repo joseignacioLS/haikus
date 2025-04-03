@@ -61,7 +61,9 @@ export const About = () => {
           </p>
           <p>
             Ahora mismo el haiku del que estoy más orgulloso es{" "}
-            <a href={`/130`}>Sonríe el Maigmo</a>
+            <a href={`/130`}>Sonríe el Maigmo</a>, pero además tengo una
+            colección de haikus personales que puedes consultar{" "}
+            <a href="/collection/Personal">aquí</a>.
           </p>
           <p>¡Espero que los disfrutes!</p>
         </div>

@@ -1,3 +1,4 @@
+import { CollectionsCard } from "../components/CollectionsCard";
 import { TitledBlock } from "../components/TitledBlock";
 import styles from "./MiniAbout.module.scss";
 
@@ -15,6 +16,7 @@ export const MiniAbout = () => {
       </div>
       <div className={styles.profileTextWrapper}>
         <TitledBlock
+          isCard
           title={
             <h2 style={{ viewTransitionName: "about-title" }}>
               <a href={`/about`}>Sobre mí</a>
@@ -30,6 +32,9 @@ export const MiniAbout = () => {
             llevar un diario. ¡Espero que los disfrutes!
           </p>
         </TitledBlock>
+      </div>
+      <div className={styles.collectionsWrapper}>
+        <CollectionsCard />
       </div>
     </section>
   );

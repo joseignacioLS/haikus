@@ -2,6 +2,7 @@
 import { Title } from "../../components/Title";
 import Layout from "../../layouts/Layout.astro";
 import { HaikuCollection } from "../../sections/HaikuCollection";
+import { CollectionsCard } from "../../components/CollectionsCard";
 
 import "../../styles/_blocks.scss";
 
@@ -11,11 +12,28 @@ const tag = Astro.params.tag ?? "";
 
 <Layout>
   <main>
-    <Title client:load showBackButton>
-      <span>
-        {tag}
-      </span>
-    </Title>
-    <HaikuCollection client:load tag={tag} />
+    <section class="collection">
+      <Title client:load showBackButton>
+        <span transition:name={`collection-title-${tag}`}>
+          {tag}
+        </span>
+      </Title>
+      <HaikuCollection client:load tag={tag} />
+    </section>
+    <CollectionsCard client:load />
   </main>
 </Layout>
+
+<style lang="scss">
+  @use "../../styles/spaces";
+  main {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: spaces.$gap_default;
+    .collection {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>

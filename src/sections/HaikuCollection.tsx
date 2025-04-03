@@ -14,7 +14,7 @@ export const HaikuCollection = ({ tag }: { tag: string }) => {
       .filter((h) => h.tags.includes(tag))
       .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
       .map((haiku) => {
-        return <Haiku key={haiku.id} haiku={haiku} detailed />;
+        return <Haiku key={haiku.id} haiku={haiku} />;
       });
     return <Carousel slides={slides}></Carousel>;
   }, [haikus, tag]);

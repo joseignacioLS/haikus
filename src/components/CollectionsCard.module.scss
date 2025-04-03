@@ -1,0 +1,17 @@
+@use "../styles/spaces";
+@use "../styles/media";
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: spaces.$gap_mini;
+}
+@include media.mobile {
+  .tagList {
+    justify-content: flex-start;
+    max-height: 100px;
+    overflow: auto;
+  }
+}

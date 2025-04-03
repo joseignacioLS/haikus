@@ -1,19 +1,26 @@
+@use "../styles/spaces";
 @use "../styles/fonts";
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: spaces.$gap_small;
   .date {
     @extend .caption_font;
     display: inline-block;
-    margin-bottom: 1ch;
     opacity: 0.7;
   }
   p {
-    margin-bottom: 1ch;
+    margin-bottom: spaces.$gap_small;
   }
 
   .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 1ch;
+  }
+
+  .shareButton {
+    margin-left: auto,
   }
 }

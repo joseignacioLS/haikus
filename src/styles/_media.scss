@@ -4,8 +4,14 @@
   }
 }
 
+@mixin mobile {
+  @media (width < 800px) {
+    @content;
+  }
+}
+
 @mixin large {
-  @media (width > 800px) {
+  @media (width >= 800px) {
     @content;
   }
 }

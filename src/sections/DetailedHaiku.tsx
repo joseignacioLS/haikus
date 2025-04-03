@@ -31,7 +31,7 @@ export default function DetailedHaiku({ id }: { id: THaiku["id"] }) {
 
   return (
     <div className="card">
-      {status === ERequestStatus.SUCCESS && <Haiku haiku={haiku} detailed />}
+      {status === ERequestStatus.SUCCESS && <Haiku haiku={haiku} fullpage />}
       {status === ERequestStatus.LOADING && <Spinner />}
     </div>
   );

@@ -14,14 +14,14 @@
   align-items: center;
 
   .modal {
-    @include animations.fade-in(.5s);
+    @include animations.fade-in(0.5s);
     position: relative;
     width: 90vw;
     max-width: calc(500px * 0.9);
     height: fit-content;
     background-color: rgba(black, 0.95);
-    border-radius: spaces.$gap_big;
-    padding: spaces.$gap_big;
+    border-radius: spaces.$gap_default;
+    padding: spaces.$gap_default;
 
     .closeBtn {
       position: absolute;
