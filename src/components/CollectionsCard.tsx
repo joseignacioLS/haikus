@@ -5,6 +5,8 @@ import type { THaiku } from "../types";
 import { navigate } from "astro:transitions/client";
 import styles from "./CollectionsCard.module.scss";
 
+const hiddenCollections: string[] = ["3-5-3", "5-7-5"];
+
 export const CollectionsCard = () => {
   const { haikus } = useHaikuStore();
   const tags = useMemo(() => {
@@ -14,7 +16,9 @@ export const CollectionsCard = () => {
           return [...tags, ...h.tags];
         }, [])
       )
-    ).sort();
+    )
+      .filter((t) => !hiddenCollections.includes(t))
+      .sort();
   }, [haikus]);
   return (
     <TitledBlock title={<h2>Colecciones</h2>} isCard>
