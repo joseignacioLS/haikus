@@ -124,7 +124,7 @@ export const HaikuShowcase = () => {
   }, [haikus, filter, scrollPosition]);
 
   return (
-    <>
+    <section className={styles.wrapper}>
       <Title>
         <div className={styles.title}>
           {Object.values(EFilters).map((k) => {
@@ -165,6 +165,6 @@ export const HaikuShowcase = () => {
       {status === ERequestStatus.ERROR && (
         <div className={`${styles.carouselWrapper}`}>Ha habido un error</div>
       )}
-    </>
+    </section>
   );
 };

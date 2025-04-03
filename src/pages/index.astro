@@ -10,3 +10,26 @@ import { MiniAbout } from "../sections/MiniAbout";
     <MiniAbout client:load />
   </main>
 </Layout>
+
+<style lang="scss">
+  @use "../styles/media";
+  @use "../styles/spaces";
+
+  main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "haikus"
+      "about";
+    gap: spaces.$gap_default;
+
+    @include media.large {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 200px 2fr 200px;
+      grid-template-rows: 1fr;
+      grid-template-areas: ". haikus about";
+    }
+  }
+</style>

@@ -4,7 +4,7 @@ import { Haiku } from "../components/Haiku";
 import { Spinner } from "../components/Spinner.tsx";
 import { useHaikuStore } from "../hooks/useHaikuStore.tsx";
 import { ERequestStatus } from "../types";
-import styles from "./HaikuShowcase.module.scss";
+import styles from "./HaikuCollection.module.scss";
 
 export const HaikuCollection = ({ tag }: { tag: string }) => {
   const { haikus, status } = useHaikuStore();

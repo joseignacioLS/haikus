@@ -3,7 +3,7 @@ import styles from "./MiniAbout.module.scss";
 
 export const MiniAbout = () => {
   return (
-    <div className={styles.miniAbout}>
+    <section className={styles.miniAbout}>
       <div className={styles.profilePicWrapper}>
         <img
           style={{
@@ -31,6 +31,6 @@ export const MiniAbout = () => {
           </p>
         </TitledBlock>
       </div>
-    </div>
+    </section>
   );
 };
