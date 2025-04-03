@@ -14,7 +14,7 @@ export const CollectionsCard = () => {
           return [...tags, ...h.tags];
         }, [])
       )
-    );
+    ).sort();
   }, [haikus]);
   return (
     <TitledBlock title={<h2>Colecciones</h2>} isCard>

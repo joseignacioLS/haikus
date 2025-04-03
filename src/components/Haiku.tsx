@@ -21,12 +21,9 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
           return <p key={l}>{cleanHaiku(l)}</p>;
         })}
       </div>
+      {!fullpage && <span className={styles.id}>{`#${haiku.id}`}</span>}
       <div className={styles.detail}>
-        {!fullpage && <span className={styles.id}>{`#${haiku.id}`}</span>}
-        <button
-          className={`round`}
-          onClick={openDescription}
-        >
+        <button className={`round`} onClick={openDescription}>
           <img src="/info.svg" />
         </button>
       </div>

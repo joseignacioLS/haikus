@@ -12,8 +12,7 @@
 
   @include media.mobile {
     height: 100%;
-    max-height: 50dvh;
-    grid-template-columns: minmax(100px, 1fr) auto;
+    grid-template-columns: minmax(40px, 150px) 1fr;
     grid-template-rows: auto auto;
   }
 
@@ -29,9 +28,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include media.large {
-      flex: 1;
-    }
 
     img {
       object-fit: cover;
@@ -39,13 +35,16 @@
       min-width: 100%;
       border-radius: inherit;
     }
+    @include media.mobile {
+      max-height: 170px;
+    }
   }
 
   .profileTextWrapper {
     height: 100%;
     p {
-      overflow: hidden;
-      text-overflow: ellipsis;
+      height: 100%;
+      overflow: auto;
     }
     @include media.mobile {
       max-height: 170px;

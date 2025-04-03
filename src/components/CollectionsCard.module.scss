@@ -7,11 +7,16 @@
   justify-content: center;
   align-items: center;
   gap: spaces.$gap_mini;
+  padding-bottom: spaces.$gap_small;
+  & > * {
+    flex-shrink: 0;
+  }
 }
 @include media.mobile {
   .tagList {
     justify-content: flex-start;
     max-height: 100px;
     overflow: auto;
+    flex-wrap: no-wrap;
   }
 }

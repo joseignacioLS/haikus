@@ -27,9 +27,9 @@ import { MiniAbout } from "../sections/MiniAbout";
     @include media.large {
       max-width: 100%;
       display: grid;
-      grid-template-columns: 1fr 200px calc(
+      grid-template-columns: 1fr 220px minmax(auto, calc(
           600px - calc(spaces.$gap_default * 2)
-        ) 200px 1fr;
+        )) 220px 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: ". . haikus about .";
     }
