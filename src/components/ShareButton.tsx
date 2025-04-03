@@ -3,7 +3,7 @@ import { type THaiku } from "../types";
 export const ShareButton = ({ id }: { id: THaiku["id"] }) => {
   const copyShareLinkToClipboard = () => {
     navigator.clipboard
-      .writeText(`${window.location.host}/${id}`)
+      .writeText(`${window.location.origin}/${id}`)
       .then(
         () =>
           !(navigator as any).userAgentData?.mobile &&
