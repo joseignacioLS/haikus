@@ -6,6 +6,10 @@
   animation: jump-animation $time infinite;
 }
 
+@mixin rotate($time) {
+  animation: rotate-animation $time infinite;
+}
+
 @keyframes fade-in-animation {
   from {
     opacity: 0;
@@ -42,5 +46,12 @@
 
   100% {
     transform: translateY(-50px);
+  }
+}
+
+
+@keyframes rotate-animation {
+  to {
+    transform: rotate(0.5turn);
   }
 }

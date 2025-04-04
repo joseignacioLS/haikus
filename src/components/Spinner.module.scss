@@ -1,5 +1,6 @@
 @use "../styles/colors";
 @use "../styles/animations";
+@use "../styles/spaces";
 
 .wrapper {
   width: 100%;
@@ -8,17 +9,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   .spinner {
+    @include animations.rotate(2s);
     width: 50px;
     aspect-ratio: 1;
-    border-radius: 50%;
+    border-radius: spaces.$border_radius_round;
     border: 8px solid;
     border-color: colors.$text #0000;
-    animation: l1 2s infinite;
-  }
-  @keyframes l1 {
-    to {
-      transform: rotate(0.5turn);
-    }
   }
 }
