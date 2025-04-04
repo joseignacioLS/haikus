@@ -27,8 +27,8 @@ export const MiniAbout = () => {
               viewTransitionName: "about-text",
             }}
           >
-            ¡Hola! Soy Jose. Escribir haikus es una forma de expresarme y de
-            llevar un diario. ¡Espero que los disfrutes!
+            ¡Hola! Soy Jose y este es mi diario de Haikus ¡Espero que los
+            disfrutes!
           </p>
         </TitledBlock>
       </div>
