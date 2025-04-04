@@ -1,14 +1,15 @@
+import { modalStore } from "../store/Modal";
+import { toastStore } from "../store/Toast";
 import { type THaiku } from "../types";
 
 export const ShareButton = ({ id }: { id: THaiku["id"] }) => {
   const copyShareLinkToClipboard = () => {
     navigator.clipboard
       .writeText(`${window.location.origin}/${id}`)
-      .then(
-        () =>
-          !(navigator as any).userAgentData?.mobile &&
-          alert(`Se ha copiado la url del haiku #${id}`)
-      );
+      .then(() => {
+        toastStore.set(`Se ha copiado la url del haiku #${id}`);
+        modalStore.set(null);
+      });
   };
   return (
     <button

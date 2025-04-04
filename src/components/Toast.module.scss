@@ -1,0 +1,42 @@
+@use "../styles/blocks";
+@use "../styles/spaces";
+@use "../styles/colors";
+@use "../styles/animations";
+
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: spaces.$gap_big;
+  .toast {
+    @extend .card;
+    animation-name: fade-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1000ms;
+    width: fit-content;
+    max-width: 500px;
+    height: fit-content;
+    margin: auto;
+
+    text-align: center;
+
+    background-color: colors.$background;
+    box-shadow: spaces.$gap_mini spaces.$gap_mini 0 0 colors.$text;
+  }
+}
+
+@keyframes fade-in-out {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

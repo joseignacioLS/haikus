@@ -3,6 +3,7 @@ import "@fontsource-variable/domine";
 import "@fontsource-variable/open-sans";
 import { ClientRouter } from "astro:transitions";
 import { Modal } from "../components/Modal";
+import { Toast } from "../components/Toast";
 import "../styles/global.scss";
 ---
 
@@ -43,5 +44,6 @@ import "../styles/global.scss";
   <body>
     <slot />
     <Modal client:only />
+    <Toast client:only />
   </body>
 </html>

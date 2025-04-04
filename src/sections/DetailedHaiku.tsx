@@ -1,33 +1,15 @@
-import { navigate } from "astro:transitions/client";
-import { useEffect, useState } from "react";
 import { Haiku } from "../components/Haiku";
 import { Spinner } from "../components/Spinner";
+import { useHaikuGuard } from "../hooks/useHaikuGuard";
 import { useHaikuStore } from "../hooks/useHaikuStore";
 import { fallbackHaiku } from "../store/Haikus";
 import { ERequestStatus, type THaiku } from "../types";
 
 export default function DetailedHaiku({ id }: { id: THaiku["id"] }) {
-  const { haikus, status } = useHaikuStore();
-  const [haiku, setHaiku] = useState(fallbackHaiku);
+  const { status, haikus } = useHaikuStore();
+  useHaikuGuard(id);
 
-  useEffect(() => {
-    if (status === ERequestStatus.LOADING) return;
-    if (status === ERequestStatus.ERROR) {
-      navigate("/");
-      return;
-    }
-    const haiku: THaiku =
-      haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku;
-    if (
-      status === ERequestStatus.SUCCESS &&
-      haikus.length > 0 &&
-      haiku.id === -1
-    ) {
-      navigate("/");
-      return;
-    }
-    setHaiku(haiku);
-  }, [id, haikus, status]);
+  const haiku = haikus.find((h) => h.id === id) ?? fallbackHaiku;
 
   return (
     <div className="card">
