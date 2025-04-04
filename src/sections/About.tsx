@@ -1,4 +1,3 @@
-import { Title } from "../components/Title";
 import styles from "./About.module.scss";
 
 export const About = () => {
@@ -48,12 +47,6 @@ export const About = () => {
             Shiki
           </a>
           .
-        </p>
-        <p>
-          Ahora mismo el haiku del que estoy más orgulloso es{" "}
-          <a href={`/130`}>Sonríe el Maigmo</a>, pero además tengo una colección
-          de haikus personales que puedes consultar{" "}
-          <a href="/collection/Personal">aquí</a>.
         </p>
         <p>¡Espero que los disfrutes!</p>
       </div>
