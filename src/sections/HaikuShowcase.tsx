@@ -47,7 +47,7 @@ export const HaikuShowcase = <T extends string>({
 
       const { filter, scrollPosition } = JSON.parse(retrieved);
 
-      setFilter([filters].includes(filter) ? filter : defaultFilter);
+      setFilter(filters.includes(filter) ? filter : defaultFilter);
 
       if (typeof scrollPosition === "number") {
         setScrollPosition(scrollPosition);
