@@ -15,19 +15,13 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
   };
 
   return (
-    <div className={`${styles.wrapper} `}>
-      <div className={styles.haiku}>
+    <button className={`naked ${styles.wrapper}`}>
+      <div className={`${styles.haiku}`} onClick={openDescription}>
         {haiku.text.map((l) => {
           return <p key={l}>{cleanHaiku(l)}</p>;
         })}
       </div>
       {!fullpage && <span className={styles.id}>{`#${haiku.id}`}</span>}
-      <button
-        className={`round ${styles.shareButton}`}
-        onClick={openDescription}
-      >
-        <img src="/info.svg" />
-      </button>
-    </div>
+    </button>
   );
 };

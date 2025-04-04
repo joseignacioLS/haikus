@@ -7,6 +7,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  padding: spaces.$gap_small;
 
   .haiku {
     @extend .haiku_font;
@@ -17,14 +18,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1ch;
+
+    p {
+      text-decoration: underline;
+      text-decoration-color: colors.$button;
+      text-decoration-thickness: spaces.$gap_mini;
+    }
   }
 
   .id {
     @extend .subtitle_font;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: spaces.$gap_small;
+    top: spaces.$gap_small;
   }
 
   .shareButton {
