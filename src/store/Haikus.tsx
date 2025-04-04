@@ -1,5 +1,6 @@
 import { atom } from "nanostores";
 import { ERequestStatus, type THaiku } from "../types";
+import { toastStore } from "./Toast";
 
 export const fallbackHaiku: THaiku = {
   id: -1,
@@ -11,25 +12,46 @@ export const fallbackHaiku: THaiku = {
   description: [],
 };
 
+const retrieveChunk = async (id: number) => {
+  return fetch(import.meta.env.PUBLIC_HAIKU_DATA_URL + `/chunk_${id}.json`)
+    .then((res) => {
+      if (!res.ok) throw new Error();
+      return res.json();
+    })
+    .then(($haikus: THaiku[]) => {
+      haikus.set([...haikus.get(), ...$haikus]);
+    })
+    .catch(() => {
+      toastStore.set(`Ha habido un error cargando algunos haikus`);
+    });
+};
+
 const initHaikuData = async () => {
   status.set(ERequestStatus.LOADING);
 
-  return fetch(import.meta.env.PUBLIC_HAIKU_DATA_URL)
-    .then((r) => {
-      if (!r.ok || r.status !== 200) {
-        throw "Ha habido un error recuperando los haikus";
+  return fetch(import.meta.env.PUBLIC_HAIKU_DATA_URL + "/director.json")
+    .then((res) => {
+      if (!res.ok) throw new Error();
+      return res.json();
+    })
+    .then((data: { totalChunks: number; chunkSize: number }) => {
+      const { totalChunks } = data;
+      const promises = [];
+      for (let i = 0; i < totalChunks; i++) {
+        promises.push(retrieveChunk(i));
       }
-      return r.json();
+      Promise.allSettled(promises).then(() => {
+        haikus.set(
+          haikus
+            .get()
+            .filter((h) => h.show)
+            .sort((a, b) => b.id - a.id)
+        );
+        status.set(ERequestStatus.SUCCESS);
+      });
     })
-    .then((retrievedData: THaiku[]) => {
-      haikus.set(retrievedData.filter((h) => h.show));
-      status.set(ERequestStatus.SUCCESS);
-      error.set(null);
-    })
-    .catch((err) => {
-      haikus.set([]);
+    .catch(() => {
       status.set(ERequestStatus.ERROR);
-      error.set(err);
     });
 };
 
