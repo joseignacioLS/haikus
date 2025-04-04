@@ -15,7 +15,7 @@
 
   @include media.mobile {
     height: 100%;
-    grid-template-columns: minmax(40px, 150px) 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto;
   }
 
@@ -38,6 +38,7 @@
       min-width: 100%;
       border-radius: inherit;
     }
+
     @include media.mobile {
       max-height: 170px;
     }
@@ -48,6 +49,7 @@
       height: 100%;
       overflow: auto;
     }
+
     @include media.mobile {
       max-height: 170px;
     }
