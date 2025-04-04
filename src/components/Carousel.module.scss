@@ -26,8 +26,8 @@
     view-timeline-name: --revealing-item;
     view-timeline-axis: block;
 
-    animation: linear fade-in-animation both;
+    animation: linear fade-in-out-animation both;
     animation-timeline: --revealing-item;
-    animation-range: entry 0% cover 50%;
+    animation-range: entry 0% cover 100%;
   }
 }
