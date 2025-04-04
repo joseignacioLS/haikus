@@ -12,8 +12,7 @@ export const useHaikuGuard = (id: THaiku["id"]) => {
       navigate("/");
       return;
     }
-    const haiku: THaiku =
-      haikus.find((h) => h.id === id && h.show) ?? fallbackHaiku;
+    const haiku: THaiku = haikus.find((h) => h.id === id) ?? fallbackHaiku;
     if (
       status === ERequestStatus.SUCCESS &&
       haikus.length > 0 &&

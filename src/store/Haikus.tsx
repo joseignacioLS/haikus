@@ -6,7 +6,6 @@ export const fallbackHaiku: THaiku = {
   id: -1,
   date: "",
   selected: false,
-  show: true,
   tags: [],
   text: [],
   description: [],
@@ -47,12 +46,7 @@ const initHaikuData = async () => {
           promises.push(retrieveChunk(i));
         }
         Promise.allSettled(promises).then(() => {
-          haikus.set(
-            haikus
-              .get()
-              .filter((h) => h.show)
-              .sort((a, b) => b.id - a.id)
-          );
+          haikus.set(haikus.get().sort((a, b) => b.id - a.id));
           status.set(ERequestStatus.SUCCESS);
         });
       }

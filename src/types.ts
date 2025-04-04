@@ -4,7 +4,6 @@ export type THaiku = {
   selected: boolean;
   id: number;
   tags: string[];
-  show: boolean;
   description?: string[];
 };
 
