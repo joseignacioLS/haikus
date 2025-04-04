@@ -34,28 +34,36 @@ const initHaikuData = async () => {
       if (!res.ok) throw new Error();
       return res.json();
     })
-    .then((data: { totalChunks: number; chunkSize: number }) => {
-      const { totalChunks } = data;
-      const promises = [];
-      for (let i = 0; i < totalChunks; i++) {
-        promises.push(retrieveChunk(i));
+    .then(
+      (data: {
+        totalChunks: number;
+        chunkSize: number;
+        collections: THaiku["tags"];
+      }) => {
+        const { totalChunks, collections: $collections } = data;
+        collections.set($collections);
+        const promises = [];
+        for (let i = 0; i < totalChunks; i++) {
+          promises.push(retrieveChunk(i));
+        }
+        Promise.allSettled(promises).then(() => {
+          haikus.set(
+            haikus
+              .get()
+              .filter((h) => h.show)
+              .sort((a, b) => b.id - a.id)
+          );
+          status.set(ERequestStatus.SUCCESS);
+        });
       }
-      Promise.allSettled(promises).then(() => {
-        haikus.set(
-          haikus
-            .get()
-            .filter((h) => h.show)
-            .sort((a, b) => b.id - a.id)
-        );
-        status.set(ERequestStatus.SUCCESS);
-      });
-    })
+    )
     .catch(() => {
       status.set(ERequestStatus.ERROR);
     });
 };
 
 export const haikus = atom<THaiku[]>([]);
+export const collections = atom<THaiku["tags"]>([]);
 export const status = atom<ERequestStatus>(ERequestStatus.LOADING);
 export const error = atom<any>(null);
 

@@ -1,29 +1,15 @@
-import { useMemo } from "react";
-import { useHaikuStore } from "../hooks/useHaikuStore";
-import { TitledBlock } from "./TitledBlock";
-import type { THaiku } from "../types";
 import { navigate } from "astro:transitions/client";
+import { useHaikuStore } from "../hooks/useHaikuStore";
 import styles from "./CollectionsCard.module.scss";
-
-const hiddenCollections: string[] = ["3-5-3", "5-7-5"];
+import { TitledBlock } from "./TitledBlock";
 
 export const CollectionsCard = () => {
-  const { haikus } = useHaikuStore();
-  const tags = useMemo(() => {
-    return Array.from(
-      new Set(
-        haikus.reduce((tags: string[], h: THaiku) => {
-          return [...tags, ...h.tags];
-        }, [])
-      )
-    )
-      .filter((t) => !hiddenCollections.includes(t))
-      .sort();
-  }, [haikus]);
+  const { collections } = useHaikuStore();
+
   return (
     <TitledBlock title={<h2>Colecciones</h2>}>
       <div className={styles.tagList}>
-        {tags.map((tag) => {
+        {collections.map((tag) => {
           return (
             <button
               key={tag}
