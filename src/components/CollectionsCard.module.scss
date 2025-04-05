@@ -13,7 +13,6 @@
   @include media.mobile {
     justify-content: flex-start;
     max-height: 100px;
-    flex-wrap: nowrap;
     overflow: auto;
   }
 }
