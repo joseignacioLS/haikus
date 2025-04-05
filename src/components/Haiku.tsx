@@ -1,6 +1,5 @@
 import { modalStore } from "../store/Modal";
 import type { THaiku } from "../types";
-import { cleanHaiku } from "../utils/text";
 import styles from "./Haiku.module.scss";
 import { HaikuInfoModal } from "./HaikuInfoModal";
 
@@ -18,7 +17,7 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
     <button className={`naked ${styles.wrapper}`}>
       <div className={`${styles.haiku}`} onClick={openDescription}>
         {haiku.text.map((l) => {
-          return <p key={l}>{cleanHaiku(l)}</p>;
+          return <p key={l}>{l}</p>;
         })}
       </div>
       {!fullpage && <span className={styles.id}>{`#${haiku.id}`}</span>}
