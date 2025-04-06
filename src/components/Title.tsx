@@ -29,7 +29,7 @@ export const Title = ({
           }}
         >
           <img
-            src={`/back.svg`}
+            src={`/icons/back.svg`}
             alt="Icono de flecha apuntado a la izquierda"
           />
         </button>

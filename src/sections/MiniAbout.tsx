@@ -8,10 +8,10 @@ export const MiniAbout = () => {
       <div className={styles.profilePicWrapper}>
         <img
           style={{
-            viewTransitionName: "jose-img",
+            viewTransitionName: "avatar-img",
           }}
           src={`/me.webp`}
-          alt="Fotografía de Jose, el autor de la página"
+          alt="Avatar del autor de la página"
         />
       </div>
       <div className={styles.profileTextWrapper}>
@@ -27,8 +27,7 @@ export const MiniAbout = () => {
               viewTransitionName: "about-text",
             }}
           >
-            ¡Hola! Soy Jose y este es mi diario de Haikus ¡Espero que los
-            disfrutes!
+            Bienvenido/a a mi diario ¡Espero que los disfrutes!
           </p>
         </TitledBlock>
       </div>

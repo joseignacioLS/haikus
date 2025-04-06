@@ -5,9 +5,9 @@ export const About = () => {
     <div className={styles.body}>
       <img
         src={`/me.webp`}
-        alt="Fotografía de Jose, el autor de la página"
+        alt="Avatar del autor de la página"
         style={{
-          viewTransitionName: "jose-img",
+          viewTransitionName: "avatar-img",
         }}
       />
       <div style={{ viewTransitionName: "about-text" }}>

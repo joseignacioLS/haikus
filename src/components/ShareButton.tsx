@@ -20,7 +20,7 @@ export const ShareButton = ({ id }: { id: THaiku["id"] }) => {
         copyShareLinkToClipboard();
       }}
     >
-      <img src={`/share.svg`} alt="Icono de compartir" />
+      <img src={`/icons/share.svg`} alt="Icono de compartir" />
     </button>
   );
 };
