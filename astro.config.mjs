@@ -5,8 +5,11 @@ import react from '@astrojs/react';
 
 import netlify from "@astrojs/netlify";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
+  integrations: [react(), sitemap()],
   adapter: netlify(),
+  site: "http://verdecillo.netlify.app/"
 });
