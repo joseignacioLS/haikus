@@ -5,21 +5,18 @@ import { Spinner } from "../components/Spinner.tsx";
 import { Title } from "../components/Title.tsx";
 import { useHaikuStore } from "../hooks/useHaikuStore.tsx";
 import { ERequestStatus, type THaiku } from "../types";
-import { retrieveData, storeData } from "../utils/storage.ts";
 import styles from "./HaikuShowcase.module.scss";
 
 type Props<T extends string> = {
   filters: T[];
   filterFns: Record<T, Record<string, any[]>>;
   defaultFilter?: T;
-  storeState?: boolean;
 };
 
 export const HaikuShowcase = <T extends string>({
   filters,
   defaultFilter,
   filterFns,
-  storeState,
 }: Props<T>) => {
   const [filter, setFilter] = useState<T | undefined>(undefined);
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
@@ -36,25 +33,7 @@ export const HaikuShowcase = <T extends string>({
   >(undefined);
 
   const initializeFilter = () => {
-    if (!storeState) {
-      setFilter(defaultFilter);
-      return;
-    }
-    try {
-      const retrieved = retrieveData();
-
-      if (!retrieved) throw new Error("");
-
-      const { filter, scrollPosition } = JSON.parse(retrieved);
-
-      setFilter(filters.includes(filter) ? filter : defaultFilter);
-
-      if (typeof scrollPosition === "number") {
-        setScrollPosition(scrollPosition);
-      }
-    } catch (err) {
-      setFilter(defaultFilter ?? filters[0]);
-    }
+    setFilter(defaultFilter ?? filters[0]);
   };
 
   const handleTouchEnd = () => {
@@ -99,21 +78,7 @@ export const HaikuShowcase = <T extends string>({
     });
   };
 
-  const handleScroll = (scrollPosition: number) => {
-    storeData(JSON.stringify({ scrollPosition, filter }));
-  };
-
   useEffect(initializeFilter, []);
-
-  useEffect(() => {
-    if (!storeState) return;
-    storeData(
-      JSON.stringify({
-        scrollPosition: scrollPosition ?? 0,
-        filter,
-      })
-    );
-  }, [filter, scrollPosition, storeState]);
 
   const carousel = useMemo(() => {
     const slides = haikus
@@ -132,11 +97,7 @@ export const HaikuShowcase = <T extends string>({
         return <Haiku key={haiku.id} haiku={haiku} />;
       });
     return (
-      <Carousel
-        slides={slides}
-        scrollPosition={scrollPosition}
-        onScroll={handleScroll}
-      ></Carousel>
+      <Carousel slides={slides} scrollPosition={scrollPosition}></Carousel>
     );
   }, [haikus, filter, scrollPosition]);
 
