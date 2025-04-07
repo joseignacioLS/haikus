@@ -13,6 +13,31 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
     modalStore.set(<HaikuInfoModal haiku={haiku} />);
   };
 
+  if (fullpage) {
+    return (
+      <div className={`${styles.wrapper} ${styles.fullpage}`}>
+        <div className={`${styles.haiku}`}>
+          {haiku.text.map((l) => {
+            return <p key={l}>{l}</p>;
+          })}
+        </div>
+        <div className={styles.data}>
+          <p className={styles.dataTitle}>{haiku.date}</p>
+          <div>
+            {haiku.description?.map((l) => {
+              return <p key={l}>{l}</p>;
+            })}
+          </div>
+          <div className={styles.tags}>
+            {haiku.tags.map((tag) => {
+              return <button key={tag}>{tag}</button>;
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <button className={`naked ${styles.wrapper}`}>
       <div className={`${styles.haiku}`} onClick={openDescription}>
@@ -20,7 +45,7 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
           return <p key={l}>{l}</p>;
         })}
       </div>
-      {!fullpage && <span className={styles.id}>{`#${haiku.id}`}</span>}
+      <span className={styles.id}>{`#${haiku.id}`}</span>
     </button>
   );
 };
