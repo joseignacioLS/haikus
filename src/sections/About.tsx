@@ -4,7 +4,7 @@ export const About = () => {
   return (
     <div className={styles.body}>
       <img
-        src={`/me.webp`}
+        src={`/favicon.jpg`}
         alt="Avatar del autor de la página"
         style={{
           viewTransitionName: "avatar-img",

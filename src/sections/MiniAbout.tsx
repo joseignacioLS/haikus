@@ -10,7 +10,7 @@ export const MiniAbout = () => {
           style={{
             viewTransitionName: "avatar-img",
           }}
-          src={`/me.webp`}
+          src={`/favicon.jpg`}
           alt="Avatar del autor de la página"
         />
       </div>
