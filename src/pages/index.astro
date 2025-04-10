@@ -29,21 +29,29 @@ const filterFns = {
 
   main {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 1fr auto;
-    grid-template-areas:
-      "haikus"
-      "about";
+    max-width: 100%;
+    grid-template-columns:
+      1fr minmax(0, 220px) minmax(
+        auto,
+        calc(600px - calc(spaces.$gap_default * 2))
+      )
+      220px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . haikus about .";
     gap: spaces.$gap_default;
 
-    @include media.large {
-      max-width: 100%;
-      display: grid;
-      grid-template-columns:
-        1fr 220px minmax(auto, calc(600px - calc(spaces.$gap_default * 2)))
-        220px 1fr;
+    @include media.mobile {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: 1fr auto;
+      grid-template-areas:
+        "haikus"
+        "about";
+    }
+
+    @include media.tablet {
+      grid-template-columns: 1fr minmax(auto, 220px);
       grid-template-rows: 1fr;
-      grid-template-areas: ". . haikus about .";
+      grid-template-areas: "haikus about";
     }
   }
 </style>

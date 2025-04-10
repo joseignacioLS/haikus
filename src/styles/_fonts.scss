@@ -11,7 +11,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  @include media.large {
+  @include media.larger_than_mobile {
     font-size: 2rem;
   }
 

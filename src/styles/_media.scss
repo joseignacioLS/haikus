@@ -10,7 +10,13 @@
   }
 }
 
-@mixin large {
+@mixin tablet {
+  @media (800px <width < 1024px) {
+    @content;
+  }
+}
+
+@mixin larger_than_mobile {
   @media (width >= 800px) {
     @content;
   }

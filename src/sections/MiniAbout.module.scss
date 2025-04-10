@@ -19,7 +19,7 @@
     grid-template-rows: auto auto;
   }
 
-  @include media.large {
+  @include media.larger_than_mobile {
     margin-top: auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
