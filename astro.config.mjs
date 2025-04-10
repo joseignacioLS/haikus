@@ -1,7 +1,7 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import react from '@astrojs/react';
+import react from "@astrojs/react";
 
 import netlify from "@astrojs/netlify";
 
@@ -11,5 +11,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   integrations: [react(), sitemap()],
   adapter: netlify(),
-  site: "http://verdecillo.netlify.app/"
+  site: "http://verdecillo.netlify.app/",
+  output: "server",
 });
