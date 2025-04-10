@@ -23,10 +23,8 @@ body {
   width: 100%;
   font-family: "Open Sans Variable", sans-serif;
 
-  @media (prefers-color-scheme: dark) {
-    background-color: colors.$background;
-    color: colors.$text;
-  }
+  background-color: colors.$background;
+  color: colors.$text;
 }
 
 body {
