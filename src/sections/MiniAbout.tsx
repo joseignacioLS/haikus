@@ -27,7 +27,7 @@ export const MiniAbout = () => {
               viewTransitionName: "about-text",
             }}
           >
-            Bienvenido/a a mi diario ¡Espero que los disfrutes!
+            Bienvenido/a a mi diario de haikus ¡Espero que los disfrutes!
           </p>
         </TitledBlock>
       </div>
