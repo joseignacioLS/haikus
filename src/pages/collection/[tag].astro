@@ -1,10 +1,10 @@
 ---
-import { Title } from "../../components/Title";
-import Layout from "../../layouts/Layout.astro";
-import { CollectionsCard } from "../../components/CollectionsCard";
+import { CollectionsCard } from "@components/CollectionsCard";
+import { Title } from "@components/structure/Title";
+import Layout from "@layouts/Layout.astro";
 
-import "../../styles/_blocks.scss";
-import { HaikuShowcase } from "../../sections/HaikuShowcase";
+import "@/styles/_blocks.scss";
+import { HaikuShowcase } from "@sections/HaikuShowcase";
 
 export const prerender = false;
 
@@ -36,7 +36,7 @@ const filterFns = {
 </Layout>
 
 <style lang="scss">
-  @use "../../styles/spaces";
+  @use "@/styles/spaces";
   main {
     display: grid;
     grid-template-rows: 1fr auto;

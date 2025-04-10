@@ -1,8 +1,8 @@
+import { ERequestStatus, type THaiku } from "@/types";
+import { useHaikuStore } from "@hooks/useHaikuStore";
+import { fallbackHaiku } from "@store/Haikus";
 import { navigate } from "astro:transitions/client";
 import { useEffect } from "react";
-import { fallbackHaiku } from "../store/Haikus";
-import { ERequestStatus, type THaiku } from "../types";
-import { useHaikuStore } from "./useHaikuStore";
 
 export const useHaikuGuard = (id: THaiku["id"]) => {
   const { status, haikus } = useHaikuStore();

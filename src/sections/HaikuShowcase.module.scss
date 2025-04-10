@@ -1,7 +1,7 @@
-@use "../styles/blocks";
-@use "../styles/colors";
-@use "../styles/animations";
-@use "../styles/spaces";
+@use "@/styles/blocks";
+@use "@/styles/colors";
+@use "@/styles/animations";
+@use "@/styles/spaces";
 
 .wrapper {
   grid-area: haikus;

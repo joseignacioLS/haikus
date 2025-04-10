@@ -1,6 +1,6 @@
-@use "../styles/blocks";
-@use "../styles/spaces";
-@use "../styles/fonts";
+@use "@/styles/blocks";
+@use "@/styles/spaces";
+@use "@/styles/fonts";
 
 .wrapper {
   @extend .card;

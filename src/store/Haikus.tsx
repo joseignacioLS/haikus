@@ -1,6 +1,6 @@
 import { atom } from "nanostores";
-import { ERequestStatus, type THaiku } from "../types";
-import { toastStore } from "./Toast";
+import { ERequestStatus, type THaiku } from "@/types";
+import { toastStore } from "@store/Toast";
 
 export const fallbackHaiku: THaiku = {
   id: -1,

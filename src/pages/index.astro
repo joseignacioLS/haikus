@@ -1,7 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { HaikuShowcase } from "../sections/HaikuShowcase";
-import { MiniAbout } from "../sections/MiniAbout";
+import Layout from "@layouts/Layout.astro";
+import { HaikuShowcase } from "@sections/HaikuShowcase";
+import { MiniAbout } from "@sections/MiniAbout";
 
 const filters = ["Todos", "Destacados"];
 const defaultFilter = filters[1];
@@ -24,8 +24,8 @@ const filterFns = {
 </Layout>
 
 <style lang="scss">
-  @use "../styles/media";
-  @use "../styles/spaces";
+  @use "@/styles/media";
+  @use "@/styles/spaces";
 
   main {
     display: grid;

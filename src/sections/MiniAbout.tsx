@@ -1,5 +1,5 @@
-import { CollectionsCard } from "../components/CollectionsCard";
-import { TitledBlock } from "../components/TitledBlock";
+import { CollectionsCard } from "@components/CollectionsCard";
+import { TitledBlock } from "@components/structure/TitledBlock";
 import styles from "./MiniAbout.module.scss";
 
 export const MiniAbout = () => {

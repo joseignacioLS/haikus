@@ -1,6 +1,6 @@
-import { modalStore } from "../store/Modal";
-import { toastStore } from "../store/Toast";
-import { type THaiku } from "../types";
+import { type THaiku } from "@/types";
+import { modalStore } from "@store/Modal";
+import { toastStore } from "@store/Toast";
 
 export const ShareButton = ({ id }: { id: THaiku["id"] }) => {
   const copyShareLinkToClipboard = () => {

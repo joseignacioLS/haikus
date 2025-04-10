@@ -1,7 +1,9 @@
-import { modalStore } from "../store/Modal";
-import type { THaiku } from "../types";
+import type { THaiku } from "@/types";
+import { HaikuInfoModal } from "@components/HaikuInfoModal";
+import { useHaikuStore } from "@hooks/useHaikuStore";
+import { modalStore } from "@store/Modal";
+import { navigate } from "astro:transitions/client";
 import styles from "./Haiku.module.scss";
-import { HaikuInfoModal } from "./HaikuInfoModal";
 
 type Props = {
   haiku: THaiku;
@@ -9,6 +11,7 @@ type Props = {
 };
 
 export const Haiku = ({ haiku, fullpage }: Props) => {
+  const { collections } = useHaikuStore();
   const openDescription = () => {
     modalStore.set(<HaikuInfoModal haiku={haiku} />);
   };
@@ -29,9 +32,22 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
             })}
           </div>
           <div className={styles.tags}>
-            {haiku.tags.map((tag) => {
-              return <button key={tag}>{tag}</button>;
-            })}
+            {haiku.tags
+              .filter((tag) => {
+                return collections.includes(tag);
+              })
+              .map((tag) => {
+                return (
+                  <button
+                    key={tag}
+                    onClick={() => {
+                      navigate(`/collection/${tag}`);
+                    }}
+                  >
+                    {tag}
+                  </button>
+                );
+              })}
           </div>
         </div>
       </div>

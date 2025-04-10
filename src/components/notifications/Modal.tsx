@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/react";
-import { modalStore } from "../store/Modal";
+import { modalStore } from "@store/Modal";
 import styles from "./Modal.module.scss";
 import { useEffect } from "react";
 

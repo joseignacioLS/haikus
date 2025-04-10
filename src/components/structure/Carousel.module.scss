@@ -1,6 +1,6 @@
-@use "../styles/colors";
-@use "../styles/animations";
-@use "../styles/spaces";
+@use "@/styles/colors";
+@use "@/styles/animations";
+@use "@/styles/spaces";
 
 .carousel {
   @include animations.fade-in(0.5s);

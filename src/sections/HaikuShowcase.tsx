@@ -1,10 +1,10 @@
+import { ERequestStatus, type THaiku } from "@/types";
+import { Haiku } from "@components/Haiku";
+import { Spinner } from "@components/notifications/Spinner.tsx";
+import { Carousel } from "@components/structure/Carousel";
+import { Title } from "@components/structure/Title.tsx";
+import { useHaikuStore } from "@hooks/useHaikuStore.tsx";
 import { useEffect, useMemo, useState } from "react";
-import { Carousel } from "../components/Carousel";
-import { Haiku } from "../components/Haiku";
-import { Spinner } from "../components/Spinner.tsx";
-import { Title } from "../components/Title.tsx";
-import { useHaikuStore } from "../hooks/useHaikuStore.tsx";
-import { ERequestStatus, type THaiku } from "../types";
 import styles from "./HaikuShowcase.module.scss";
 
 type Props<T extends string> = {

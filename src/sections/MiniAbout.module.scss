@@ -1,6 +1,6 @@
-@use "../styles/blocks";
-@use "../styles/spaces";
-@use "../styles/media";
+@use "@/styles/blocks";
+@use "@/styles/spaces";
+@use "@/styles/media";
 
 .miniAbout {
   width: 100%;
@@ -26,16 +26,17 @@
   }
 
   .profilePicWrapper {
-    @extend .cardNoPadding;
+    @extend .card;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f1e3c5;
 
     img {
-      object-fit: cover;
-      min-height: 100%;
-      min-width: 100%;
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
       border-radius: inherit;
     }
 

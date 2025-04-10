@@ -1,5 +1,5 @@
-@use "../styles/spaces";
-@use "../styles/fonts";
+@use "@/styles/spaces";
+@use "@/styles/fonts";
 
 .wrapper {
   display: flex;
@@ -35,6 +35,6 @@
   }
 
   .shareButton {
-    margin-left: auto,
+    margin-left: auto;
   }
 }

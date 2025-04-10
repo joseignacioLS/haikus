@@ -1,6 +1,6 @@
+import { ERequestStatus, type THaiku } from "@/types";
+import { collections, error, haikus, status } from "@store/Haikus";
 import { useEffect, useState } from "react";
-import { collections, error, haikus, status } from "../store/Haikus";
-import { ERequestStatus, type THaiku } from "../types";
 
 export const useHaikuStore = () => {
   const [data, setData] = useState<{

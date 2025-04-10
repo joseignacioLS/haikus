@@ -1,8 +1,8 @@
+import type { THaiku } from "@/types";
+import { ShareButton } from "@components/ShareButton";
+import { useHaikuStore } from "@hooks/useHaikuStore";
 import { navigate } from "astro:transitions/client";
-import { useHaikuStore } from "../hooks/useHaikuStore";
-import type { THaiku } from "../types";
 import styles from "./HaikuInfoModal.module.scss";
-import { ShareButton } from "./ShareButton";
 
 export const HaikuInfoModal = ({ haiku }: { haiku: THaiku }) => {
   const { collections } = useHaikuStore();
