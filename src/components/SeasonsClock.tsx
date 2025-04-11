@@ -1,9 +1,11 @@
 import type { SeasonResponse } from "@/types";
-import { getSeasons } from "@/utils/seasons.api";
+import { getSeasonsEvents } from "@/utils/seasons.api";
 import React, { useEffect, useState } from "react";
 import { Temporal } from "temporal-polyfill";
 import styles from "./SeasonsClock.module.scss";
 import { Spinner } from "./notifications/Spinner";
+import { navigate } from "astro:transitions/client";
+import { toastStore } from "@/store/Toast";
 
 const MONTH_TO_COLOR: Record<number, string> = {
   6: "#ffc3cd",
@@ -102,13 +104,21 @@ export const SeasonsClock = () => {
       return acc + diff;
     }, 0);
   };
+
+  const handleRequestError = () => {
+    toastStore.set(
+      "Ha habido un error cargando la información de las estaciones"
+    );
+    navigate("/");
+  };
+
   const initClock = async () => {
     setIsLoading(true);
-    const todayYear = today.year;
-    const seasonsEvents = (
-      await Promise.all([getSeasons(todayYear), getSeasons(todayYear + 1)])
-    ).flat();
-
+    const seasonsEvents = await getSeasonsEvents(today.year);
+    if (seasonsEvents.length < 8) {
+      handleRequestError();
+      return;
+    }
     setIsLoading(false);
 
     const relevantSeasonEvents = getRelevantSeasonEvents(seasonsEvents);
