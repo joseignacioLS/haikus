@@ -1,3 +1,4 @@
+import { navigate } from "astro:transitions/client";
 import styles from "./About.module.scss";
 
 export const About = () => {
@@ -8,6 +9,9 @@ export const About = () => {
         alt="Avatar del autor de la página"
         style={{
           viewTransitionName: "avatar-img",
+        }}
+        onClick={() => {
+          navigate("/seasonsclock");
         }}
       />
       <div style={{ viewTransitionName: "about-text" }}>

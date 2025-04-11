@@ -1,0 +1,237 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Title } from "@components/structure/Title";
+import { Spinner } from "@components/notifications/Spinner";
+---
+
+<Layout>
+  <main>
+    <Title showBackButton client:load>Reloj de Estaciones</Title>
+    <div class="spinner">
+      <Spinner client:load />
+    </div>
+    <section class="body">
+      <div class="clockWrapper">
+        <div class="orbit"></div>
+        <div class="earth"></div>
+        <div class="sun"></div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+  @use "@/styles/blocks";
+  @use "@/styles/colors";
+  @use "@/styles/spaces";
+
+  .spinner {
+    height: 100%;
+  }
+
+  .body {
+    @extend .card;
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    padding: 10%;
+
+    .legend {
+      list-style: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 3rem;
+      .summer {
+        color: #ffc3cd;
+      }
+      .autumn {
+        color: #e84d2e;
+      }
+      .winter {
+        color: #134665;
+      }
+      .spring {
+        color: #fede87;
+      }
+    }
+  }
+
+  .clockWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+
+    .earth {
+      position: absolute;
+      bottom: calc(100% - spaces.$gap_mini);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: colors.$text;
+      width: spaces.$gap_default;
+      height: spaces.$gap_default;
+      border-radius: spaces.$border_radius_round;
+      box-sizing: border-box;
+    }
+
+    .sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background-color: colors.$text;
+      border-radius: spaces.$border_radius_round;
+      width: 2rem;
+      aspect-ratio: 1 / 1;
+    }
+
+    .orbit {
+      --rotation: 0deg;
+      --c1: #ffc3cd;
+      --c2: #e84d2e;
+      --c3: #134665;
+      --c4: #fede87;
+
+      --c1-pos: 0%;
+      --c2-pos: 25%;
+      --c3-pos: 50%;
+      --c4-pos: 75%;
+
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: spaces.$border_radius_round;
+      background: colors.$foreground;
+      background-clip: padding-box;
+      padding: spaces.$gap_default;
+
+      &::before {
+        transform: rotate(var(--rotation));
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        background: conic-gradient(
+          var(--c1) var(--c1-pos),
+          var(--c1) var(--c2-pos),
+          var(--c2) var(--c2-pos),
+          var(--c2) var(--c3-pos),
+          var(--c3) var(--c3-pos),
+          var(--c3) var(--c4-pos),
+          var(--c4) var(--c4-pos),
+          var(--c4) 100%
+        );
+        margin: calc(0px - spaces.$gap_small);
+        border-radius: inherit;
+      }
+    }
+  }
+</style>
+
+<script>
+  import { getSeasons } from "@/utils/seasons.api";
+  import type { SeasonResponse } from "@/types";
+  import { Temporal } from "temporal-polyfill";
+
+  const today = Temporal.Now.plainDateISO();
+  const orbit = document.querySelector(".orbit") as any;
+
+  const MONTH_TO_COLOR: Record<number, string> = {
+    6: "#ffc3cd",
+    9: "#e84d2e",
+    12: "#134665",
+    3: "#fede87",
+  };
+
+  const dismissLoading = () => {
+    const body = document.querySelector(".body") as any;
+    if (!body) return;
+    body.style.display = "grid";
+    const spinner = document.querySelector(".spinner") as any;
+    if (!spinner) return;
+    spinner.style.display = "none";
+  };
+
+  const getRelevantSeasonEvents = (
+    seasonsEvents: SeasonResponse["data"]
+  ): SeasonResponse["data"] => {
+    const previousEventIndex = seasonsEvents.findIndex((currentEvent, i) => {
+      const nextEvent = seasonsEvents[i + 1];
+      const currentDate = Temporal.PlainDate.from(
+        `${currentEvent.year}-${String(currentEvent.month).padStart(2, "0")}-${String(currentEvent.day).padStart(2, "0")}`
+      );
+      const nextDate = Temporal.PlainDate.from(
+        `${nextEvent.year}-${String(nextEvent.month).padStart(2, "0")}-${String(nextEvent.day).padStart(2, "0")}`
+      );
+      return (
+        today.since(currentDate).sign === 1 && today.since(nextDate).sign === -1
+      );
+    });
+
+    return seasonsEvents.slice(previousEventIndex, previousEventIndex + 4);
+  };
+
+  const adjustClockRotation = (
+    relevantSeasonEvents: SeasonResponse["data"]
+  ) => {
+    const daysSinceLastEvent = today.since(
+      Temporal.PlainDate.from(
+        `${relevantSeasonEvents[0].year}-${String(
+          relevantSeasonEvents[0].month
+        ).padStart(
+          2,
+          "0"
+        )}-${String(relevantSeasonEvents[0].day).padStart(2, "0")}`
+      )
+    ).days;
+    orbit.style?.setProperty(
+      "--rotation",
+      `${-(360 * daysSinceLastEvent) / 365}deg`
+    );
+  };
+
+  const adjustSeasonColorAndPositions = (
+    relevantSeasonEvents: SeasonResponse["data"]
+  ) => {
+    relevantSeasonEvents.reduce((acc, e, i) => {
+      orbit.style?.setProperty(`--c${i + 1}`, MONTH_TO_COLOR[e.month]);
+      if (i === 3) {
+        orbit.style?.setProperty(`--c${i + 1}-pos`, `${acc}%`);
+        return acc;
+      }
+      const nextEvent = relevantSeasonEvents[i + 1];
+      const currentDate = Temporal.PlainDate.from(
+        `${e.year}-${String(e.month).padStart(2, "0")}-${String(e.day).padStart(2, "0")}`
+      );
+      const nextDate = Temporal.PlainDate.from(
+        `${nextEvent.year}-${String(nextEvent.month).padStart(2, "0")}-${String(nextEvent.day).padStart(2, "0")}`
+      );
+      const diff = (nextDate.since(currentDate).days / 365) * 100;
+      orbit.style?.setProperty(`--c${i + 1}-pos`, `${acc}%`);
+      return acc + diff;
+    }, 0);
+  };
+
+  const initClock = async () => {
+    if (!orbit) return;
+
+    const todayYear = today.year;
+    const seasonsEvents = (
+      await Promise.all([getSeasons(todayYear), getSeasons(todayYear + 1)])
+    ).flat();
+
+    const relevantSeasonEvents = getRelevantSeasonEvents(seasonsEvents);
+    console.log({ relevantSeasonEvents });
+    adjustClockRotation(relevantSeasonEvents);
+    adjustSeasonColorAndPositions(relevantSeasonEvents);
+    dismissLoading();
+  };
+
+  document.addEventListener("astro:page-load", initClock);
+</script>

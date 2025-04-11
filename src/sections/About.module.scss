@@ -6,6 +6,8 @@
   @extend .card;
 
   img {
+    position: relative;
+    z-index: 99;
     float: left;
     margin-right: spaces.$gap_default;
     max-width: 50%;

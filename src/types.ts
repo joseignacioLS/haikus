@@ -12,3 +12,16 @@ export enum ERequestStatus {
   SUCCESS = "SUCCESS",
   ERROR = "ERROR",
 }
+
+export type SeasonResponse = {
+  apiversion: string;
+  data: {
+    day: number;
+    month: number;
+    phenom: "Perihelion" | "Equinox" | "Solstice" | "Aphelion";
+    time: string;
+    year: number;
+  }[];
+  tz: number;
+  year: number;
+};
