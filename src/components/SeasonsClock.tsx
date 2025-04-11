@@ -12,6 +12,13 @@ const MONTH_TO_COLOR: Record<number, string> = {
   3: "#fede87",
 };
 
+const MONTH_TO_SEASON: Record<number, string> = {
+  6: "Verano",
+  9: "Otoño",
+  12: "Invierno",
+  3: "Primavera",
+};
+
 const today = Temporal.Now.plainDateISO();
 
 const eventToPlainDate = (e: { year: number; month: number; day: number }) => {
@@ -39,6 +46,7 @@ const getRelevantSeasonEvents = (
 };
 
 export const SeasonsClock = () => {
+  const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [clockRotation, setClockRotation] = useState(0);
   const [seasons, setSeasons] = useState([
@@ -104,7 +112,13 @@ export const SeasonsClock = () => {
     setIsLoading(false);
 
     const relevantSeasonEvents = getRelevantSeasonEvents(seasonsEvents);
-    console.log({ relevantSeasonEvents });
+
+    setMessage(
+      `Hoy es el día ${
+        today.since(eventToPlainDate(relevantSeasonEvents[0])).days
+      } de ${MONTH_TO_SEASON[relevantSeasonEvents[0].month]}`
+    );
+
     adjustClockRotation(relevantSeasonEvents);
     adjustSeasonColorAndPositions(relevantSeasonEvents);
   };
@@ -116,25 +130,35 @@ export const SeasonsClock = () => {
     return <Spinner />;
   }
   return (
-    <div className={styles.clock}>
-      <div
-        className={styles.orbit}
-        style={
-          {
-            "--rotation": `${clockRotation}deg`,
-            "--c1": seasons[0].color,
-            "--c2": seasons[1].color,
-            "--c3": seasons[2].color,
-            "--c4": seasons[3].color,
-            "--c1-pos": seasons[0].range + "%",
-            "--c2-pos": seasons[1].range + "%",
-            "--c3-pos": seasons[2].range + "%",
-            "--c4-pos": seasons[3].range + "%",
-          } as React.CSSProperties
-        }
-      ></div>
-      <div className={styles.earth}></div>
-      <div className={styles.sun}></div>
+    <div className={styles.wrapper}>
+      <div className={styles.clock}>
+        <div
+          className={styles.orbit}
+          style={
+            {
+              "--rotation": `${clockRotation}deg`,
+              "--c1": seasons[0].color,
+              "--c2": seasons[1].color,
+              "--c3": seasons[2].color,
+              "--c4": seasons[3].color,
+              "--c1-pos": seasons[0].range + "%",
+              "--c2-pos": seasons[1].range + "%",
+              "--c3-pos": seasons[2].range + "%",
+              "--c4-pos": seasons[3].range + "%",
+            } as React.CSSProperties
+          }
+        ></div>
+        <div className={styles.earth}></div>
+        <div className={styles.sun}></div>
+      </div>
+      <p
+        className={styles.message}
+        style={{
+          textDecorationColor: seasons[0].color,
+        }}
+      >
+        {message}
+      </p>
     </div>
   );
 };

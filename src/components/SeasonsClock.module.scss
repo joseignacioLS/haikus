@@ -2,6 +2,14 @@
 @use "@/styles/colors";
 @use "@/styles/spaces";
 
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: spaces.$gap_default;
+  text-align: center;
+}
+
 .clock {
   position: relative;
   width: 100%;
@@ -75,4 +83,9 @@
       border-radius: inherit;
     }
   }
+}
+
+.message {
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
 }
