@@ -5,12 +5,22 @@
 .body {
   @extend .card;
 
-  img {
+  .buttonImage {
     position: relative;
     z-index: 99;
     float: left;
     margin-right: spaces.$gap_default;
-    max-width: 50%;
+    margin-bottom: spaces.$gap_mini;
+    width: 50%;
+    aspect-ratio: 1 / 1;
     border-radius: spaces.$border_radius_default;
+    box-shadow: spaces.$gap_mini spaces.$gap_mini 0 colors.$button;
+    overflow: hidden;
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
   }
 }

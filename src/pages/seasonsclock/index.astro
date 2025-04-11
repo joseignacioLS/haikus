@@ -6,7 +6,9 @@ import { Title } from "@components/structure/Title";
 
 <Layout>
   <main>
-    <Title showBackButton client:load>Reloj de Estaciones</Title>
+    <Title showBackButton client:load backRoute="/about/"
+      >Reloj de Estaciones</Title
+    >
     <div class="body">
       <SeasonsClock client:load />
     </div>
