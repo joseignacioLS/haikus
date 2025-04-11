@@ -1,6 +1,7 @@
 @use "@/styles/blocks";
 @use "@/styles/colors";
 @use "@/styles/spaces";
+@use "@/styles/fonts";
 
 .wrapper {
   width: 100%;
@@ -69,16 +70,14 @@
       right: 0;
       left: 0;
       z-index: -1;
-      background: conic-gradient(
-        var(--c1) var(--c1-pos),
-        var(--c1) var(--c2-pos),
-        var(--c2) var(--c2-pos),
-        var(--c2) var(--c3-pos),
-        var(--c3) var(--c3-pos),
-        var(--c3) var(--c4-pos),
-        var(--c4) var(--c4-pos),
-        var(--c4) 100%
-      );
+      background: conic-gradient(var(--c1) var(--c1-pos),
+          var(--c1) var(--c2-pos),
+          var(--c2) var(--c2-pos),
+          var(--c2) var(--c3-pos),
+          var(--c3) var(--c3-pos),
+          var(--c3) var(--c4-pos),
+          var(--c4) var(--c4-pos),
+          var(--c4) 100%);
       margin: calc(0px - spaces.$gap_small);
       border-radius: inherit;
     }
@@ -86,6 +85,7 @@
 }
 
 .message {
+  @extend .haiku_font;
   text-decoration-line: underline;
   text-decoration-thickness: 5px;
 }
