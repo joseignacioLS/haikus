@@ -1,0 +1,91 @@
+@use "@/styles/blocks";
+@use "@/styles/colors";
+@use "@/styles/spaces";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: spaces.$gap_default;
+  text-align: center;
+}
+
+.clock {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  z-index: 1;
+
+  .earth {
+    position: absolute;
+    bottom: calc(100% - spaces.$gap_mini);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: colors.$text;
+    width: spaces.$gap_default;
+    height: spaces.$gap_default;
+    border-radius: spaces.$border_radius_round;
+    box-sizing: border-box;
+  }
+
+  .sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: colors.$text;
+    border-radius: spaces.$border_radius_round;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  .orbit {
+    --rotation: 0deg;
+    --c1: #ffc3cd;
+    --c2: #e84d2e;
+    --c3: #134665;
+    --c4: #fede87;
+
+    --c1-pos: 0%;
+    --c2-pos: 25%;
+    --c3-pos: 50%;
+    --c4-pos: 75%;
+
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: spaces.$border_radius_round;
+    background: colors.$foreground;
+    background-clip: padding-box;
+    padding: spaces.$gap_default;
+
+    &::before {
+      transform: rotate(var(--rotation));
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      background: conic-gradient(
+        var(--c1) var(--c1-pos),
+        var(--c1) var(--c2-pos),
+        var(--c2) var(--c2-pos),
+        var(--c2) var(--c3-pos),
+        var(--c3) var(--c3-pos),
+        var(--c3) var(--c4-pos),
+        var(--c4) var(--c4-pos),
+        var(--c4) 100%
+      );
+      margin: calc(0px - spaces.$gap_small);
+      border-radius: inherit;
+    }
+  }
+}
+
+.message {
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+}

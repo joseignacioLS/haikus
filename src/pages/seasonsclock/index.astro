@@ -1,0 +1,30 @@
+---
+import { SeasonsClock } from "@/components/SeasonsClock";
+import Layout from "@/layouts/Layout.astro";
+import { Title } from "@components/structure/Title";
+---
+
+<Layout>
+  <main>
+    <Title showBackButton client:load backRoute="/about/"
+      >Reloj de Estaciones</Title
+    >
+    <div class="body">
+      <SeasonsClock client:load />
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  @use "@/styles/blocks";
+
+  .body {
+    @extend .card;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+  }
+</style>

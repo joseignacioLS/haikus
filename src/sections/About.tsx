@@ -1,15 +1,20 @@
+import { navigate } from "astro:transitions/client";
 import styles from "./About.module.scss";
 
 export const About = () => {
   return (
     <div className={styles.body}>
-      <img
-        src={`/favicon.jpg`}
-        alt="Avatar del autor de la página"
+      <button
+        onClick={() => {
+          navigate("/seasonsclock");
+        }}
+        className={`naked ${styles.buttonImage}`}
         style={{
           viewTransitionName: "avatar-img",
         }}
-      />
+      >
+        <img src={`/favicon.jpg`} alt="Avatar del autor de la página" />
+      </button>
       <div style={{ viewTransitionName: "about-text" }}>
         <p>
           ¡Hola! Me llamo Jose, y has entrado en mi diario de haikus,
