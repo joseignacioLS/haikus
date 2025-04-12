@@ -5,6 +5,19 @@ import { modalStore } from "@store/Modal";
 import { navigate } from "astro:transitions/client";
 import styles from "./Haiku.module.scss";
 
+const HaikuBody = ({ haiku }: { haiku: string[] }) => {
+  const cleanLine = (line: string) => {
+    return line.replace(/-/g, "").replace(/_/g, " ");
+  };
+  return (
+    <div className={`${styles.haiku}`}>
+      {haiku.map((l) => {
+        return <p key={l}>{cleanLine(l)}</p>;
+      })}
+    </div>
+  );
+};
+
 type Props = {
   haiku: THaiku;
   fullpage?: boolean;
@@ -19,11 +32,7 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
   if (fullpage) {
     return (
       <div className={`${styles.wrapper} ${styles.fullpage}`}>
-        <div className={`${styles.haiku}`}>
-          {haiku.text.map((l) => {
-            return <p key={l}>{l}</p>;
-          })}
-        </div>
+        <HaikuBody haiku={haiku.text} />
         <div className={styles.data}>
           <p className={styles.dataTitle}>{haiku.date}</p>
           <div>
@@ -55,12 +64,8 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
   }
 
   return (
-    <button className={`naked ${styles.wrapper}`}>
-      <div className={`${styles.haiku}`} onClick={openDescription}>
-        {haiku.text.map((l) => {
-          return <p key={l}>{l}</p>;
-        })}
-      </div>
+    <button className={`naked ${styles.wrapper}`} onClick={openDescription}>
+      <HaikuBody haiku={haiku.text} />
       <span className={styles.id}>{`#${haiku.id}`}</span>
     </button>
   );
