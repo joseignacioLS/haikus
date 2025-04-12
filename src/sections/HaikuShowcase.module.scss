@@ -4,12 +4,14 @@
 @use "@/styles/spaces";
 
 .wrapper {
+  position: relative;
   grid-area: haikus;
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
   .title {
     display: flex;
     gap: 1ch;
@@ -34,6 +36,17 @@
       @include animations.fade-in(0.5s);
       border-top: 1px solid white;
       padding-top: 1ch;
+    }
+  }
+
+  .btnUp {
+    position: absolute;
+    bottom: spaces.$gap_default;
+    left: spaces.$gap_default;
+    transition: opacity .2s;
+
+    &.hidden {
+      opacity: 0;
     }
   }
 }

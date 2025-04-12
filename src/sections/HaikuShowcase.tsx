@@ -21,9 +21,7 @@ export const HaikuShowcase = <T extends string>({
   filterFns,
 }: Props<T>) => {
   const [filter, setFilter] = useState<T | undefined>(undefined);
-  const [scrollPosition, setScrollPosition] = useState<number | undefined>(
-    undefined
-  );
+  const [hideButtonUp, setHideButtonUp] = useState(true);
 
   const focusHaikuId = useStore(showcaseStore);
 
@@ -55,7 +53,6 @@ export const HaikuShowcase = <T extends string>({
         const leftIndex = Math.max(0, filterIndex - 1);
         return filters[leftIndex];
       });
-      setScrollPosition(undefined);
       return;
     }
     if (deltaX < 0) {
@@ -65,7 +62,6 @@ export const HaikuShowcase = <T extends string>({
         const rightIndex = Math.min(filters.length - 1, filterIndex + 1);
         return filters[rightIndex];
       });
-      setScrollPosition(undefined);
       return;
     }
   };
@@ -82,26 +78,43 @@ export const HaikuShowcase = <T extends string>({
     });
   };
 
+  const handleScroll = (scrollTop: number) => {
+    setHideButtonUp(scrollTop < 50);
+  };
+
+  const handleGoUp = () => {
+    document
+      .getElementById(String(slides[0].id))
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const slides = useMemo(
+    () =>
+      haikus
+        .filter((h) => {
+          if (!filter || !filterFns[filter]) return false;
+          return Object.entries(filterFns[filter]).every(([key, options]) => {
+            const value = h[key as keyof THaiku];
+            if (Array.isArray(value)) {
+              return options.filter((o) => value.includes(o)).length > 0;
+            }
+            return options.includes(h[key as keyof THaiku]);
+          });
+        })
+        .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1)),
+    [haikus, filter]
+  );
+
   const carousel = useMemo(() => {
-    const slides = haikus
-      .filter((h) => {
-        if (!filter || !filterFns[filter]) return false;
-        return Object.entries(filterFns[filter]).every(([key, options]) => {
-          const value = h[key as keyof THaiku];
-          if (Array.isArray(value)) {
-            return options.filter((o) => value.includes(o)).length > 0;
-          }
-          return options.includes(h[key as keyof THaiku]);
-        });
-      })
-      .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1))
-      .map((haiku) => {
-        return <Haiku key={haiku.id} haiku={haiku} />;
-      });
     return (
-      <Carousel slides={slides} scrollPosition={scrollPosition}></Carousel>
+      <Carousel
+        slides={slides.map((haiku) => {
+          return <Haiku key={haiku.id} haiku={haiku} />;
+        })}
+        onScroll={handleScroll}
+      ></Carousel>
     );
-  }, [haikus, filter, scrollPosition]);
+  }, [slides]);
 
   useEffect(() => {
     initializeFilter();
@@ -123,7 +136,6 @@ export const HaikuShowcase = <T extends string>({
                   }`}
                   onClick={() => {
                     setFilter(k);
-                    setScrollPosition(undefined);
                   }}
                 >
                   {k}
@@ -151,6 +163,12 @@ export const HaikuShowcase = <T extends string>({
       {status === ERequestStatus.ERROR && (
         <div className={`${styles.carouselWrapper}`}>Ha habido un error</div>
       )}
+      <button
+        className={`round ${styles.btnUp} ${hideButtonUp ? styles.hidden : ""}`}
+        onClick={handleGoUp}
+      >
+        <img src="/icons/up.svg"></img>
+      </button>
     </section>
   );
 };
