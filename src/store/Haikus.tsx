@@ -5,7 +5,6 @@ import { atom } from "nanostores";
 export const fallbackHaiku: THaiku = {
   id: -1,
   date: "",
-  selected: false,
   tags: [],
   text: [],
   description: [],

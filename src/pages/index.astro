@@ -1,18 +1,21 @@
 ---
+import { Title } from "@/components/structure/Title";
 import Layout from "@layouts/Layout.astro";
 import { HaikuShowcase } from "@sections/HaikuShowcase";
 import { MiniAbout } from "@sections/MiniAbout";
 
-const filters = ["Todos", "Destacados"];
-const defaultFilter = filters[1];
+const filters = ["Todos"];
+const defaultFilter = filters[0];
 const filterFns = {
   Todos: {},
-  Destacados: { selected: [true] },
 };
 ---
 
 <Layout>
   <main>
+    <div style={{ gridArea: "title" }}>
+      <Title client:load>Diario de Haikus</Title>
+    </div>
     <HaikuShowcase
       client:load
       filters={filters}
@@ -35,23 +38,29 @@ const filterFns = {
         auto,
         calc(600px - calc(spaces.$gap_default * 2))
       )
+      spaces.$gap_default
       220px 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: ". . haikus about .";
-    gap: spaces.$gap_default;
+    grid-template-areas:
+      ". . title . . ."
+      ". . haikus .about .";
 
     @include media.mobile {
       grid-template-columns: minmax(0, 1fr);
-      grid-template-rows: 1fr auto;
+      grid-template-rows: auto 1fr spaces.$gap_default auto;
       grid-template-areas:
+        "title"
         "haikus"
+        "."
         "about";
     }
 
     @include media.tablet {
-      grid-template-columns: 1fr minmax(auto, 220px);
+      grid-template-columns: 1fr spaces.$gap_default minmax(auto, 220px);
       grid-template-rows: 1fr;
-      grid-template-areas: "haikus about";
+      grid-template-areas:
+        "title . ."
+        "haikus . about";
     }
   }
 </style>

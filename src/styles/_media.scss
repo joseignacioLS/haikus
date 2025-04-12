@@ -5,19 +5,19 @@
 }
 
 @mixin mobile {
-  @media (width < 800px) {
+  @media (width < 600px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (800px <width < 1024px) {
+  @media (600px <= width < 900px) {
     @content;
   }
 }
 
 @mixin larger_than_mobile {
-  @media (width >= 800px) {
+  @media (width >= 600px) {
     @content;
   }
 }

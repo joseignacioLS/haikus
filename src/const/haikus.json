@@ -7,7 +7,6 @@
       "to-man las ca-lles"
     ],
     "date": "2025-04-12",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -18,8 +17,7 @@
     "id": 160,
     "text": ["Ca-e la tar-de", "pre-so en-tre pá-gi-nas", "pren-do u-na luz"],
     "date": "2025-04-11",
-    "selected": true,
-    "tags": ["Personal", "5-7-5"],
+    "tags": ["Destacado", "Personal", "5-7-5"],
     "show": true,
     "description": [
       "Primera tarde de vacaciones de semana santa, disfruto de la compañía de un libro durante más tiempo del que pensaba."
@@ -29,7 +27,6 @@
     "id": 159,
     "text": ["O-tro dí-a más", "mi fo-lio si-gue blan-co", "des-co-nec-ta-do"],
     "date": "2025-04-11",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -40,7 +37,6 @@
     "id": 158,
     "text": ["Vein-ti-ún dí-as", "a-trás el e-qui-no-cio", "mas que-da frí-o"],
     "date": "2025-04-10",
-    "selected": false,
     "tags": ["Naturaleza", "Reflexión", "5-7-5"],
     "show": true,
     "description": [
@@ -51,7 +47,6 @@
     "id": 157,
     "text": ["Men-te en blan-co", "noche, paseo, notas", "la vi-da si-gue"],
     "date": "2025-04-10",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -66,7 +61,6 @@
       "si-len-cio frí-o"
     ],
     "date": "2025-04-09",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -81,7 +75,6 @@
       "ya no las quie-ro"
     ],
     "date": "2025-04-08",
-    "selected": false,
     "tags": ["Reflexión", "Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -92,7 +85,6 @@
     "id": 154,
     "text": ["Ma-nos can-sa-das", "a-ho-ra lo di-fí-cil", "to-ca es-pe-rar"],
     "date": "2025-04-08",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -103,7 +95,6 @@
     "id": 153,
     "text": ["Hai-jin o-cul-to", "po-e-mas no le-í-dos", "te-mo res-pues-ta"],
     "date": "2025-04-07",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -114,7 +105,6 @@
     "id": 152,
     "text": ["Sin es-pe-rar-lo", "un so-ni-do a-vi-sa", "me has es-cri-to"],
     "date": "2025-04-07",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -129,7 +119,6 @@
       "sin ins-pi-ra-ción"
     ],
     "date": "2025-04-07",
-    "selected": false,
     "tags": ["Personal", "Reflexión", "5-7-5"],
     "show": true,
     "description": [
@@ -141,7 +130,6 @@
     "id": 150,
     "text": ["A-quí de-cla-ro", "u-na vi-da ho-nes-ta", "a e-so_as-pi-ro"],
     "date": "2025-04-06",
-    "selected": false,
     "tags": ["Personal", "Reflexión", "5-7-5"],
     "show": true,
     "description": [
@@ -156,7 +144,6 @@
       "a-diós a-mi-gos"
     ],
     "date": "2025-04-06",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -167,8 +154,7 @@
     "id": 148,
     "text": ["Ta-llo mi bas-tón,", "hoy no tra-ba-jo so-lo,", "u-na gar-ce-ta"],
     "date": "2025-04-06",
-    "selected": true,
-    "tags": ["Personal", "Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Personal", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
       "He encontrado un palo nuevo que quiero convertir en un bastón. En un parque he comenzado a limpiar la corteza, facilitando que se seque.",
@@ -183,7 +169,6 @@
       "cuar-to cre-cien-te"
     ],
     "date": "2025-04-06",
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -195,7 +180,6 @@
     "id": 146,
     "text": ["Sin es-pe-rar-lo", "re-ci-bo un re-ga-lo", "¡bo-las de_o-re-o!"],
     "date": "2025-04-05",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -210,8 +194,7 @@
       "¿cuál es el te-ma?"
     ],
     "date": "2025-04-05",
-    "selected": true,
-    "tags": ["Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
       "Hoy he visto un grupo de palomas, formando una especie de círculo en el suelo, mientras tomaban el sol.",
@@ -226,7 +209,6 @@
       "pe-ro ter-mi-nó"
     ],
     "date": "2025-04-04",
-    "selected": false,
     "tags": ["Reflexión", "Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -241,7 +223,6 @@
       "no me re-tie-nen"
     ],
     "date": "2025-04-02",
-    "selected": false,
     "tags": ["Reflexión", "Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -257,7 +238,6 @@
       "muer-tes ne-va-das"
     ],
     "date": "2025-03-30",
-    "selected": false,
     "tags": ["5-7-5"],
     "show": true,
     "description": [
@@ -273,7 +253,6 @@
     "id": 141,
     "text": ["A-pren-diz Hai-jin", "o-tra ho-ja del ár-bol", "e-se es Jo-se"],
     "date": "2025-03-30",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -288,8 +267,7 @@
       "¿ver-dad ár-bo-les?"
     ],
     "date": "2025-03-30",
-    "selected": true,
-    "tags": ["Naturaleza", "Reflexión", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "Reflexión", "5-7-5"],
     "show": true,
     "description": [
       "En honor al shinrin-yoku. Dar un paseo por la naturaleza hace que cambie la percepción que tengo del mundo. Me siento uno con el bosque."
@@ -303,7 +281,6 @@
       "a-bro los o-jos"
     ],
     "date": "2025-03-30",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -318,7 +295,6 @@
       "nos a-cep-ta-mos"
     ],
     "date": "2025-03-29",
-    "selected": false,
     "tags": ["Reflexión", "5-7-5"],
     "show": true,
     "description": [
@@ -333,8 +309,7 @@
       "nue-vos a-mi-gos"
     ],
     "date": "2025-03-27",
-    "selected": true,
-    "tags": ["Personal", "5-7-5"],
+    "tags": ["Destacado", "Personal", "5-7-5"],
     "show": true,
     "description": [
       "No pensaba que fuese capaz de montar un nuevo grupo de rol. Me daba miedo abrirme a gente nueva.",
@@ -345,7 +320,6 @@
     "id": 136,
     "text": ["No-che tem-pra-na,", "sua-ve ca-lor de le-cho,", "ca-e a-re-na"],
     "date": "2025-03-26",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -362,7 +336,6 @@
       "re-na-cen ho-jas"
     ],
     "date": "2025-03-26",
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -377,8 +350,7 @@
       "¿por qué tra-ba-jar?"
     ],
     "date": "2025-03-23",
-    "selected": true,
-    "tags": ["Reflexión", "5-7-5"],
+    "tags": ["Destacado", "Reflexión", "5-7-5"],
     "show": true,
     "description": [
       "Tras cinco días de vacaciones toca volver al trabajo. Quizás no sea tanto tener una rutina de trabajo, sino las condiciones y la proyección de este sistema lo que me quita las ganas de volver"
@@ -392,7 +364,6 @@
       "co-ne-xión mu-da"
     ],
     "date": "2025-03-23",
-    "selected": false,
     "tags": ["Reflexión", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -407,7 +378,6 @@
       "sol-ta-mos car-ga"
     ],
     "date": "2025-03-23",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -422,7 +392,6 @@
       "nue-vas ba-ta-llas"
     ],
     "date": "2025-03-22",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -438,8 +407,7 @@
       "son-rí-e_el Maig-mó"
     ],
     "date": "2025-03-21",
-    "selected": true,
-    "tags": ["Naturaleza", "Personal", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "Personal", "5-7-5"],
     "show": true,
     "description": [
       "Salgo de Alicante, camino de ver a mis amigos, y mientras conduzco el Maigmó se eleva ante mí.",
@@ -450,7 +418,6 @@
     "id": 129,
     "text": ["Tras la co-li-na", "un ba-ño pla-te-a-do,", "la lu-na lle-na"],
     "date": "2025-03-16",
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -465,7 +432,6 @@
       "a mi me so-bra"
     ],
     "date": "2025-03-16",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -476,7 +442,6 @@
     "id": 127,
     "text": ["Fu-gaz mo-men-to,", "u-na ye-ma flo-re-ce,", "so-le-dad ro-ta"],
     "date": "2025-03-15",
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -488,8 +453,7 @@
       "flo-re-ce al-to"
     ],
     "date": "2025-03-15",
-    "selected": true,
-    "tags": ["Reflexión", "Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Reflexión", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
       "Es curioso ver como los árboles tiene ramas a partir de cierta altura. Han aprendido de sus errores y solo producen yemas donde saben que es fructífero."
@@ -503,7 +467,6 @@
     ],
     "date": "2025-03-10",
     "id": 125,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -518,8 +481,7 @@
     ],
     "date": "2025-03-10",
     "id": 124,
-    "selected": true,
-    "tags": ["Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
       "He visto un verdecillo posado en un rama, pero aún quedan unas semanas para la primavera.",
@@ -534,8 +496,7 @@
     ],
     "date": "2025-03-05",
     "id": 123,
-    "selected": false,
-    "tags": ["Naturaleza", "Estaciones", "5-7-5"],
+    "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
   {
@@ -546,8 +507,7 @@
     ],
     "date": "2025-03-05",
     "id": 122,
-    "selected": false,
-    "tags": ["Naturaleza", "Estaciones", "5-7-5"],
+    "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
       "Se acerca el equinocio de primavera y me inspira a escribir, pero no consigo captarlo en forma de haiku."
@@ -557,7 +517,6 @@
     "text": ["Du-ra ca-í-da,", "a par-tir de a-ho-ra", "mi-ra tus bo-tas"],
     "date": "2025-03-03",
     "id": 121,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -573,8 +532,7 @@
     ],
     "date": "2025-03-03",
     "id": 120,
-    "selected": true,
-    "tags": ["Naturaleza", "Reflexión", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "Reflexión", "5-7-5"],
     "show": true,
     "description": ["Con el paso del tiempo, ¿seguimos siendo los mismos?"]
   },
@@ -582,7 +540,6 @@
     "text": ["De vuel-ta en pie", "ca-mi-no sin co-ge-ar,", "más a-ún due-le"],
     "date": "2025-03-02",
     "id": 119,
-    "selected": false,
     "tags": ["Reflexión", "Personal", "5-7-5"],
     "show": true
   },
@@ -594,7 +551,6 @@
     ],
     "date": "2025-03-02",
     "id": 118,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -606,7 +562,6 @@
     ],
     "date": "2025-03-02",
     "id": 117,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": false
   },
@@ -614,7 +569,6 @@
     "text": ["La llu-via ca-e", "el ar-tis-ta es-cri-be", "el al-ma vi-ve"],
     "date": "2025-03-01",
     "id": 116,
-    "selected": false,
     "tags": ["Reflexión", "5-7-5"],
     "show": true
   },
@@ -622,7 +576,6 @@
     "text": ["Char-co de llu-via,", "e-fí-me-ro re-fle-jo", "llé-va-me a-llí"],
     "date": "2025-03-01",
     "id": 115,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -630,8 +583,7 @@
     "text": ["Ex-tra-ño ár-bol,", "re-pa-so mi ca-mi-no", "¿Dón-de me per-dí?"],
     "date": "2025-02-27",
     "id": 114,
-    "selected": true,
-    "tags": ["Reflexión", "5-7-5"],
+    "tags": ["Destacado", "Reflexión", "5-7-5"],
     "show": true,
     "description": [
       "A veces no nos damos cuenta de que nos hemos perdido hasta que no nos topamos con algo extraño, que nos hace ver que no sabemos donde estamos."
@@ -641,7 +593,6 @@
     "text": ["Yer-mo pá-ra-mo,", "bro-te de-sa-fian-te", "vo-lun-tad sa-cra"],
     "date": "2025-02-26",
     "id": 113,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -653,7 +604,6 @@
     ],
     "date": "2025-02-25",
     "id": 112,
-    "selected": false,
     "tags": ["Reflexión", "5-7-5"],
     "show": true
   },
@@ -665,8 +615,7 @@
     ],
     "date": "2025-02-23",
     "id": 111,
-    "selected": true,
-    "tags": ["Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
       "Bien entrado el invierno los almendros empiezan a florecer, llenando los árboles de color rosa, como si de fuegos artificiales se trataran."
@@ -676,8 +625,7 @@
     "text": ["Al-ta mon-ta-ña", "nu-bes cu-bren tu ci-ma", "a-ho-ra pla-na"],
     "date": "2025-02-23",
     "id": 110,
-    "selected": true,
-    "tags": ["Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
       "He visto unas nubes muy densas y bajas que hacían de techo, como cortando la montaña a mitad. Daba la impresión de que, en lugar de en pico, arriba hubiese una gran planicie."
@@ -687,7 +635,6 @@
     "text": ["For-mas le-ja-nas", "bru-ma de las mon-ta-ñas", "a-bri-go frí-o"],
     "date": "2025-02-20",
     "id": 109,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -698,7 +645,6 @@
     "text": ["Mu-sa mo-nar-ca", "¿có-mo con-si-go ha-cer", "que no te va-yas?"],
     "date": "2025-02-18",
     "id": 108,
-    "selected": false,
     "tags": ["Naturaleza", "Personal", "5-7-5"],
     "show": true
   },
@@ -706,7 +652,6 @@
     "text": ["To-dos los co-pos", "a-ca-ban de-rre-ti-dos,", "man-to al-bi-no"],
     "date": "2025-02-18",
     "id": 107,
-    "selected": false,
     "tags": ["Reflexión", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -721,8 +666,7 @@
     ],
     "date": "2025-02-12",
     "id": 106,
-    "selected": true,
-    "tags": ["Personal", "5-7-5"],
+    "tags": ["Destacado", "Personal", "5-7-5"],
     "show": true,
     "description": [
       "Las noches son momentos complicados, traen recuerdos que abren heridas sin curar."
@@ -736,7 +680,6 @@
     ],
     "date": "2025-02-11",
     "id": 105,
-    "selected": false,
     "tags": ["Reflexión", "Personal", "5-7-5"],
     "show": true
   },
@@ -748,7 +691,6 @@
     ],
     "date": "2025-02-07",
     "id": 104,
-    "selected": false,
     "tags": ["Reflexión", "Naturaleza", "5-7-5"],
     "show": true
   },
@@ -756,7 +698,6 @@
     "text": ["Mi-ro_al o-es-te", "sor-pren-den-te be-lle-za,", "o-ca-so ro-sa"],
     "date": "2025-02-06",
     "id": 103,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -767,7 +708,6 @@
     "text": ["Co-rro y co-rro", "per-si-go u-na me-ta,", "el ho-ri-zon-te"],
     "date": "2025-02-06",
     "id": 102,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -775,7 +715,6 @@
     "text": ["Ba-jo tu som-bra", "es-pe-ro a las flo-res,", "gi-gan-te ver-de"],
     "date": "2025-02-05",
     "id": 101,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -790,8 +729,7 @@
     ],
     "date": "2025-02-01",
     "id": 100,
-    "selected": true,
-    "tags": ["Personal", "5-7-5"],
+    "tags": ["Destacado", "Personal", "5-7-5"],
     "show": true,
     "description": ["Ojalá algún día sea tan buen haijin."]
   },
@@ -803,7 +741,6 @@
     ],
     "date": "2025-02-01",
     "id": 99,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -814,7 +751,6 @@
     "text": ["Gra-ta sor-pre-sa,", "¡u-na pa-ta-ta de-luxe", "en mi pe-di-do!"],
     "date": "2025-02-01",
     "id": 98,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -829,8 +765,7 @@
     ],
     "date": "2025-02-01",
     "id": 97,
-    "selected": true,
-    "tags": ["Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "5-7-5"],
     "show": true,
     "description": [
       "Hace reflexionar como lo que sería un montón de basura para mí, para otro ser puede ser una fuente de alimento."
@@ -840,7 +775,6 @@
     "text": ["Bri-sa he-la-da", "cá-li-do to-que de sol,", "dí-a in-ver-nal"],
     "date": "2025-02-01",
     "id": 96,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -855,7 +789,6 @@
     ],
     "date": "2025-02-01",
     "id": 95,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -863,7 +796,6 @@
     "text": ["Na-tu-ra-le-za", "cu-bier-ta de as-fal-to,", "mu-sa nos-tal-gía"],
     "date": "2025-01-31",
     "id": 94,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -875,7 +807,6 @@
     ],
     "date": "2025-01-31",
     "id": 93,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -883,8 +814,7 @@
     "text": ["Un des-per-fec-to", "en mi co-che cre-í ver,", "u-na po-li-lla"],
     "date": "2025-01-30",
     "id": 92,
-    "selected": true,
-    "tags": ["Naturaleza", "Personal", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "Personal", "5-7-5"],
     "show": true,
     "description": [
       "Que gracia. Caminaba hacia mi coche y en el lateral parecía haber un golpe o algún desperfecto. Sin embargo, al acercarme, ví que realmente era una polilla posada en la puerta. De alguna manera camuflándose en un entorno moderno."
@@ -898,8 +828,7 @@
     ],
     "date": "2025-01-30",
     "id": 91,
-    "selected": true,
-    "tags": ["Naturaleza", "Personal", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "Personal", "5-7-5"],
     "show": true,
     "description": [
       "Vuelvo a casa de noche tras la partida de rol y miro arriba, al cielo estrellado."
@@ -909,8 +838,7 @@
     "text": ["A-mi-go cuen-co", "to-ma-mos el té jun-tos,", "ma-ña-nas frí-as"],
     "date": "2025-01-30",
     "id": 90,
-    "selected": true,
-    "tags": ["Personal", "5-7-5"],
+    "tags": ["Destacado", "Personal", "5-7-5"],
     "show": true,
     "description": [
       "Otro día más trabajando, me preparo un té, y la taza y yo pasamos un rato juntos."
@@ -920,7 +848,6 @@
     "text": ["U-na_al-mo-ha-da", "don-de an-tes e-ran dos,", "sue-ño le-ja-no"],
     "date": "2025-01-29",
     "id": 89,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -932,8 +859,7 @@
     ],
     "date": "2025-01-29",
     "id": 88,
-    "selected": true,
-    "tags": ["Personal", "Reflexión", "5-7-5"],
+    "tags": ["Destacado", "Personal", "Reflexión", "5-7-5"],
     "show": true,
     "description": ["Estoy en una época bastante melancólica."]
   },
@@ -945,7 +871,6 @@
     ],
     "date": "2025-01-28",
     "id": 87,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": false
   },
@@ -957,7 +882,6 @@
     ],
     "date": "2025-01-28",
     "id": 86,
-    "selected": false,
     "tags": ["Reflexión", "5-7-5"],
     "show": true
   },
@@ -969,7 +893,6 @@
     ],
     "date": "2025-01-28",
     "id": 85,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -981,7 +904,6 @@
     ],
     "date": "2025-01-28",
     "id": 84,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -993,7 +915,6 @@
     ],
     "date": "2025-01-28",
     "id": 83,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
     "description": [
@@ -1008,7 +929,6 @@
     ],
     "date": "2025-01-28",
     "id": 82,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -1016,7 +936,6 @@
     "text": ["El to-cón", "pa-re-ce muer-to,", "es-pe-ra"],
     "date": "2025-01-28",
     "id": 81,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": true
   },
@@ -1024,8 +943,7 @@
     "text": ["Mi_a-mi-go", "se fue por siem-pre,", "dos a-ños"],
     "date": "2025-01-23",
     "id": 80,
-    "selected": true,
-    "tags": ["Chuck", "Personal", "3-5-3"],
+    "tags": ["Destacado", "Chuck", "Personal", "3-5-3"],
     "show": true,
     "description": ["Hace dos años que se fue Chuck. Le echo de menos."]
   },
@@ -1037,7 +955,6 @@
     ],
     "date": "2025-01-19",
     "id": 79,
-    "selected": false,
     "tags": ["Reflexión", "5-7-5"],
     "show": false
   },
@@ -1045,7 +962,6 @@
     "text": ["Bien y mal", "es sub-je-ti-vo", "y fu-gaz"],
     "date": "2025-01-17",
     "id": 78,
-    "selected": false,
     "tags": ["Reflexión", "3-5-3"],
     "show": true
   },
@@ -1053,7 +969,6 @@
     "text": ["To-dos sa-be-mos", "co-mo fun-cio-na to-do", "si no_es-tá ro-to"],
     "date": "2025-01-17",
     "id": 77,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1061,7 +976,6 @@
     "text": ["Po-der e-le-gir", "mi com-ple-to des-ti-no", "al-ma des-nu-da"],
     "date": "2025-01-13",
     "id": 76,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1069,7 +983,6 @@
     "text": ["Soy li-bre,", "pa-ra bien o mal", "yo man-do"],
     "date": "2025-01-13",
     "id": 75,
-    "selected": false,
     "tags": ["Reflexión", "3-5-3"],
     "show": true
   },
@@ -1077,7 +990,6 @@
     "text": ["Ya no se", "que es co-rrec-to", "y que no"],
     "date": "2025-01-10",
     "id": 74,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1085,7 +997,6 @@
     "text": ["Al fi-nal", "to-do_es la-men-to", "y pe-na"],
     "date": "2025-01-07",
     "id": 73,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1093,7 +1004,6 @@
     "text": ["La lu-na", "ya no son-rí-e", "pa-ra mí"],
     "date": "2025-01-07",
     "id": 72,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1101,7 +1011,6 @@
     "text": ["Se_a-ca-bó,", "frí-a tris-te-za,", "des-a-mor"],
     "date": "2025-01-07",
     "id": 71,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1109,7 +1018,6 @@
     "text": ["Me_han ro-to,", "de-pen-de de mí", "re-gre-sar"],
     "date": "2025-01-07",
     "id": 70,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1121,7 +1029,6 @@
     ],
     "date": "2025-01-07",
     "id": 69,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1133,7 +1040,6 @@
     ],
     "date": "2025-01-07",
     "id": 68,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1141,7 +1047,6 @@
     "text": ["El ar-te", "a-pa-ga_el do-lor", "de mi_al-ma"],
     "date": "2025-01-07",
     "id": 67,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1149,7 +1054,6 @@
     "text": ["Ás-pe-ro", "do-lor dor-mi-ta", "por den-tro"],
     "date": "2025-01-07",
     "id": 66,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1157,7 +1061,6 @@
     "text": ["E-xis-te", "re-al-men-te el", "fra-ca-so?"],
     "date": "2025-01-07",
     "id": 65,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1165,7 +1068,6 @@
     "text": ["Tor-men-ta,", "a-gi-ta_y_em-pu-ja", "mis ve-las"],
     "date": "2025-01-07",
     "id": 64,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1177,7 +1079,6 @@
     ],
     "date": "2025-01-06",
     "id": 63,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1185,7 +1086,6 @@
     "text": ["¿Dón-de_es-tá", "el pro-pó-si-to", "de vi-vir?"],
     "date": "2025-01-01",
     "id": 62,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1193,7 +1093,6 @@
     "text": ["Es-cue-tos", "po-e-mas di-cen", "la ver-dad?"],
     "date": "2025-01-01",
     "id": 61,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1201,7 +1100,6 @@
     "text": ["Me cuen-to", "men-ti-ras pa-ra", "cre-er-las"],
     "date": "2025-01-01",
     "id": 60,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1209,7 +1107,6 @@
     "text": ["Pre-vio_a-mor", "ya des-gas-ta-do,", "¿a-mis-tad?"],
     "date": "2025-01-01",
     "id": 59,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1217,7 +1114,6 @@
     "text": ["Es-ca-par", "de tu des-ti-no", "es men-tal"],
     "date": "2025-01-01",
     "id": 58,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1225,7 +1121,6 @@
     "text": ["Be-lle-za,", "¿es-tás tam-bién en", "el do-lor?"],
     "date": "2025-01-01",
     "id": 57,
-    "selected": false,
     "tags": ["Reflexión", "Personal", "3-5-3"],
     "show": true
   },
@@ -1233,7 +1128,6 @@
     "text": ["Mi-ro_a-trás", "in-a-ca-ba-do", "per-sis-to"],
     "date": "2025-01-01",
     "id": 56,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1241,7 +1135,6 @@
     "text": ["Un tra-to,", "lim-piad las mi-nas", "sed li-bres"],
     "date": "2024-12-31",
     "id": 55,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1253,7 +1146,6 @@
     ],
     "date": "2024-12-31",
     "id": 54,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1265,7 +1157,6 @@
     ],
     "date": "2024-12-31",
     "id": 53,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -1277,7 +1168,6 @@
     ],
     "date": "2024-12-31",
     "id": 52,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1285,7 +1175,6 @@
     "text": ["Más due-le", "tu da-ga_al sa-lir,", "te quie-ro"],
     "date": "2024-12-31",
     "id": 51,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1297,7 +1186,6 @@
     ],
     "date": "2024-12-31",
     "id": 50,
-    "selected": false,
     "tags": ["Naturaleza", "Reflexión", "5-7-5"],
     "show": true
   },
@@ -1309,7 +1197,6 @@
     ],
     "date": "2024-12-30",
     "id": 49,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1317,7 +1204,6 @@
     "text": ["A-ho-ra", "có-mo con-fí-o", "en na-die?"],
     "date": "2024-12-30",
     "id": 48,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1325,7 +1211,6 @@
     "text": ["Se rom-pen", "vie-jas pro-me-sas,", "ex-tra-ño"],
     "date": "2024-12-30",
     "id": 47,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1333,7 +1218,6 @@
     "text": ["Las nu-bes", "siem-pre ter-mi-nan", "por ir-se"],
     "date": "2024-12-30",
     "id": 46,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1345,7 +1229,6 @@
     ],
     "date": "2024-12-11",
     "id": 45,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -1353,7 +1236,6 @@
     "text": ["Re-bro-ta", "tras un de-sas-tre,", "la vi-da"],
     "date": "2024-11-21",
     "id": 44,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true,
     "description": [
@@ -1364,7 +1246,6 @@
     "text": ["El ár-bol", "al per-der la_ho-ja", "se mue-re"],
     "date": "2024-10-17",
     "id": 43,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1372,7 +1253,6 @@
     "text": ["La_an-sie-dad", "so-bre mi pe-cho", "me_a-ho-ga"],
     "date": "2024-10-17",
     "id": 42,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1380,7 +1260,6 @@
     "text": ["El cam-bio", "tra-e con-si-go", "el do-lor"],
     "date": "2024-10-17",
     "id": 41,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1388,7 +1267,6 @@
     "text": ["La ro-ca", "es-pe-ra quie-ta,", "en cal-ma"],
     "date": "2024-10-17",
     "id": 40,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1396,7 +1274,6 @@
     "text": ["So-le-dad,", "a-mor y o-dio", "o-to-ñal"],
     "date": "2024-10-17",
     "id": 39,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1404,7 +1281,6 @@
     "text": ["Se me-cen", "los sua-ves tol-dos", "ca-lien-tes"],
     "date": "2024-10-17",
     "id": 38,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": true
   },
@@ -1416,7 +1292,6 @@
     ],
     "date": "2024-10-17",
     "id": 37,
-    "selected": false,
     "tags": ["Reflexión", "5-7-5"],
     "show": true
   },
@@ -1424,7 +1299,6 @@
     "text": ["Los rí-os", "no se di-vi-den,", "por siem-pre"],
     "date": "2024-10-17",
     "id": 36,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true
   },
@@ -1432,7 +1306,6 @@
     "text": ["La llu-via", "trae tu re-cuer-do,", "tris-te-za"],
     "date": "2023-05-19",
     "id": 35,
-    "selected": false,
     "tags": ["Chuck", "Personal", "3-5-3"],
     "show": true,
     "description": ["Hace pocos meses que se fue Chuck. Que difícil."]
@@ -1441,8 +1314,7 @@
     "text": ["Ro-ja luz", "al-ma des-nu-da,", "sols-ti-cio"],
     "date": "2022-06-21",
     "id": 34,
-    "selected": false,
-    "tags": ["Naturaleza", "Estaciones", "3-5-3"],
+    "tags": ["Naturaleza", "3-5-3"],
     "show": true
   },
   {
@@ -1453,8 +1325,7 @@
     ],
     "date": "2021-10-26",
     "id": 33,
-    "selected": true,
-    "tags": ["Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "5-7-5"],
     "show": true
   },
   {
@@ -1465,7 +1336,6 @@
     ],
     "date": "2021-10-26",
     "id": 32,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -1473,7 +1343,6 @@
     "text": ["La llu-ví-a es,", "la mon-ta-ña fue y es,", "no de-jo hue-lla"],
     "date": "2019-01-13",
     "id": 31,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": false
   },
@@ -1481,7 +1350,6 @@
     "text": ["El vien-to", "des-nu-da_al ár-bol,", "ca-du-co"],
     "date": "2019-01-13",
     "id": 30,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": true
   },
@@ -1489,7 +1357,6 @@
     "text": ["La puer-ta", "a-sus-ta des-de", "dos ca-ras"],
     "date": "2019-01-13",
     "id": 29,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1497,7 +1364,6 @@
     "text": ["Un a-gu-je-ro", "al que so-lo se en-tra,", "va-cuo es-pa-cio"],
     "date": "2019-01-13",
     "id": 28,
-    "selected": false,
     "tags": ["5-7-5"],
     "show": false
   },
@@ -1509,7 +1375,6 @@
     ],
     "date": "2019-01-13",
     "id": 27,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -1517,7 +1382,6 @@
     "text": ["La bri-sa", "in-cli-na_al ta-llo,", "por siem-pre"],
     "date": "2019-01-13",
     "id": 26,
-    "selected": false,
     "tags": ["Naturaleza", "Reflexión", "3-5-3"],
     "show": false
   },
@@ -1525,7 +1389,6 @@
     "text": ["Un bro-te", "se_a-gi-ta_al vien-to,", "al na-cer"],
     "date": "2019-01-13",
     "id": 25,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": false
   },
@@ -1533,7 +1396,6 @@
     "text": ["La_a-ra-ña", "te-je su mun-do", "en se-da."],
     "date": "2019-01-13",
     "id": 24,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": false
   },
@@ -1545,7 +1407,6 @@
     ],
     "date": "2019-01-13",
     "id": 23,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -1553,7 +1414,6 @@
     "text": ["El rí-o", "se de-ti-e-ne", "a_es-pe-rar"],
     "date": "2019-01-13",
     "id": 22,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": false
   },
@@ -1561,7 +1421,6 @@
     "text": ["El to-cón", "co-bi-ja vi-da", "que duer-me"],
     "date": "2019-01-13",
     "id": 21,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": false
   },
@@ -1569,7 +1428,6 @@
     "text": ["La nie-ve", "cu-bre el bos-que", "ca-no-so"],
     "date": "2019-01-13",
     "id": 20,
-    "selected": false,
     "tags": ["3-5-3"],
     "show": false
   },
@@ -1577,7 +1435,6 @@
     "text": ["Pe-num-bra", "i-nun-da_el mon-te,", "lo_a-bra-za"],
     "date": "2019-01-13",
     "id": 19,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": true
   },
@@ -1585,7 +1442,6 @@
     "text": ["El vue-lo ra-so", "del pá-ja-ro_a-za-ba-che,", "gé-li-do cam-po"],
     "date": "2019-01-13",
     "id": 18,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -1593,7 +1449,6 @@
     "text": ["Des-nu-do", "el ár-bol duer-me,", "¿vol-ve-rá?"],
     "date": "2019-01-13",
     "id": 17,
-    "selected": false,
     "tags": ["Naturaleza", "Reflexión", "3-5-3"],
     "show": true
   },
@@ -1601,7 +1456,6 @@
     "text": ["Des-can-sa", "la vi-da_a-ho-ra,", "tran-qui-la"],
     "date": "2019-01-13",
     "id": 16,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": false
   },
@@ -1609,8 +1463,7 @@
     "text": ["Frí-o_a-zul", "nu-bes dis-tan-tes,", "In-vier-no"],
     "date": "2019-01-13",
     "id": 15,
-    "selected": false,
-    "tags": ["Naturaleza", "Estaciones", "3-5-3"],
+    "tags": ["Naturaleza", "3-5-3"],
     "show": true
   },
   {
@@ -1621,7 +1474,6 @@
     ],
     "date": "2017-10-06",
     "id": 14,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -1633,7 +1485,6 @@
     ],
     "date": "2017-10-06",
     "id": 13,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -1641,7 +1492,6 @@
     "text": ["El ri-a-chue-lo", "hu-yen-do del des-hie-lo", "o-tro a-ño más"],
     "date": "2017-10-06",
     "id": 12,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -1653,7 +1503,6 @@
     ],
     "date": "2017-10-06",
     "id": 11,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -1661,7 +1510,6 @@
     "text": ["La pre-sión", "so-bre mi pe-cho,", "me_a-ho-ga"],
     "date": "2017-10-06",
     "id": 10,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": false
   },
@@ -1669,7 +1517,6 @@
     "text": ["El ca-lor", "de tu com-pa-ñí-a", "me lle-na"],
     "date": "2017-10-06",
     "id": 9,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": false
   },
@@ -1677,7 +1524,6 @@
     "text": ["Es-pe-ra,", "pron-to ca-e-rá", "la no-che"],
     "date": "2017-10-06",
     "id": 8,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": false
   },
@@ -1685,7 +1531,6 @@
     "text": ["Oc-tu-bre,", "¿por qué no du-ras?", "qué-da-te"],
     "date": "2017-10-06",
     "id": 7,
-    "selected": false,
     "tags": ["Personal", "3-5-3"],
     "show": true,
     "description": [
@@ -1700,7 +1545,6 @@
     ],
     "date": "2017-10-06",
     "id": 6,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true
   },
@@ -1712,7 +1556,6 @@
     ],
     "date": "2017-10-06",
     "id": 5,
-    "selected": false,
     "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
@@ -1720,15 +1563,13 @@
     "text": ["La lu-na ro-ja", "in-di-ca la lle-ga-da,", "fe-liz co-se-cha"],
     "date": "2017-10-06",
     "id": 4,
-    "selected": true,
-    "tags": ["Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "5-7-5"],
     "show": true
   },
   {
     "text": ["El ár-bol", "mu-da las ho-jas,", "can-sa-do"],
     "date": "2017-10-06",
     "id": 3,
-    "selected": false,
     "tags": ["Naturaleza", "3-5-3"],
     "show": true
   },
@@ -1740,7 +1581,6 @@
     ],
     "date": "2017-10-06",
     "id": 2,
-    "selected": false,
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": [
@@ -1755,16 +1595,14 @@
     ],
     "date": "2017-10-06",
     "id": 1,
-    "selected": false,
-    "tags": ["Naturaleza", "Estaciones", "5-7-5"],
+    "tags": ["Naturaleza", "5-7-5"],
     "show": true
   },
   {
     "text": ["O-to-ño,", "ho-jas de co-lor", "na-ran-ja"],
     "date": "2017-10-06",
     "id": 0,
-    "selected": true,
-    "tags": ["Naturaleza", "Estaciones", "3-5-3"],
+    "tags": ["Destacado", "Naturaleza", "3-5-3"],
     "show": true
   }
 ]
