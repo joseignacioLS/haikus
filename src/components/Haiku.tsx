@@ -1,8 +1,8 @@
+import { showcaseStore } from "@/store/Showcase";
 import type { THaiku } from "@/types";
-import { HaikuInfoModal } from "@components/HaikuInfoModal";
 import { useHaikuStore } from "@hooks/useHaikuStore";
-import { modalStore } from "@store/Modal";
 import { navigate } from "astro:transitions/client";
+import { useEffect } from "react";
 import styles from "./Haiku.module.scss";
 
 const HaikuBody = ({ haiku }: { haiku: string[] }) => {
@@ -26,8 +26,13 @@ type Props = {
 export const Haiku = ({ haiku, fullpage }: Props) => {
   const { collections } = useHaikuStore();
   const openDescription = () => {
-    modalStore.set(<HaikuInfoModal haiku={haiku} />);
+    navigate(`/${haiku.id}`);
   };
+
+  useEffect(() => {
+    if (!fullpage) return;
+    showcaseStore.set(haiku.id);
+  }, [fullpage]);
 
   if (fullpage) {
     return (
@@ -64,7 +69,11 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
   }
 
   return (
-    <button className={`naked ${styles.wrapper}`} onClick={openDescription}>
+    <button
+      id={String(haiku.id)}
+      className={`naked ${styles.wrapper}`}
+      onClick={openDescription}
+    >
       <HaikuBody haiku={haiku.text} />
       <span className={styles.id}>{`#${haiku.id}`}</span>
     </button>

@@ -1,9 +1,11 @@
+import { showcaseStore } from "@/store/Showcase";
 import { ERequestStatus, type THaiku } from "@/types";
 import { Haiku } from "@components/Haiku";
 import { Spinner } from "@components/notifications/Spinner.tsx";
 import { Carousel } from "@components/structure/Carousel";
 import { Title } from "@components/structure/Title.tsx";
 import { useHaikuStore } from "@hooks/useHaikuStore.tsx";
+import { useStore } from "@nanostores/react";
 import { useEffect, useMemo, useState } from "react";
 import styles from "./HaikuShowcase.module.scss";
 
@@ -22,6 +24,8 @@ export const HaikuShowcase = <T extends string>({
   const [scrollPosition, setScrollPosition] = useState<number | undefined>(
     undefined
   );
+
+  const focusHaikuId = useStore(showcaseStore);
 
   const { haikus, status } = useHaikuStore();
 
@@ -78,8 +82,6 @@ export const HaikuShowcase = <T extends string>({
     });
   };
 
-  useEffect(initializeFilter, []);
-
   const carousel = useMemo(() => {
     const slides = haikus
       .filter((h) => {
@@ -100,6 +102,12 @@ export const HaikuShowcase = <T extends string>({
       <Carousel slides={slides} scrollPosition={scrollPosition}></Carousel>
     );
   }, [haikus, filter, scrollPosition]);
+
+  useEffect(() => {
+    initializeFilter();
+    if (!focusHaikuId) return;
+    document.getElementById(`${focusHaikuId}`)?.scrollIntoView();
+  }, [focusHaikuId, carousel]);
 
   return (
     <section className={styles.wrapper}>
