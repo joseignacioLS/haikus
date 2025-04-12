@@ -1,11 +1,19 @@
 ---
+import { haikus } from "@/store/Haikus";
 import { Title } from "@components/structure/Title";
 import Layout from "@layouts/Layout.astro";
 import DetailedHaiku from "@sections/DetailedHaiku";
-
+import type { GetStaticPaths } from "astro";
 import "../../styles/_blocks.scss";
 
-export const prerender = false;
+export const getStaticPaths = (() => {
+  const $haikus = haikus.get();
+  return $haikus.map((h) => {
+    return {
+      params: { id: String(h.id) },
+    };
+  });
+}) satisfies GetStaticPaths;
 
 const id = parseInt(Astro.params.id ?? "-1");
 ---

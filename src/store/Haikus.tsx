@@ -1,6 +1,6 @@
-import { atom } from "nanostores";
+import haikusContent from "@/const/haikus.json";
 import { ERequestStatus, type THaiku } from "@/types";
-import { toastStore } from "@store/Toast";
+import { atom } from "nanostores";
 
 export const fallbackHaiku: THaiku = {
   id: -1,
@@ -10,50 +10,28 @@ export const fallbackHaiku: THaiku = {
   text: [],
   description: [],
 };
-
-const retrieveChunk = async (id: number) => {
-  return fetch(import.meta.env.PUBLIC_HAIKU_DATA_URL + `/chunk_${id}.json`)
-    .then((res) => {
-      if (!res.ok) throw new Error();
-      return res.json();
-    })
-    .then(($haikus: THaiku[]) => {
-      haikus.set([...haikus.get(), ...$haikus]);
-    })
-    .catch(() => {
-      toastStore.set(`Ha habido un error cargando algunos haikus`);
-    });
-};
+const HIDDEN_COLLECTIONS: string[] = ["5-7-5", "3-5-3"];
 
 const initHaikuData = async () => {
   status.set(ERequestStatus.LOADING);
+  const $haikus: THaiku[] = haikusContent
+    .filter((h) => h.show)
+    .sort((a, b) => b.id - a.id);
 
-  return fetch(import.meta.env.PUBLIC_HAIKU_DATA_URL + "/director.json")
-    .then((res) => {
-      if (!res.ok) throw new Error();
-      return res.json();
-    })
-    .then(
-      (data: {
-        totalChunks: number;
-        chunkSize: number;
-        collections: THaiku["tags"];
-      }) => {
-        const { totalChunks, collections: $collections } = data;
-        collections.set($collections);
-        const promises = [];
-        for (let i = 0; i < totalChunks; i++) {
-          promises.push(retrieveChunk(i));
-        }
-        Promise.allSettled(promises).then(() => {
-          haikus.set(haikus.get().sort((a, b) => b.id - a.id));
-          status.set(ERequestStatus.SUCCESS);
-        });
-      }
+  const $collections = Array.from(
+    new Set(
+      $haikus.reduce(
+        (tags: string[], { tags: newTags }) => [...tags, ...newTags],
+        []
+      )
     )
-    .catch(() => {
-      status.set(ERequestStatus.ERROR);
-    });
+  )
+    .filter((tag: string) => !HIDDEN_COLLECTIONS.includes(tag))
+    .sort();
+
+  collections.set($collections);
+  haikus.set($haikus);
+  status.set(ERequestStatus.SUCCESS);
 };
 
 export const haikus = atom<THaiku[]>([]);
