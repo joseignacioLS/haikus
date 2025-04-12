@@ -9,7 +9,7 @@ export const fallbackHaiku: THaiku = {
   text: [],
   description: [],
 };
-const HIDDEN_COLLECTIONS: string[] = ["5-7-5", "3-5-3"];
+const HIDDEN_COLLECTIONS: string[] = ["Chuck", "5-7-5", "3-5-3"];
 
 const initHaikuData = async () => {
   status.set(ERequestStatus.LOADING);
