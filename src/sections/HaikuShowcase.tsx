@@ -118,7 +118,7 @@ export const HaikuShowcase = <T extends string>({
 
   useEffect(() => {
     initializeFilter();
-    if (!focusHaikuId) return;
+    if (focusHaikuId === undefined) return;
     document.getElementById(`${focusHaikuId}`)?.scrollIntoView();
   }, [focusHaikuId, carousel]);
 
