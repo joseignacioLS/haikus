@@ -4,6 +4,7 @@ import { useHaikuStore } from "@hooks/useHaikuStore";
 import { navigate } from "astro:transitions/client";
 import { useEffect } from "react";
 import styles from "./Haiku.module.scss";
+import { Swipeable } from "./structure/Swipeable";
 
 const HaikuBody = ({ haiku }: { haiku: string[] }) => {
   const cleanLine = (line: string) => {
@@ -24,11 +25,23 @@ type Props = {
 };
 
 export const Haiku = ({ haiku, fullpage }: Props) => {
-  const { collections } = useHaikuStore();
+  const { collections, haikus } = useHaikuStore();
+
   const openDescription = () => {
     navigate(`/${haiku.id}`);
   };
 
+  const handleSwipe = (direction: "Right" | "Left") => {
+    const currentIndex = haikus.findIndex((h) => h.id === haiku.id);
+    if (currentIndex === -1) return;
+    if (direction === "Right") {
+      if (currentIndex === haikus.length - 1) return;
+      navigate(`/${haikus[currentIndex + 1].id}`);
+    } else if (direction === "Left") {
+      if (currentIndex === 0) return;
+      navigate(`/${haikus[currentIndex - 1].id}`);
+    }
+  };
   useEffect(() => {
     if (!fullpage) return;
     showcaseStore.set(haiku.id);
@@ -36,7 +49,10 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
 
   if (fullpage) {
     return (
-      <div className={`${styles.wrapper} ${styles.fullpage}`}>
+      <Swipeable
+        handleSwipe={handleSwipe}
+        className={`${styles.wrapper} ${styles.fullpage}`}
+      >
         <HaikuBody haiku={haiku.text} />
         <div className={styles.data}>
           <p className={styles.dataTitle}>{haiku.date}</p>
@@ -64,7 +80,7 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
               })}
           </div>
         </div>
-      </div>
+      </Swipeable>
     );
   }
 

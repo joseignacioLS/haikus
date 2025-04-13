@@ -1,3 +1,4 @@
+import { Swipeable } from "@/components/structure/Swipeable";
 import { showcaseStore } from "@/store/Showcase";
 import { ERequestStatus, type THaiku } from "@/types";
 import { Haiku } from "@components/Haiku";
@@ -27,55 +28,26 @@ export const HaikuShowcase = <T extends string>({
 
   const { haikus, status } = useHaikuStore();
 
-  const [touchStart, setTouchStart] = useState<
-    { x: number; y: number } | undefined
-  >(undefined);
-  const [touchEnd, setTouchEnd] = useState<
-    { x: number; y: number } | undefined
-  >(undefined);
-
   const initializeFilter = () => {
     setFilter(defaultFilter ?? filters[0]);
   };
 
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const deltaX = touchEnd.x - touchStart.x;
-    const deltaY = touchEnd.y - touchStart.y;
-    setTouchStart(undefined);
-    setTouchEnd(undefined);
-    if (Math.abs(deltaY) > 50) return;
-    if (Math.abs(deltaX) < 50) return;
-    if (deltaX > 0) {
+  const handleSwipe = (direction: "Right" | "Left") => {
+    if (direction === "Left") {
       setFilter((oldFilter) => {
         const filterIndex = filters.findIndex((f) => f === oldFilter);
         if (filterIndex === -1) return oldFilter;
         const leftIndex = Math.max(0, filterIndex - 1);
         return filters[leftIndex];
       });
-      return;
-    }
-    if (deltaX < 0) {
+    } else if (direction === "Right") {
       setFilter((oldFilter) => {
         const filterIndex = filters.findIndex((f) => f === oldFilter);
         if (filterIndex === -1) return oldFilter;
         const rightIndex = Math.min(filters.length - 1, filterIndex + 1);
         return filters[rightIndex];
       });
-      return;
     }
-  };
-  const handleTouchStart = (e: React.TouchEvent<HTMLElement>) => {
-    setTouchStart({
-      x: e.targetTouches[0].clientX,
-      y: e.targetTouches[0].clientY,
-    });
-  };
-  const handleTouchMove = (e: React.TouchEvent<HTMLElement>) => {
-    setTouchEnd({
-      x: e.targetTouches[0].clientX,
-      y: e.targetTouches[0].clientY,
-    });
   };
 
   const handleScroll = (scrollTop: number) => {
@@ -118,6 +90,9 @@ export const HaikuShowcase = <T extends string>({
 
   useEffect(() => {
     initializeFilter();
+  }, []);
+
+  useEffect(() => {
     if (focusHaikuId === undefined) return;
     document.getElementById(`${focusHaikuId}`)?.scrollIntoView();
   }, [focusHaikuId, carousel]);
@@ -146,14 +121,9 @@ export const HaikuShowcase = <T extends string>({
         </Title>
       )}
       {status === ERequestStatus.SUCCESS && (
-        <div
-          className={styles.carouselWrapper}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
+        <Swipeable handleSwipe={handleSwipe} className={styles.carouselWrapper}>
           {carousel}
-        </div>
+        </Swipeable>
       )}
       {status === ERequestStatus.LOADING && (
         <div className={`${styles.carouselWrapper}`}>
