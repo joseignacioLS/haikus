@@ -1,25 +1,38 @@
+import { toastStore } from "@/store/Toast";
 import type { SeasonResponse } from "@/types";
 import { getSeasonsEvents } from "@/utils/seasons.api";
+import { navigate } from "astro:transitions/client";
 import React, { useEffect, useState } from "react";
 import { Temporal } from "temporal-polyfill";
 import styles from "./SeasonsClock.module.scss";
 import { Spinner } from "./notifications/Spinner";
-import { navigate } from "astro:transitions/client";
-import { toastStore } from "@/store/Toast";
 
-const MONTH_TO_COLOR: Record<number, string> = {
-  6: "#ffc3cd",
-  9: "#e84d2e",
-  12: "#134665",
-  3: "#fede87",
-};
-
-const MONTH_TO_SEASON: Record<number, string> = {
-  6: "Verano",
-  9: "Otoño",
-  12: "Invierno",
-  3: "Primavera",
-};
+const SEASONS = [
+  {
+    name: "Verano",
+    color: "#ffc3cd",
+    initialMonth: 6,
+    nextSeason: "Otoño",
+  },
+  {
+    name: "Otoño",
+    color: "#e84d2e",
+    initialMonth: 9,
+    nextSeason: "Invierno",
+  },
+  {
+    name: "Invierno",
+    color: "#134665",
+    initialMonth: 12,
+    nextSeason: "Primavera",
+  },
+  {
+    name: "Primavera",
+    color: "#fede87",
+    initialMonth: 3,
+    nextSeason: "Verano",
+  },
+];
 
 const today = Temporal.Now.plainDateISO();
 
@@ -53,19 +66,19 @@ export const SeasonsClock = () => {
   const [clockRotation, setClockRotation] = useState(0);
   const [seasons, setSeasons] = useState([
     {
-      color: MONTH_TO_COLOR[6],
+      color: "white",
       range: 0,
     },
     {
-      color: MONTH_TO_COLOR[9],
+      color: "white",
       range: 25,
     },
     {
-      color: MONTH_TO_COLOR[12],
-      range: 5,
+      color: "white",
+      range: 50,
     },
     {
-      color: MONTH_TO_COLOR[3],
+      color: "white",
       range: 75,
     },
   ]);
@@ -86,7 +99,11 @@ export const SeasonsClock = () => {
       if (i === 3) {
         setSeasons((oldState) => {
           const newState = structuredClone(oldState);
-          newState[i] = { color: MONTH_TO_COLOR[e.month], range: acc };
+          newState[i] = {
+            color:
+              SEASONS.find((s) => s.initialMonth === e.month)?.color ?? "white",
+            range: acc,
+          };
           return newState;
         });
         return acc;
@@ -98,7 +115,11 @@ export const SeasonsClock = () => {
 
       setSeasons((oldState) => {
         const newState = structuredClone(oldState);
-        newState[i] = { color: MONTH_TO_COLOR[e.month], range: acc };
+        newState[i] = {
+          color:
+            SEASONS.find((s) => s.initialMonth === e.month)?.color ?? "white",
+          range: acc,
+        };
         return newState;
       });
       return acc + diff;
@@ -123,10 +144,18 @@ export const SeasonsClock = () => {
 
     const relevantSeasonEvents = getRelevantSeasonEvents(seasonsEvents);
 
+    const currentSeason = SEASONS.find(
+      (s) => s.initialMonth === relevantSeasonEvents[0].month
+    );
+
+    const daysOfCurrentSeason = today.since(
+      eventToPlainDate(relevantSeasonEvents[0])
+    ).days;
+    const daysToNextSeason = -today.since(
+      eventToPlainDate(relevantSeasonEvents[1])
+    ).days;
     setMessage(
-      `Hoy es el día ${
-        today.since(eventToPlainDate(relevantSeasonEvents[0])).days
-      } de ${MONTH_TO_SEASON[relevantSeasonEvents[0].month]}`
+      `Hoy es el día ${daysOfCurrentSeason} de ${currentSeason?.name.toLowerCase()}. Quedan ${daysToNextSeason} días hasta ${currentSeason?.nextSeason.toLowerCase()}.`
     );
 
     adjustClockRotation(relevantSeasonEvents);
