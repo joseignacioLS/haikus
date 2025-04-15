@@ -36,10 +36,10 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
     if (currentIndex === -1) return;
     if (direction === "Right") {
       if (currentIndex === haikus.length - 1) return;
-      navigate(`/${haikus[currentIndex + 1].id}`);
+      navigate(`/${haikus[currentIndex + 1].id}`,{history:"replace"});
     } else if (direction === "Left") {
       if (currentIndex === 0) return;
-      navigate(`/${haikus[currentIndex - 1].id}`);
+      navigate(`/${haikus[currentIndex - 1].id}`,{history: "replace"});
     }
   };
   useEffect(() => {
