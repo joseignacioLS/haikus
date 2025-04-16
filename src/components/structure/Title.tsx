@@ -25,7 +25,7 @@ export const Title = ({
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            navigate(backRoute);
+            navigate(backRoute,{history:"replace"});
           }}
         >
           <img
