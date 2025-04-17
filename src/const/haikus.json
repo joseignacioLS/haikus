@@ -1,5 +1,39 @@
- [
-    {
+[
+  {
+    "id": 172,
+    "text": [
+      "Un po-qui-to más",
+      "las sá-ba-nas me_a-tra-pan",
+      "sue-ños a_ol-vi-dar"
+    ],
+    "date": "2025-04-14",
+    "tags": ["Personal", "5-7-5"],
+    "show": true,
+    "description": ["Aún me persiguen sueños de mi vida pasada."]
+  },
+  {
+    "id": 171,
+    "text": ["Can-sa-do pa-ro", "y vo-so-tros con-mi-go", "to-do es-tá bien"],
+    "date": "2025-04-14",
+    "tags": ["Personal", "5-7-5"],
+    "show": true,
+    "description": ["Que agradecido estoy de pasar tiempo con mis amigos."]
+  },
+  {
+    "id": 170,
+    "text": [
+      "Pa-ro de bus-car",
+      "to-ma-mos el sol jun-tos",
+      "e-lla me_en-cuen-tra"
+    ],
+    "date": "2025-04-14",
+    "tags": ["Personal", "5-7-5"],
+    "show": true,
+    "description": [
+      "Por fín paro un poco. Tengo unos días de relax con mis amigos. No tengo que cumplir nada, solo disfrutar. Me doy cuenta de que día a día persigo estar bien, y eso me estresa."
+    ]
+  },
+  {
     "id": 169,
     "text": [
       "Pe-que-ño mil-piés",
@@ -15,11 +49,7 @@
   },
   {
     "id": 168,
-    "text": [
-      "Flor de a-lia-ga",
-      "so-bre un fon-do par-do",
-      "plan-ta do-ra-da"
-    ],
+    "text": ["Flor de a-lia-ga", "so-bre un fon-do par-do", "plan-ta do-ra-da"],
     "date": "2025-04-14",
     "tags": ["Naturaleza", "5-7-5"],
     "show": true,
@@ -27,7 +57,7 @@
       "Después de años saliendo de excursión por las sierras de la provincia, aún me encuentro disfrutando de los vivos colores de las flores."
     ]
   },
- {
+  {
     "id": 167,
     "text": [
       "A-gu-do sil-bar",
@@ -40,7 +70,7 @@
     "description": [
       "Se me hace la boca agua mientras espero a que los boniatos estén listos para sacarlos de la chimenea."
     ]
-  }, 
+  },
   {
     "id": 166,
     "text": [
@@ -69,7 +99,7 @@
       "No sabía que los conejos se comiesen las raices de los olivos. Desde luego es un problema para los agricultores, pero que figura tan curiosa de ver corriendo."
     ]
   },
-   {
+  {
     "id": 164,
     "text": [
       "Ho-ra de sies-ta",
