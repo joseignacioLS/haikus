@@ -7,6 +7,8 @@ import Layout from "@layouts/Layout.astro";
 import { HaikuShowcase } from "@sections/HaikuShowcase";
 import type { GetStaticPaths } from "astro";
 
+export const prerender = true;
+
 export const getStaticPaths = (() => {
   const $collections = collections.get();
   return $collections.map((c) => {

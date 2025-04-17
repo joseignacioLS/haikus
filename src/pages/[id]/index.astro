@@ -6,6 +6,8 @@ import DetailedHaiku from "@sections/DetailedHaiku";
 import type { GetStaticPaths } from "astro";
 import "../../styles/_blocks.scss";
 
+export const prerender = true;
+
 export const getStaticPaths = (() => {
   const $haikus = haikus.get();
   return $haikus.map((h) => {
