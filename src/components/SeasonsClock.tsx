@@ -52,9 +52,7 @@ const getRelevantSeasonEvents = (
     const nextEvent = seasonsEvents[i + 1];
     const currentDate = eventToPlainDate(currentEvent);
     const nextDate = eventToPlainDate(nextEvent);
-    return (
-      today.since(currentDate).sign === 1 && today.since(nextDate).sign === -1
-    );
+    return today.since(currentDate).days >= 0 && today.since(nextDate).days < 0;
   });
 
   return seasonsEvents.slice(previousEventIndex, previousEventIndex + 4);
@@ -148,14 +146,17 @@ export const SeasonsClock = () => {
       (s) => s.initialMonth === relevantSeasonEvents[0].month
     );
 
-    const daysOfCurrentSeason = today.since(
-      eventToPlainDate(relevantSeasonEvents[0])
-    ).days;
+    const daysOfCurrentSeason =
+      today.since(eventToPlainDate(relevantSeasonEvents[0])).days + 1;
     const daysToNextSeason = -today.since(
       eventToPlainDate(relevantSeasonEvents[1])
     ).days;
     setMessage(
-      `Hoy es el día ${daysOfCurrentSeason} de ${currentSeason?.name.toLowerCase()}. Quedan ${daysToNextSeason} días hasta ${currentSeason?.nextSeason.toLowerCase()}.`
+      `Hoy es el día ${daysOfCurrentSeason} de ${currentSeason?.name.toLowerCase()}. Queda${
+        daysToNextSeason > 1 ? "n" : ""
+      } ${daysToNextSeason} día${
+        daysToNextSeason > 1 ? "s" : ""
+      } hasta ${currentSeason?.nextSeason.toLowerCase()}.`
     );
 
     adjustClockRotation(relevantSeasonEvents);
