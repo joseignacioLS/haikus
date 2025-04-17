@@ -36,6 +36,5 @@ const initHaikuData = async () => {
 export const haikus = atom<THaiku[]>([]);
 export const collections = atom<THaiku["tags"]>([]);
 export const status = atom<ERequestStatus>(ERequestStatus.LOADING);
-export const error = atom<any>(null);
 
 initHaikuData();

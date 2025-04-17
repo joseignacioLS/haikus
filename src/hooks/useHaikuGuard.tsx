@@ -8,10 +8,6 @@ export const useHaikuGuard = (id: THaiku["id"]) => {
   const { status, haikus } = useHaikuStore();
   useEffect(() => {
     if (status === ERequestStatus.LOADING) return;
-    if (status === ERequestStatus.ERROR) {
-      navigate("/");
-      return;
-    }
     const haiku: THaiku = haikus.find((h) => h.id === id) ?? fallbackHaiku;
     if (
       status === ERequestStatus.SUCCESS &&

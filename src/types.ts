@@ -9,7 +9,6 @@ export type THaiku = {
 export enum ERequestStatus {
   LOADING = "LOADING",
   SUCCESS = "SUCCESS",
-  ERROR = "ERROR",
 }
 
 export type SeasonResponse = {

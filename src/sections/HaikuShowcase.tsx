@@ -130,9 +130,6 @@ export const HaikuShowcase = <T extends string>({
           <Spinner />
         </div>
       )}
-      {status === ERequestStatus.ERROR && (
-        <div className={`${styles.carouselWrapper}`}>Ha habido un error</div>
-      )}
       <button
         className={`round ${styles.btnUp} ${hideButtonUp ? styles.hidden : ""}`}
         onClick={handleGoUp}
