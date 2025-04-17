@@ -1,12 +1,26 @@
 [
   {
+    "id": 173,
+    "text": [
+      "Cam-bio de tiem-po",
+      "nu-bes des-hi-la-cha-das",
+      "u-na de-ci-sión"
+    ],
+    "date": "2025-04-17",
+    "tags": ["Naturaleza", "5-7-5"],
+    "show": true,
+    "description": [
+      "Estamos en esa época del año en la que el cielo se cubre de nubes estiradas, como si estirasen algodón, y parece no decidirse a dejar llegar el buen tiempo."
+    ]
+  },
+  {
     "id": 172,
     "text": [
       "Un po-qui-to más",
       "las sá-ba-nas me_a-tra-pan",
       "sue-ños a_ol-vi-dar"
     ],
-    "date": "2025-04-14",
+    "date": "2025-04-17",
     "tags": ["Personal", "5-7-5"],
     "show": true,
     "description": ["Aún me persiguen sueños de mi vida pasada."]
