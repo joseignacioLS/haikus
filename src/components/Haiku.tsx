@@ -36,10 +36,10 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
     if (currentIndex === -1) return;
     if (direction === "Right") {
       if (currentIndex === haikus.length - 1) return;
-      navigate(`/${haikus[currentIndex + 1].id}`,{history:"replace"});
+      navigate(`/${haikus[currentIndex + 1].id}`, { history: "replace" });
     } else if (direction === "Left") {
       if (currentIndex === 0) return;
-      navigate(`/${haikus[currentIndex - 1].id}`,{history: "replace"});
+      navigate(`/${haikus[currentIndex - 1].id}`, { history: "replace" });
     }
   };
   useEffect(() => {
@@ -55,12 +55,15 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
       >
         <HaikuBody haiku={haiku.text} />
         <div className={styles.data}>
-          <p className={styles.dataTitle}>{haiku.date}</p>
           <div>
-            {haiku.description?.map((l) => {
-              return <p key={l}>{l}</p>;
-            })}
+            <h2 className={styles.dataTitle}>{haiku.date}</h2>
+            <div>
+              {haiku.description?.map((l) => {
+                return <p key={l}>{l}</p>;
+              })}
+            </div>
           </div>
+
           <div className={styles.tags}>
             {haiku.tags
               .filter((tag) => {

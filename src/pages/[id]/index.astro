@@ -22,7 +22,7 @@ const id = parseInt(Astro.params.id ?? "-1");
   <main class="slim">
     <Title client:load showBackButton>
       <span transition:name={`haiku-id-${id}`}>
-        #{id}
+        Haiku #{id}
       </span>
     </Title>
     <DetailedHaiku client:load id={id} />

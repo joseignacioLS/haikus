@@ -2,6 +2,7 @@
 
 .title_font {
   font-size: 2rem;
+
   @include media.extremely_small {
     font-size: 1.5rem;
   }
@@ -11,6 +12,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+
   @include media.larger_than_mobile {
     font-size: 2rem;
   }
@@ -22,16 +24,33 @@
 
 .subtitle_font {
   font-size: 1.5rem;
+
   @include media.extremely_small {
     font-size: 1.25rem;
+  }
+}
+
+.subsubtitle_font {
+  font-size: 1.25rem;
+
+  @include media.extremely_small {
+    font-size: 1rem;
   }
 }
 
 .text_font {
   font-size: 1rem;
   font-weight: normal;
+
+  @include media.extremely_small {
+    font-size: .75rem;
+  }
 }
 
 .caption_font {
   font-size: 1rem;
+
+  @include media.extremely_small {
+    font-size: .75rem;
+  }
 }

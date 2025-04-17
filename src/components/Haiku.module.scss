@@ -55,7 +55,7 @@
     text-align: left;
 
     .dataTitle {
-      font-weight: bold;
+      @extend .subsubtitle_font;
     }
 
     .tags {
