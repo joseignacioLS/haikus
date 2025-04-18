@@ -14,16 +14,6 @@
   align-items: center;
   gap: 25%;
 
-  &.fullpage {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
-    gap: spaces.$gap_small;
-
-    .haiku p {
-      text-decoration: none;
-    }
-  }
 
   .haiku {
     @extend .haiku_font;
@@ -33,12 +23,24 @@
     justify-content: center;
     align-items: center;
 
-    p {
-      text-decoration: underline;
-      text-decoration-color: colors.$button;
-      text-decoration-thickness: spaces.$gap_mini;
+    >p {
+      @extend .interactive_font;
     }
   }
+
+
+  &.fullpage {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+    gap: spaces.$gap_small;
+
+    .haiku>p {
+      text-decoration: none;
+    }
+
+  }
+
 
   .id {
     @extend .subtitle_font;
