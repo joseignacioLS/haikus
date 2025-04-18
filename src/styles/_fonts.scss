@@ -1,4 +1,6 @@
 @use "./media";
+@use "./colors";
+@use "./spaces";
 
 .title_font {
   font-size: 2rem;
@@ -53,4 +55,11 @@
   @include media.extremely_small {
     font-size: .75rem;
   }
+}
+
+.interactive_font {
+
+  text-decoration: underline;
+  text-decoration-color: colors.$button;
+  text-decoration-thickness: spaces.$gap_mini;
 }
