@@ -27,7 +27,7 @@ export const getSeasonsEvents = async (year: number) => {
   return checkCache()
     .then(data => data)
     .catch(async () => {
-      const newSeasonData = (await Promise.all([getSeasons(year), getSeasons(year + 1)])
+      const newSeasonData = (await Promise.all([getSeasons(year - 1), getSeasons(year), getSeasons(year + 1)])
       ).flat();
       localStorage.setItem("haiku-seasons-cache", JSON.stringify({
         date: Temporal.Now.plainDateISO().toString(),

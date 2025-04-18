@@ -50,6 +50,7 @@ const getRelevantSeasonEvents = (
 ): SeasonResponse["data"] => {
   const previousEventIndex = seasonsEvents.findIndex((currentEvent, i) => {
     const nextEvent = seasonsEvents[i + 1];
+    if (!nextEvent) return false;
     const currentDate = eventToPlainDate(currentEvent);
     const nextDate = eventToPlainDate(nextEvent);
     return today.since(currentDate).days >= 0 && today.since(nextDate).days < 0;
