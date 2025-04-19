@@ -88,13 +88,11 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
   }
 
   return (
-    <button
-      id={String(haiku.id)}
-      className={`naked ${styles.wrapper}`}
-      onClick={openDescription}
-    >
-      <HaikuBody haiku={haiku.text} />
-      <span className={styles.id}>{`#${haiku.id}`}</span>
-    </button>
+    <div id={String(haiku.id)} className={`${styles.wrapper}`}>
+      <button className={`naked`} onClick={openDescription}>
+        <HaikuBody haiku={haiku.text} />
+      </button>
+      <h2 className={styles.id}>{`Haiku #${haiku.id}`}</h2>
+    </div>
   );
 };

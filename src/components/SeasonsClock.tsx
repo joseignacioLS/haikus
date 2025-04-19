@@ -129,7 +129,7 @@ export const SeasonsClock = () => {
     toastStore.set(
       "Ha habido un error cargando la información de las estaciones"
     );
-    navigate("/");
+    navigate("/", { history: "replace" });
   };
 
   const initClock = async () => {

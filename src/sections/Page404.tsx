@@ -5,7 +5,7 @@ import styles from "./Page404.module.scss";
 
 export const Page404 = () => {
   useEffect(() => {
-    navigate("/");
+    navigate("/", { history: "replace" });
   }, []);
   return (
     <main>
