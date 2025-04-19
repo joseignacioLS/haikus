@@ -1,4 +1,16 @@
-[
+import type { THaiku } from "@/types";
+
+export const haikus: THaiku[] = [
+  {
+    "id": 176,
+    "text": ["Mien-tras ins-pi-ro", "mi-llo-nes de ca-mi-nos", "a-bro los o-jos"],
+    "date": "2025-04-18",
+    "tags": ["Reflexión", "Personal", "5-7-5"],
+    "description": [
+      "A veces, durante un instante, siento que mi vida es mucho más grande que lo que experimento y se compone también de todo lo que pudo haber sido.",
+      "Como si de un plumazo múltiples realidades colapsaran en una."
+    ]
+  },
   {
     "id": 175,
     "text": ["Pa-cien-cia ro-ta", "e-co de lo que no es", "bro-te au-sen-te"],
