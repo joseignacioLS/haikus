@@ -6,7 +6,7 @@ export const About = () => {
     <div className={styles.body}>
       <button
         onClick={() => {
-          navigate("/seasonsclock");
+          navigate("/seasonsclock", { history: "replace" });
         }}
         className={`naked ${styles.buttonImage}`}
         style={{

@@ -27,6 +27,7 @@
 
   .profilePicWrapper {
     @extend .card;
+    @extend .interactive;
     overflow: hidden;
     display: flex;
     justify-content: center;
