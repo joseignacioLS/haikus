@@ -11,7 +11,7 @@ const checkCache = (): Promise<SeasonResponse["data"]> => {
     try {
       const { date, data }: { date: string, data: SeasonResponse["data"] } = JSON.parse(cache)
       const today = Temporal.Now.plainDateISO()
-      if (today.since(Temporal.PlainDate.from(date)).days > 0) {
+      if (today.since(Temporal.PlainDate.from(date)).days >= Number(import.meta.env.PUBLIC_SEASONS_API_CACHE ?? "0")) {
         reject()
         return
       }
