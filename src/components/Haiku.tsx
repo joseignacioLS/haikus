@@ -56,7 +56,17 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
         <HaikuBody haiku={haiku.text} />
         <div className={styles.data}>
           <div>
-            <h2 className={styles.dataTitle}>{haiku.date}</h2>
+            <h2 className={styles.dataTitle}>
+              {haiku.date}{" "}
+              <button
+                className={"naked"}
+                onClick={() => {
+                  navigator.share({ url: window.location.href });
+                }}
+              >
+                <img src="/icons/share.svg" />
+              </button>
+            </h2>
             <div>
               {haiku.description?.map((l) => {
                 return <p key={l}>{l}</p>;

@@ -58,6 +58,16 @@
 
     .dataTitle {
       @extend .subsubtitle_font;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: spaces.$gap_small;
+
+      margin-bottom: spaces.$gap_small;
+
+      img {
+        height: 100%;
+      }
     }
 
     .tags {
