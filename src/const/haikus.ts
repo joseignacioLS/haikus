@@ -2,6 +2,15 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    "id": 181,
+    "text": ["Re-fle-jo blan-co", "flo-ta so-bre la ci-ma", "so-pla el vien-to"],
+    "date": "2025-04-21",
+    "tags": ["Naturaleza", "5-7-5"],
+    "description": [
+      "He salido a recoger un paquete a un locker, y caminando por la avenida de la universidad he podido saludar al Maigmó. Que forma tan curiosa formaban las nubes sobre él, aunque haya sido un pequeño rato."
+    ]
+  },
+  {
     "id": 180,
     "text": ["A la de-ri-va", "dí-as de va-ca-cio-nes", "con-su-mo li-bros"],
     "date": "2025-04-21",
@@ -14,7 +23,7 @@ export const haikus: THaiku[] = [
     "id": 179,
     "text": ["En-tre lí-ne-as", "bus-co al-go que no_es-tá", "o-tro tro-pie-zo"],
     "date": "2025-04-21",
-    "tags": ["Reflexión", "Personal", "5-7-5"],
+    "tags": ["Destacado", "Reflexión", "Personal", "5-7-5"],
     "description": [
       "De nuevo me encuentro pensando en el futuro, en lo que espero de los demás y las exigencia que les pongo sin que ellos lo sepan.",
       "Más tarde esto no me trae más que decepciones, tengo que aceptar las cosas como son."
