@@ -149,7 +149,7 @@ export const haikus: THaiku[] = [
     "id": 167,
     "text": [
       "Cre-pi-ta_el fue-go",
-      "las lla-mas me hip-no-ti-zan",
+      "las lla-mas me_hip-no-ti-zan",
       "a-so bo-nia-tos"
     ],
     "date": "2025-04-14",
@@ -252,7 +252,7 @@ export const haikus: THaiku[] = [
   },
   {
     "id": 158,
-    "text": ["Men-te en blan-co", "noche, paseo, notas", "la vi-da si-gue"],
+    "text": ["Men-te en blan-co", "no-che, pa-se-o, no-tas", "la vi-da si-gue"],
     "date": "2025-04-10",
     "tags": ["Personal", "5-7-5"],
     "description": [
@@ -556,7 +556,7 @@ export const haikus: THaiku[] = [
     "id": 133,
     "text": [
       "Briz-nas su-su-rran,",
-      "ba-jo un cie-lo sin lu-na",
+      "ba-jo_un cie-lo sin lu-na",
       "sol-ta-mos car-ga"
     ],
     "date": "2025-03-23",
@@ -753,7 +753,7 @@ export const haikus: THaiku[] = [
     ]
   },
   {
-    "text": ["Yer-mo pá-ra-mo,", "bro-te de-sa-fian-te", "vo-lun-tad sa-cra"],
+    "text": ["Yer-mo pá-ra-mo,", "bro-te de-sa-fi-an-te", "vo-lun-tad sa-cra"],
     "date": "2025-02-26",
     "id": 114,
     "tags": ["Naturaleza", "5-7-5"]
@@ -772,7 +772,7 @@ export const haikus: THaiku[] = [
     "text": [
       "Vis-ta in-ver-nal",
       "pi-ro-tec-nia ro-sa-da",
-      "llu-via de_al-mendras"
+      "llu-via de_al-men-dras"
     ],
     "date": "2025-02-23",
     "id": 112,
@@ -1013,7 +1013,7 @@ export const haikus: THaiku[] = [
   {
     "text": [
       "E-ter-no tic-tac",
-      "su-ce-si-ón in-fi-ni-ta,",
+      "su-ce-sión in-fi-ni-ta,",
       "sen-ti-do fa-laz"
     ],
     "date": "2025-01-28",
@@ -1576,7 +1576,7 @@ export const haikus: THaiku[] = [
     "text": ["El ca-lor", "de tu com-pa-ñí-a", "me lle-na"],
     "date": "2017-10-06",
     "id": 10,
-    "tags": ["Personal", "3-5-3", "Oculto"]
+    "tags": ["Personal", "Oculto"]
   },
   {
     "text": ["Es-pe-ra,", "pron-to ca-e-rá", "la no-che"],
@@ -1628,7 +1628,7 @@ export const haikus: THaiku[] = [
   {
     "text": [
       "La ca-la-ba-za,",
-      "cre-ce_en el huer-to,fe-liz,",
+      "cre-ce_en el huer-to, fe-liz,",
       "pron-to son-rei-rá."
     ],
     "date": "2017-10-06",
