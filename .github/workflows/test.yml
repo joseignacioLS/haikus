@@ -1,11 +1,14 @@
 name: Run Tests
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
 
 jobs:
   test:
+    name: vitest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
