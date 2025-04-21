@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "npx vitest run"
   },
   "dependencies": {
     "@astrojs/netlify": "^6.2.4",
@@ -25,9 +26,13 @@
     "temporal-polyfill": "^0.2.5"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^22.13.10",
     "fs": "^0.0.1-security",
+    "jsdom": "^26.1.0",
     "sass-embedded": "^1.85.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.2"
   }
 }

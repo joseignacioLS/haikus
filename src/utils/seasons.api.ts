@@ -1,5 +1,6 @@
 import type { SeasonResponse } from "@/types";
 import { Temporal } from "temporal-polyfill";
+import { getRequest } from "./api";
 
 const checkCache = (): Promise<SeasonResponse["data"]> => {
   return new Promise((resolve, reject) => {
@@ -23,12 +24,20 @@ const checkCache = (): Promise<SeasonResponse["data"]> => {
   })
 }
 
-export const getSeasonsEvents = async (year: number) => {
+export const getSeasonsEvents = async (year: number): Promise<SeasonResponse["data"]> => {
   return checkCache()
     .then(data => data)
     .catch(async () => {
-      const newSeasonData = (await Promise.all([getSeasons(year - 1), getSeasons(year), getSeasons(year + 1)])
-      ).flat();
+      const newSeasonData = (await Promise.all([
+        getRequest<SeasonResponse>(`https://aa.usno.navy.mil/api/seasons?year=${year - 1}`),
+        getRequest<SeasonResponse>(`https://aa.usno.navy.mil/api/seasons?year=${year}`),
+        getRequest<SeasonResponse>(`https://aa.usno.navy.mil/api/seasons?year=${year + 1}`),
+      ]))
+        .map((d) => {
+          if (!d) return []
+          return d.data.filter((e) => ["Equinox", "Solstice"].includes(e.phenom))
+        })
+        .flat();
       localStorage.setItem("haiku-seasons-cache", JSON.stringify({
         date: Temporal.Now.plainDateISO().toString(),
         data: newSeasonData
@@ -36,20 +45,3 @@ export const getSeasonsEvents = async (year: number) => {
       return newSeasonData
     })
 }
-
-export const getSeasons = async (
-  year: number
-): Promise<SeasonResponse["data"]> => {
-  return fetch(`https://aa.usno.navy.mil/api/seasons?year=${year}`)
-    .then((r) => {
-      if (!r.ok || r.status !== 200) throw new Error();
-      return r.json();
-    })
-    .then((d: SeasonResponse) => {
-      const data = d.data.filter((e) => ["Equinox", "Solstice"].includes(e.phenom))
-      return data
-    })
-    .catch(() => {
-      return [];
-    });
-};

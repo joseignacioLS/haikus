@@ -59,7 +59,6 @@ export const Haiku = ({ haiku, fullpage }: Props) => {
             <h2 className={styles.dataTitle}>
               {haiku.date}{" "}
               <button
-                className={"naked"}
                 onClick={() => {
                   navigator.share({ url: window.location.href });
                 }}
