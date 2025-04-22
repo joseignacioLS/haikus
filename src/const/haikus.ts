@@ -2,6 +2,33 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    "id": 184,
+    "text": ["Aun-que_in-se-gu-ro", "quie-ro co-rrer el ries-go", "vuel-ve_a_a-ma-ne-cer"],
+    "date": "2025-04-21",
+    "tags": ["Personal", "5-7-5"],
+    "description": [
+      "La última temporada ha sido bastante difícil de llevar, y no quiero que eso deje una huella de miedo en mí, que me impida abrirme o ser feliz."
+    ]
+  },
+  {
+    "id": 183,
+    "text": ["O-tro hai-ku más", "die-ci-sie-te sí-la-bas", "pe-que-ño mun-do"],
+    "date": "2025-04-21",
+    "tags": ["Personal", "5-7-5"],
+    "description": [
+      "Cada haiku es una observación o un sentimiento recogido en si mismo. Os celebro pequeños poemas."
+    ]
+  },
+  {
+    "id": 182,
+    "text": ["Fi-nas pa-re-des", "a-je-tre-o noc-tur-no", "¡de-jad-me dor-mir!"],
+    "date": "2025-04-21",
+    "tags": ["Personal", "5-7-5"],
+    "description": [
+      "Me siento en la cama a escribir en mi diario. No espero una calma absoluta, pero vecinos, ¿qué hacéis de mudanza a estas horas?"
+    ]
+  },
+  {
     "id": 181,
     "text": ["Re-fle-jo blan-co", "flo-ta so-bre la ci-ma", "so-pla el vien-to"],
     "date": "2025-04-21",
