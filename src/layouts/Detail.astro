@@ -1,0 +1,56 @@
+---
+import { haikus } from "@/const/haikus";
+import "@/styles/global.scss";
+import { Modal } from "@components/notifications/Modal";
+import { Toast } from "@components/notifications/Toast";
+import "@fontsource-variable/domine";
+import "@fontsource-variable/open-sans";
+import { ClientRouter } from "astro:transitions";
+
+const id = Number(Astro.params.id ?? "0");
+const haiku = haikus.find((h) => h.id === id);
+const title = `Verdecillo | Haiku #${id}`;
+const description = `${haiku?.text.join(" / ")}`;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href=`/favicon.jpg` />
+    <meta name="description" content={description} />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:url" content="https://verdecillo.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image:url"
+      content="https://verdecillo.netlify.app/favicon.jpg"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Preload Images -->
+    <link rel="preload" href="/icons/back.svg" as="image" />
+    <link rel="preload" href="/icons/close.svg" as="image" />
+    <link rel="preload" href="/icons/share.svg" as="image" />
+    <link rel="preload" href="/me.webp" as="image" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <ClientRouter />
+  </head>
+  <body>
+    <slot />
+    <Modal client:only />
+    <Toast client:only />
+  </body>
+</html>

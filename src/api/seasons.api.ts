@@ -1,8 +1,8 @@
-import type { SeasonResponse } from "@/types";
+import type { SeasonEntry, SeasonResponse } from "@/types";
 import { Temporal } from "temporal-polyfill";
 import { getRequest } from "./api";
 
-const checkCache = (): Promise<SeasonResponse["data"]> => {
+const checkCache = (): Promise<SeasonEntry[]> => {
   return new Promise((resolve, reject) => {
     const cache = localStorage.getItem("haiku-seasons-cache");
     if (cache === null) {
@@ -10,7 +10,7 @@ const checkCache = (): Promise<SeasonResponse["data"]> => {
       return
     }
     try {
-      const { date, data }: { date: string, data: SeasonResponse["data"] } = JSON.parse(cache)
+      const { date, data }: { date: string, data: SeasonEntry[] } = JSON.parse(cache)
       const today = Temporal.Now.plainDateISO()
       if (today.since(Temporal.PlainDate.from(date)).days >= Number(import.meta.env.PUBLIC_SEASONS_API_CACHE ?? "0")) {
         reject()
@@ -24,7 +24,7 @@ const checkCache = (): Promise<SeasonResponse["data"]> => {
   })
 }
 
-export const getSeasonsEvents = async (year: number): Promise<SeasonResponse["data"]> => {
+export const getSeasonsEvents = async (year: number): Promise<SeasonEntry[]> => {
   return checkCache()
     .then(data => data)
     .catch(async () => {

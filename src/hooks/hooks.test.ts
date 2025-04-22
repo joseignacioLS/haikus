@@ -1,4 +1,3 @@
-import { ERequestStatus } from '@/types';
 import { renderHook } from '@testing-library/react';
 import { navigate } from 'astro:transitions/client';
 import { afterEach, describe } from "node:test";
@@ -19,19 +18,8 @@ describe('useHaikuGuard', () => {
     vi.clearAllMocks();
   });
 
-  test('Does not navigate on status === LOADING', () => {
-    (useHaikuStore as Mock).mockReturnValue({
-      status: ERequestStatus.LOADING,
-      haikus: [],
-    });
-
-    renderHook(() => useHaikuGuard(123));
-    expect(navigate).not.toHaveBeenCalled();
-  });
-
   test('Does not navigate if haiku found', () => {
     (useHaikuStore as Mock).mockReturnValue({
-      status: ERequestStatus.SUCCESS,
       haikus: [{ id: 123, text: ['Línea 1', 'Línea 2', 'Línea 3'] }],
     })
 
@@ -39,9 +27,17 @@ describe('useHaikuGuard', () => {
     expect(navigate).not.toHaveBeenCalled();
   });
 
-  test('Navigates if haiku not found and status === SUCCESS', () => {
+  test('Does not navigate if empty array of haikus', () => {
     (useHaikuStore as Mock).mockReturnValue({
-      status: ERequestStatus.SUCCESS,
+      haikus: [],
+    })
+
+    renderHook(() => useHaikuGuard(999));
+    expect(navigate).not.toHaveBeenCalled();
+  });
+
+  test('Navigates if haiku not found', () => {
+    (useHaikuStore as Mock).mockReturnValue({
       haikus: [{ id: 123, text: ['Línea 1', 'Línea 2', 'Línea 3'] }],
     })
 

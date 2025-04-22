@@ -1,8 +1,7 @@
 import { Swipeable } from "@/components/structure/Swipeable";
 import { showcaseStore } from "@/store/Showcase";
-import { ERequestStatus, type THaiku } from "@/types";
-import { Haiku } from "@components/Haiku";
-import { Spinner } from "@components/notifications/Spinner.tsx";
+import { type THaiku } from "@/types";
+import { Haiku } from "@/components/haiku/HaikuMini";
 import { Carousel } from "@components/structure/Carousel";
 import { Title } from "@components/structure/Title.tsx";
 import { useHaikuStore } from "@hooks/useHaikuStore.tsx";
@@ -26,7 +25,7 @@ export const HaikuShowcase = <T extends string>({
 
   const focusHaikuId = useStore(showcaseStore);
 
-  const { haikus, status } = useHaikuStore();
+  const { haikus } = useHaikuStore();
 
   const initializeFilter = () => {
     setFilter(defaultFilter ?? filters[0]);
@@ -120,16 +119,9 @@ export const HaikuShowcase = <T extends string>({
           </div>
         </Title>
       )}
-      {status === ERequestStatus.SUCCESS && (
-        <Swipeable handleSwipe={handleSwipe} className={styles.carouselWrapper}>
-          {carousel}
-        </Swipeable>
-      )}
-      {status === ERequestStatus.LOADING && (
-        <div className={`${styles.carouselWrapper}`}>
-          <Spinner />
-        </div>
-      )}
+      <Swipeable handleSwipe={handleSwipe} className={styles.carouselWrapper}>
+        {carousel}
+      </Swipeable>
       <button
         className={`round ${styles.btnUp} ${hideButtonUp ? styles.hidden : ""}`}
         onClick={handleGoUp}
