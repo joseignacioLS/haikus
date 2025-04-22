@@ -1,10 +1,10 @@
 ---
+import Detail from "@/layouts/Detail.astro";
 import { haikus } from "@/store/Haikus";
+import "@/styles/_blocks.scss";
 import { Title } from "@components/structure/Title";
-import Layout from "@layouts/Layout.astro";
 import DetailedHaiku from "@sections/DetailedHaiku";
 import type { GetStaticPaths } from "astro";
-import "@/styles/_blocks.scss";
 
 export const prerender = true;
 
@@ -20,7 +20,7 @@ export const getStaticPaths = (() => {
 const id = parseInt(Astro.params.id ?? "-1");
 ---
 
-<Layout>
+<Detail>
   <main class="slim">
     <Title client:load showBackButton>
       <span transition:name={`haiku-id-${id}`}>
@@ -29,4 +29,4 @@ const id = parseInt(Astro.params.id ?? "-1");
     </Title>
     <DetailedHaiku client:load id={id} />
   </main>
-</Layout>
+</Detail>
