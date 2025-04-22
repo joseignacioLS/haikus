@@ -1,86 +1,26 @@
 import { toastStore } from "@/store/Toast";
-import type { SeasonEntry, SeasonResponse } from "@/types";
-import { getSeasonsEvents } from "@/utils/seasons.api";
+import type { SeasonEntry } from "@/types";
+import {
+  eventToPlainDate,
+  generateSeasonColorAndRangeData,
+  getSeasonData,
+  requestSeasonsEvents,
+} from "@/utils/seasons";
 import { navigate } from "astro:transitions/client";
 import React, { useEffect, useState } from "react";
 import { Temporal } from "temporal-polyfill";
 import styles from "./SeasonsClock.module.scss";
 import { Spinner } from "./notifications/Spinner";
 
-const SEASONS = [
-  {
-    name: "Verano",
-    color: "#ffc3cd",
-    initialMonth: 6,
-    nextSeason: "Otoño",
-  },
-  {
-    name: "Otoño",
-    color: "#e84d2e",
-    initialMonth: 9,
-    nextSeason: "Invierno",
-  },
-  {
-    name: "Invierno",
-    color: "#134665",
-    initialMonth: 12,
-    nextSeason: "Primavera",
-  },
-  {
-    name: "Primavera",
-    color: "#fede87",
-    initialMonth: 3,
-    nextSeason: "Verano",
-  },
-];
-
 const today = Temporal.Now.plainDateISO();
-
-const eventToPlainDate = (e: { year: number; month: number; day: number }) => {
-  return Temporal.PlainDate.from(
-    `${e.year}-${String(e.month).padStart(2, "0")}-${String(e.day).padStart(
-      2,
-      "0"
-    )}`
-  );
-};
-
-const getRelevantSeasonEvents = (
-  seasonsEvents: SeasonEntry[]
-): SeasonEntry[] => {
-  const previousEventIndex = seasonsEvents.findIndex((currentEvent, i) => {
-    const nextEvent = seasonsEvents[i + 1];
-    if (!nextEvent) return false;
-    const currentDate = eventToPlainDate(currentEvent);
-    const nextDate = eventToPlainDate(nextEvent);
-    return today.since(currentDate).days >= 0 && today.since(nextDate).days < 0;
-  });
-
-  return seasonsEvents.slice(previousEventIndex, previousEventIndex + 4);
-};
 
 export const SeasonsClock = () => {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [clockRotation, setClockRotation] = useState(0);
-  const [seasons, setSeasons] = useState([
-    {
-      color: "white",
-      range: 0,
-    },
-    {
-      color: "white",
-      range: 25,
-    },
-    {
-      color: "white",
-      range: 50,
-    },
-    {
-      color: "white",
-      range: 75,
-    },
-  ]);
+  const [seasons, setSeasons] = useState<{ color: string; range: number }[]>(
+    []
+  );
 
   const adjustClockRotation = (relevantSeasonEvents: SeasonEntry[]) => {
     const daysSinceLastEvent = today.since(
@@ -92,35 +32,8 @@ export const SeasonsClock = () => {
   const adjustSeasonColorAndPositions = (
     relevantSeasonEvents: SeasonEntry[]
   ) => {
-    relevantSeasonEvents.reduce((acc, e, i) => {
-      if (i === 3) {
-        setSeasons((oldState) => {
-          const newState = structuredClone(oldState);
-          newState[i] = {
-            color:
-              SEASONS.find((s) => s.initialMonth === e.month)?.color ?? "white",
-            range: acc,
-          };
-          return newState;
-        });
-        return acc;
-      }
-      const nextEvent = relevantSeasonEvents[i + 1];
-      const currentDate = eventToPlainDate(e);
-      const nextDate = eventToPlainDate(nextEvent);
-      const diff = (nextDate.since(currentDate).days / 365) * 100;
-
-      setSeasons((oldState) => {
-        const newState = structuredClone(oldState);
-        newState[i] = {
-          color:
-            SEASONS.find((s) => s.initialMonth === e.month)?.color ?? "white",
-          range: acc,
-        };
-        return newState;
-      });
-      return acc + diff;
-    }, 0);
+    const seasonData = generateSeasonColorAndRangeData(relevantSeasonEvents);
+    setSeasons(seasonData);
   };
 
   const handleRequestError = () => {
@@ -130,26 +43,9 @@ export const SeasonsClock = () => {
     navigate("/", { history: "replace" });
   };
 
-  const initClock = async () => {
-    setIsLoading(true);
-    const seasonsEvents = await getSeasonsEvents(today.year);
-    if (seasonsEvents.length < 8) {
-      handleRequestError();
-      return;
-    }
-    setIsLoading(false);
-
-    const relevantSeasonEvents = getRelevantSeasonEvents(seasonsEvents);
-
-    const currentSeason = SEASONS.find(
-      (s) => s.initialMonth === relevantSeasonEvents[0].month
-    );
-
-    const daysOfCurrentSeason =
-      today.since(eventToPlainDate(relevantSeasonEvents[0])).days + 1;
-    const daysToNextSeason = -today.since(
-      eventToPlainDate(relevantSeasonEvents[1])
-    ).days;
+  const initMessage = (relevantSeasonEvents: SeasonEntry[]) => {
+    const { currentSeason, daysOfCurrentSeason, daysToNextSeason } =
+      getSeasonData(today, relevantSeasonEvents);
     setMessage(
       `Hoy es el día ${daysOfCurrentSeason} de ${currentSeason?.name.toLowerCase()}. Queda${
         daysToNextSeason > 1 ? "n" : ""
@@ -157,7 +53,17 @@ export const SeasonsClock = () => {
         daysToNextSeason > 1 ? "s" : ""
       } hasta ${currentSeason?.nextSeason.toLowerCase()}.`
     );
+  };
 
+  const initClock = async () => {
+    setIsLoading(true);
+    const relevantSeasonEvents = await requestSeasonsEvents(today);
+    setIsLoading(false);
+    if (relevantSeasonEvents.length === 0) {
+      handleRequestError();
+      return;
+    }
+    initMessage(relevantSeasonEvents);
     adjustClockRotation(relevantSeasonEvents);
     adjustSeasonColorAndPositions(relevantSeasonEvents);
   };
@@ -165,9 +71,11 @@ export const SeasonsClock = () => {
   useEffect(() => {
     initClock();
   }, []);
+
   if (isLoading) {
     return <Spinner />;
   }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.clock}>

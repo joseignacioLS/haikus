@@ -20,3 +20,17 @@ export type SeasonResponse = {
   tz: number;
   year: number;
 };
+
+export enum ESeason {
+  OTOÑO = "Otoño",
+  INVIERNO = "Invierno",
+  PRIMAVERA = "Primavera",
+  VERANO = "Verano"
+}
+
+export type Season = {
+  name: ESeason,
+  color: string,
+  initialMonth: number,
+  nextSeason: ESeason,
+}

@@ -8,46 +8,12 @@
   height: 100%;
   overflow: hidden;
   padding: spaces.$gap_small;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25%;
 
 
-  .haiku {
-    @extend .haiku_font;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    >p {
-      @extend .interactive_font;
-    }
-  }
-
-
-  &.fullpage {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
-    gap: spaces.$gap_small;
-
-    .haiku>p {
-      text-decoration: none;
-    }
-
-  }
-
-
-  .id {
-    @extend .subtitle_font;
-    position: absolute;
-    left: spaces.$gap_small;
-    top: spaces.$gap_small;
-  }
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+  gap: spaces.$gap_small;
 
   .data {
     @extend .text_font;

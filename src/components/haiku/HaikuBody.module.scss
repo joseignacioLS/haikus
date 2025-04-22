@@ -1,0 +1,14 @@
+@use "@/styles/fonts";
+
+.haiku {
+  @extend .haiku_font;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.interactive>p {
+    @extend .interactive_font;
+  }
+}
