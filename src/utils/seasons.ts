@@ -1,7 +1,7 @@
 
 import { getSeasonsEvents } from "@/api/seasons.api";
 import { SEASONS } from "@/const/seasons";
-import type { Season, SeasonEntry } from "@/types";
+import type { TSeason, TSeasonEntry } from "@/types";
 import { Temporal } from "temporal-polyfill";
 
 export const eventToPlainDate = (e: { year: number; month: number; day: number }): Temporal.PlainDate => {
@@ -15,8 +15,8 @@ export const eventToPlainDate = (e: { year: number; month: number; day: number }
 
 export const getRelevantSeasonEvents = (
   today: Temporal.PlainDate,
-  seasonsEvents: SeasonEntry[]
-): SeasonEntry[] => {
+  seasonsEvents: TSeasonEntry[]
+): TSeasonEntry[] => {
   const previousEventIndex = seasonsEvents.findIndex((currentEvent, i) => {
     const nextEvent = seasonsEvents[i + 1];
     if (!nextEvent) return false;
@@ -28,8 +28,8 @@ export const getRelevantSeasonEvents = (
   return seasonsEvents.slice(previousEventIndex, previousEventIndex + 4);
 };
 
-export const getSeasonData = (today: Temporal.PlainDate, relevantSeasonEvents: SeasonEntry[]): {
-  currentSeason: Season | undefined,
+export const getSeasonData = (today: Temporal.PlainDate, relevantSeasonEvents: TSeasonEntry[]): {
+  currentSeason: TSeason | undefined,
   daysOfCurrentSeason: number,
   daysToNextSeason: number
 } => {
@@ -49,7 +49,7 @@ export const getSeasonData = (today: Temporal.PlainDate, relevantSeasonEvents: S
 }
 
 export const generateSeasonColorAndRangeData = (
-  relevantSeasonEvents: SeasonEntry[]
+  relevantSeasonEvents: TSeasonEntry[]
 ): { color: string, range: number }[] => {
   return relevantSeasonEvents.reduce(
     (acc: {
@@ -85,7 +85,7 @@ export const generateSeasonColorAndRangeData = (
   ).seasonData;
 };
 
-export const requestSeasonsEvents = async (today: Temporal.PlainDate): Promise<SeasonEntry[]> => {
+export const requestSeasonsEvents = async (today: Temporal.PlainDate): Promise<TSeasonEntry[]> => {
   const seasonsEvents = await getSeasonsEvents(today.year);
   if (seasonsEvents.length < 12) return [];
   const relevantSeasonEvents = getRelevantSeasonEvents(today, seasonsEvents);
