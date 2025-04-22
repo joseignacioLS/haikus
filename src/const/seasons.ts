@@ -1,7 +1,14 @@
-import { ESeason, type Season } from "@/types";
+import { type TSeason } from "@/types";
 
 
-export const SEASONS: Season[] = [
+export enum ESeason {
+  OTOÑO = "Otoño",
+  INVIERNO = "Invierno",
+  PRIMAVERA = "Primavera",
+  VERANO = "Verano"
+}
+
+export const SEASONS: TSeason[] = [
   {
     name: ESeason.VERANO,
     color: "#ffc3cd",

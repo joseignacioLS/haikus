@@ -1,3 +1,5 @@
+import type { ESeason } from "./const/seasons";
+
 export type THaiku = {
   text: string[];
   date: string;
@@ -6,7 +8,7 @@ export type THaiku = {
   description?: string[];
 };
 
-export type SeasonEntry = {
+export type TSeasonEntry = {
   day: number;
   month: number;
   phenom: "Perihelion" | "Equinox" | "Solstice" | "Aphelion";
@@ -14,21 +16,14 @@ export type SeasonEntry = {
   year: number;
 }
 
-export type SeasonResponse = {
+export type TSeasonResponse = {
   apiversion: string;
-  data: SeasonEntry[];
+  data: TSeasonEntry[];
   tz: number;
   year: number;
 };
 
-export enum ESeason {
-  OTOÑO = "Otoño",
-  INVIERNO = "Invierno",
-  PRIMAVERA = "Primavera",
-  VERANO = "Verano"
-}
-
-export type Season = {
+export type TSeason = {
   name: ESeason,
   color: string,
   initialMonth: number,

@@ -1,5 +1,5 @@
 import { toastStore } from "@/store/Toast";
-import type { SeasonEntry } from "@/types";
+import type { TSeasonEntry } from "@/types";
 import {
   eventToPlainDate,
   generateSeasonColorAndRangeData,
@@ -22,7 +22,7 @@ export const SeasonsClock = () => {
     []
   );
 
-  const adjustClockRotation = (relevantSeasonEvents: SeasonEntry[]) => {
+  const adjustClockRotation = (relevantSeasonEvents: TSeasonEntry[]) => {
     const daysSinceLastEvent = today.since(
       eventToPlainDate(relevantSeasonEvents[0])
     ).days;
@@ -30,7 +30,7 @@ export const SeasonsClock = () => {
   };
 
   const adjustSeasonColorAndPositions = (
-    relevantSeasonEvents: SeasonEntry[]
+    relevantSeasonEvents: TSeasonEntry[]
   ) => {
     const seasonData = generateSeasonColorAndRangeData(relevantSeasonEvents);
     setSeasons(seasonData);
@@ -43,7 +43,7 @@ export const SeasonsClock = () => {
     navigate("/", { history: "replace" });
   };
 
-  const initMessage = (relevantSeasonEvents: SeasonEntry[]) => {
+  const initMessage = (relevantSeasonEvents: TSeasonEntry[]) => {
     const { currentSeason, daysOfCurrentSeason, daysToNextSeason } =
       getSeasonData(today, relevantSeasonEvents);
     setMessage(
