@@ -1,5 +1,5 @@
 import { haikus as rawHaikus } from "@/const/haikus";
-import { ERequestStatus, type THaiku } from "@/types";
+import { type THaiku } from "@/types";
 import { atom } from "nanostores";
 
 export const fallbackHaiku: THaiku = {
@@ -12,7 +12,6 @@ export const fallbackHaiku: THaiku = {
 const HIDDEN_COLLECTIONS: string[] = ["Oculto", "Chuck", "5-7-5", "3-5-3"];
 
 const initHaikuData = async () => {
-  status.set(ERequestStatus.LOADING);
   const $haikus = rawHaikus
     .filter((h) => !h.tags.includes("Oculto"))
     .sort((a, b) => b.id - a.id);
@@ -30,11 +29,9 @@ const initHaikuData = async () => {
 
   collections.set($collections);
   haikus.set($haikus);
-  status.set(ERequestStatus.SUCCESS);
 };
 
 export const haikus = atom<THaiku[]>([]);
 export const collections = atom<THaiku["tags"]>([]);
-export const status = atom<ERequestStatus>(ERequestStatus.LOADING);
 
 initHaikuData();

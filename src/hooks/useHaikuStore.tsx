@@ -1,15 +1,13 @@
-import { ERequestStatus, type THaiku } from "@/types";
-import { collections, haikus, status } from "@store/Haikus";
+import { type THaiku } from "@/types";
+import { collections, haikus } from "@store/Haikus";
 import { useEffect, useState } from "react";
 
 export const useHaikuStore = () => {
   const [data, setData] = useState<{
     haikus: THaiku[];
-    status: ERequestStatus;
     collections: THaiku["tags"];
   }>({
     haikus: [],
-    status: ERequestStatus.LOADING,
     collections: [],
   });
 
@@ -18,11 +16,6 @@ export const useHaikuStore = () => {
       haikus.subscribe((haikus) => {
         setData((oldState) => {
           return { ...oldState, haikus: [...haikus] };
-        });
-      }),
-      status.subscribe((status: ERequestStatus) => {
-        setData((oldState) => {
-          return { ...oldState, status };
         });
       }),
       collections.subscribe((collections: any) => {
@@ -35,6 +28,8 @@ export const useHaikuStore = () => {
       subscriptions.forEach((u) => u());
     };
   }, []);
+
+  useEffect(() => {}, []);
 
   return data;
 };

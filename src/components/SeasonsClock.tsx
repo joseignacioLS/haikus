@@ -1,5 +1,5 @@
 import { toastStore } from "@/store/Toast";
-import type { SeasonResponse } from "@/types";
+import type { SeasonEntry, SeasonResponse } from "@/types";
 import { getSeasonsEvents } from "@/utils/seasons.api";
 import { navigate } from "astro:transitions/client";
 import React, { useEffect, useState } from "react";
@@ -46,8 +46,8 @@ const eventToPlainDate = (e: { year: number; month: number; day: number }) => {
 };
 
 const getRelevantSeasonEvents = (
-  seasonsEvents: SeasonResponse["data"]
-): SeasonResponse["data"] => {
+  seasonsEvents: SeasonEntry[]
+): SeasonEntry[] => {
   const previousEventIndex = seasonsEvents.findIndex((currentEvent, i) => {
     const nextEvent = seasonsEvents[i + 1];
     if (!nextEvent) return false;
@@ -82,9 +82,7 @@ export const SeasonsClock = () => {
     },
   ]);
 
-  const adjustClockRotation = (
-    relevantSeasonEvents: SeasonResponse["data"]
-  ) => {
+  const adjustClockRotation = (relevantSeasonEvents: SeasonEntry[]) => {
     const daysSinceLastEvent = today.since(
       eventToPlainDate(relevantSeasonEvents[0])
     ).days;
@@ -92,7 +90,7 @@ export const SeasonsClock = () => {
   };
 
   const adjustSeasonColorAndPositions = (
-    relevantSeasonEvents: SeasonResponse["data"]
+    relevantSeasonEvents: SeasonEntry[]
   ) => {
     relevantSeasonEvents.reduce((acc, e, i) => {
       if (i === 3) {
