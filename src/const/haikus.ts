@@ -23,7 +23,7 @@ export const haikus: THaiku[] = [
     "id": 182,
     "text": ["Fi-nas pa-re-des", "a-je-tre-o noc-tur-no", "¡de-jad-me dor-mir!"],
     "date": "2025-04-21",
-    "tags": ["Personal", "5-7-5"],
+    "tags": ["Destacado", "Personal", "5-7-5"],
     "description": [
       "Me siento en la cama a escribir en mi diario. No espero una calma absoluta, pero vecinos, ¿qué hacéis de mudanza a estas horas?"
     ]
