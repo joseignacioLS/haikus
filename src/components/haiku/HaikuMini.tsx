@@ -4,16 +4,20 @@ import styles from "./HaikuMini.module.scss";
 import { HaikuBody } from "./HaikuBody";
 
 export const Haiku = ({ haiku }: { haiku: THaiku }) => {
-  const openDescription = () => {
+  const visitDetail = () => {
     navigate(`/${haiku.id}`);
   };
 
   return (
-    <div id={String(haiku.id)} className={`${styles.wrapper}`}>
-      <button className={`naked`} onClick={openDescription}>
-        <HaikuBody haiku={haiku.text} interactive />
+    <button
+      id={String(haiku.id)}
+      className={`naked ${styles.wrapper}`}
+      onClick={visitDetail}
+    >
+      <button className={`naked`}>
+        <HaikuBody haiku={haiku.text} />
       </button>
       <h2 className={styles.id}>{`Haiku #${haiku.id}`}</h2>
-    </div>
+    </button>
   );
 };
