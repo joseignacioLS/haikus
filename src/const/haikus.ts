@@ -2,6 +2,24 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    "id": 186,
+    "text": ["Ar-de_el as-fal-to", "los go-rrio-nes se_es-con-den", "ho-ra sin som-bra"],
+    "date": "2025-04-23",
+    "tags": ["Naturaleza", "5-7-5"],
+    "description": [
+      "No ha terminado Abril, pero el calor ya está aquí."
+    ]
+  },
+  {
+    "id": 185,
+    "text": ["Vi-da a-dul-ta", "ri-tu-al ol-vi-da-do", "so-mos a-mi-gos"],
+    "date": "2025-04-22",
+    "tags": ["Oculto", "Personal", "5-7-5"],
+    "description": [
+      "Que sensación que te digan que te consideran su amigo."
+    ]
+  },
+  {
     "id": 184,
     "text": ["Aun-que_in-se-gu-ro", "quie-ro co-rrer el ries-go", "vuel-ve_a_a-ma-ne-cer"],
     "date": "2025-04-21",
