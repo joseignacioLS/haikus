@@ -18,5 +18,6 @@
 
 .interactive {
   max-width: calc(100% - spaces.$gap_mini);
+  max-height: calc(100% - spaces.$gap_mini);
   box-shadow: spaces.$gap_mini spaces.$gap_mini 0 colors.$button;
 }

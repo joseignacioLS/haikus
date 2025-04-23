@@ -5,7 +5,7 @@ export const haikus: THaiku[] = [
     "id": 186,
     "text": ["Ar-de_el as-fal-to", "los go-rrio-nes se_es-con-den", "ho-ra sin som-bra"],
     "date": "2025-04-23",
-    "tags": ["Naturaleza", "5-7-5"],
+    "tags": ["Destacado", "Naturaleza", "5-7-5"],
     "description": [
       "No ha terminado Abril, pero el calor ya está aquí."
     ]

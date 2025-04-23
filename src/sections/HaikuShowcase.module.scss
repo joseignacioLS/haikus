@@ -24,6 +24,7 @@
   }
 
   .carouselWrapper {
+    @extend .interactive;
     @extend .card;
     width: 100%;
     height: 100%;
