@@ -2,6 +2,17 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    "id": 187,
+    "text": ["Frus-tra-ción sin fín", "pi-den lo im-po-si-ble", "dis-cul-pa pa-red"],
+    "date": "2025-04-24",
+    "tags": ["Personal", "5-7-5"],
+    "description": [
+      "Pienso en todas esas veces que he usado la frase:",
+      "'Es como hablar con la pared'",
+      "En días como hoy preferiría tener que convencer a una pared de cualquier cosa."
+    ]
+  },
+  {
     "id": 186,
     "text": ["Ar-de_el as-fal-to", "los go-rrio-nes se_es-con-den", "ho-ra sin som-bra"],
     "date": "2025-04-23",
