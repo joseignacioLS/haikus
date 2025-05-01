@@ -3,7 +3,6 @@ import { Modal } from "@components/notifications/Modal";
 import { Toast } from "@components/notifications/Toast";
 import "@fontsource-variable/domine";
 import "@fontsource-variable/open-sans";
-import { ClientRouter } from "astro:transitions";
 import "@/styles/global.scss";
 ---
 
@@ -48,8 +47,6 @@ import "@/styles/global.scss";
     <link rel="preload" href="/me.webp" as="image" />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <ClientRouter />
   </head>
   <body>
     <slot />
