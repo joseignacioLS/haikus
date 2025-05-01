@@ -1,6 +1,7 @@
 import { haikus } from "@/const/haikus";
 import { useEffect, useState } from "react";
 import { Temporal } from "temporal-polyfill";
+import { Spinner } from "../notifications/Spinner";
 import { TitledBlock } from "../structure/TitledBlock";
 import styles from "./HaikuMiniCalendar.module.scss";
 
@@ -63,27 +64,31 @@ export const HaikuMiniCalendar = () => {
 
   return (
     <TitledBlock title={<h2>Calendario</h2>}>
-      <div className={styles.calendar}>
-        {["L", "M", "X", "J", "V", "S", "D"].map((weekday) => {
-          return <span key={weekday}>{weekday}</span>;
-        })}
-        {data.data.map(({ date, haikuCount }) => {
-          return (
-            <div
-              className={`${styles.day} ${
-                today.toString() === date.toString() ? styles.today : ""
-              }`}
-              key={date.toString()}
-            >
+      {data.data.length === 0 ? (
+        <Spinner />
+      ) : (
+        <div className={styles.calendar}>
+          {["L", "M", "X", "J", "V", "S", "D"].map((weekday) => {
+            return <span key={weekday}>{weekday}</span>;
+          })}
+          {data.data.map(({ date, haikuCount }) => {
+            return (
               <div
-                style={{
-                  opacity: haikuCount / data.max,
-                }}
-              ></div>
-            </div>
-          );
-        })}
-      </div>
+                className={`${styles.day} ${
+                  today.toString() === date.toString() ? styles.today : ""
+                }`}
+                key={date.toString()}
+              >
+                <div
+                  style={{
+                    opacity: haikuCount / data.max,
+                  }}
+                ></div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </TitledBlock>
   );
 };
