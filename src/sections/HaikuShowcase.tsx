@@ -1,7 +1,8 @@
+import { Haiku } from "@/components/haiku/HaikuMini";
+import { Spinner } from "@/components/notifications/Spinner";
 import { Swipeable } from "@/components/structure/Swipeable";
 import { showcaseStore } from "@/store/Showcase";
 import { type THaiku } from "@/types";
-import { Haiku } from "@/components/haiku/HaikuMini";
 import { Carousel } from "@components/structure/Carousel";
 import { Title } from "@components/structure/Title.tsx";
 import { useHaikuStore } from "@hooks/useHaikuStore.tsx";
@@ -119,9 +120,13 @@ export const HaikuShowcase = <T extends string>({
           </div>
         </Title>
       )}
-      <Swipeable handleSwipe={handleSwipe} className={styles.carouselWrapper}>
-        {carousel}
-      </Swipeable>
+      {slides.length > 0 ? (
+        <Swipeable handleSwipe={handleSwipe} className={styles.carouselWrapper}>
+          {carousel}
+        </Swipeable>
+      ) : (
+        <Spinner />
+      )}
       <button
         className={`round ${styles.btnUp} ${hideButtonUp ? styles.hidden : ""}`}
         onClick={handleGoUp}
