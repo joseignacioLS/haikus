@@ -1,5 +1,5 @@
 ---
-import { collections } from "@/store/Haikus";
+import { collectionsStore } from "@store/Haikus";
 import "@/styles/_blocks.scss";
 import { CollectionsCard } from "@components/CollectionsCard";
 import { Title } from "@components/structure/Title";
@@ -10,7 +10,7 @@ import type { GetStaticPaths } from "astro";
 export const prerender = true;
 
 export const getStaticPaths = (() => {
-  const $collections = collections.get();
+  const $collections = collectionsStore.get();
   return $collections.map((c) => {
     return {
       params: { tag: String(c) },

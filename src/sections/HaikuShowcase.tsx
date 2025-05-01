@@ -1,7 +1,7 @@
 import { Haiku } from "@/components/haiku/HaikuMini";
 import { Spinner } from "@/components/notifications/Spinner";
 import { Swipeable } from "@/components/structure/Swipeable";
-import { dateStore } from "@/store/Haikus";
+import { dateStore } from "@store/Haikus";
 import { showcaseStore } from "@/store/Showcase";
 import { type THaiku } from "@/types";
 import { Carousel } from "@components/structure/Carousel";
