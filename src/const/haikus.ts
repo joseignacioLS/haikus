@@ -12,7 +12,7 @@ export const haikus: THaiku[] = [
   },
   {
     "id": 190,
-    "text": ["Dí-as sin nu-bes", "ol-vi-do mi tris-te-za", "me cues-ta es-cri-bir"],
+    "text": ["Dí-as sin nu-bes", "ol-vi-do mi tris-te-za", "me cues-ta_es-cri-bir"],
     "date": "2025-05-01",
     "tags": ["Personal", "Reflexión", "5-7-5"],
     "description": [
