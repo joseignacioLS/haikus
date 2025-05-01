@@ -16,12 +16,9 @@ export const About = () => {
         <img src={`/favicon.jpg`} alt="Avatar del autor de la página" />
       </button>
       <div style={{ viewTransitionName: "about-text" }}>
+        <p>¡Hola! has entrado en mi diario de haikus, ¡bienvenido/a!</p>
         <p>
-          ¡Hola! Me llamo Jose, y has entrado en mi diario de haikus,
-          ¡bienvenido/a!
-        </p>
-        <p>
-          Para mi los haikus son una manera de plasmar lo que siento. Coger
+          Para mí los haikus son una manera de plasmar lo que siento. Coger
           sensaciones y sentimientos concretos y convertirlos en algo pequeño y
           sencillo que los contenga y transmita.
         </p>
