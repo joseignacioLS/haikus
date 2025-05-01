@@ -2,8 +2,36 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    "id": 191,
+    "text": ["Dí-a fes-ti-vo", "a-pa-go mis a-lar-mas", "si-go dur-mien-do"],
+    "date": "2025-05-01",
+    "tags": ["Personal", "5-7-5"],
+    "description": [
+      "Que placer despertarse pronto y poder quedarse a disfrutar de la tranquilidad de que no hay prisa. Hoy no se trabaja."
+    ]
+  },
+  {
+    "id": 190,
+    "text": ["Dí-as sin nu-bes", "ol-vi-do mi tris-te-za", "me cues-ta es-cri-bir"],
+    "date": "2025-05-01",
+    "tags": ["Personal", "Reflexión", "5-7-5"],
+    "description": [
+      "Me encuentro mejor conmigo mismo, y me doy cuenta que con ello dejo de lado el hábito de escribir, tanto en mi diario como haikus.",
+      "Sé que son herramientas que uso para entenderme y sobrellevar mi melancolía, pero me gustaría no perderlas en mis mejores épocas."
+    ]
+  },
+  {
+    "id": 189,
+    "text": ["Se-ca par-ce-la", "vien-to me-ce hier-ba-jos", "rui-dos de_a-tas-co"],
+    "date": "2025-05-01",
+    "tags": ["Naturaleza", "5-7-5"],
+    "description": [
+      "Resiste la naturaleza en la ciudad, tomando una forma nueva que le permite sobrevivir en los áridos descampados."
+    ]
+  },
+  {
     "id": 188,
-    "text": ["De pron-to so-lo","mue-re_el mun-do di-gi-tal","no se_es-tá tan mal"],
+    "text": ["De pron-to so-lo", "mue-re_el mun-do di-gi-tal", "no se_es-tá tan mal"],
     "date": "2025-04-29",
     "tags": ["Personal", "5-7-5"],
     "description": [
