@@ -1,26 +1,35 @@
 import { type THaiku } from "@/types";
-import { collections, haikus } from "@store/Haikus";
+import { collectionsStore, dateStore, haikusStore } from "@store/Haikus";
 import { useEffect, useState } from "react";
+
+import { Temporal } from "temporal-polyfill";
 
 export const useHaikuStore = () => {
   const [data, setData] = useState<{
     haikus: THaiku[];
     collections: THaiku["tags"];
+    date: Temporal.PlainDate;
   }>({
     haikus: [],
     collections: [],
+    date: Temporal.Now.plainDateISO(),
   });
 
   useEffect(() => {
     const subscriptions = [
-      haikus.subscribe((haikus) => {
+      haikusStore.subscribe((haikus) => {
         setData((oldState) => {
           return { ...oldState, haikus: [...haikus] };
         });
       }),
-      collections.subscribe((collections: any) => {
+      collectionsStore.subscribe((collections) => {
         setData((oldState) => {
-          return { ...oldState, collections };
+          return { ...oldState, collections: [...collections] };
+        });
+      }),
+      dateStore.subscribe((date) => {
+        setData((oldState) => {
+          return { ...oldState, date };
         });
       }),
     ];

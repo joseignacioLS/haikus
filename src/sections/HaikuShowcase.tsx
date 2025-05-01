@@ -1,6 +1,7 @@
 import { Haiku } from "@/components/haiku/HaikuMini";
 import { Spinner } from "@/components/notifications/Spinner";
 import { Swipeable } from "@/components/structure/Swipeable";
+import { dateStore } from "@/store/Haikus";
 import { showcaseStore } from "@/store/Showcase";
 import { type THaiku } from "@/types";
 import { Carousel } from "@components/structure/Carousel";
@@ -8,6 +9,7 @@ import { Title } from "@components/structure/Title.tsx";
 import { useHaikuStore } from "@hooks/useHaikuStore.tsx";
 import { useStore } from "@nanostores/react";
 import { useEffect, useMemo, useState } from "react";
+import { Temporal } from "temporal-polyfill";
 import styles from "./HaikuShowcase.module.scss";
 
 type Props<T extends string> = {
@@ -26,7 +28,7 @@ export const HaikuShowcase = <T extends string>({
 
   const focusHaikuId = useStore(showcaseStore);
 
-  const { haikus } = useHaikuStore();
+  const { haikus, date } = useHaikuStore();
 
   const initializeFilter = () => {
     setFilter(defaultFilter ?? filters[0]);
@@ -50,8 +52,11 @@ export const HaikuShowcase = <T extends string>({
     }
   };
 
-  const handleScroll = (scrollTop: number) => {
+  const handleScroll = (scrollTop: number, key: number) => {
     setHideButtonUp(scrollTop < 50);
+    const onViewHaiku = haikus.find((h) => h.id === key);
+    if (!onViewHaiku) return;
+    dateStore.set(Temporal.PlainDate.from(onViewHaiku.date));
   };
 
   const handleGoUp = () => {
