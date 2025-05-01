@@ -1,0 +1,49 @@
+@use "../../styles/blocks";
+@use "../../styles/colors";
+
+.calendar {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+  aspect-ratio: 3 / 2;
+  gap: 0;
+
+  .day {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(white, .2);
+    overflow: hidden;
+
+    &>div {
+      width: 100%;
+      height: 100%;
+      background-color: colors.$text;
+    }
+
+    &:nth-child(8) {
+      border-radius: 50% 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 50% 0;
+    }
+
+    &:nth-child(14) {
+      border-radius: 0 50% 0 0;
+    }
+
+    &:nth-child(29) {
+      border-radius: 0 0 0 50%;
+    }
+
+
+    &.today {
+      border: 2px solid colors.$anchor;
+      opacity: 1;
+    }
+  }
+}

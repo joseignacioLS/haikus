@@ -41,21 +41,6 @@
       width: 100%;
       border-radius: inherit;
     }
-
-    @include media.mobile {
-      max-height: 170px;
-    }
-  }
-
-  .profileTextWrapper {
-    p {
-      height: 100%;
-      overflow: auto;
-    }
-
-    @include media.mobile {
-      max-height: 170px;
-    }
   }
 
   .collectionsWrapper {
