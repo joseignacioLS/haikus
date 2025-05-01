@@ -14,10 +14,4 @@
   align-items: center;
   gap: 25%;
 
-  .id {
-    @extend .subtitle_font;
-    position: absolute;
-    left: spaces.$gap_small;
-    top: spaces.$gap_small;
-  }
 }

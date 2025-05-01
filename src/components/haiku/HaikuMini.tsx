@@ -15,7 +15,6 @@ export const Haiku = ({ haiku }: { haiku: THaiku }) => {
       onClick={visitDetail}
     >
       <HaikuBody haiku={haiku.text} />
-      <h2 className={styles.id}>{`Haiku #${haiku.id}`}</h2>
     </button>
   );
 };
