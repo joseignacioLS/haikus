@@ -1,4 +1,4 @@
-import { haikus } from "@/const/haikus";
+import { useHaikuStore } from "@/hooks/useHaikuStore";
 import { useEffect, useState } from "react";
 import { Temporal } from "temporal-polyfill";
 import { Spinner } from "../notifications/Spinner";
@@ -16,15 +16,27 @@ type TData = {
 const today = Temporal.Now.plainDateISO();
 
 export const HaikuMiniCalendar = () => {
+  const { date: storeDate, haikus } = useHaikuStore();
   const [data, setData] = useState<TData>({
     max: 0,
     data: [],
   });
-  useEffect(() => {
+
+  const handleDayClick = (d: Temporal.PlainDate) => {
+    const firstHaikuOfDate = haikus.find((h) => h.date === d.toString());
+    if (firstHaikuOfDate === undefined) {
+      return;
+    }
+    document
+      .getElementById(String(firstHaikuOfDate.id))
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const generateDisplayDatesArray = (): Temporal.PlainDate[] => {
     const daysToNextSunday = 7 - today.dayOfWeek;
     const nextSunday = today.add({ days: daysToNextSunday });
-    const weeks = 4;
-    const weekDiff = Array.from(new Array(weeks).keys()).map((k) => k);
+    const WEEKS = 4;
+    const weekDiff = Array.from(new Array(WEEKS).keys()).map((k) => k);
     const daysDiff = weekDiff
       .map((w) => {
         return Array.from(new Array(7).keys())
@@ -33,9 +45,13 @@ export const HaikuMiniCalendar = () => {
       })
       .flat();
 
-    const dates = daysDiff.map((diff) => {
+    return daysDiff.map((diff) => {
       return nextSunday.subtract({ days: diff });
     });
+  };
+
+  useEffect(() => {
+    const dates = generateDisplayDatesArray();
     setData(() => {
       return dates.reduce(
         (acc: TData, date) => {
@@ -59,11 +75,10 @@ export const HaikuMiniCalendar = () => {
         }
       );
     });
-    console.log(today.toString());
-  }, [today]);
+  }, [storeDate]);
 
   return (
-    <TitledBlock title={<h2>Calendario</h2>}>
+    <TitledBlock title={<h2>Último Mes</h2>}>
       {data.data.length === 0 ? (
         <Spinner />
       ) : (
@@ -71,20 +86,29 @@ export const HaikuMiniCalendar = () => {
           {["L", "M", "X", "J", "V", "S", "D"].map((weekday) => {
             return <span key={weekday}>{weekday}</span>;
           })}
-          {data.data.map(({ date, haikuCount }) => {
+          {data.data.map(({ date: d, haikuCount }) => {
+            const opacity = Math.max(
+              haikuCount > 0 ? 0.25 : 0,
+              data.max ? haikuCount / data.max : 0
+            );
             return (
-              <div
-                className={`${styles.day} ${
-                  today.toString() === date.toString() ? styles.today : ""
+              <button
+                className={`naked ${styles.day} ${
+                  today.toString() === d.toString() ? styles.today : ""
+                } ${
+                  storeDate.toString() === d.toString() ? styles.selected : ""
                 }`}
-                key={date.toString()}
+                key={d.toString()}
+                onClick={() => haikuCount > 0 && handleDayClick(d)}
               >
                 <div
                   style={{
-                    opacity: haikuCount / data.max,
+                    opacity,
                   }}
-                ></div>
-              </div>
+                >
+                  {haikuCount}
+                </div>
+              </button>
             );
           })}
         </div>

@@ -1,9 +1,9 @@
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactElement, type ReactNode } from "react";
 import styles from "./Carousel.module.scss";
 
 type Props = {
-  slides: ReactNode[];
-  onScroll?: (scrollPosition: number) => void;
+  slides: ReactElement[];
+  onScroll?: (scrollPosition: number, key: number) => void;
   scrollPosition?: number;
 };
 
@@ -17,8 +17,9 @@ export const Carousel = ({ slides, onScroll, scrollPosition }: Props) => {
   };
 
   const handleScroll = (e: React.UIEvent<HTMLElement>) => {
-    const { scrollTop } = e.currentTarget;
-    onScroll?.(scrollTop);
+    const { scrollTop, scrollHeight } = e.currentTarget;
+    const slideIndex = Math.round(scrollTop / (scrollHeight / slides.length));
+    onScroll?.(scrollTop, Number(slides[slideIndex].key));
   };
 
   useEffect(() => {

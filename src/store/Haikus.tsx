@@ -6,16 +6,18 @@ import {
   sortHaikusById,
 } from "@/utils/haiku";
 import { atom } from "nanostores";
+import { Temporal } from "temporal-polyfill";
 
 const initHaikuData = async () => {
   const $haikus = sortHaikusById(getVisibleHaikus(rawHaikus));
-  haikus.set($haikus);
+  haikusStore.set($haikus);
 
   const $collections = getCollections($haikus);
-  collections.set($collections);
+  collectionsStore.set($collections);
 };
 
-export const haikus = atom<THaiku[]>([]);
-export const collections = atom<THaiku["tags"]>([]);
+export const haikusStore = atom<THaiku[]>([]);
+export const dateStore = atom<Temporal.PlainDate>(Temporal.Now.plainDateISO());
+export const collectionsStore = atom<THaiku["tags"]>([]);
 
 initHaikuData();
