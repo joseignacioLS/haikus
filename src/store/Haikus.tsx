@@ -14,6 +14,9 @@ const initHaikuData = async () => {
 
   const $collections = getCollections($haikus);
   collectionsStore.set($collections);
+
+  const $date = Temporal.PlainDate.from($haikus[0].date);
+  dateStore.set($date);
 };
 
 export const haikusStore = atom<THaiku[]>([]);
