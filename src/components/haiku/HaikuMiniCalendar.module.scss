@@ -35,16 +35,16 @@
       border-radius: 50% 0 0 0;
     }
 
-    &:last-child {
-      border-radius: 0 0 50% 0;
-    }
-
     &:nth-child(14) {
       border-radius: 0 50% 0 0;
     }
 
-    &:nth-child(29) {
+    &:nth-last-child(7) {
       border-radius: 0 0 0 50%;
+    }
+
+    &:last-child {
+      border-radius: 0 0 50% 0;
     }
 
     &.selected::after {
