@@ -4,6 +4,7 @@ import { Temporal } from "temporal-polyfill";
 import { Spinner } from "../notifications/Spinner";
 import { TitledBlock } from "../structure/TitledBlock";
 import styles from "./HaikuMiniCalendar.module.scss";
+import { showcaseStore } from "@/store/Showcase";
 
 type TDateData = {
   date: Temporal.PlainDate;
@@ -27,15 +28,23 @@ export const HaikuMiniCalendar = () => {
     if (firstHaikuOfDate === undefined) {
       return;
     }
-    document
-      .getElementById(String(firstHaikuOfDate.id))
-      ?.scrollIntoView({ behavior: "smooth" });
+
+    showcaseStore.set(firstHaikuOfDate.id);
+
+    // document
+    //   .getElementById(String(firstHaikuOfDate.id))
+    //   ?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const generateDisplayDatesArray = (): Temporal.PlainDate[] => {
-    const daysToNextSunday = 7 - today.dayOfWeek;
-    const nextSunday = today.add({ days: daysToNextSunday });
-    const WEEKS = 4;
+  const generateDisplayDatesArray = (
+    storeDate: Temporal.PlainDate
+  ): Temporal.PlainDate[] => {
+    const daysToNextSunday =
+      today.weekOfYear !== storeDate.weekOfYear
+        ? 14 - storeDate.dayOfWeek
+        : 7 - storeDate.dayOfWeek;
+    const nextSunday = storeDate.add({ days: daysToNextSunday });
+    const WEEKS = 3;
     const weekDiff = Array.from(new Array(WEEKS).keys()).map((k) => k);
     const daysDiff = weekDiff
       .map((w) => {
@@ -51,7 +60,7 @@ export const HaikuMiniCalendar = () => {
   };
 
   useEffect(() => {
-    const dates = generateDisplayDatesArray();
+    const dates = generateDisplayDatesArray(storeDate);
     setData(() => {
       return dates.reduce(
         (acc: TData, date) => {
@@ -78,7 +87,7 @@ export const HaikuMiniCalendar = () => {
   }, [storeDate]);
 
   return (
-    <TitledBlock title={<h2>Último Mes</h2>}>
+    <TitledBlock title={<h2>{storeDate.toString()}</h2>}>
       {data.data.length === 0 ? (
         <Spinner />
       ) : (
@@ -87,6 +96,18 @@ export const HaikuMiniCalendar = () => {
             return <span key={weekday}>{weekday}</span>;
           })}
           {data.data.map(({ date: d, haikuCount }) => {
+            if (haikuCount === 0) {
+              return (
+                <div
+                  key={d.toString()}
+                  className={`${styles.day}  ${
+                    today.toString() === d.toString() ? styles.today : ""
+                  }`}
+                >
+                  <div>{haikuCount}</div>
+                </div>
+              );
+            }
             const opacity = Math.max(
               haikuCount > 0 ? 0.25 : 0,
               data.max ? haikuCount / data.max : 0
