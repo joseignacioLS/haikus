@@ -28,7 +28,7 @@ export const HaikuShowcase = <T extends string>({
 
   const focusHaikuId = useStore(showcaseStore);
 
-  const { haikus, date } = useHaikuStore();
+  const { haikus } = useHaikuStore();
 
   const initializeFilter = () => {
     setFilter(defaultFilter ?? filters[0]);
