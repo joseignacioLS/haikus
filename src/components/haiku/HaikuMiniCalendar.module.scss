@@ -20,7 +20,7 @@
     overflow: hidden;
     background-color: colors.$foreground;
 
-    & > div {
+    &>div {
       opacity: 0;
       width: 100%;
       height: 100%;
@@ -47,7 +47,7 @@
       border-radius: 0 0 50% 0;
     }
 
-    &.selected::after {
+    &.today::after {
       content: "";
       position: absolute;
       right: -1px;
@@ -58,8 +58,8 @@
       z-index: 5;
     }
 
-    &.today {
-      border: 2px solid colors.$text;
+    &.selected {
+      border: 1px solid colors.$text;
     }
   }
 }
