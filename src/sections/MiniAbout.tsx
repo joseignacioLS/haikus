@@ -1,9 +1,12 @@
-import { HaikuMiniCalendar } from "@/components/haiku/HaikuMiniCalendar";
+import { useHaikuStore } from "@/hooks/useHaikuStore";
 import { CollectionsCard } from "@components/CollectionsCard";
 import { navigate } from "astro:transitions/client";
 import styles from "./MiniAbout.module.scss";
+import { Spinner } from "@/components/notifications/Spinner";
 
 export const MiniAbout = () => {
+  const { haikus, selected } = useHaikuStore();
+  const haiku = haikus.find((h) => h.id === selected);
   return (
     <section className={styles.miniAbout}>
       <button
@@ -17,7 +20,21 @@ export const MiniAbout = () => {
       >
         <img src={`/favicon.jpg`} alt="Avatar del autor de la página" />
       </button>
-      <HaikuMiniCalendar />
+      <div className={styles.dataWrapper}>
+        {haiku ? (
+          <>
+            <h2>
+              <a href={`/${haiku?.id}`}>#{haiku?.id}</a>
+            </h2>
+            <p>{haiku?.date}</p>
+            <p className={styles.description}>
+              {(haiku?.description ?? ["//Sin descripción//"])?.join(" ")}
+            </p>
+          </>
+        ) : (
+          <Spinner />
+        )}
+      </div>
       <div className={styles.collectionsWrapper}>
         <CollectionsCard />
       </div>

@@ -9,18 +9,23 @@ const defaultFilter = filters[0];
 const filterFns = {
   Todos: {},
 };
+const searchParams = Astro.url.searchParams;
+const collection = searchParams.get("collection") ?? undefined;
 ---
 
 <Layout>
   <main>
     <div style={{ gridArea: "title" }}>
-      <Title client:load>Diario de Haikus</Title>
+      <Title client:load
+        >Diario de Haikus {collection ? `// ${collection}` : ""}</Title
+      >
     </div>
     <HaikuShowcase
       client:load
       filters={filters}
       defaultFilter={defaultFilter}
       filterFns={filterFns}
+      collection={collection}
     />
     <MiniAbout client:load />
   </main>

@@ -43,6 +43,19 @@
     }
   }
 
+  .dataWrapper {
+    @extend .card;
+    > .description {
+      display: -webkit-box;
+      overflow: hidden;
+      max-height: 7.5ch;
+      min-height: 7.5ch;
+      line-height: 2.5ch;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+
   .collectionsWrapper {
     @include media.mobile {
       grid-column: 1 / 3;

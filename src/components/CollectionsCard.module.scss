@@ -1,5 +1,6 @@
 @use "@/styles/spaces";
 @use "@/styles/media";
+@use "@/styles/colors";
 
 .tagList {
   display: flex;
@@ -8,12 +9,16 @@
   gap: spaces.$gap_mini;
   padding-bottom: spaces.$gap_small;
 
-  &>* {
+  & > * {
     flex-shrink: 0;
   }
 
   @include media.mobile {
     justify-content: flex-start;
     overflow: auto;
+  }
+
+  .selected {
+    box-shadow: 2px 2px 0 colors.$text;
   }
 }

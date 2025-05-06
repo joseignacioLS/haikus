@@ -20,6 +20,9 @@
   .wrapper {
     padding: 1px 0;
     flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     scroll-snap-align: center;
 

@@ -1,5 +1,10 @@
 import { type THaiku } from "@/types";
-import { collectionsStore, dateStore, haikusStore } from "@store/Haikus";
+import {
+  collectionsStore,
+  dateStore,
+  haikusStore,
+  selectedStore,
+} from "@store/Haikus";
 import { useEffect, useState } from "react";
 
 import { Temporal } from "temporal-polyfill";
@@ -9,10 +14,12 @@ export const useHaikuStore = () => {
     haikus: THaiku[];
     collections: THaiku["tags"];
     date: Temporal.PlainDate;
+    selected: THaiku["id"];
   }>({
     haikus: [],
     collections: [],
     date: Temporal.Now.plainDateISO(),
+    selected: 1,
   });
 
   useEffect(() => {
@@ -30,6 +37,11 @@ export const useHaikuStore = () => {
       dateStore.subscribe((date) => {
         setData((oldState) => {
           return { ...oldState, date };
+        });
+      }),
+      selectedStore.subscribe((selected) => {
+        setData((oldState) => {
+          return { ...oldState, selected };
         });
       }),
     ];

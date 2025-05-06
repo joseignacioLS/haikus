@@ -1,13 +1,13 @@
-import { Haiku } from "@/components/haiku/HaikuMini";
+import { HaikuBody } from "@/components/haiku/HaikuBody";
 import { Spinner } from "@/components/notifications/Spinner";
 import { Swipeable } from "@/components/structure/Swipeable";
-import { dateStore } from "@store/Haikus";
 import { showcaseStore } from "@/store/Showcase";
 import { type THaiku } from "@/types";
 import { Carousel } from "@components/structure/Carousel";
 import { Title } from "@components/structure/Title.tsx";
 import { useHaikuStore } from "@hooks/useHaikuStore.tsx";
 import { useStore } from "@nanostores/react";
+import { dateStore, selectedStore } from "@store/Haikus";
 import { useEffect, useMemo, useState } from "react";
 import { Temporal } from "temporal-polyfill";
 import styles from "./HaikuShowcase.module.scss";
@@ -16,12 +16,14 @@ type Props<T extends string> = {
   filters: T[];
   filterFns: Record<T, Record<string, any[]>>;
   defaultFilter?: T;
+  collection?: string;
 };
 
 export const HaikuShowcase = <T extends string>({
   filters,
   defaultFilter,
   filterFns,
+  collection,
 }: Props<T>) => {
   const [filter, setFilter] = useState<T | undefined>(undefined);
   const [hideButtonUp, setHideButtonUp] = useState(true);
@@ -34,7 +36,7 @@ export const HaikuShowcase = <T extends string>({
     setFilter(defaultFilter ?? filters[0]);
   };
 
-  const handleSwipe = (direction: "Right" | "Left") => {
+  const handleSwipe = (direction: string) => {
     if (direction === "Left") {
       setFilter((oldFilter) => {
         const filterIndex = filters.findIndex((f) => f === oldFilter);
@@ -55,11 +57,16 @@ export const HaikuShowcase = <T extends string>({
   const handleScroll = (scrollTop: number, key: number) => {
     setHideButtonUp(scrollTop < 50);
     const onViewHaiku = haikus.find((h) => h.id === key);
+    console.log({ key });
     if (!onViewHaiku) return;
     dateStore.set(Temporal.PlainDate.from(onViewHaiku.date));
+    selectedStore.set(onViewHaiku.id);
   };
 
   const handleGoUp = () => {
+    console.log("wi");
+    console.log(slides[0].id);
+    console.log();
     document
       .getElementById(String(slides[0].id))
       ?.scrollIntoView({ behavior: "smooth" });
@@ -69,6 +76,8 @@ export const HaikuShowcase = <T extends string>({
     () =>
       haikus
         .filter((h) => {
+          if (collection !== undefined && !h.tags.includes(collection))
+            return false;
           if (!filter || !filterFns[filter]) return false;
           return Object.entries(filterFns[filter]).every(([key, options]) => {
             const value = h[key as keyof THaiku];
@@ -79,14 +88,14 @@ export const HaikuShowcase = <T extends string>({
           });
         })
         .sort(({ id: aId }, { id: bId }) => (aId < bId ? 1 : -1)),
-    [haikus, filter]
+    [haikus, filter, collection]
   );
 
   const carousel = useMemo(() => {
     return (
       <Carousel
-        slides={slides.map((haiku) => {
-          return <Haiku key={haiku.id} haiku={haiku} />;
+        slides={slides.map(({ id, text }) => {
+          return <HaikuBody key={id} id={id} haiku={text} />;
         })}
         onScroll={handleScroll}
       ></Carousel>
