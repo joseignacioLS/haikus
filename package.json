@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "npx vitest run"
+    "test": "npx vitest run",
+    "haiku": "node tools/addHaiku.js"
   },
   "dependencies": {
     "@astrojs/netlify": "^6.2.4",
