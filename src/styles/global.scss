@@ -60,6 +60,10 @@ h2,
 h3 {
   font-family: "Domine Variable", serif;
   transition: font-size 0.2s;
+  a,
+  a:visited {
+    color: inherit;
+  }
 }
 
 p {
@@ -105,6 +109,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: box-shadow .5s;
 
   &.round {
     border-radius: spaces.$border_radius_round;
