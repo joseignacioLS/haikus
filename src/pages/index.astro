@@ -17,7 +17,8 @@ const collection = searchParams.get("collection") ?? undefined;
   <main>
     <div style={{ gridArea: "title" }}>
       <Title client:load
-        >Diario de Haikus {collection ? `// ${collection}` : ""}</Title
+        ><a href="/">Diario de Haikus</a>
+        {collection ? `// ${collection}` : ""}</Title
       >
     </div>
     <HaikuShowcase
