@@ -1,9 +1,9 @@
+import { Spinner } from "@/components/notifications/Spinner";
+import { TitledBlock } from "@/components/structure/TitledBlock";
 import { useHaikuStore } from "@/hooks/useHaikuStore";
 import { CollectionsCard } from "@components/CollectionsCard";
 import { navigate } from "astro:transitions/client";
 import styles from "./MiniAbout.module.scss";
-import { Spinner } from "@/components/notifications/Spinner";
-import { TitledBlock } from "@/components/structure/TitledBlock";
 
 export const MiniAbout = () => {
   const { haikus, selected } = useHaikuStore();
@@ -23,18 +23,20 @@ export const MiniAbout = () => {
       </button>
       <TitledBlock
         title={
-          <>
-            <h2>
-              <a href={`/${haiku?.id}`}>#{haiku?.id}</a>
-            </h2>
-            <p>{haiku?.date}</p>
-          </>
+          haiku !== undefined && (
+            <>
+              <h2>
+                <a href={`/${haiku?.id}`}>#{haiku?.id}</a>
+              </h2>
+              <p>{haiku.date}</p>
+            </>
+          )
         }
       >
         {haiku ? (
           <div className={styles.dataWrapper}>
             <p className={styles.description}>
-              {(haiku?.description ?? ["// Sin descripción //"])?.join(" ")}
+              {(haiku.description ?? ["// Sin descripción //"])?.join(" ")}
             </p>
           </div>
         ) : (
