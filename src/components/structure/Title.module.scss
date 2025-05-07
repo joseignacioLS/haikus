@@ -5,4 +5,10 @@
   gap: spaces.$gap_small;
   align-items: center;
   margin-bottom: spaces.$gap_default;
+
+  * {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }

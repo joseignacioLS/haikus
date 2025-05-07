@@ -16,10 +16,16 @@ const collection = searchParams.get("collection") ?? undefined;
 <Layout>
   <main>
     <div style={{ gridArea: "title" }}>
-      <Title client:load
-        ><a href="/">Diario de Haikus</a>
-        {collection ? `// ${collection}` : ""}</Title
-      >
+      {
+        collection ? (
+          <Title client:load showBackButton>
+            Colección
+            {` // ${collection}`}
+          </Title>
+        ) : (
+          <Title client:load>Diario de Haikus</Title>
+        )
+      }
     </div>
     <HaikuShowcase
       client:load
