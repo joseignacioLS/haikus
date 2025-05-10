@@ -2,6 +2,13 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 198,
+    text: ["Frí-o noc-tur-no", "mi bra-zo en tus hom-bros", "lu-na cre-cien-te"],
+    date: "2025-05-09",
+    tags: ["5-7-5", "Personal"],
+    description: ["Me preocupo tanto por lo que va a ser. Da gusto vivir en el momento y disfrutar, no necesito saber más."]
+  },
+  {
     id: 197,
     text: [
       "Vie-jo plu-ma-je",
