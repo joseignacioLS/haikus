@@ -2,7 +2,7 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
-    id: 200,
+    id: 201,
     text: ["Me_a-po-yo en ti", "tus bra-zos me ro-de-an", "el va-lle ca-lla"],
     date: "2025-05-11",
     tags: ["5-7-5", "Personal"],
@@ -11,7 +11,7 @@ export const haikus: THaiku[] = [
     ],
   },
   {
-    id: 199,
+    id: 200,
     text: ["Car-go mi cul-pa", "per-do-no a los de-más", "pe-ro no a mí"],
     date: "2025-05-11",
     tags: ["5-7-5", "Personal", "Reflexión"],
@@ -20,7 +20,7 @@ export const haikus: THaiku[] = [
     ],
   },
   {
-    id: 198,
+    id: 199,
     text: [
       "E-co_en el va-lle",
       "des-de_un le-ja-no ár-bol",
@@ -30,6 +30,19 @@ export const haikus: THaiku[] = [
     tags: ["5-7-5", "Naturaleza", "Destacado"],
     description: [
       "Hoy he vuelto a salir a escalar, esta vez en Crevillente. Me siento yo estando en la naturaleza.",
+    ],
+  },
+  {
+    id: 198,
+    text: [
+      "Frí-o noc-tur-no",
+      "mi bra-zo en tus hom-bros",
+      "lu-na cre-cien-te",
+    ],
+    date: "2025-05-09",
+    tags: ["5-7-5", "Personal"],
+    description: [
+      "Me preocupo tanto por lo que va a ser. Da gusto vivir en el momento y disfrutar, no necesito saber más.",
     ],
   },
   {
