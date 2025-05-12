@@ -18,7 +18,6 @@ export const Carousel = ({ slides, onScroll, scrollPosition }: Props) => {
 
   const handleScroll = (e: React.UIEvent<HTMLElement>) => {
     const { scrollTop, scrollHeight } = e.currentTarget;
-    console.log({ scrollTop, scrollHeight, l: slides.length });
     const slideIndex = Math.round(scrollTop / (scrollHeight / slides.length));
     onScroll?.(scrollTop, Number(slides[slideIndex].key));
   };

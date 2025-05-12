@@ -57,16 +57,12 @@ export const HaikuShowcase = <T extends string>({
   const handleScroll = (scrollTop: number, key: number) => {
     setHideButtonUp(scrollTop < 50);
     const onViewHaiku = haikus.find((h) => h.id === key);
-    console.log({ key });
     if (!onViewHaiku) return;
     dateStore.set(Temporal.PlainDate.from(onViewHaiku.date));
     selectedStore.set(onViewHaiku.id);
   };
 
   const handleGoUp = () => {
-    console.log("wi");
-    console.log(slides[0].id);
-    console.log();
     document
       .getElementById(String(slides[0].id))
       ?.scrollIntoView({ behavior: "smooth" });

@@ -34,7 +34,7 @@ const collection = searchParams.get("collection") ?? undefined;
       filterFns={filterFns}
       collection={collection}
     />
-    <MiniAbout client:load />
+    <MiniAbout client:only />
   </main>
 </Layout>
 
