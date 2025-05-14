@@ -2,6 +2,19 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 202,
+    text: [
+      "Llu-vía tem-pra-na",
+      "al res-guar-do del ár-bol",
+      "can-ta el mir-lo",
+    ],
+    date: "2025-05-14",
+    tags: ["5-7-5", "Naturaleza"],
+    description: [
+      "Me despierto antes del amanecer, oyendo el repiqueteo de la lluvia en la ventana, y los cantos de los pájaros.",
+    ],
+  },
+  {
     id: 201,
     text: ["Me_a-po-yo en ti", "tus bra-zos me ro-de-an", "el va-lle ca-lla"],
     date: "2025-05-11",
