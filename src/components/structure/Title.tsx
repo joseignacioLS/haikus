@@ -27,6 +27,7 @@ export const Title = ({
             e.stopPropagation();
             navigate(backRoute, { history: "replace" });
           }}
+          arial-label="Botón para navegar atrás"
         >
           <img
             src={`/icons/back.svg`}

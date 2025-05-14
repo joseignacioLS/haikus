@@ -36,6 +36,7 @@ export const HaikuFullPage = ({ haiku }: { haiku: THaiku }) => {
                 onClick={() => {
                   navigator.share({ url: window.location.href });
                 }}
+                arial-label="Botón para compartir el haiku"
               >
                 <img src="/icons/share.svg" />
               </button>
