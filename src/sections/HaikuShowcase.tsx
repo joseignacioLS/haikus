@@ -1,7 +1,6 @@
 import { HaikuMini } from "@/components/haiku/HaikuMini";
 import { Spinner } from "@/components/notifications/Spinner";
 import { selectedStore } from "@/store/Haikus";
-import { showcaseStore } from "@/store/Showcase";
 import { type THaiku } from "@/types";
 import { useHaikuStore } from "@hooks/useHaikuStore.tsx";
 import { useEffect, useMemo, useState } from "react";
@@ -39,13 +38,11 @@ export const HaikuShowcase = ({ collection }: Props) => {
       setSelectedHaiku(displayHaiku);
       return;
     }
-    showcaseStore.set(undefined);
     setSelectedHaiku(haikuList[0]);
   }, [haikuList, selected]);
 
   return (
     <section className={styles.wrapper}>
-      {selectedHaiku ? <HaikuMini haiku={selectedHaiku} /> : <Spinner />}
       <button
         className={`round ${styles.btnPrev}`}
         onClick={() => handleChangeHaiku(-1)}
@@ -57,6 +54,7 @@ export const HaikuShowcase = ({ collection }: Props) => {
           alt="icono flecha apuntando a la izquierda"
         ></img>
       </button>
+      {selectedHaiku ? <HaikuMini haiku={selectedHaiku} /> : <Spinner />}
       <button
         className={`round ${styles.btnNext}`}
         onClick={() => handleChangeHaiku(1)}

@@ -1,12 +1,10 @@
 import { useHaikuStore } from "@/hooks/useHaikuStore";
-import { showcaseStore } from "@/store/Showcase";
+import { selectedStore } from "@/store/Haikus";
 import type { THaiku } from "@/types";
 import { navigate } from "astro:transitions/client";
-import { useEffect } from "react";
 import { Swipeable } from "../structure/Swipeable";
 import { HaikuBody } from "./HaikuBody";
 import styles from "./HaikuFullPage.module.scss";
-import { selectedStore } from "@/store/Haikus";
 
 export const HaikuFullPage = ({ haiku }: { haiku: THaiku }) => {
   const { collections, haikus } = useHaikuStore();
@@ -22,9 +20,7 @@ export const HaikuFullPage = ({ haiku }: { haiku: THaiku }) => {
       navigate(`/${haikus[currentIndex - 1].id}`, { history: "replace" });
     }
   };
-  useEffect(() => {
-    showcaseStore.set(haiku.id);
-  }, []);
+
   return (
     <Swipeable
       handleSwipe={handleSwipe}
