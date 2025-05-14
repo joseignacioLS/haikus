@@ -1,7 +1,6 @@
 import { HaikuFullPage } from "@/components/haiku/HaikuFullPage";
 import { Spinner } from "@/components/notifications/Spinner";
 import { type THaiku } from "@/types";
-import { Haiku } from "@/components/haiku/HaikuMini";
 import { useHaikuGuard } from "@hooks/useHaikuGuard";
 import { useHaikuStore } from "@hooks/useHaikuStore";
 

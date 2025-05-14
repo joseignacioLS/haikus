@@ -1,20 +1,11 @@
 import type { THaiku } from "@/types";
-import { navigate } from "astro:transitions/client";
-import styles from "./HaikuMini.module.scss";
 import { HaikuBody } from "./HaikuBody";
+import styles from "./HaikuMini.module.scss";
 
-export const Haiku = ({ haiku }: { haiku: THaiku }) => {
-  const visitDetail = () => {
-    navigate(`/${haiku.id}`);
-  };
-
+export const HaikuMini = ({ haiku }: { haiku: THaiku }) => {
   return (
-    <button
-      id={String(haiku.id)}
-      className={`naked ${styles.wrapper}`}
-      onClick={visitDetail}
-    >
+    <article id={String(haiku.id)} className={`${styles.wrapper}`}>
       <HaikuBody haiku={haiku.text} />
-    </button>
+    </article>
   );
 };

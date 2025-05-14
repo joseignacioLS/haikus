@@ -40,14 +40,18 @@
     }
   }
 
-  .btnUp {
+  .btnPrev {
     position: absolute;
     bottom: spaces.$gap_default;
     left: spaces.$gap_default;
-    transition: opacity .2s;
-
-    &.hidden {
-      opacity: 0;
-    }
+    transition: opacity 0.2s;
+    rotate: -90deg;
+  }
+  .btnNext {
+    position: absolute;
+    bottom: spaces.$gap_default;
+    right: spaces.$gap_default;
+    transition: opacity 0.2s;
+    rotate: 90deg;
   }
 }

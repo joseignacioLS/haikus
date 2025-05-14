@@ -4,11 +4,6 @@ import Layout from "@layouts/Layout.astro";
 import { HaikuShowcase } from "@sections/HaikuShowcase";
 import { MiniAbout } from "@sections/MiniAbout";
 
-const filters = ["Todos"];
-const defaultFilter = filters[0];
-const filterFns = {
-  Todos: {},
-};
 const searchParams = Astro.url.searchParams;
 const collection = searchParams.get("collection") ?? undefined;
 ---
@@ -27,13 +22,7 @@ const collection = searchParams.get("collection") ?? undefined;
         )
       }
     </div>
-    <HaikuShowcase
-      client:load
-      filters={filters}
-      defaultFilter={defaultFilter}
-      filterFns={filterFns}
-      collection={collection}
-    />
+    <HaikuShowcase client:load collection={collection} />
     <MiniAbout client:only />
   </main>
 </Layout>

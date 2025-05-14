@@ -18,15 +18,15 @@ export const HaikuBody = ({ id, haiku }: { id?: number; haiku: string[] }) => {
   }, [maxHaikuLineLength]);
 
   return (
-    <div ref={bodyRef} className={`${styles.haiku}`} id={String(id)}>
+    <p ref={bodyRef} className={`${styles.haiku}`} id={String(id)}>
       {fontSize > 0 &&
         haiku.map((l) => {
           return (
-            <p key={l} style={{ fontSize }}>
+            <span key={l} style={{ fontSize }}>
               {cleanLine(l)}
-            </p>
+            </span>
           );
         })}
-    </div>
+    </p>
   );
 };
