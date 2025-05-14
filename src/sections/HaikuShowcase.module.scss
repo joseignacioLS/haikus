@@ -46,6 +46,7 @@
     left: spaces.$gap_default;
     transition: opacity 0.2s;
     rotate: -90deg;
+    z-index: 1;
   }
   .btnNext {
     position: absolute;
@@ -53,5 +54,6 @@
     right: spaces.$gap_default;
     transition: opacity 0.2s;
     rotate: 90deg;
+    z-index: 1;
   }
 }
