@@ -18,6 +18,7 @@ export const MiniAbout = () => {
         style={{
           viewTransitionName: "avatar-img",
         }}
+        aria-label={"Enlace a la página sobre mí del autor."}
       >
         <img src={`/favicon.jpg`} alt="Avatar del autor de la página" />
       </button>
@@ -26,7 +27,12 @@ export const MiniAbout = () => {
           haiku !== undefined && (
             <>
               <h2>
-                <a href={`/${haiku?.id}`}>#{haiku?.id}</a>
+                <a
+                  href={`/${haiku?.id}`}
+                  aria-label={`Detalle del haiku número ${haiku?.id}`}
+                >
+                  #{haiku?.id}
+                </a>
               </h2>
               <p>{haiku.date}</p>
             </>
