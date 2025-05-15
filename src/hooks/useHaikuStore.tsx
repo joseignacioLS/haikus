@@ -55,7 +55,5 @@ export const useHaikuStore = () => {
     };
   }, []);
 
-  useEffect(() => {}, []);
-
   return data;
 };
