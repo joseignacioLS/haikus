@@ -8,10 +8,10 @@ type Props = {
 };
 
 export const Carousel = ({ slides, onScroll, scrollPosition }: Props) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const scrollTo = (top: number = 0) => {
-    const scrollElement = ref?.current as unknown as HTMLElement;
+    const scrollElement = ref?.current;
     if (!scrollElement) return;
     scrollElement.scrollTo({ top });
   };

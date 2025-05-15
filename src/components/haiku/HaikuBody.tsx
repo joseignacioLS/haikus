@@ -5,7 +5,7 @@ import styles from "./HaikuBody.module.scss";
 export const HaikuBody = ({ id, haiku }: { id?: number; haiku: string[] }) => {
   const [fontSize, setFontSize] = useState(0);
   const { maxHaikuLineLength } = useHaikuStore();
-  const bodyRef = useRef(null);
+  const bodyRef = useRef<HTMLParagraphElement>(null);
 
   const cleanLine = (line: string) => {
     return line.replace(/-/g, "").replace(/_/g, " ");
@@ -13,7 +13,8 @@ export const HaikuBody = ({ id, haiku }: { id?: number; haiku: string[] }) => {
 
   useEffect(() => {
     if (!maxHaikuLineLength) return;
-    const { offsetWidth } = bodyRef.current as unknown as HTMLElement;
+    if (!bodyRef.current) return;
+    const { offsetWidth } = bodyRef.current;
     setFontSize((2.5 * offsetWidth) / maxHaikuLineLength);
   }, [maxHaikuLineLength]);
 

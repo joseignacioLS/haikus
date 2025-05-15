@@ -16,7 +16,7 @@ export const getRequest = async <T>(url: string): Promise<T> => {
 
 export const postRequest = async <T>(
   url: string,
-  body?: unknown
+  body?: RequestInit["body"]
 ): Promise<T> => {
   return request<T>(url, {
     method: "POST",
