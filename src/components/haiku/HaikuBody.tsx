@@ -13,7 +13,7 @@ export const HaikuBody = ({ id, haiku }: { id?: number; haiku: string[] }) => {
 
   useEffect(() => {
     if (!maxHaikuLineLength) return;
-    const { offsetWidth } = bodyRef.current as any;
+    const { offsetWidth } = bodyRef.current as unknown as HTMLElement;
     setFontSize((2.5 * offsetWidth) / maxHaikuLineLength);
   }, [maxHaikuLineLength]);
 

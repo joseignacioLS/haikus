@@ -11,7 +11,7 @@ export const Carousel = ({ slides, onScroll, scrollPosition }: Props) => {
   const ref = useRef(null);
 
   const scrollTo = (top: number = 0) => {
-    const scrollElement = ref?.current as any;
+    const scrollElement = ref?.current as unknown as HTMLElement;
     if (!scrollElement) return;
     scrollElement.scrollTo({ top });
   };
@@ -33,7 +33,7 @@ export const Carousel = ({ slides, onScroll, scrollPosition }: Props) => {
       className={styles.carousel}
       onScroll={handleScroll}
     >
-      {slides.map((s: any) => {
+      {slides.map((s) => {
         return (
           <div key={s.key} className={styles.wrapper}>
             {s}

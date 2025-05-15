@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 export const useEventListeners = (
-  listeners: Record<string, (...params: any) => void>,
-  dependencies: any[]
+  listeners: Record<string, (...params: unknown[]) => void>,
+  dependencies: unknown[]
 ) => {
   useEffect(() => {
     Object.entries(listeners).forEach(([key, fn]) => {
