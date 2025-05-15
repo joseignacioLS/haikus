@@ -131,4 +131,8 @@ button {
   img {
     height: 3ch;
   }
+
+  &:not(:disabled):active {
+    filter: brightness(150%);
+  }
 }
