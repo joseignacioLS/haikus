@@ -1,5 +1,6 @@
 import { HaikuMini } from "@/components/haiku/HaikuMini";
 import { Spinner } from "@/components/notifications/Spinner";
+import { useEventListeners } from "@/hooks/useEventListeners";
 import { selectedStore } from "@/store/Haikus";
 import { type THaiku } from "@/types";
 import { useHaikuStore } from "@hooks/useHaikuStore.tsx";
@@ -32,6 +33,17 @@ export const HaikuShowcase = ({ collection }: Props) => {
     selectedStore.set(haikuList[nextHaikuIndex].id);
   };
 
+  const handleKeyboardInput = ({ key }: KeyboardEvent) => {
+    if (key === "ArrowRight") {
+      handleChangeHaiku(1);
+      return;
+    }
+    if (key === "ArrowLeft") {
+      handleChangeHaiku(-1);
+      return;
+    }
+  };
+
   useEffect(() => {
     const displayHaiku = haikuList.find((h) => h.id === selected);
     if (displayHaiku) {
@@ -40,6 +52,13 @@ export const HaikuShowcase = ({ collection }: Props) => {
     }
     setSelectedHaiku(haikuList[0]);
   }, [haikuList, selected]);
+
+  useEventListeners(
+    {
+      keydown: handleKeyboardInput,
+    },
+    [haikuList, selectedHaiku]
+  );
 
   return (
     <section className={styles.wrapper}>
