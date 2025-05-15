@@ -1,8 +1,5 @@
-
-export const getRequest = async <T>(
-  url: string
-): Promise<T> => {
-  return fetch(url)
+const request = async <T>(url: string, headers?: RequestInit): Promise<T> => {
+  return fetch(url, headers)
     .then((r) => {
       if (!r.ok || r.status !== 200) throw new Error();
       return r.json();
@@ -11,4 +8,18 @@ export const getRequest = async <T>(
     .catch(() => {
       return null;
     });
+};
+
+export const getRequest = async <T>(url: string): Promise<T> => {
+  return request<T>(url);
+};
+
+export const postRequest = async <T>(
+  url: string,
+  body?: unknown
+): Promise<T> => {
+  return request<T>(url, {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
 };
