@@ -9,7 +9,7 @@ type Props = {
 export const TitledBlock = ({ title, children }: Props) => {
   return (
     <section className={styles.titledBlock}>
-      {title}
+      <div className={styles.title}>{title}</div>
       <div className={styles.content}>{children}</div>
     </section>
   );

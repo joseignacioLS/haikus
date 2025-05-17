@@ -44,13 +44,15 @@
   }
 
   .dataWrapper {
-    > .description {
+    >.description {
+      --line-height: 2ch;
+      --lines: 2;
       display: -webkit-box;
       overflow: hidden;
-      max-height: 7.5ch;
-      min-height: 7.5ch;
-      line-height: 2.5ch;
-      -webkit-line-clamp: 3;
+      max-height: calc(var(--lines) * var(--line-height));
+      min-height: calc(var(--lines) * var(--line-height));
+      line-height: var(--line-height);
+      -webkit-line-clamp: var(--lines);
       -webkit-box-orient: vertical;
 
       text-justify: pretty;

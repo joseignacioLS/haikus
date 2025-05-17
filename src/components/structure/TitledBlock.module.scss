@@ -1,4 +1,5 @@
 @use "@/styles/blocks";
+@use "@/styles/spaces";
 
 .titledBlock {
   @extend .card;
@@ -6,9 +7,12 @@
   display: flex;
   flex-direction: column;
   text-decoration: inherit;
-  gap: 1ch;
 
   overflow: hidden;
+
+  .title {
+    margin-bottom: spaces.$gap_mini;
+  }
 
   .content {
     width: 100%;

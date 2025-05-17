@@ -39,6 +39,7 @@
     .tags {
       display: flex;
       flex-wrap: wrap;
+      margin-top: spaces.$gap_small;
       gap: spaces.$gap_mini;
     }
   }

@@ -60,14 +60,11 @@ h2,
 h3 {
   font-family: "Domine Variable", serif;
   transition: font-size 0.2s;
+
   a,
   a:visited {
     color: inherit;
   }
-}
-
-p {
-  margin-bottom: spaces.$gap_default;
 }
 
 a,
