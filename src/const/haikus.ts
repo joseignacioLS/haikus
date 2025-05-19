@@ -2,6 +2,24 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 204,
+    text: ["Ha-yo an-te mí", "u-na ma-no ten-di-da", "gra-cias a-mi-go"],
+    date: "2025-05-18",
+    tags: ["5-7-5", "Personal"],
+    description: [
+      "Llevo unos días algo reflexivo, dándole vueltas a ideas que me generan dudas. Una pequeña conversación distendida con un amigo me ha ayudado a estar más tranquilo.",
+    ],
+  },
+  {
+    id: 203,
+    text: ["Sol a-bra-sa-dor", "u-na chi-cha-rra can-ta", "hue-le_a ro-me-ro"],
+    date: "2025-05-18",
+    tags: ["Naturaleza", "5-7-5"],
+    description: [
+      "He salido a escalar a la sierra de Villena. El sol, a pesar de ser mayo aún, empieza a notarse caliente en la piel cuando sube a medio día.",
+    ],
+  },
+  {
     id: 202,
     text: [
       "Llu-vía tem-pra-na",
