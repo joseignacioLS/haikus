@@ -2,14 +2,14 @@ import { useHaikuStore } from "@/hooks/useHaikuStore";
 import { useEffect, useRef, useState } from "react";
 import styles from "./HaikuBody.module.scss";
 
+const cleanLine = (line: string) => {
+  return line.replace(/-/g, "").replace(/_/g, " ");
+};
+
 export const HaikuBody = ({ id, haiku }: { id?: number; haiku: string[] }) => {
   const [fontSize, setFontSize] = useState(0);
   const { maxHaikuLineLength } = useHaikuStore();
   const bodyRef = useRef<HTMLParagraphElement>(null);
-
-  const cleanLine = (line: string) => {
-    return line.replace(/-/g, "").replace(/_/g, " ");
-  };
 
   useEffect(() => {
     if (!maxHaikuLineLength) return;

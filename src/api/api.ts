@@ -6,6 +6,7 @@ const request = async <T>(url: string, headers?: RequestInit): Promise<T> => {
     })
     .then((d) => d)
     .catch(() => {
+      console.error(`Failed request against: ${url}`);
       return null;
     });
 };

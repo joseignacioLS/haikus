@@ -1,7 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { modalStore } from "@store/Modal";
-import styles from "./Modal.module.scss";
 import { useEffect } from "react";
+import styles from "./Modal.module.scss";
 
 export const Modal = () => {
   const store = useStore(modalStore);

@@ -1,10 +1,13 @@
-
 import { getSeasonsEvents } from "@/api/seasons.api";
 import { SEASONS } from "@/const/seasons";
 import type { TSeason, TSeasonEntry } from "@/types";
 import { Temporal } from "temporal-polyfill";
 
-export const eventToPlainDate = (e: { year: number; month: number; day: number }): Temporal.PlainDate => {
+export const eventToPlainDate = (e: {
+  year: number;
+  month: number;
+  day: number;
+}): Temporal.PlainDate => {
   return Temporal.PlainDate.from(
     `${e.year}-${String(e.month).padStart(2, "0")}-${String(e.day).padStart(
       2,
@@ -28,10 +31,13 @@ export const getRelevantSeasonEvents = (
   return seasonsEvents.slice(previousEventIndex, previousEventIndex + 4);
 };
 
-export const getSeasonData = (today: Temporal.PlainDate, relevantSeasonEvents: TSeasonEntry[]): {
-  currentSeason: TSeason | undefined,
-  daysOfCurrentSeason: number,
-  daysToNextSeason: number
+export const getSeasonData = (
+  today: Temporal.PlainDate,
+  relevantSeasonEvents: TSeasonEntry[]
+): {
+  currentSeason: TSeason | undefined;
+  daysOfCurrentSeason: number;
+  daysToNextSeason: number;
 } => {
   const currentSeason = SEASONS.find(
     (s) => s.initialMonth === relevantSeasonEvents[0].month
@@ -44,20 +50,25 @@ export const getSeasonData = (today: Temporal.PlainDate, relevantSeasonEvents: T
   return {
     currentSeason,
     daysOfCurrentSeason,
-    daysToNextSeason
-  }
-}
+    daysToNextSeason,
+  };
+};
 
 export const generateSeasonColorAndRangeData = (
   relevantSeasonEvents: TSeasonEntry[]
-): { color: string, range: number }[] => {
+): { color: string; range: number }[] => {
   return relevantSeasonEvents.reduce(
-    (acc: {
-      diff: number; seasonData: {
-        color: string,
-        range: number
-      }[]
-    }, e, i) => {
+    (
+      acc: {
+        diff: number;
+        seasonData: {
+          color: string;
+          range: number;
+        }[];
+      },
+      e,
+      i
+    ) => {
       const currentDate = eventToPlainDate(e);
 
       const nextEvent = relevantSeasonEvents[(i + 1) % 4];
@@ -70,8 +81,7 @@ export const generateSeasonColorAndRangeData = (
           ...acc.seasonData,
           {
             color:
-              SEASONS.find((s) => s.initialMonth === e.month)?.color ??
-              "white",
+              SEASONS.find((s) => s.initialMonth === e.month)?.color ?? "white",
             range: acc.diff,
           },
         ],
@@ -85,11 +95,12 @@ export const generateSeasonColorAndRangeData = (
   ).seasonData;
 };
 
-export const requestSeasonsEvents = async (today: Temporal.PlainDate): Promise<TSeasonEntry[]> => {
+export const requestSeasonsEvents = async (
+  today: Temporal.PlainDate
+): Promise<TSeasonEntry[]> => {
   const seasonsEvents = await getSeasonsEvents(today.year);
   if (seasonsEvents.length < 12) return [];
   const relevantSeasonEvents = getRelevantSeasonEvents(today, seasonsEvents);
   if (relevantSeasonEvents.length < 4) return [];
   return relevantSeasonEvents;
 };
-

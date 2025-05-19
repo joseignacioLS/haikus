@@ -1,6 +1,6 @@
 import styles from "./Spinner.module.scss";
 
-export const Spinner = ({ isOpen }: { isOpen?: boolean }) => {
+export const Spinner = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.spinner}></div>

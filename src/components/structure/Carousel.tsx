@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ReactElement, type ReactNode } from "react";
+import { useEffect, useRef, type ReactElement } from "react";
 import styles from "./Carousel.module.scss";
 
 type Props = {

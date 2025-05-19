@@ -1,11 +1,10 @@
 import { type TSeason } from "@/types";
 
-
 export enum ESeason {
   OTOÑO = "Otoño",
   INVIERNO = "Invierno",
   PRIMAVERA = "Primavera",
-  VERANO = "Verano"
+  VERANO = "Verano",
 }
 
 export const SEASONS: TSeason[] = [

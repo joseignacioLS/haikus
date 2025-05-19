@@ -1,6 +1,6 @@
 import { useStore } from "@nanostores/react";
-import { useEffect, useState } from "react";
 import { toastStore } from "@store/Toast";
+import { useEffect, useState } from "react";
 import styles from "./Toast.module.scss";
 
 export const Toast = () => {

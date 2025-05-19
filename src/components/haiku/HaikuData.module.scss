@@ -1,0 +1,32 @@
+@use "@/styles/spaces";
+@use "@/styles/colors";
+@use "@/styles/fonts";
+
+.data {
+  @extend .text_font;
+  height: 100%;
+  overflow: auto;
+
+  text-align: left;
+
+  .dataTitle {
+    @extend .subsubtitle_font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: spaces.$gap_small;
+
+    margin-bottom: spaces.$gap_small;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: spaces.$gap_small;
+    gap: spaces.$gap_mini;
+  }
+}
