@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 export const useEventListeners = (
-  listeners: Record<string, (...params: unknown[]) => void>,
+  listeners: Record<string, (params: any) => void>,
   dependencies: React.DependencyList
 ) => {
   useEffect(() => {

@@ -29,8 +29,9 @@ export const HaikuShowcase = ({ collection }: Props) => {
     if (currentHaikuIndex === -1) return;
     const nextHaikuIndex = currentHaikuIndex + delta;
     if (nextHaikuIndex < 0 || nextHaikuIndex >= haikuList.length) return;
-    setSelectedHaiku(haikuList[nextHaikuIndex]);
-    selectedStore.set(haikuList[nextHaikuIndex].id);
+    const newHaiku = haikuList[nextHaikuIndex];
+    setSelectedHaiku({ ...newHaiku });
+    selectedStore.set(newHaiku.id);
   };
 
   const handleKeyboardInput = ({ key }: KeyboardEvent) => {
@@ -47,10 +48,10 @@ export const HaikuShowcase = ({ collection }: Props) => {
   useEffect(() => {
     const displayHaiku = haikuList.find((h) => h.id === selected);
     if (displayHaiku) {
-      setSelectedHaiku(displayHaiku);
+      setSelectedHaiku({ ...displayHaiku });
       return;
     }
-    setSelectedHaiku(haikuList[0]);
+    setSelectedHaiku({ ...haikuList[0] });
   }, [haikuList, selected]);
 
   useEventListeners(
