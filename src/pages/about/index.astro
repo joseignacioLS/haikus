@@ -1,20 +1,12 @@
 ---
-import { Title } from "@components/structure/Title";
 import Layout from "@layouts/Layout.astro";
 import About from "@sections/About";
+import { Header } from "@sections/Header";
 ---
 
 <Layout>
+  <Header title="Sobre mí" showBackButton client:load />
   <main>
-    <Title showBackButton client:load>
-      <span
-        style={{
-          viewTransitionName: "about-title",
-        }}
-      >
-        Sobre mí
-      </span>
-    </Title>
     <About client:load />
   </main>
 </Layout>

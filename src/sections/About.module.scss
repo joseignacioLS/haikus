@@ -1,10 +1,16 @@
 @use "@/styles/blocks";
 @use "@/styles/colors";
 @use "@/styles/spaces";
+@use "@/styles/media";
 
 .body {
-  @extend .card;
+  padding: spaces.$gap_default;
 
+  p {
+    margin-bottom: 1lh;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .buttonImage {
     @extend .interactive;
     position: relative;
@@ -12,7 +18,7 @@
     float: left;
     margin-right: spaces.$gap_default;
     margin-bottom: spaces.$gap_mini;
-    width: 50%;
+    width: 200px;
     aspect-ratio: 1 / 1;
     border-radius: spaces.$border_radius_default;
     overflow: hidden;
@@ -22,6 +28,9 @@
       min-height: 100%;
       object-fit: cover;
       border-radius: inherit;
+    }
+    @include media.extremely_small {
+      width: 100%;
     }
   }
 }

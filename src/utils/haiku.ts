@@ -17,7 +17,14 @@ export const getCollections = (haikus: THaiku[]): string[] => {
         []
       )
     )
-  )
-    .filter((tag: string) => !HIDDEN_COLLECTIONS.includes(tag))
-    .sort();
+  ).sort();
+};
+
+export const cleanHaikuTags = (haikus: THaiku[]): THaiku[] => {
+  return haikus.map((haiku) => {
+    return {
+      ...haiku,
+      tags: haiku.tags.filter((t) => !HIDDEN_COLLECTIONS.includes(t)),
+    };
+  });
 };

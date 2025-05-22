@@ -1,17 +1,19 @@
 import { useEffect } from "react";
 
 export const useEventListeners = (
+  target: Document | HTMLElement | null,
   listeners: Record<string, (params: any) => void>,
   dependencies: React.DependencyList
 ) => {
   useEffect(() => {
+    if (!target) return;
     Object.entries(listeners).forEach(([key, fn]) => {
-      document.addEventListener(key, fn);
+      target.addEventListener(key, fn);
     });
     return () => {
       Object.entries(listeners).forEach(([key, fn]) => {
-        document.removeEventListener(key, fn);
+        target.removeEventListener(key, fn);
       });
     };
-  }, [listeners, ...dependencies]);
+  }, [target, listeners, ...dependencies]);
 };

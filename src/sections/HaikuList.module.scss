@@ -1,0 +1,50 @@
+@use "@/styles/media";
+@use "@/styles/spaces";
+@use "@/styles/blocks";
+@use "@/styles/colors";
+
+.haikuList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: spaces.$gap_default;
+  .haiku {
+    @extend .card;
+    width: calc(100% - calc(2 * spaces.$gap_default));
+    max-width: 650px;
+    flex: 0 0 fit-content;
+    padding: spaces.$gap_default;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: spaces.$gap_default;
+    overflow: hidden;
+
+    .haikuData {
+    }
+
+    .collections {
+      grid-column: 1 / 3;
+      display: flex;
+      gap: spaces.$gap_mini;
+    }
+  }
+
+  .infoCollection {
+    background-color: colors.$text;
+    color: colors.$background;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.9;
+    height: 0;
+    overflow: hidden;
+
+    &.show {
+      height: fit-content;
+      padding: spaces.$gap_default;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "@/styles/spaces";
+@use "@/styles/colors";
+
+.header {
+  padding: spaces.$gap_small spaces.$gap_default;
+  background-color: colors.$foreground;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 0 15px colors.$background;
+  z-index: 1;
+
+  .avatar {
+    height: spaces.$gap_large;
+    border-radius: spaces.$gap_small;
+  }
+}

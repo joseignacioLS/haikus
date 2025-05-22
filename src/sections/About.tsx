@@ -1,10 +1,9 @@
-import { navigate } from "astro:transitions/client";
 import styles from "./About.module.scss";
 
 export const About = () => {
   return (
     <div className={styles.body}>
-      <button
+      {/* <button
         onClick={() => {
           navigate("/seasonsclock", { history: "replace" });
         }}
@@ -14,7 +13,7 @@ export const About = () => {
         }}
       >
         <img src={`/favicon.jpg`} alt="Avatar del autor de la página" />
-      </button>
+      </button> */}
       <div style={{ viewTransitionName: "about-text" }}>
         <p>¡Hola! has entrado en mi diario de haikus, ¡bienvenido/a!</p>
         <p>

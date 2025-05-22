@@ -1,6 +1,7 @@
 import { haikus as rawHaikus } from "@/const/haikus";
 import { type THaiku } from "@/types";
 import {
+  cleanHaikuTags,
   getCollections,
   getVisibleHaikus,
   sortHaikusById,
@@ -9,7 +10,7 @@ import { atom } from "nanostores";
 import { Temporal } from "temporal-polyfill";
 
 const initHaikuData = async () => {
-  const $haikus = sortHaikusById(getVisibleHaikus(rawHaikus));
+  const $haikus = sortHaikusById(cleanHaikuTags(getVisibleHaikus(rawHaikus)));
   haikusStore.set($haikus);
 
   const $collections = getCollections($haikus);
