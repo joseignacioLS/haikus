@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   gap: spaces.$gap_default;
+
   .haiku {
     @extend .card;
     width: calc(100% - calc(2 * spaces.$gap_default));
@@ -16,12 +17,11 @@
     padding: spaces.$gap_default;
 
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto minmax(70%, 1fr);
     gap: spaces.$gap_default;
     overflow: hidden;
 
-    .haikuData {
-    }
+    .haikuData {}
 
     .collections {
       grid-column: 1 / 3;
