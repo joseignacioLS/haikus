@@ -1,12 +1,13 @@
 ---
 import { SeasonsClock } from "@/components/SeasonsClock";
 import Layout from "@/layouts/Layout.astro";
+import { Header } from "@/sections/Header";
 import { Title } from "@components/structure/Title";
 ---
 
 <Layout>
+  <Header title="Reloj de estaciones" showBackButton client:load />
   <main>
-    <Title showBackButton client:load>Reloj de Estaciones</Title>
     <div class="body">
       <SeasonsClock client:load />
     </div>
@@ -17,7 +18,6 @@ import { Title } from "@components/structure/Title";
   @use "@/styles/blocks";
 
   .body {
-    @extend .card;
     width: 100%;
     overflow: hidden;
     display: flex;

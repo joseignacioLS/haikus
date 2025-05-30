@@ -2,11 +2,47 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 209,
+    text: [
+      "Cuar-to cre-cien-te",
+      "pro-pues-tas in-de-cen-tes",
+      "no-to tu ca-lor",
+    ],
+    date: "2025-05-29",
+    tags: ["5-7-5", "Personal"],
+    description: [],
+  },
+  {
+    id: 208,
+    text: ["Sua-ve re-cuer-do", "tu cuer-po con-tra_el mí-o", "cru-do de-se-o"],
+    date: "2025-05-29",
+    tags: ["5-7-5", "Personal"],
+    description: [],
+  },
+  {
+    id: 207,
+    text: [
+      "Cien-tos de co-ches",
+      "re-tre-tes de pá-ja-ros",
+      "¡sois u-nos gua-rros!",
+    ],
+    date: "2025-05-25",
+    tags: ["5-7-5", "Naturaleza"],
+    description: ["¿Tienen algún tipo de fijación con manchar los coches?"],
+  },
+  {
+    id: 206,
+    text: ["Cie-lo sin lu-na", "ro-pa ya-ce sin due-ño", "prue-bo tus la-bios"],
+    date: "2025-05-24",
+    tags: ["5-7-5", "Personal"],
+    description: [],
+  },
+  {
     id: 205,
     text: ["Ci-ta tar-dí-a", "cris-ta-les em-pa-ña-dos", "ri-sas ner-vio-sas"],
-    date: "2025-05-25",
+    date: "2025-05-24",
     tags: ["5-7-5", "Personal"],
-    description: []
+    description: [],
   },
   {
     id: 204,

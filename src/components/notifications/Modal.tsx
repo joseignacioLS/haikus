@@ -26,7 +26,8 @@ export const Modal = () => {
         <button className={`naked ${styles.closeBtn}`} onClick={handleClose}>
           <img src={`/icons/close.svg`} alt="Círculo con un aspa dentro" />
         </button>
-        {store}
+        <section className={styles.title}>{store.title}</section>
+        <section>{store.body}</section>
       </div>
     </div>
   );
