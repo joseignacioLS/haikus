@@ -7,26 +7,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: spaces.$gap_default;
+  gap: spaces.$gap_large;
 
   .haiku {
-    @extend .card;
     width: calc(100% - calc(2 * spaces.$gap_default));
     max-width: 650px;
     flex: 0 0 fit-content;
     padding: spaces.$gap_default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: spaces.$gap_small;
 
-    display: grid;
-    grid-template-columns: auto minmax(70%, 1fr);
-    gap: spaces.$gap_default;
-    overflow: hidden;
+    .data {
+      opacity: 0.6;
 
-    .haikuData {}
-
-    .collections {
-      grid-column: 1 / 3;
-      display: flex;
-      gap: spaces.$gap_mini;
+      .clickableTitle {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
   }
 

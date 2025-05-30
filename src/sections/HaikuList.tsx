@@ -1,11 +1,10 @@
 import { HaikuBody } from "@/components/haiku/HaikuBody";
-import { useHaikuStore } from "@/hooks/useHaikuStore";
-import styles from "./HaikuList.module.scss";
-import { navigate } from "astro:transitions/client";
-import { Temporal } from "temporal-polyfill";
 import { Spinner } from "@/components/notifications/Spinner";
-import { useEffect, useRef, useState } from "react";
 import { useEventListeners } from "@/hooks/useEventListeners";
+import { useHaikuStore } from "@/hooks/useHaikuStore";
+import { useEffect, useRef, useState } from "react";
+import styles from "./HaikuList.module.scss";
+import { modalStore } from "@/store/Modal";
 
 export const HaikuList = ({
   collection,
@@ -49,7 +48,7 @@ export const HaikuList = ({
         .filter(({ tags }) => {
           return !collection || tags.includes(collection);
         })
-        .map(({ id, text, date, tags }, index) => {
+        .map(({ id, text, date, description }, index) => {
           return (
             <article
               key={id}
@@ -58,31 +57,29 @@ export const HaikuList = ({
                 display: index < numberOfHaikusShown ? "grid" : "none",
               }}
             >
-              <div className={styles.haikuData}>
-                <h2>#{id}</h2>
-                <p>
-                  {Temporal.PlainDate.from(date).toLocaleString("es-ES", {
-                    dateStyle: "medium",
-                  })}
-                </p>
-              </div>
               <HaikuBody id={id} haiku={text} />
-              <div className={styles.collections}>
-                {tags.map((t) => {
-                  return (
-                    <button
-                      key={t}
-                      onClick={() => {
-                        if (collection === t) {
-                          return;
-                        }
-                        navigate(`?collection=${t}`);
-                      }}
-                    >
-                      {t}
-                    </button>
-                  );
-                })}
+              <div className={styles.data}>
+                <h2
+                  className={`${
+                    description && description.length > 0
+                      ? styles.clickableTitle
+                      : ""
+                  }`}
+                  onClick={() => {
+                    if (!description || description.length === 0) return;
+                    modalStore.set({
+                      title: <p>{`#${id}`}</p>,
+                      body: (
+                        <div>
+                          {description.map((l) => {
+                            return <p key={l}>{l}</p>;
+                          })}
+                        </div>
+                      ),
+                    });
+                  }}
+                >{`#${id}`}</h2>
+                <p>{date}</p>
               </div>
             </article>
           );
