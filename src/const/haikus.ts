@@ -2,6 +2,44 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 213,
+    text: ["Es-ti-val a-mor", "ve-la-das en pa-re-ja", "a-bra-zo_e-ter-no"],
+    date: "2025-06-01",
+    tags: ["5-7-5", "Personal", "Oculto"],
+    description: [],
+  },
+  {
+    id: 212,
+    text: ["U-no de ju-nio", "a-diós pan-ta-lón lar-go", "has-ta_el o-to-ño"],
+    date: "2025-06-01",
+    tags: ["5-7-5", "Personal"],
+    description: [
+      "Vaya calor, voy a echar de menos mis outfits más abrigados.",
+    ],
+  },
+  {
+    id: 211,
+    text: ["Ex-tra-ño ga-to", "sin rum-bo tu ca-mi-no", "bus-ca ca-ri-cias"],
+    date: "2025-06-01",
+    tags: ["5-7-5", "Personal"],
+    description: [
+      "Es curioso, lo que al principio era un haiku sobre un encuentro que tuve, al repasarlo veo que trata sobre mí.",
+    ],
+  },
+  {
+    id: 210,
+    text: [
+      "En la_os-cu-ri-dad",
+      "el can-to de un gri-llo",
+      "tra-e_el ve-ra-no",
+    ],
+    date: "2025-06-01",
+    tags: ["5-7-5", "Naturaleza"],
+    description: [
+      "Ya se pueden escuchar los primeros grillos. Para mí el mejor momento del día son las primeras horas de la noche, donde reaparece el fresco.",
+    ],
+  },
+  {
     id: 209,
     text: [
       "Cuar-to cre-cien-te",
