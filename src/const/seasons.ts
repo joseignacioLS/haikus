@@ -10,13 +10,13 @@ export enum ESeason {
 export const SEASONS: TSeason[] = [
   {
     name: ESeason.VERANO,
-    color: "#ffc3cd",
+    color: "#ff99aa",
     initialMonth: 6,
     nextSeason: ESeason.OTOÑO,
   },
   {
     name: ESeason.OTOÑO,
-    color: "#e84d2e",
+    color: "#E95335",
     initialMonth: 9,
     nextSeason: ESeason.INVIERNO,
   },

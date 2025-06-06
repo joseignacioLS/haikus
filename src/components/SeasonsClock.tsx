@@ -95,7 +95,12 @@ export const SeasonsClock = () => {
             } as React.CSSProperties
           }
         ></div>
-        <div className={styles.earth}></div>
+        <div
+          className={styles.earth}
+          style={{
+            backgroundColor: "transparent",
+          }}
+        ></div>
         <div className={styles.sun}></div>
       </div>
       <p

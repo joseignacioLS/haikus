@@ -4,7 +4,9 @@
 @use "@/styles/fonts";
 
 .wrapper {
-  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  aspect-ratio: 1 / 2;
   display: flex;
   flex-direction: column;
   gap: spaces.$gap_default;
@@ -19,14 +21,15 @@
 
   .earth {
     position: absolute;
-    bottom: calc(100% - spaces.$gap_mini);
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: colors.$text;
+    background-color: white;
     width: spaces.$gap_default;
-    height: spaces.$gap_default;
+    aspect-ratio: 1 / 1;
     border-radius: spaces.$border_radius_round;
     box-sizing: border-box;
+    outline: 4px solid colors.$background;
   }
 
   .sun {
@@ -35,9 +38,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background-color: colors.$text;
+    background-color: white;
     border-radius: spaces.$border_radius_round;
-    width: 2rem;
+    width: 3rem;
     aspect-ratio: 1 / 1;
   }
 
@@ -78,7 +81,7 @@
           var(--c3) var(--c4-pos),
           var(--c4) var(--c4-pos),
           var(--c4) 100%);
-      margin: calc(0px - spaces.$gap_small);
+      margin: calc(0px - spaces.$gap_default);
       border-radius: inherit;
     }
   }
