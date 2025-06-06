@@ -24,11 +24,11 @@
     max-width: calc(500px * 0.9);
     height: fit-content;
 
-    box-shadow: 0px 0px 25px colors.$text;
+    box-shadow: 5px 5px 5px rgba(white, 0.2), -5px -5px 5px rgba(black, 0.9);
 
     padding: spaces.$gap_default;
 
-    background-color: rgba(black, 0.95);
+    background-color: colors.$foreground;
     border-radius: spaces.$gap_default;
 
     .closeBtn {
