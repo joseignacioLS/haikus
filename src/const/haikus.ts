@@ -19,7 +19,7 @@ export const haikus: THaiku[] = [
     text: ["Es-ti-val a-mor", "ve-la-das en pa-re-ja", "a-bra-zo_e-ter-no"],
     date: "2025-06-01",
     tags: ["5-7-5", "Personal", "Oculto"],
-    description: [],
+    description: ["Por lo visto soy capaz de volver a sentir cosas."],
   },
   {
     id: 212,
@@ -61,13 +61,15 @@ export const haikus: THaiku[] = [
     ],
     date: "2025-05-29",
     tags: ["5-7-5", "Personal"],
-    description: [],
+    description: [
+      "Me alegro de volver a sentir a alguien tan cercano, tenía miedo de no poder bajar mis barreras.",
+    ],
   },
   {
     id: 208,
     text: ["Sua-ve re-cuer-do", "tu cuer-po con-tra_el mí-o", "cru-do de-se-o"],
     date: "2025-05-29",
-    tags: ["5-7-5", "Personal"],
+    tags: ["5-7-5", "Personal", "Oculto"],
     description: [],
   },
   {
@@ -85,14 +87,14 @@ export const haikus: THaiku[] = [
     id: 206,
     text: ["Cie-lo sin lu-na", "ro-pa ya-ce sin due-ño", "prue-bo tus la-bios"],
     date: "2025-05-24",
-    tags: ["5-7-5", "Personal"],
+    tags: ["5-7-5", "Personal", "Oculto"],
     description: [],
   },
   {
     id: 205,
     text: ["Ci-ta tar-dí-a", "cris-ta-les em-pa-ña-dos", "ri-sas ner-vio-sas"],
     date: "2025-05-24",
-    tags: ["5-7-5", "Personal"],
+    tags: ["5-7-5", "Personal", "Oculto"],
     description: [],
   },
   {
