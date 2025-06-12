@@ -2,6 +2,19 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 215,
+    text: [
+      "Ras-gue-o_es-ti-val",
+      "go-tas a-pre-su-ra-das",
+      "re-co-rren mi piel",
+    ],
+    date: "2025-06-11",
+    tags: ["5-7-5", "Personal"],
+    description: [
+      "Quedan 10 días para el solsticio de verano, pero parece que el calor ha llegado con bastante antelación",
+    ],
+  },
+  {
     id: 214,
     text: [
       "Mi-ro el re-loj",
