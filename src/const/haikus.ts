@@ -2,6 +2,20 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 217,
+    text: ["In-som-nio_im-pues-to", "e-cos de u-na fies-ta", "in-vo-can lla-mas"],
+    date: "2025-06-20",
+    tags: ["5-7-5", "Personal"],
+    description: ["Han empezado las fiestas en Alicante, y la música suena hasta altas horas de la madrugada. No puedo dormir."]
+  },
+  {
+    id: 216,
+    text: ["A me-dio mon-tar", "a-trac-cio-nes de fe-ria", "si-nies-tra vi-sión"],
+    date: "2025-06-18",
+    tags: ["5-7-5", "Personal"],
+    description: ["Vuelvo a casa de noche y cruzo una feria a oscuras, con atracciones vacias y sin terminar de montar. Me siento como en una película de miedo."]
+  },
+  {
     id: 215,
     text: [
       "Ras-gue-o_es-ti-val",
