@@ -9,7 +9,7 @@ import { ClientRouter } from "astro:transitions";
 
 const id = Number(Astro.params.id ?? "0");
 const haiku = haikus.find((h) => h.id === id);
-const title = `Verdecillo | Haiku #${id}`;
+const title = `Solo Haikus | Haiku #${id}`;
 const description = `${haiku?.text.join(" / ")}`;
 ---
 
@@ -24,13 +24,13 @@ const description = `${haiku?.text.join(" / ")}`;
 
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content={title} />
-    <meta property="og:url" content="https://verdecillo.netlify.app/" />
+    <meta property="og:url" content="https://justhaikus.netlify.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:description" content={description} />
     <meta
       property="og:image:url"
-      content="https://verdecillo.netlify.app/favicon.jpg"
+      content="https://justhaikus.netlify.app/favicon.jpg"
     />
 
     <!-- Twitter Meta Tags -->

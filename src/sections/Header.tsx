@@ -23,7 +23,7 @@ export const Header = ({
         <img
           className={styles.avatar}
           src="favicon.jpg"
-          alt="Avatar de Verdecillo"
+          alt="Avatar del autor"
         />
       </button>
     </header>

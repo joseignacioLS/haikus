@@ -11,6 +11,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   integrations: [react(), sitemap()],
   adapter: netlify(),
-  site: "http://verdecillo.netlify.app/",
+  site: "http://justhaikus.netlify.app/",
   output: "server",
 });
