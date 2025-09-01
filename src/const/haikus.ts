@@ -3,7 +3,7 @@ import type { THaiku } from "@/types";
 export const haikus: THaiku[] = [
   {
     id: 221,
-    text: ["An-ti-guo ár-bol", "?re-cuer-das to-da-vía", "to-dos tus nu-dos?"],
+    text: ["An-ti-guo ár-bol", "¿re-cuer-das to-da-vía", "to-dos tus nu-dos?"],
     date: "2025-08-12",
     tags: ["5-7-5", "Naturaleza", "Reflexión"],
     description: ["¿Alguna vez dejaré de lamentar mis cicatrices para verlas como vivencias?"]
