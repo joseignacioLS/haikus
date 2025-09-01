@@ -2,6 +2,27 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 221,
+    text: ["An-ti-guo ár-bol", "?re-cuer-das to-da-vía", "to-dos tus nu-dos?"],
+    date: "2025-08-12",
+    tags: ["5-7-5", "Naturaleza", "Reflexión"],
+    description: ["¿Alguna vez dejaré de lamentar mis cicatrices para verlas como vivencias?"]
+  },
+  {
+    id: 220,
+    text: ["Mien-tras vi-a-jo", "re-cuer-do o-tra vi-da", "tras mi es-pal-da"],
+    date: "2025-08-11",
+    tags: ["5-7-5", "Personal"],
+    description: ["Me asaltan recuerdos de los últimos años. De cosas que he perdido, tanto de mi vida como de mí"]
+  },
+  {
+    id: 219,
+    text: ["Ca-lien-te_a-bra-zo", "pue-de que en sep-tiem-bre", "vuel-va a dor-mir"],
+    date: "2025-07-16",
+    tags: ["5-7-5", "Personal"],
+    description: ["Echo de menos las noches frías, taparme y disfrutar del otoño"]
+  },
+  {
     id: 218,
     text: ["Cas-ca-rón hue-co", "mi nue-vo yo a-van-za", "yo pa-go_el pre-cio"],
     date: "2025-07-01",
