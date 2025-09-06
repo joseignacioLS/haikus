@@ -9,6 +9,20 @@ describe("haikus", () => {
     expect(haikus.length).toBe(idArray.length)
   })
 
+  test("Tags ok", () => {
+    haikus.forEach(({ id, tags }) => {
+      const hasMetric = tags.find(t => /^[0-9]\-[0-9]\-[0-9]$/.test(t)) !== undefined
+      expect.soft(hasMetric, `El poema ${id} no tiene métrica`).toBe(true)
+
+      const hasClass = tags.find(t => t === "Haiku" || t === "Senryū") !== undefined
+      expect.soft(hasClass, `El poema ${id} no está clasificado`).toBe(true)
+
+      const notRepeatedTags = tags.length === Array.from(new Set(tags)).length
+      expect.soft(notRepeatedTags, `El poema ${id} tiene tags repetidas`).toBe(true)
+
+    })
+  })
+
   test("Metrics are correct", () => {
     haikus.forEach(({ id, text, tags }) => {
       const pattern = tags.find(t => /^[0-9]\-[0-9]\-[0-9]$/.test(t))
