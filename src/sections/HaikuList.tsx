@@ -59,26 +59,7 @@ export const HaikuList = ({
             >
               <HaikuBody id={id} haiku={text} />
               <div className={styles.data}>
-                <h2
-                  className={`${
-                    description && description.length > 0
-                      ? styles.clickableTitle
-                      : ""
-                  }`}
-                  onClick={() => {
-                    if (!description || description.length === 0) return;
-                    modalStore.set({
-                      title: <p>{`#${id}`}</p>,
-                      body: (
-                        <div>
-                          {description.map((l) => {
-                            return <p key={l}>{l}</p>;
-                          })}
-                        </div>
-                      ),
-                    });
-                  }}
-                >{`#${id}`}</h2>
+                <h2>{`#${id}`}</h2>
                 <p>{date}</p>
               </div>
             </article>
