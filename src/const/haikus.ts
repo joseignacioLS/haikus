@@ -2,39 +2,73 @@ import type { THaiku } from "@/types";
 
 export const haikus: THaiku[] = [
   {
+    id: 225,
+    text: ["Te-lón de nu-bes", "ol-vi-das-te al-zar-te", "¿y el e-clip-se?"],
+    date: "2025-09-07",
+    tags: ["5-7-5", "Senryū"],
+    description: [],
+  },
+  {
+    id: 224,
+    text: ["A-le-gre rit-mo", "es-cu-cho un as-per-sor", "des-de mi ca-ma"],
+    date: "2025-09-07",
+    tags: ["Senryū", "5-7-5"],
+    description: [],
+  },
+  {
     id: 223,
-    text: ["San-gre en pla-ta", "bien-ve-ni-do sep-tiem-bre", "sol, tie-rra, lu-na"],
+    text: [
+      "San-gre en pla-ta",
+      "bien-ve-ni-do sep-tiem-bre",
+      "sol, tie-rra, lu-na",
+    ],
     date: "2025-09-06",
     tags: ["Haiku", "5-7-5"],
-    description: ["Precede al equinocio un solsticio lunar"]
+    description: ["Precede al equinocio un solsticio lunar"],
   },
   {
     id: 222,
-    text: ["¿Cuen-to de ha-das?", "cre-yen-do ser Jim Hal-pert", "re-sul-to ser Roy"],
+    text: [
+      "¿Cuen-to de ha-das?",
+      "cre-yen-do ser Jim Hal-pert",
+      "re-sul-to ser Roy",
+    ],
     date: "2025-09-06",
     tags: ["Senryū", "5-7-5"],
-    description: ["Mirar atrás aún duele. Entre otras cosas por la idea de mi mismo que tenía"]
+    description: [
+      "Mirar atrás aún duele. Entre otras cosas por la idea de mi mismo que tenía",
+    ],
   },
   {
     id: 221,
     text: ["An-ti-guo ár-bol", "¿re-cuer-das to-da-ví-a", "to-dos tus nu-dos?"],
     date: "2025-08-12",
     tags: ["5-7-5", "Haiku", "Reflexión"],
-    description: ["¿Alguna vez dejaré de lamentar mis cicatrices para verlas como vivencias?"]
+    description: [
+      "¿Alguna vez dejaré de lamentar mis cicatrices para verlas como vivencias?",
+    ],
   },
   {
     id: 220,
     text: ["Mien-tras vi-a-jo", "re-cuer-do o-tra vi-da", "tras mi es-pal-da"],
     date: "2025-08-11",
     tags: ["5-7-5", "Senryū"],
-    description: ["Me asaltan recuerdos de los últimos años. De cosas que he perdido, tanto de mi vida como de mí"]
+    description: [
+      "Me asaltan recuerdos de los últimos años. De cosas que he perdido, tanto de mi vida como de mí",
+    ],
   },
   {
     id: 219,
-    text: ["Ca-lien-te_a-bra-zo", "pue-de que en sep-tiem-bre", "vuel-va a dor-mir"],
+    text: [
+      "Ca-lien-te_a-bra-zo",
+      "pue-de que en sep-tiem-bre",
+      "vuel-va a dor-mir",
+    ],
     date: "2025-07-16",
     tags: ["5-7-5", "Senryū"],
-    description: ["Echo de menos las noches frías, taparme y disfrutar del otoño"]
+    description: [
+      "Echo de menos las noches frías, taparme y disfrutar del otoño",
+    ],
   },
   {
     id: 218,
@@ -108,7 +142,7 @@ export const haikus: THaiku[] = [
     id: 212,
     text: ["U-no de ju-nio", "a-diós pan-ta-lón lar-go", "has-ta_el o-to-ño"],
     date: "2025-06-01",
-    tags: ["5-7-5", "Haiku"],
+    tags: ["5-7-5", "Haiku", "Destacado"],
     description: [
       "Vaya calor, voy a echar de menos mis outfits más abrigados.",
     ],
